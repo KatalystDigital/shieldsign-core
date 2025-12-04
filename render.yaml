@@ -1,0 +1,151 @@
+services:
+  - type: web
+    runtime: node
+    name: documenso-app
+    plan: free
+    buildCommand: npm i && npm run build
+    startCommand: npx prisma migrate deploy --schema packages/prisma/schema.prisma && npx turbo run start --filter=@documenso/remix
+    healthCheckPath: /api/health
+
+    envVars:
+      # Node Version
+      - key: NODE_VERSION
+        value: 18.17.0
+
+      - key: PORT
+        value: 10000
+
+      # Auth
+      - key: NEXTAUTH_URL
+        fromService:
+          name: documenso-app
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL
+      - key: NEXTAUTH_SECRET
+        generateValue: true
+
+      # Database
+      - key: NEXT_PRIVATE_DATABASE_URL
+        fromDatabase:
+          name: documenso-db
+          property: connectionString
+
+      - key: NEXT_PRIVATE_DIRECT_DATABASE_URL
+        fromDatabase:
+          name: documenso-db
+          property: connectionString
+
+      # URLs
+      - key: NEXT_PUBLIC_WEBAPP_URL
+        fromService:
+          name: documenso-app
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL
+      - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
+        value: 'http://localhost:10000'
+
+      # SMTP
+      - key: NEXT_PRIVATE_SMTP_TRANSPORT
+        value: 'smtp-auth'
+      - key: NEXT_PRIVATE_SMTP_HOST
+        sync: false
+      - key: NEXT_PRIVATE_SMTP_PORT
+        sync: false
+      - key: NEXT_PRIVATE_SMTP_USERNAME
+        sync: false
+      - key: NEXT_PRIVATE_SMTP_PASSWORD
+        sync: false
+      - key: NEXT_PRIVATE_SMTP_FROM_NAME
+        sync: false
+      - key: NEXT_PRIVATE_SMTP_FROM_ADDRESS
+        sync: false
+
+      # Stripe
+      - key: NEXT_PRIVATE_STRIPE_API_KEY
+        sync: false
+      - key: NEXT_PRIVATE_STRIPE_WEBHOOK_SECRET
+        sync: false
+
+      # Features
+      - key: NEXT_PUBLIC_POSTHOG_KEY
+        sync: false
+      - key: NEXT_PUBLIC_FEATURE_BILLING_ENABLED
+        sync: false
+
+      # Storage
+      - key: NEXT_PUBLIC_UPLOAD_TRANSPORT
+        value: 'database'
+      - key: NEXT_PRIVATE_UPLOAD_ENDPOINT
+        sync: false
+      - key: NEXT_PRIVATE_UPLOAD_FORCE_PATH_STYLE
+        sync: false
+      - key: NEXT_PRIVATE_UPLOAD_REGION
+        sync: false
+      - key: NEXT_PRIVATE_UPLOAD_BUCKET
+        sync: false
+      - key: NEXT_PRIVATE_UPLOAD_ACCESS_KEY_ID
+        sync: false
+      - key: NEXT_PRIVATE_UPLOAD_SECRET_ACCESS_KEY
+        sync: false
+
+      # Crypto
+      - key: NEXT_PRIVATE_ENCRYPTION_KEY
+        generateValue: true
+      - key: NEXT_PRIVATE_ENCRYPTION_SECONDARY_KEY
+        generateValue: true
+
+      # Auth Optional
+      - key: NEXT_PRIVATE_GOOGLE_CLIENT_ID
+        sync: false
+      - key: NEXT_PRIVATE_GOOGLE_CLIENT_SECRET
+        sync: false
+
+      # Signing
+      - key: NEXT_PRIVATE_SIGNING_TRANSPORT
+        sync: false
+      - key: NEXT_PRIVATE_SIGNING_PASSPHRASE
+        sync: false
+      - key: NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH
+        sync: false
+      - key: NEXT_PRIVATE_SIGNING_LOCAL_FILE_CONTENTS
+        sync: false
+      - key: NEXT_PRIVATE_SIGNING_GCLOUD_HSM_KEY_PATH
+        sync: false
+      - key: NEXT_PRIVATE_SIGNING_GCLOUD_HSM_PUBLIC_CRT_FILE_PATH
+        sync: false
+      - key: NEXT_PRIVATE_SIGNING_GCLOUD_HSM_PUBLIC_CRT_FILE_CONTENTS
+        sync: false
+      - key: NEXT_PRIVATE_SIGNING_GCLOUD_APPLICATION_CREDENTIALS_CONTENTS
+        sync: false
+
+      # SMTP Optional
+      - key: NEXT_PRIVATE_SMTP_APIKEY_USER
+        sync: false
+      - key: NEXT_PRIVATE_SMTP_APIKEY
+        sync: false
+      - key: NEXT_PRIVATE_SMTP_SECURE
+        sync: false
+      - key: NEXT_PRIVATE_RESEND_API_KEY
+        sync: false
+      - key: NEXT_PRIVATE_MAILCHANNELS_API_KEY
+        sync: false
+      - key: NEXT_PRIVATE_MAILCHANNELS_ENDPOINT
+        sync: false
+      - key: NEXT_PRIVATE_MAILCHANNELS_DKIM_DOMAIN
+        sync: false
+      - key: NEXT_PRIVATE_MAILCHANNELS_DKIM_SELECTOR
+        sync: false
+      - key: NEXT_PRIVATE_MAILCHANNELS_DKIM_PRIVATE_KEY
+        sync: false
+      - key: NEXT_PUBLIC_DOCUMENT_SIZE_UPLOAD_LIMIT
+        sync: false
+
+      # Features Optional
+      - key: NEXT_PUBLIC_DISABLE_SIGNUP
+        sync: false
+      - key: NEXT_PUBLIC_USE_INTERNAL_URL_BROWSERLESS
+        sync: false
+
+databases:
+  - name: documenso-db
+    plan: free

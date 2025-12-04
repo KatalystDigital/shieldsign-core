@@ -1,0 +1,57 @@
+/* ShieldDocs Sign - Brand Colors
+ * Use these to replace Documenso's default colors
+ */
+
+:root {
+  /* Primary - Teal (matches ShieldDocs main app) */
+  --shielddocs-50: #f0fdfa;
+  --shielddocs-100: #ccfbf1;
+  --shielddocs-200: #99f6e4;
+  --shielddocs-300: #5eead4;
+  --shielddocs-400: #2dd4bf;
+  --shielddocs-500: #14b8a6;  /* Primary */
+  --shielddocs-600: #0d9488;  /* Primary Dark */
+  --shielddocs-700: #0f766e;
+  --shielddocs-800: #115e59;
+  --shielddocs-900: #134e4a;
+  --shielddocs-950: #042f2e;
+
+  /* Secondary - Slate (dark theme) */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* Background (Dark Theme) */
+  --background: #0d1117;
+  --background-secondary: #161b22;
+  --background-tertiary: #21262d;
+  
+  /* Borders */
+  --border: #30363d;
+  --border-light: #484f58;
+  
+  /* Text */
+  --foreground: #e6edf3;
+  --foreground-muted: #7d8590;
+  
+  /* Status Colors */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+}
+
+/* Documenso uses a green primary - replace with teal */
+/* Search and replace these in the codebase:
+ * 
+ * Documenso Green (#00d47f) → ShieldDocs Teal (#14b8a6)
+ * Documenso Green Dark (#00a862) → ShieldDocs Teal Dark (#0d9488)
+ */

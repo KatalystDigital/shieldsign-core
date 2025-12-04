@@ -1,0 +1,75 @@
+You are an expert in TypeScript, Node.js, Remix, React, Shadcn UI and Tailwind.
+
+Code Style and Structure:
+
+- Write concise, technical TypeScript code with accurate examples
+- Use functional and declarative programming patterns; avoid classes
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+- Structure files: exported component, subcomponents, helpers, static content, types
+
+Naming Conventions:
+
+- Use lowercase with dashes for directories (e.g., components/auth-wizard)
+- Favor named exports for components
+
+TypeScript Usage:
+
+- Use TypeScript for all code; prefer types over interfaces
+- Use functional components with TypeScript interfaces
+
+Syntax and Formatting:
+
+- Create functions using `const fn = () => {}`
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements
+- Use declarative JSX
+- Never use 'use client'
+- Never use 1 line if statements
+
+Error Handling and Validation:
+
+- Prioritize error handling: handle errors and edge cases early
+- Use early returns and guard clauses
+- Implement proper error logging and user-friendly messages
+- Use Zod for form validation
+- Model expected errors as return values in Server Actions
+- Use error boundaries for unexpected errors
+
+UI and Styling:
+
+- Use Shadcn UI, Radix, and Tailwind Aria for components and styling
+- Implement responsive design with Tailwind CSS; use a mobile-first approach
+- When using Lucide icons, prefer the longhand names, for example HomeIcon instead of Home
+
+React forms
+
+- Use zod for form validation react-hook-form for forms
+- Look at TeamCreateDialog.tsx as an example of form usage
+- Use <Form> <FormItem> elements, and also wrap the contents of form in a fieldset which should have the :disabled attribute when the form is loading
+
+TRPC Specifics
+
+- Every route should be in it's own file, example routers/teams/create-team.ts
+- Every route should have a types file associated with it, example routers/teams/create-team.types.ts. These files should have the OpenAPI meta, and request/response zod schemas
+- The request/response schemas should be named like Z[RouteName]RequestSchema and Z[RouteName]ResponseSchema
+- Use create-team.ts and create-team.types.ts as an example when creating new routes.
+- When creating the OpenAPI meta, only use GET and POST requests, do not use any other REST methods
+- Deconstruct the input argument on it's one line of code.
+
+Toast usage
+
+- Use the t`string` macro from @lingui/react/macro to display toast messages
+
+Remix/ReactRouter Usage
+
+- Use (params: Route.Params) to get the params from the route
+- Use (loaderData: Route.LoaderData) to get the loader data from the route
+- When using loaderdata, deconstruct the data you need from the loader data inside the function body
+- Do not use json() to return data, directly return the data
+
+Translations
+
+- Use <Trans>string</Trans> to display translations in jsx code, this should be imported from @lingui/react/macro
+- Use the t`string` macro from @lingui/react/macro to display translations in typescript code
+- t should be imported as const { t } = useLingui() where useLingui is imported from @lingui/react/macro
+- String in constants should be using the t`string` macro
