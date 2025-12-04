@@ -1,354 +1,218 @@
-<img src="https://github.com/documenso/documenso/assets/13398220/a643571f-0239-46a6-a73e-6bef38d1228b" alt="ShieldDocs Sign Logo">
+# 🛡️ ShieldDocs Sign
 
-<p align="center" style="margin-top: 20px">
-  <p align="center">
-  Enterprise E-Signatures for Trust Centers.
-  <br>
-    <a href="https://shielddocs.io"><strong>Learn more »</strong></a>
-    <br />
-    <br />
-    <a href="https://documen.so/discord">Discord</a>
-    ·
-    <a href="https://shielddocs.io">Website</a>
-    ·
-    <a href="https://github.com/documenso/documenso/issues">Issues</a>
-    ·
-    <a href="https://documen.so/live">Upcoming Releases</a>
-    ·
-    <a href="https://documen.so/roadmap">Roadmap</a>
-  </p>
-</p>
+**Enterprise E-Signatures for Trust Centers**
 
-<p align="center">
-   <a href="https://documen.so/discord"><img src="https://img.shields.io/badge/Discord-documen.so/discord-%235865F2" alt="Join ShieldDocs Sign on Discord"></a>
-   <a href="https://github.com/documenso/documenso/stargazers"><img src="https://img.shields.io/github/stars/documenso/documenso" alt="Github Stars"></a>
-   <a href="https://github.com/documenso/documenso/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
-   <a href="https://github.com/documenso/documenso/pulse"><img src="https://img.shields.io/github/commit-activity/m/documenso/documenso" alt="Commits-per-month"></a>
-   <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/documenso/documenso">
-   <img alt="open in devcontainer" src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Enabled&color=blue&logo=visualstudiocode" />
-   </a>
-   <a href="CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="Contributor Covenant"></a>
-</p>
+ShieldDocs Sign is a white-labeled fork of [Documenso](https://github.com/documenso/documenso), customized for the ShieldDocs Trust Center platform. It provides legally-binding electronic signatures integrated with your security documentation workflow.
 
-<div align="center">
-  <img src="https://github.com/documenso/documenso/assets/13398220/d96ed533-6f34-4a97-be9b-442bdb189c69" style="width: 80%;" />
-</div>
-
-## About ShieldDocs Sign
-
-Signing documents digitally should be fast and easy and should be the best practice for every document signed worldwide. This is technically quite easy today, but it also introduces a new party to every signature: The signing tool providers. While this is not a problem in itself, it should make us think about how we want these providers of trust to work. ShieldDocs Sign aims to be the world's most trusted document-signing tool. This trust is built by empowering you to self-host ShieldDocs Sign and review how it works under the hood.
-
-Join us in creating the next generation of open trust infrastructure.
-
-## Recognition
-
-<p align="center">
-  <a href="https://www.producthunt.com/posts/documenso?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-documenso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=395047&theme=light&period=daily" alt="ShieldDocs Sign - The&#0032;open&#0032;source&#0032;DocuSign&#0032;alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-  <a href="https://www.producthunt.com/posts/documenso?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-documenso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=395047&theme=light" alt="ShieldDocs Sign - The&#0032;Open&#0032;Source&#0032;DocuSign&#0032;Alternative&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-</p>
-
-## Community and Next Steps 🎯
-
-- Check out the first source code release in this repository and test it.
-- Tell us what you think in the [Discussions](https://github.com/documenso/documenso/discussions).
-- Join the [Discord server](https://documen.so/discord) for any questions and getting to know to other community members.
-- ⭐ the repository to help us raise awareness.
-- Spread the word on Twitter that ShieldDocs Sign is working towards a more open signing tool.
-- Fix or create [issues](https://github.com/documenso/documenso/issues), that are needed for the first production release.
-
-## Contributing
-
-- To contribute, please see our [contribution guide](https://github.com/documenso/documenso/blob/main/CONTRIBUTING.md).
-
-## Contact us
-
-Contact us if you are interested in our Enterprise plan for large organizations that need extra flexibility and control.
-
-<a href="https://cal.com/timurercan/enterprise-customers?utm_source=banner&utm_campaign=oss"><img alt="Book us with Cal.com" src="https://cal.com/book-with-cal-dark.svg" /></a>
-
-## Tech Stack
-
-<p align="left">
-  <a href="https://www.typescriptlang.org"><img src="https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square" alt="TypeScript"></a>
-  <a href="https://prisma.io"><img width="122" height="20" src="http://made-with.prisma.io/indigo.svg" alt="Made with Prisma" /></a>
-  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss" alt="Tailwind CSS"></a>
-  <a href=""><img src="" alt=""></a>
-  <a href=""><img src="" alt=""></a>
-  <a href=""><img src="" alt=""></a>
-  <a href=""><img src="" alt=""></a>
-  <a href=""><img src="" alt=""></a>
-</p>
-
-- [Typescript](https://www.typescriptlang.org/) - Language
-- [ReactRouter](https://reactrouter.com/) - Framework
-- [Prisma](https://www.prisma.io/) - ORM
-- [Tailwind](https://tailwindcss.com/) - CSS
-- [shadcn/ui](https://ui.shadcn.com/) - Component Library
-- [react-email](https://react.email/) - Email Templates
-- [tRPC](https://trpc.io/) - API
-- [@documenso/pdf-sign](https://www.npmjs.com/package/@documenso/pdf-sign) - PDF Signatures (launching soon)
-- [React-PDF](https://github.com/wojtekmaj/react-pdf) - Viewing PDFs
-- [PDF-Lib](https://github.com/Hopding/pdf-lib) - PDF manipulation
-- [Stripe](https://stripe.com/) - Payments
-
-<!-- - Support for [opensignpdf (requires Java on server)](https://github.com/open-pdf-sign) is currently planned. -->
-
-## Local Development
-
-### Requirements
-
-To run ShieldDocs Sign locally, you will need
-
-- Node.js (v22 or above)
-- Postgres SQL Database
-- Docker (optional)
-
-### Developer Quickstart
-
-> **Note**: This is a quickstart for developers. It assumes that you have both [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/) installed on your machine.
-
-Want to get up and running quickly? Follow these steps:
-
-1. [Fork this repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) to your GitHub account.
-
-After forking the repository, clone it to your local device by using the following command:
-
-```sh
-git clone https://github.com/<your-username>/documenso
-```
-
-2. Set up your `.env` file using the recommendations in the `.env.example` file. Alternatively, just run `cp .env.example .env` to get started with our handpicked defaults.
-
-3. Run `npm run dx` in the root directory
-
-   - This will spin up a postgres database and inbucket mailserver in a docker container.
-
-4. Run `npm run dev` in the root directory
-
-5. Want it even faster? Just use
-
-```sh
-npm run d
-```
-
-#### Access Points for Your Application
-
-1. **App** - http://localhost:3000
-2. **Incoming Mail Access** - http://localhost:9000
-3. **Database Connection Details**
-
-   - **Port**: 54320
-   - **Connection**: Use your favorite database client to connect using the provided port.
-
-4. **S3 Storage Dashboard** - http://localhost:9001
-
-## Developer Setup
-
-### Manual Setup
-
-Follow these steps to setup ShieldDocs Sign on your local machine:
-
-1. [Fork this repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) to your GitHub account.
-
-After forking the repository, clone it to your local device by using the following command:
-
-```sh
-git clone https://github.com/<your-username>/documenso
-```
-
-2. Run `npm i` in the root directory
-
-3. Create your `.env` from the `.env.example`. You can use `cp .env.example .env` to get started with our handpicked defaults.
-
-4. Set the following environment variables:
-
-   - NEXTAUTH_SECRET
-   - NEXT_PUBLIC_WEBAPP_URL
-   - NEXT_PRIVATE_DATABASE_URL
-   - NEXT_PRIVATE_DIRECT_DATABASE_URL
-   - NEXT_PRIVATE_SMTP_FROM_NAME
-   - NEXT_PRIVATE_SMTP_FROM_ADDRESS
-
-5. Create the database schema by running `npm run prisma:migrate-dev`
-
-6. Run `npm run translate:compile` in the root directory to compile lingui
-
-7. Run `npm run dev` in the root directory to start
-
-8. Register a new user at http://localhost:3000/signup
+[![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 
 ---
 
-- Optional: Seed the database using `npm run prisma:seed -w @documenso/prisma` to create a test user and document.
-- Optional: Create your own signing certificate.
-  - To generate your own using these steps and a Linux Terminal or Windows Subsystem for Linux (WSL), see **[Create your own signing certificate](./SIGNING.md)**.
+## 🎯 Overview
 
-### Run in Gitpod
+ShieldDocs Sign extends the excellent Documenso platform with:
 
-- Click below to launch a ready-to-use Gitpod workspace in your browser.
+- **ShieldDocs Branding** - Consistent teal color scheme and branding
+- **Trust Center Integration** - Seamless connection to ShieldDocs Trust Center
+- **Azure Deployment** - Optimized for Azure cloud infrastructure
+- **Enterprise Features** - Team management, audit logs, webhooks
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/documenso/documenso)
+## 🚀 Quick Start
 
-### Run in DevContainer
+### Prerequisites
 
-We support DevContainers for VSCode. [Click here to get started.](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/documenso/documenso)
+- Node.js 20+
+- PostgreSQL 14+
+- Docker (optional, for development)
 
-### Video walkthrough
+### Development Setup
 
-If you're a visual learner and prefer to watch a video walkthrough of setting up ShieldDocs Sign locally, check out this video:
+```bash
+# Clone the repository
+git clone https://github.com/your-org/shielddocs-esign.git
+cd shielddocs-esign
 
-[![Watch the video](https://img.youtube.com/vi/Y0ppIQrEnZs/hqdefault.jpg)](https://youtu.be/Y0ppIQrEnZs)
+# Copy environment template
+cp .env.example .env.local
 
-## Docker
+# Install dependencies
+npm install
 
-We provide a Docker container for ShieldDocs Sign, which is published on both DockerHub and GitHub Container Registry.
+# Start development database (requires Docker)
+npm run dx:up
 
-- DockerHub: [https://hub.docker.com/r/documenso/documenso](https://hub.docker.com/r/documenso/documenso)
-- GitHub Container Registry: [https://ghcr.io/documenso/documenso](https://ghcr.io/documenso/documenso)
+# Run database migrations
+npm run prisma:migrate-dev
 
-You can pull the Docker image from either of these registries and run it with your preferred container hosting provider.
+# Seed the database
+npm run prisma:seed
 
-Please note that you will need to provide environment variables for connecting to the database, mailserver, and so forth.
-
-For detailed instructions on how to configure and run the Docker container, please refer to the [Docker README](./docker/README.md) in the `docker` directory.
-
-## Self Hosting
-
-We support a variety of deployment methods, and are actively working on adding more. Stay tuned for updates!
-
-### Fetch, configure, and build
-
-First, clone the code from Github:
-
-```
-git clone https://github.com/documenso/documenso.git
+# Start development server
+npm run dev
 ```
 
-Then, inside the `documenso` folder, copy the example env file:
+Visit `http://localhost:3000` to see the application.
+
+### Environment Variables
+
+Key environment variables to configure:
+
+```env
+# Database
+NEXT_PRIVATE_DATABASE_URL=postgresql://user:password@localhost:5432/shielddocs_sign
+
+# App URLs
+NEXT_PUBLIC_WEBAPP_URL=https://sign.shielddocs.io
+NEXT_PUBLIC_MARKETING_URL=https://shielddocs.io
+
+# Email (SMTP)
+NEXT_PRIVATE_SMTP_HOST=smtp.sendgrid.net
+NEXT_PRIVATE_SMTP_PORT=587
+NEXT_PRIVATE_SMTP_USERNAME=apikey
+NEXT_PRIVATE_SMTP_PASSWORD=your-sendgrid-api-key
+NEXT_PRIVATE_SMTP_FROM_ADDRESS=noreply@shielddocs.io
+NEXT_PRIVATE_SMTP_FROM_NAME=ShieldDocs Sign
+
+# Storage (Azure Blob)
+NEXT_PRIVATE_UPLOAD_TRANSPORT=azure
+NEXT_PRIVATE_AZURE_BLOB_CONNECTION_STRING=your-connection-string
+NEXT_PRIVATE_AZURE_BLOB_CONTAINER_NAME=documents
+```
+
+See `.env.example` for all available options.
+
+## 🏗️ Project Structure
 
 ```
-cp .env.example .env
+shielddocs-esign/
+├── apps/
+│   ├── remix/              # Main web application (React Router)
+│   ├── documentation/      # Documentation site
+│   └── openpage-api/       # Public API
+├── packages/
+│   ├── prisma/            # Database schema & migrations
+│   ├── lib/               # Shared library code
+│   ├── email/             # Email templates
+│   ├── trpc/              # tRPC API router
+│   ├── ui/                # UI components
+│   └── signing/           # PDF signing logic
+├── branding/              # ShieldDocs branding assets
+│   ├── colors.css         # Color definitions
+│   ├── tailwind-colors.js # Tailwind configuration
+│   └── logo/              # Logo assets (add your files here)
+├── docker/                # Docker configuration
+│   ├── Dockerfile
+│   └── docker-compose.yml
+└── scripts/
+    └── rebrand.ps1        # Rebranding script
 ```
 
-The following environment variables must be set:
+## 🐳 Docker Deployment
 
-- `NEXTAUTH_SECRET`
-- `NEXT_PUBLIC_WEBAPP_URL`
-- `NEXT_PRIVATE_DATABASE_URL`
-- `NEXT_PRIVATE_DIRECT_DATABASE_URL`
-- `NEXT_PRIVATE_SMTP_FROM_NAME`
-- `NEXT_PRIVATE_SMTP_FROM_ADDRESS`
+### Build the Image
 
-> If you are using a reverse proxy in front of ShieldDocs Sign, don't forget to provide the public URL for the `NEXT_PUBLIC_WEBAPP_URL` variable!
-
-Now you can install the dependencies and build it:
-
+```bash
+docker build -t shielddocs-sign:latest -f docker/Dockerfile .
 ```
-npm i
+
+### Run with Docker Compose
+
+```bash
+cd docker
+docker-compose up -d
+```
+
+### Azure Container Apps
+
+See [Azure Deployment Guide](docs/azure-deployment.md) for deploying to Azure Container Apps.
+
+## 🔧 Development Commands
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
 npm run build
+
+# Run linting
+npm run lint
+
+# Format code
+npm run format
+
+# Generate Prisma client
+npm run prisma:generate
+
+# Create database migration
+npm run prisma:migrate-dev
+
+# Run database migrations (production)
 npm run prisma:migrate-deploy
+
+# Seed database
+npm run prisma:seed
 ```
 
-Finally, you can start it with:
+## 🔗 Integration with ShieldDocs Trust Center
 
-```
-cd apps/remix
-npm run start
-```
+ShieldDocs Sign integrates with the main ShieldDocs Trust Center application via:
 
-This will start the server on `localhost:3000`. For now, any reverse proxy can then do the frontend and SSL termination.
+1. **Webhook Events** - Document signing events trigger webhooks
+2. **REST API** - Create and manage documents programmatically
+3. **SSO Integration** - Shared authentication with Trust Center
 
-> If you want to run with another port than 3000, you can start the application with `next -p <ANY PORT>` from the `apps/remix` folder.
+### Webhook Events
 
-### Run as a service
+- `DOCUMENT_CREATED` - New document uploaded
+- `DOCUMENT_SENT` - Document sent for signing
+- `DOCUMENT_SIGNED` - Recipient signed the document
+- `DOCUMENT_COMPLETED` - All signatures collected
+- `DOCUMENT_CANCELLED` - Document cancelled
+- `DOCUMENT_REJECTED` - Document rejected by recipient
 
-You can use a systemd service file to run the app. Here is a simple example of the service running on port 3500 (using 3000 by default):
+## 📚 API Documentation
 
-```bash
-[Unit]
-Description=documenso
-After=network.target
+API documentation is available at `/api/v1/openapi` when running the application.
 
-[Service]
-Environment=PATH=/path/to/your/node/binaries
-Type=simple
-User=www-data
-WorkingDirectory=/var/www/documenso/apps/remix
-ExecStart=/usr/bin/next start -p 3500
-TimeoutSec=15
-Restart=always
+Key endpoints:
 
-[Install]
-WantedBy=multi-user.target
-```
+- `POST /api/v1/documents` - Create a document
+- `GET /api/v1/documents/{id}` - Get document details
+- `POST /api/v1/documents/{id}/send` - Send for signing
+- `GET /api/v1/templates` - List templates
 
-### Railway
+## 🎨 Customization
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/bG6D4p)
+### Branding
 
-### Render
+Update files in the `branding/` directory:
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/documenso/documenso)
+1. **Colors**: Edit `branding/colors.css`
+2. **Tailwind**: Edit `branding/tailwind-colors.js`
+3. **Logos**: Add files to `branding/logo/`
+4. **Constants**: Edit `branding/app-constants.ts`
 
-### Koyeb
+### Legal Pages
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/documenso/documenso&branch=main&name=documenso-app&builder=dockerfile&dockerfile=/docker/Dockerfile)
+Update legal documents:
 
-## Elestio
+- `branding/legal/terms.md` - Terms of Service
+- `branding/legal/privacy.md` - Privacy Policy
 
-[![Deploy on Elestio](https://elest.io/images/logos/deploy-to-elestio-btn.png)](https://elest.io/open-source/documenso)
+## 🤝 Attribution
 
-## Troubleshooting
+ShieldDocs Sign is based on [Documenso](https://github.com/documenso/documenso), an open-source document signing platform licensed under AGPL-3.0.
 
-### I'm not receiving any emails when using the developer quickstart.
+We gratefully acknowledge the Documenso team for their excellent work in creating the foundation for this project.
 
-When using the developer quickstart, an [Inbucket](https://inbucket.org/) server will be spun up in a docker container that will store all outgoing emails locally for you to view.
+## 📄 License
 
-The Web UI can be found at http://localhost:9000, while the SMTP port will be on localhost:2500.
+This project is licensed under the [AGPL-3.0 License](LICENSE).
 
-### Support IPv6
+---
 
-If you are deploying to a cluster that uses only IPv6, You can use a custom command to pass a parameter to the Remix start command
+**ShieldDocs** - Trust Center & E-Signature Platform
 
-For local docker run
-
-```bash
-docker run -it documenso:latest npm run start -- -H ::
-```
-
-For k8s or docker-compose
-
-```yaml
-containers:
-  - name: documenso
-    image: documenso:latest
-    imagePullPolicy: IfNotPresent
-    command:
-      - npm
-    args:
-      - run
-      - start
-      - --
-      - -H
-      - '::'
-```
-
-### I can't see environment variables in my package scripts.
-
-Wrap your package script with the `with:env` script like such:
-
-```
-npm run with:env -- npm run myscript
-```
-
-The same can be done when using `npx` for one of the bin scripts:
-
-```
-npm run with:env -- npx myscript
-```
-
-This will load environment variables from your `.env` and `.env.local` files.
-
-## Repo Activity
-
-![Repository Activity](https://repobeats.axiom.co/api/embed/622a2e9aa709696f7226304b5b7178a5741b3868.svg)
+- 🌐 Website: [shielddocs.io](https://shielddocs.io)
+- 📧 Support: [support@shielddocs.io](mailto:support@shielddocs.io)

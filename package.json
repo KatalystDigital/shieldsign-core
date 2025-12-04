@@ -1,11 +1,14 @@
 {
   "private": true,
-  "name": "@documenso/root",
+  "name": "@shielddocs/esign",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "version": "2.2.2",
+  "version": "1.0.0",
+  "description": "ShieldDocs Sign - Enterprise E-Signatures for Trust Centers",
+  "author": "ShieldDocs <support@shielddocs.io>",
+  "license": "AGPL-3.0",
   "scripts": {
     "postinstall": "patch-package",
     "build": "turbo run build",
