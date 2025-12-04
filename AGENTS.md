@@ -1,4 +1,4 @@
-# Agent Guidelines for Documenso
+# Agent Guidelines for ShieldDocs Sign
 
 ## Build/Test/Lint Commands
 

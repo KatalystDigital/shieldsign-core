@@ -15,7 +15,7 @@ export const CallToAction = ({ className, utmSource = 'generic-cta' }: CallToAct
         <h2 className="text-center text-2xl font-bold">Looking for the managed solution?</h2>
 
         <p className="text-muted-foreground mt-4 max-w-[55ch] text-center leading-normal">
-          You can get started with Documenso in minutes. We handle the infrastructure, so you can
+          You can get started with ShieldDocs Sign in minutes. We handle the infrastructure, so you can
           focus on signing documents.
         </p>
 
@@ -25,7 +25,7 @@ export const CallToAction = ({ className, utmSource = 'generic-cta' }: CallToAct
           size="lg"
           asChild
         >
-          <Link href={`https://app.documenso.com/signup?utm_source=${utmSource}`} target="_blank">
+          <Link href={`https://app.shielddocs.io/signup?utm_source=${utmSource}`} target="_blank">
             Get started
           </Link>
         </Button>

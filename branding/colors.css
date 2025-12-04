@@ -1,5 +1,5 @@
 /* ShieldDocs Sign - Brand Colors
- * Use these to replace Documenso's default colors
+ * Use these to replace ShieldDocs Sign's default colors
  */
 
 :root {
@@ -49,9 +49,9 @@
   --info: #3b82f6;
 }
 
-/* Documenso uses a green primary - replace with teal */
+/* ShieldDocs Sign uses a green primary - replace with teal */
 /* Search and replace these in the codebase:
  * 
- * Documenso Green (#00d47f) → ShieldDocs Teal (#14b8a6)
- * Documenso Green Dark (#00a862) → ShieldDocs Teal Dark (#0d9488)
+ * ShieldDocs Sign Green (#00d47f) → ShieldDocs Teal (#14b8a6)
+ * ShieldDocs Sign Green Dark (#00a862) → ShieldDocs Teal Dark (#0d9488)
  */

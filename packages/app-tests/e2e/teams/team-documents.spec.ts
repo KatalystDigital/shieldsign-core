@@ -151,7 +151,7 @@ test('[TEAMS]: check team documents count with external team email', async ({ pa
 
   const { team: team2, teamMember2: team2Member2 } = await seedTeamDocuments();
 
-  const teamEmail = `external-team-email-${team.id}@test.documenso.com`;
+  const teamEmail = `external-team-email-${team.id}@test.shielddocs.io`;
 
   await seedTeamEmail({
     email: teamEmail,
@@ -248,7 +248,7 @@ test('[TEAMS]: resend pending team document', async ({ page }) => {
   }).toPass();
 
   await page.getByRole('menuitem').filter({ hasText: 'Resend' }).click();
-  await page.getByLabel('test.documenso.com').first().click();
+  await page.getByLabel('test.shielddocs.io').first().click();
   await page.getByRole('button', { name: 'Send reminder' }).click();
 
   await expect(

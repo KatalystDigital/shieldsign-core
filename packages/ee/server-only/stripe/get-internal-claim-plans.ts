@@ -25,7 +25,7 @@ export type InternalClaimPlans = {
 };
 
 /**
- * Returns the main Documenso plans from Stripe.
+ * Returns the main ShieldDocs Sign plans from Stripe.
  */
 export const getInternalClaimPlans = async (): Promise<InternalClaimPlans> => {
   const { data: prices } = await stripe.prices.search({

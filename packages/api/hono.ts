@@ -16,7 +16,7 @@ import type { HonoEnv } from '@documenso/remix/server/router';
 export const tsRestHonoApp = new Hono<HonoEnv>();
 
 tsRestHonoApp
-  .get('/openapi', (c) => c.redirect('https://openapi-v1.documenso.com'))
+  .get('/openapi', (c) => c.redirect('https://openapi-v1.shielddocs.io'))
   .get('/openapi.json', (c) => c.json(OpenAPIV1))
   .get('/me', async (c) => testCredentialsHandler(c.req.raw));
 

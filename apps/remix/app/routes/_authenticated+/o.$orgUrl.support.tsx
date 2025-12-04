@@ -52,7 +52,7 @@ export default function SupportPage() {
             <h2 className="flex items-center gap-2 text-lg font-bold">
               <BookIcon className="text-muted-foreground h-5 w-5" />
               <Link
-                to="https://docs.documenso.com"
+                to="https://docs.shielddocs.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
@@ -61,7 +61,7 @@ export default function SupportPage() {
               </Link>
             </h2>
             <p className="text-muted-foreground mt-1">
-              <Trans>Read our documentation to get started with Documenso.</Trans>
+              <Trans>Read our documentation to get started with ShieldDocs Sign.</Trans>
             </p>
           </div>
           <div className="rounded-lg border p-4">

@@ -21,12 +21,12 @@ export default {
     items: {
       changelog: {
         title: 'Changelog',
-        href: 'https://documenso.com/changelog',
+        href: 'https://shielddocs.io/changelog',
         newWindow: true,
       },
       blog: {
         title: 'Blog',
-        href: 'https://documenso.com/blog',
+        href: 'https://shielddocs.io/blog',
         newWindow: true,
       },
     },

@@ -34,7 +34,7 @@ export default function ApiTokensPage() {
             On this page, you can create and manage API tokens. See our{' '}
             <a
               className="text-primary underline"
-              href={'https://docs.documenso.com/developers/public-api'}
+              href={'https://docs.shielddocs.io/developers/public-api'}
               target="_blank"
             >
               Documentation
