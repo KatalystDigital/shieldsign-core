@@ -1,12 +1,12 @@
 # Privacy Policy
 
-**ShieldDocs Sign - E-Signature Platform**
+**ShieldSign - E-Signature Platform**
 
 Last updated: December 2025
 
 ## 1. Introduction
 
-ShieldDocs ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use ShieldDocs Sign.
+ShieldSign ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use ShieldSign.
 
 ## 2. Information We Collect
 
@@ -126,12 +126,12 @@ We may update this Privacy Policy periodically. We will notify you of significan
 ## 13. Contact Us
 
 For privacy-related inquiries:
-- **Email**: privacy@shielddocs.io
-- **Data Protection Officer**: dpo@shielddocs.io
-- **Website**: https://shielddocs.io/contact
+- **Email**: privacy@shieldsign.io
+- **Data Protection Officer**: dpo@shieldsign.io
+- **Website**: https://shieldsign.io/contact
 
 For EU residents, you have the right to lodge a complaint with your local supervisory authority.
 
 ---
 
-© 2025 ShieldDocs. All rights reserved.
+© 2025 ShieldSign. All rights reserved.

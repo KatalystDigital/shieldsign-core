@@ -1,4 +1,4 @@
-import { acceptOrganisationInvitation } from '@documenso/lib/server-only/organisation/accept-organisation-invitation';
+import { acceptOrganisationInvitation } from '@shieldsign/lib/server-only/organisation/accept-organisation-invitation';
 
 import { maybeAuthenticatedProcedure } from '../trpc';
 import {

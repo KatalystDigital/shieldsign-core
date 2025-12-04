@@ -1,8 +1,8 @@
-import { findDocuments } from '@documenso/lib/server-only/document/find-documents';
-import type { GetStatsInput } from '@documenso/lib/server-only/document/get-stats';
-import { getStats } from '@documenso/lib/server-only/document/get-stats';
-import { getTeamById } from '@documenso/lib/server-only/team/get-team';
-import { mapEnvelopesToDocumentMany } from '@documenso/lib/utils/document';
+import { findDocuments } from '@shieldsign/lib/server-only/document/find-documents';
+import type { GetStatsInput } from '@shieldsign/lib/server-only/document/get-stats';
+import { getStats } from '@shieldsign/lib/server-only/document/get-stats';
+import { getTeamById } from '@shieldsign/lib/server-only/team/get-team';
+import { mapEnvelopesToDocumentMany } from '@shieldsign/lib/utils/document';
 
 import { authenticatedProcedure } from '../trpc';
 import {

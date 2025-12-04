@@ -5,9 +5,9 @@ import {
   formatSecureCookieName,
   getCookieDomain,
   useSecureCookies,
-} from '@documenso/lib/constants/auth';
-import { appLog } from '@documenso/lib/utils/debugger';
-import { env } from '@documenso/lib/utils/env';
+} from '@shieldsign/lib/constants/auth';
+import { appLog } from '@shieldsign/lib/utils/debugger';
+import { env } from '@shieldsign/lib/utils/env';
 
 import { AUTH_SESSION_LIFETIME } from '../../config';
 import { extractCookieFromHeaders } from '../utils/cookies';

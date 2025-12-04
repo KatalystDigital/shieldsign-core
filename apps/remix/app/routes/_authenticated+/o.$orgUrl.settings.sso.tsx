@@ -5,20 +5,20 @@ import { OrganisationMemberRole } from '@prisma/client';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { ORGANISATION_MEMBER_ROLE_HIERARCHY } from '@documenso/lib/constants/organisations';
-import { ORGANISATION_MEMBER_ROLE_MAP } from '@documenso/lib/constants/organisations-translations';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { ORGANISATION_MEMBER_ROLE_HIERARCHY } from '@shieldsign/lib/constants/organisations';
+import { ORGANISATION_MEMBER_ROLE_MAP } from '@shieldsign/lib/constants/organisations-translations';
 import {
   formatOrganisationCallbackUrl,
   formatOrganisationLoginUrl,
-} from '@documenso/lib/utils/organisation-authentication-portal';
-import { trpc } from '@documenso/trpc/react';
-import { domainRegex } from '@documenso/trpc/server/enterprise-router/create-organisation-email-domain.types';
-import type { TGetOrganisationAuthenticationPortalResponse } from '@documenso/trpc/server/enterprise-router/get-organisation-authentication-portal.types';
-import { ZUpdateOrganisationAuthenticationPortalRequestSchema } from '@documenso/trpc/server/enterprise-router/update-organisation-authentication-portal.types';
-import { CopyTextButton } from '@documenso/ui/components/common/copy-text-button';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+} from '@shieldsign/lib/utils/organisation-authentication-portal';
+import { trpc } from '@shieldsign/trpc/react';
+import { domainRegex } from '@shieldsign/trpc/server/enterprise-router/create-organisation-email-domain.types';
+import type { TGetOrganisationAuthenticationPortalResponse } from '@shieldsign/trpc/server/enterprise-router/get-organisation-authentication-portal.types';
+import { ZUpdateOrganisationAuthenticationPortalRequestSchema } from '@shieldsign/trpc/server/enterprise-router/update-organisation-authentication-portal.types';
+import { CopyTextButton } from '@shieldsign/ui/components/common/copy-text-button';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -26,20 +26,20 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { Switch } from '@documenso/ui/primitives/switch';
-import { Textarea } from '@documenso/ui/primitives/textarea';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/select';
+import { SpinnerBox } from '@shieldsign/ui/primitives/spinner';
+import { Switch } from '@shieldsign/ui/primitives/switch';
+import { Textarea } from '@shieldsign/ui/primitives/textarea';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { SettingsHeader } from '~/components/general/settings-header';
 import { appMetaTags } from '~/utils/meta';

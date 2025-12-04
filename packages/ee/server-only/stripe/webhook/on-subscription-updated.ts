@@ -1,10 +1,10 @@
 import { OrganisationType, SubscriptionStatus } from '@prisma/client';
 import { match } from 'ts-pattern';
 
-import { createOrganisationClaimUpsertData } from '@documenso/lib/server-only/organisation/create-organisation';
-import { type Stripe, stripe } from '@documenso/lib/server-only/stripe';
-import { INTERNAL_CLAIM_ID } from '@documenso/lib/types/subscription';
-import { prisma } from '@documenso/prisma';
+import { createOrganisationClaimUpsertData } from '@shieldsign/lib/server-only/organisation/create-organisation';
+import { type Stripe, stripe } from '@shieldsign/lib/server-only/stripe';
+import { INTERNAL_CLAIM_ID } from '@shieldsign/lib/types/subscription';
+import { prisma } from '@shieldsign/prisma';
 
 export type OnSubscriptionUpdatedOptions = {
   subscription: Stripe.Subscription;

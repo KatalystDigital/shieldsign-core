@@ -19,18 +19,18 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import type { TDocumentMany as TDocumentRow } from '@documenso/lib/types/document';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
-import { DocumentShareButton } from '@documenso/ui/components/document/document-share-button';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import type { TDocumentMany as TDocumentRow } from '@shieldsign/lib/types/document';
+import { isDocumentCompleted } from '@shieldsign/lib/utils/document';
+import { formatDocumentsPath } from '@shieldsign/lib/utils/teams';
+import { DocumentShareButton } from '@shieldsign/ui/components/document/document-share-button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
+} from '@shieldsign/ui/primitives/dropdown-menu';
 
 import { DocumentDeleteDialog } from '~/components/dialogs/document-delete-dialog';
 import { DocumentDuplicateDialog } from '~/components/dialogs/document-duplicate-dialog';

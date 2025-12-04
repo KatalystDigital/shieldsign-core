@@ -8,10 +8,10 @@ import { Loader } from 'lucide-react';
 import { type PDFDocumentProxy } from 'pdfjs-dist';
 import { Document as PDFDocument, Page as PDFPage, pdfjs } from 'react-pdf';
 
-import { useCurrentEnvelopeRender } from '@documenso/lib/client-only/providers/envelope-render-provider';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { cn } from '@documenso/ui/lib/utils';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
+import { useCurrentEnvelopeRender } from '@shieldsign/lib/client-only/providers/envelope-render-provider';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
 
 export type LoadedPDFDocument = PDFDocumentProxy;
 
@@ -29,7 +29,7 @@ const pdfViewerOptions = {
 
 const PDFLoader = () => (
   <>
-    <Loader className="h-12 w-12 animate-spin text-documenso" />
+    <Loader className="h-12 w-12 animate-spin text-shieldsign" />
 
     <p className="mt-4 text-muted-foreground">
       <Trans>Loading document...</Trans>

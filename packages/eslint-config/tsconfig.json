@@ -1,5 +1,5 @@
 {
-  "extends": "@documenso/tsconfig/base.json",
+  "extends": "@shieldsign/tsconfig/base.json",
   "compilerOptions": {
     "allowJs": true,
     "noEmit": true,

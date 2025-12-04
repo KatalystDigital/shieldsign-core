@@ -16,22 +16,22 @@ import {
 import { DateTime } from 'luxon';
 import { Link } from 'react-router';
 
-import { toFriendlyWebhookEventName } from '@documenso/lib/universal/webhook/to-friendly-webhook-event-name';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
-import { DataTable, type DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
+import { toFriendlyWebhookEventName } from '@shieldsign/lib/universal/webhook/to-friendly-webhook-event-name';
+import { trpc } from '@shieldsign/trpc/react';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Badge } from '@shieldsign/ui/primitives/badge';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { DataTable, type DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
+import { DataTablePagination } from '@shieldsign/ui/primitives/data-table-pagination';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+} from '@shieldsign/ui/primitives/dropdown-menu';
+import { Skeleton } from '@shieldsign/ui/primitives/skeleton';
+import { TableCell } from '@shieldsign/ui/primitives/table';
 
 import { WebhookCreateDialog } from '~/components/dialogs/webhook-create-dialog';
 import { WebhookDeleteDialog } from '~/components/dialogs/webhook-delete-dialog';

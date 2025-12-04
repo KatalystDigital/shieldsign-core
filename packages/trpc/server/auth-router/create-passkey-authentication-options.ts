@@ -1,4 +1,4 @@
-import { createPasskeyAuthenticationOptions } from '@documenso/lib/server-only/auth/create-passkey-authentication-options';
+import { createPasskeyAuthenticationOptions } from '@shieldsign/lib/server-only/auth/create-passkey-authentication-options';
 
 import { authenticatedProcedure } from '../trpc';
 import {

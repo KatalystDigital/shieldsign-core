@@ -4,25 +4,25 @@ import { DateTime } from 'luxon';
 import { P, match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { validateCheckboxLength } from '@documenso/lib/advanced-fields-validation/validate-checkbox';
-import { validateDropdownField } from '@documenso/lib/advanced-fields-validation/validate-dropdown';
-import { validateNumberField } from '@documenso/lib/advanced-fields-validation/validate-number';
-import { validateTextField } from '@documenso/lib/advanced-fields-validation/validate-text';
-import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import { isBase64Image } from '@documenso/lib/constants/signatures';
-import { DEFAULT_DOCUMENT_TIME_ZONE } from '@documenso/lib/constants/time-zones';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { TDocumentMeta } from '@documenso/lib/types/document-meta';
+import { validateCheckboxLength } from '@shieldsign/lib/advanced-fields-validation/validate-checkbox';
+import { validateDropdownField } from '@shieldsign/lib/advanced-fields-validation/validate-dropdown';
+import { validateNumberField } from '@shieldsign/lib/advanced-fields-validation/validate-number';
+import { validateTextField } from '@shieldsign/lib/advanced-fields-validation/validate-text';
+import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@shieldsign/lib/constants/date-formats';
+import { isBase64Image } from '@shieldsign/lib/constants/signatures';
+import { DEFAULT_DOCUMENT_TIME_ZONE } from '@shieldsign/lib/constants/time-zones';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import type { TDocumentMeta } from '@shieldsign/lib/types/document-meta';
 import {
   ZCheckboxFieldMeta,
   ZDropdownFieldMeta,
   ZNumberFieldMeta,
   ZRadioFieldMeta,
   ZTextFieldMeta,
-} from '@documenso/lib/types/field-meta';
-import { toCheckboxCustomText, toRadioCustomText } from '@documenso/lib/utils/fields';
-import type { TSignEnvelopeFieldValue } from '@documenso/trpc/server/envelope-router/sign-envelope-field.types';
-import { checkboxValidationSigns } from '@documenso/ui/primitives/document-flow/field-items-advanced-settings/constants';
+} from '@shieldsign/lib/types/field-meta';
+import { toCheckboxCustomText, toRadioCustomText } from '@shieldsign/lib/utils/fields';
+import type { TSignEnvelopeFieldValue } from '@shieldsign/trpc/server/envelope-router/sign-envelope-field.types';
+import { checkboxValidationSigns } from '@shieldsign/ui/primitives/document-flow/field-items-advanced-settings/constants';
 
 export type ExtractFieldInsertionValuesOptions = {
   fieldValue: TSignEnvelopeFieldValue;

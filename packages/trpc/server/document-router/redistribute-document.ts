@@ -1,4 +1,4 @@
-import { resendDocument } from '@documenso/lib/server-only/document/resend-document';
+import { resendDocument } from '@shieldsign/lib/server-only/document/resend-document';
 
 import { ZGenericSuccessResponse } from '../schema';
 import { authenticatedProcedure } from '../trpc';

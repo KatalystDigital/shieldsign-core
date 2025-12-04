@@ -3,15 +3,15 @@ import { useEffect, useState } from 'react';
 import { Trans } from '@lingui/react/macro';
 import { Link, redirect } from 'react-router';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
+import { getOptionalSession } from '@shieldsign/auth/server/lib/utils/get-session';
 import {
   IS_GOOGLE_SSO_ENABLED,
   IS_MICROSOFT_SSO_ENABLED,
   IS_OIDC_SSO_ENABLED,
   OIDC_PROVIDER_LABEL,
-} from '@documenso/lib/constants/auth';
-import { env } from '@documenso/lib/utils/env';
-import { isValidReturnTo, normalizeReturnTo } from '@documenso/lib/utils/is-valid-return-to';
+} from '@shieldsign/lib/constants/auth';
+import { env } from '@shieldsign/lib/utils/env';
+import { isValidReturnTo, normalizeReturnTo } from '@shieldsign/lib/utils/is-valid-return-to';
 
 import { SignInForm } from '~/components/forms/signin';
 import { appMetaTags } from '~/utils/meta';
@@ -93,7 +93,7 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
               Don't have an account?{' '}
               <Link
                 to={returnTo ? `/signup?returnTo=${encodeURIComponent(returnTo)}` : '/signup'}
-                className="text-documenso-700 duration-200 hover:opacity-70"
+                className="text-shieldsign-700 duration-200 hover:opacity-70"
               >
                 Sign up
               </Link>

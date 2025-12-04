@@ -4,11 +4,11 @@ import { Trans } from '@lingui/react/macro';
 import type { DocumentStatus } from '@prisma/client';
 import { DownloadIcon } from 'lucide-react';
 
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { isDocumentCompleted } from '@shieldsign/lib/utils/document';
+import { trpc } from '@shieldsign/trpc/react';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export type DocumentCertificateDownloadButtonProps = {
   className?: string;

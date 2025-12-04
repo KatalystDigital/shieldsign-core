@@ -1,5 +1,5 @@
-import { plainClient } from '@documenso/lib/plain/client';
-import { prisma } from '@documenso/prisma';
+import { plainClient } from '@shieldsign/lib/plain/client';
+import { prisma } from '@shieldsign/prisma';
 
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import { buildOrganisationWhereQuery } from '../../utils/organisations';

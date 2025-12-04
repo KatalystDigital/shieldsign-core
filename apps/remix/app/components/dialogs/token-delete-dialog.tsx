@@ -8,8 +8,8 @@ import type { ApiToken } from '@prisma/client';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { trpc } from '@shieldsign/trpc/react';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -18,7 +18,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -26,9 +26,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

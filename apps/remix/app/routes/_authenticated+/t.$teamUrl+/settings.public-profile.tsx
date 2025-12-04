@@ -4,17 +4,17 @@ import { useLingui } from '@lingui/react/macro';
 import { Trans } from '@lingui/react/macro';
 import { type TemplateDirectLink, TemplateType } from '@prisma/client';
 
-import { getSession } from '@documenso/auth/server/lib/utils/get-session';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { getTeamByUrl } from '@documenso/lib/server-only/team/get-team';
-import { getTeamPublicProfile } from '@documenso/lib/server-only/team/get-team-public-profile';
-import { trpc } from '@documenso/trpc/react';
-import type { FindTemplateRow } from '@documenso/trpc/server/template-router/schema';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Switch } from '@documenso/ui/primitives/switch';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { getSession } from '@shieldsign/auth/server/lib/utils/get-session';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { getTeamByUrl } from '@shieldsign/lib/server-only/team/get-team';
+import { getTeamPublicProfile } from '@shieldsign/lib/server-only/team/get-team-public-profile';
+import { trpc } from '@shieldsign/trpc/react';
+import type { FindTemplateRow } from '@shieldsign/trpc/server/template-router/schema';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Switch } from '@shieldsign/ui/primitives/switch';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { ManagePublicTemplateDialog } from '~/components/dialogs/public-profile-template-manage-dialog';
 import type { TPublicProfileFormSchema } from '~/components/forms/public-profile-form';

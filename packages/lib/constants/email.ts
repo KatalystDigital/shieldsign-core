@@ -1,14 +1,14 @@
 import { env } from '../utils/env';
 
-export const FROM_ADDRESS = env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@shielddocs.io';
-export const FROM_NAME = env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'ShieldDocs Sign';
+export const FROM_ADDRESS = env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@shieldsign.io';
+export const FROM_NAME = env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'ShieldSign';
 
-export const DOCUMENSO_INTERNAL_EMAIL = {
+export const SHIELDSIGN_INTERNAL_EMAIL = {
   name: FROM_NAME,
   address: FROM_ADDRESS,
 };
 
-export const SERVICE_USER_EMAIL = 'serviceaccount@shielddocs.io';
+export const SERVICE_USER_EMAIL = 'serviceaccount@shieldsign.io';
 
 export const EMAIL_VERIFICATION_STATE = {
   NOT_FOUND: 'NOT_FOUND',

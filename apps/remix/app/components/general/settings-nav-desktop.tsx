@@ -14,11 +14,11 @@ import {
 import { useLocation } from 'react-router';
 import { Link } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { canExecuteOrganisationAction, isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { IS_BILLING_ENABLED } from '@shieldsign/lib/constants/app';
+import { canExecuteOrganisationAction, isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
 
 export type SettingsDesktopNavProps = HTMLAttributes<HTMLDivElement>;
 

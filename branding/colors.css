@@ -1,20 +1,34 @@
-/* ShieldDocs Sign - Brand Colors
- * Use these to replace ShieldDocs Sign's default colors
+/* ShieldSign - Brand Colors
+ * Primary: #0a3b3c (deep teal)
+ * Accent: #14b8a6 (emerald/light teal)
+ * 
+ * SPDX-License-Identifier: AGPL-3.0
+ * This file is part of ShieldSign, a fork of Documenso.
  */
 
 :root {
-  /* Primary - Teal (matches ShieldDocs main app) */
-  --shielddocs-50: #f0fdfa;
-  --shielddocs-100: #ccfbf1;
-  --shielddocs-200: #99f6e4;
-  --shielddocs-300: #5eead4;
-  --shielddocs-400: #2dd4bf;
-  --shielddocs-500: #14b8a6;  /* Primary */
-  --shielddocs-600: #0d9488;  /* Primary Dark */
-  --shielddocs-700: #0f766e;
-  --shielddocs-800: #115e59;
-  --shielddocs-900: #134e4a;
-  --shielddocs-950: #042f2e;
+  /* Primary - Deep Teal */
+  --shieldsign-primary: #0a3b3c;
+  --shieldsign-primary-light: #0d4a4b;
+  --shieldsign-primary-dark: #082d2e;
+  
+  /* Accent - Emerald/Light Teal */
+  --shieldsign-accent: #14b8a6;
+  --shieldsign-accent-light: #2dd4bf;
+  --shieldsign-accent-dark: #0d9488;
+  
+  /* Extended Palette */
+  --shieldsign-50: #f0fdfa;
+  --shieldsign-100: #ccfbf1;
+  --shieldsign-200: #99f6e4;
+  --shieldsign-300: #5eead4;
+  --shieldsign-400: #2dd4bf;
+  --shieldsign-500: #14b8a6;  /* Accent */
+  --shieldsign-600: #0d9488;
+  --shieldsign-700: #0f766e;
+  --shieldsign-800: #115e59;
+  --shieldsign-900: #0a3b3c;  /* Primary */
+  --shieldsign-950: #042f2e;
 
   /* Secondary - Slate (dark theme) */
   --slate-50: #f8fafc;
@@ -30,28 +44,51 @@
   --slate-950: #020617;
 
   /* Background (Dark Theme) */
-  --background: #0d1117;
-  --background-secondary: #161b22;
-  --background-tertiary: #21262d;
+  --background: #0a3b3c;
+  --background-secondary: #0d4a4b;
+  --background-tertiary: #115e59;
   
   /* Borders */
-  --border: #30363d;
-  --border-light: #484f58;
+  --border: #0f766e;
+  --border-light: #14b8a6;
   
   /* Text */
-  --foreground: #e6edf3;
-  --foreground-muted: #7d8590;
+  --foreground: #f0fdfa;
+  --foreground-muted: #99f6e4;
   
   /* Status Colors */
   --success: #22c55e;
   --warning: #f59e0b;
   --error: #ef4444;
-  --info: #3b82f6;
+  --info: #14b8a6;
 }
 
-/* ShieldDocs Sign uses a green primary - replace with teal */
-/* Search and replace these in the codebase:
- * 
- * ShieldDocs Sign Green (#00d47f) → ShieldDocs Teal (#14b8a6)
- * ShieldDocs Sign Green Dark (#00a862) → ShieldDocs Teal Dark (#0d9488)
- */
+/* Light Theme Overrides */
+[data-theme="light"] {
+  --background: #ffffff;
+  --background-secondary: #f8fafc;
+  --background-tertiary: #f1f5f9;
+  --foreground: #0a3b3c;
+  --foreground-muted: #475569;
+  --border: #e2e8f0;
+  --border-light: #cbd5e1;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--shieldsign-primary);
+  color: var(--foreground);
+}
+
+.btn-primary:hover {
+  background-color: var(--shieldsign-primary-light);
+}
+
+.btn-accent {
+  background-color: var(--shieldsign-accent);
+  color: var(--shieldsign-950);
+}
+
+.btn-accent:hover {
+  background-color: var(--shieldsign-accent-dark);
+}

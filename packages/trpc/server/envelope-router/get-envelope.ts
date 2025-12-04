@@ -1,4 +1,4 @@
-import { getEnvelopeById } from '@documenso/lib/server-only/envelope/get-envelope-by-id';
+import { getEnvelopeById } from '@shieldsign/lib/server-only/envelope/get-envelope-by-id';
 
 import { authenticatedProcedure } from '../trpc';
 import {

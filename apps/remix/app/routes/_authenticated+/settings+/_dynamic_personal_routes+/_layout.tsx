@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 
 import { Outlet, useNavigate } from 'react-router';
 
-import { OrganisationProvider } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { TrpcProvider } from '@documenso/trpc/react';
+import { OrganisationProvider } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { TrpcProvider } from '@shieldsign/trpc/react';
 
 import { TeamProvider } from '~/providers/team';
 

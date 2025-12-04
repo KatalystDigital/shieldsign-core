@@ -8,17 +8,17 @@ import { redirect, useLoaderData } from 'react-router';
 import {
   DEFAULT_DOCUMENT_DATE_FORMAT,
   isValidDateFormat,
-} from '@documenso/lib/constants/date-formats';
-import { DocumentSignatureType } from '@documenso/lib/constants/document';
-import { isValidLanguageCode } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE } from '@documenso/lib/constants/time-zones';
-import { verifyEmbeddingPresignToken } from '@documenso/lib/server-only/embedding-presign/verify-embedding-presign-token';
-import { getTemplateById } from '@documenso/lib/server-only/template/get-template-by-id';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
-import { nanoid } from '@documenso/lib/universal/id';
-import { trpc } from '@documenso/trpc/react';
-import { Stepper } from '@documenso/ui/primitives/stepper';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/lib/constants/date-formats';
+import { DocumentSignatureType } from '@shieldsign/lib/constants/document';
+import { isValidLanguageCode } from '@shieldsign/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE } from '@shieldsign/lib/constants/time-zones';
+import { verifyEmbeddingPresignToken } from '@shieldsign/lib/server-only/embedding-presign/verify-embedding-presign-token';
+import { getTemplateById } from '@shieldsign/lib/server-only/template/get-template-by-id';
+import { ZDocumentEmailSettingsSchema } from '@shieldsign/lib/types/document-email';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { trpc } from '@shieldsign/trpc/react';
+import { Stepper } from '@shieldsign/ui/primitives/stepper';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { ConfigureDocumentProvider } from '~/components/embed/authoring/configure-document-context';
 import { ConfigureDocumentView } from '~/components/embed/authoring/configure-document-view';

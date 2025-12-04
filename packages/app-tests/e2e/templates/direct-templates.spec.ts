@@ -2,14 +2,14 @@ import { expect, test } from '@playwright/test';
 import { DocumentSigningOrder, RecipientRole } from '@prisma/client';
 import { customAlphabet } from 'nanoid';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createDocumentAuthOptions } from '@documenso/lib/utils/document-auth';
-import { mapSecondaryIdToTemplateId } from '@documenso/lib/utils/envelope';
-import { formatDirectTemplatePath } from '@documenso/lib/utils/templates';
-import { prisma } from '@documenso/prisma';
-import { seedTeam } from '@documenso/prisma/seed/teams';
-import { seedDirectTemplate, seedTemplate } from '@documenso/prisma/seed/templates';
-import { seedTestEmail, seedUser } from '@documenso/prisma/seed/users';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { createDocumentAuthOptions } from '@shieldsign/lib/utils/document-auth';
+import { mapSecondaryIdToTemplateId } from '@shieldsign/lib/utils/envelope';
+import { formatDirectTemplatePath } from '@shieldsign/lib/utils/templates';
+import { prisma } from '@shieldsign/prisma';
+import { seedTeam } from '@shieldsign/prisma/seed/teams';
+import { seedDirectTemplate, seedTemplate } from '@shieldsign/prisma/seed/templates';
+import { seedTestEmail, seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 
@@ -222,7 +222,7 @@ test('[DIRECT_TEMPLATES]: use direct template link with 1 recipient', async ({ p
   await expect(page.getByRole('heading', { name: 'General' })).toBeVisible();
 
   await page.waitForTimeout(100);
-  await page.getByPlaceholder('recipient@shielddocs.io').fill(seedTestEmail());
+  await page.getByPlaceholder('recipient@shieldsign.io').fill(seedTestEmail());
 
   await page.getByRole('button', { name: 'Continue' }).click();
 
@@ -281,7 +281,7 @@ test('[DIRECT_TEMPLATES]: V1 use direct template link with 2 recipients with nex
   await expect(page.getByRole('heading', { name: 'General' })).toBeVisible();
 
   await page.waitForTimeout(100);
-  await page.getByPlaceholder('recipient@shielddocs.io').fill(seedTestEmail());
+  await page.getByPlaceholder('recipient@shieldsign.io').fill(seedTestEmail());
 
   await page.getByRole('button', { name: 'Continue' }).click();
   await page.getByRole('button', { name: 'Complete' }).click();

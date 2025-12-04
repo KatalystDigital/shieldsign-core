@@ -6,11 +6,11 @@ import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { authClient } from '@documenso/auth/client';
-import { downloadFile } from '@documenso/lib/client-only/download-file';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@shieldsign/auth/client';
+import { downloadFile } from '@shieldsign/lib/client-only/download-file';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -20,15 +20,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { PinInput, PinInputGroup, PinInputSlot } from '@documenso/ui/primitives/pin-input';
+} from '@shieldsign/ui/primitives/form/form';
+import { PinInput, PinInputGroup, PinInputSlot } from '@shieldsign/ui/primitives/pin-input';
 
 import { RecoveryCodeList } from './recovery-code-list';
 
@@ -74,7 +74,7 @@ export const ViewRecoveryCodesDialog = () => {
       });
 
       downloadFile({
-        filename: 'documenso-2FA-recovery-codes.txt',
+        filename: 'shieldsign-2FA-recovery-codes.txt',
         data: blob,
       });
     }

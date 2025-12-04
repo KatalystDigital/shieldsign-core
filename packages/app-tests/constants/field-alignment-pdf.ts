@@ -2,8 +2,8 @@ import { FieldType } from '@prisma/client';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import type { TFieldAndMeta } from '@documenso/lib/types/field-meta';
-import { toCheckboxCustomText } from '@documenso/lib/utils/fields';
+import type { TFieldAndMeta } from '@shieldsign/lib/types/field-meta';
+import { toCheckboxCustomText } from '@shieldsign/lib/utils/fields';
 
 export type FieldTestData = TFieldAndMeta & {
   page: number;
@@ -89,7 +89,7 @@ export const ALIGNMENT_TEST_FIELDS: FieldTestData[] = [
     },
     page: 1,
     ...calculatePositionPageOne(0, 0),
-    customText: 'admin@shielddocs.io',
+    customText: 'admin@shieldsign.io',
   },
   {
     type: FieldType.EMAIL,
@@ -99,7 +99,7 @@ export const ALIGNMENT_TEST_FIELDS: FieldTestData[] = [
     },
     page: 1,
     ...calculatePositionPageOne(0, 1),
-    customText: 'admin@shielddocs.io',
+    customText: 'admin@shieldsign.io',
   },
   {
     type: FieldType.EMAIL,
@@ -110,7 +110,7 @@ export const ALIGNMENT_TEST_FIELDS: FieldTestData[] = [
     },
     page: 1,
     ...calculatePositionPageOne(0, 2),
-    customText: 'admin@shielddocs.io',
+    customText: 'admin@shieldsign.io',
   },
   /**
    * Row 2 NAME

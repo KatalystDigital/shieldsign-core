@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { Trans, useLingui } from '@lingui/react/macro';
 import type { z } from 'zod';
 
-import { generateDefaultSubscriptionClaim } from '@documenso/lib/utils/organisations-claims';
-import { trpc } from '@documenso/trpc/react';
-import type { ZCreateSubscriptionClaimRequestSchema } from '@documenso/trpc/server/admin-router/create-subscription-claim.types';
-import { Button } from '@documenso/ui/primitives/button';
+import { generateDefaultSubscriptionClaim } from '@shieldsign/lib/utils/organisations-claims';
+import { trpc } from '@shieldsign/trpc/react';
+import type { ZCreateSubscriptionClaimRequestSchema } from '@shieldsign/trpc/server/admin-router/create-subscription-claim.types';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -15,8 +15,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { SubscriptionClaimForm } from '../forms/subscription-claim-form';
 

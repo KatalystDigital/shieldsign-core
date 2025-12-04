@@ -11,22 +11,22 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { TEAM_MEMBER_ROLE_MAP } from '@documenso/lib/constants/teams-translations';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { canExecuteOrganisationAction } from '@documenso/lib/utils/organisations';
-import { canExecuteTeamAction, formatTeamUrl } from '@documenso/lib/utils/teams';
-import type { TGetOrganisationSessionResponse } from '@documenso/trpc/server/organisation-router/get-organisation-session.types';
-import { Avatar, AvatarFallback, AvatarImage } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { TEAM_MEMBER_ROLE_MAP } from '@shieldsign/lib/constants/teams-translations';
+import { formatAvatarUrl } from '@shieldsign/lib/utils/avatars';
+import { canExecuteOrganisationAction } from '@shieldsign/lib/utils/organisations';
+import { canExecuteTeamAction, formatTeamUrl } from '@shieldsign/lib/utils/teams';
+import type { TGetOrganisationSessionResponse } from '@shieldsign/trpc/server/organisation-router/get-organisation-session.types';
+import { Avatar, AvatarFallback, AvatarImage } from '@shieldsign/ui/primitives/avatar';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Card, CardContent } from '@shieldsign/ui/primitives/card';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
+} from '@shieldsign/ui/primitives/dropdown-menu';
 
 import { TeamCreateDialog } from '~/components/dialogs/team-create-dialog';
 import { TeamDeleteDialog } from '~/components/dialogs/team-delete-dialog';

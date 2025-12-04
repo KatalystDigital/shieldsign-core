@@ -2,9 +2,9 @@ import { useLingui } from '@lingui/react/macro';
 import { Trans } from '@lingui/react/macro';
 import type * as DialogPrimitive from '@radix-ui/react-dialog';
 
-import { CopyTextButton } from '@documenso/ui/components/common/copy-text-button';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { CopyTextButton } from '@shieldsign/ui/components/common/copy-text-button';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -14,10 +14,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export type OrganisationEmailDomainRecordsDialogProps = {
   trigger: React.ReactNode;

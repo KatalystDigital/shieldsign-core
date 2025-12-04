@@ -6,22 +6,22 @@ import { Trans } from '@lingui/react/macro';
 import { EditIcon, MoreHorizontalIcon, Trash2Icon } from 'lucide-react';
 import { Link } from 'react-router';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { generateEmailDomainRecords } from '@documenso/lib/utils/email-domains';
-import { trpc } from '@documenso/trpc/react';
-import type { TGetOrganisationEmailDomainResponse } from '@documenso/trpc/server/enterprise-router/get-organisation-email-domain.types';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { DataTable, type DataTableColumnDef } from '@documenso/ui/primitives/data-table';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { IS_BILLING_ENABLED } from '@shieldsign/lib/constants/app';
+import { generateEmailDomainRecords } from '@shieldsign/lib/utils/email-domains';
+import { trpc } from '@shieldsign/trpc/react';
+import type { TGetOrganisationEmailDomainResponse } from '@shieldsign/trpc/server/enterprise-router/get-organisation-email-domain.types';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { DataTable, type DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
+} from '@shieldsign/ui/primitives/dropdown-menu';
+import { SpinnerBox } from '@shieldsign/ui/primitives/spinner';
 
 import { OrganisationEmailCreateDialog } from '~/components/dialogs/organisation-email-create-dialog';
 import { OrganisationEmailDeleteDialog } from '~/components/dialogs/organisation-email-delete-dialog';

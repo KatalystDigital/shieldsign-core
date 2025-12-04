@@ -5,13 +5,13 @@ import { Trans, useLingui } from '@lingui/react/macro';
 import { MailsIcon } from 'lucide-react';
 import { Link, redirect, useSearchParams } from 'react-router';
 
-import { authClient } from '@documenso/auth/client';
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { authClient } from '@shieldsign/auth/client';
+import { getOptionalSession } from '@shieldsign/auth/server/lib/utils/get-session';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { prisma } from '@shieldsign/prisma';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Checkbox } from '@shieldsign/ui/primitives/checkbox';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { GenericErrorLayout } from '~/components/general/generic-error-layout';
 import { appMetaTags } from '~/utils/meta';
@@ -209,7 +209,7 @@ export default function OrganisationSignIn({ loaderData }: Route.ComponentProps)
 
         <div className="text-muted-foreground mt-1 flex items-center justify-center text-xs">
           <Link to="/signin">
-            <Trans>Return to ShieldDocs Sign sign in page here</Trans>
+            <Trans>Return to ShieldSign sign in page here</Trans>
           </Link>
         </div>
       </div>

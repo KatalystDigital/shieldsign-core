@@ -2,9 +2,9 @@ import { createElement } from 'react';
 
 import { msg } from '@lingui/core/macro';
 
-import { mailer } from '@documenso/email/mailer';
-import { ForgotPasswordTemplate } from '@documenso/email/templates/forgot-password';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@shieldsign/email/mailer';
+import { ForgotPasswordTemplate } from '@shieldsign/email/templates/forgot-password';
+import { prisma } from '@shieldsign/prisma';
 
 import { getI18nInstance } from '../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';
@@ -56,8 +56,8 @@ export const sendForgotPassword = async ({ userId }: SendForgotPasswordOptions) 
       name: user.name || '',
     },
     from: {
-      name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'ShieldDocs Sign',
-      address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@shielddocs.io',
+      name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'ShieldSign',
+      address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@shieldsign.io',
     },
     subject: i18n._(msg`Forgot Password?`),
     html,

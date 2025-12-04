@@ -2,36 +2,36 @@ import { DocumentDataType, EnvelopeType, SigningStatus } from '@prisma/client';
 import { tsr } from '@ts-rest/serverless/fetch';
 import { match } from 'ts-pattern';
 
-import { getServerLimits } from '@documenso/ee/server-only/limits/server';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import '@documenso/lib/constants/time-zones';
-import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { createDocumentData } from '@documenso/lib/server-only/document-data/create-document-data';
-import { updateDocumentMeta } from '@documenso/lib/server-only/document-meta/upsert-document-meta';
-import { deleteDocument } from '@documenso/lib/server-only/document/delete-document';
-import { findDocuments } from '@documenso/lib/server-only/document/find-documents';
-import { resendDocument } from '@documenso/lib/server-only/document/resend-document';
-import { sendDocument } from '@documenso/lib/server-only/document/send-document';
-import { createEnvelope } from '@documenso/lib/server-only/envelope/create-envelope';
+import { getServerLimits } from '@shieldsign/ee/server-only/limits/server';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@shieldsign/lib/constants/date-formats';
+import '@shieldsign/lib/constants/time-zones';
+import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@shieldsign/lib/constants/time-zones';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { createDocumentData } from '@shieldsign/lib/server-only/document-data/create-document-data';
+import { updateDocumentMeta } from '@shieldsign/lib/server-only/document-meta/upsert-document-meta';
+import { deleteDocument } from '@shieldsign/lib/server-only/document/delete-document';
+import { findDocuments } from '@shieldsign/lib/server-only/document/find-documents';
+import { resendDocument } from '@shieldsign/lib/server-only/document/resend-document';
+import { sendDocument } from '@shieldsign/lib/server-only/document/send-document';
+import { createEnvelope } from '@shieldsign/lib/server-only/envelope/create-envelope';
 import {
   getEnvelopeById,
   getEnvelopeWhereInput,
-} from '@documenso/lib/server-only/envelope/get-envelope-by-id';
-import { deleteDocumentField } from '@documenso/lib/server-only/field/delete-document-field';
-import { updateEnvelopeFields } from '@documenso/lib/server-only/field/update-envelope-fields';
-import { insertFormValuesInPdf } from '@documenso/lib/server-only/pdf/insert-form-values-in-pdf';
-import { deleteEnvelopeRecipient } from '@documenso/lib/server-only/recipient/delete-envelope-recipient';
-import { getRecipientsForDocument } from '@documenso/lib/server-only/recipient/get-recipients-for-document';
-import { setDocumentRecipients } from '@documenso/lib/server-only/recipient/set-document-recipients';
-import { updateEnvelopeRecipients } from '@documenso/lib/server-only/recipient/update-envelope-recipients';
-import { createDocumentFromTemplate } from '@documenso/lib/server-only/template/create-document-from-template';
-import { deleteTemplate } from '@documenso/lib/server-only/template/delete-template';
-import { findTemplates } from '@documenso/lib/server-only/template/find-templates';
-import { getTemplateById } from '@documenso/lib/server-only/template/get-template-by-id';
-import { ZRecipientAuthOptionsSchema } from '@documenso/lib/types/document-auth';
-import { extractDerivedDocumentEmailSettings } from '@documenso/lib/types/document-email';
+} from '@shieldsign/lib/server-only/envelope/get-envelope-by-id';
+import { deleteDocumentField } from '@shieldsign/lib/server-only/field/delete-document-field';
+import { updateEnvelopeFields } from '@shieldsign/lib/server-only/field/update-envelope-fields';
+import { insertFormValuesInPdf } from '@shieldsign/lib/server-only/pdf/insert-form-values-in-pdf';
+import { deleteEnvelopeRecipient } from '@shieldsign/lib/server-only/recipient/delete-envelope-recipient';
+import { getRecipientsForDocument } from '@shieldsign/lib/server-only/recipient/get-recipients-for-document';
+import { setDocumentRecipients } from '@shieldsign/lib/server-only/recipient/set-document-recipients';
+import { updateEnvelopeRecipients } from '@shieldsign/lib/server-only/recipient/update-envelope-recipients';
+import { createDocumentFromTemplate } from '@shieldsign/lib/server-only/template/create-document-from-template';
+import { deleteTemplate } from '@shieldsign/lib/server-only/template/delete-template';
+import { findTemplates } from '@shieldsign/lib/server-only/template/find-templates';
+import { getTemplateById } from '@shieldsign/lib/server-only/template/get-template-by-id';
+import { ZRecipientAuthOptionsSchema } from '@shieldsign/lib/types/document-auth';
+import { extractDerivedDocumentEmailSettings } from '@shieldsign/lib/types/document-email';
 import {
   ZCheckboxFieldMeta,
   ZDropdownFieldMeta,
@@ -39,20 +39,20 @@ import {
   ZNumberFieldMeta,
   ZRadioFieldMeta,
   ZTextFieldMeta,
-} from '@documenso/lib/types/field-meta';
-import { getFileServerSide } from '@documenso/lib/universal/upload/get-file.server';
-import { putPdfFileServerSide } from '@documenso/lib/universal/upload/put-file.server';
+} from '@shieldsign/lib/types/field-meta';
+import { getFileServerSide } from '@shieldsign/lib/universal/upload/get-file.server';
+import { putPdfFileServerSide } from '@shieldsign/lib/universal/upload/put-file.server';
 import {
   getPresignGetUrl,
   getPresignPostUrl,
-} from '@documenso/lib/universal/upload/server-actions';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
+} from '@shieldsign/lib/universal/upload/server-actions';
+import { isDocumentCompleted } from '@shieldsign/lib/utils/document';
+import { createDocumentAuditLogData } from '@shieldsign/lib/utils/document-audit-logs';
 import {
   mapSecondaryIdToDocumentId,
   mapSecondaryIdToTemplateId,
-} from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
+} from '@shieldsign/lib/utils/envelope';
+import { prisma } from '@shieldsign/prisma';
 
 import { ApiContractV1 } from './contract';
 import { authenticatedMiddleware } from './middleware/authenticated';

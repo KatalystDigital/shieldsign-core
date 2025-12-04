@@ -1,9 +1,9 @@
 import { Trans, useLingui } from '@lingui/react/macro';
 
-import { validateFields as validateInitialsFields } from '@documenso/lib/advanced-fields-validation/validate-fields';
-import { type TInitialsFieldMeta as InitialsFieldMeta } from '@documenso/lib/types/field-meta';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
+import { validateFields as validateInitialsFields } from '@shieldsign/lib/advanced-fields-validation/validate-fields';
+import { type TInitialsFieldMeta as InitialsFieldMeta } from '@shieldsign/lib/types/field-meta';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../select';
 

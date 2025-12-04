@@ -10,11 +10,11 @@ import { match } from 'ts-pattern';
 import { UAParser } from 'ua-parser-js';
 import { z } from 'zod';
 
-import { MAXIMUM_PASSKEYS } from '@documenso/lib/constants/auth';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { trpc } from '@documenso/trpc/react';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { MAXIMUM_PASSKEYS } from '@shieldsign/lib/constants/auth';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { trpc } from '@shieldsign/trpc/react';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -23,7 +23,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -31,9 +31,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export type PasskeyCreateDialogProps = {
   trigger?: React.ReactNode;

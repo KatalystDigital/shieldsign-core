@@ -12,19 +12,19 @@ import { Link, useSearchParams } from 'react-router';
 import { match } from 'ts-pattern';
 import type { z } from 'zod';
 
-import type { InternalClaimPlans } from '@documenso/ee/server-only/stripe/get-internal-claim-plans';
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { INTERNAL_CLAIM_ID } from '@documenso/lib/types/subscription';
-import { parseMessageDescriptorMacro } from '@documenso/lib/utils/i18n';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { ZCreateOrganisationRequestSchema } from '@documenso/trpc/server/organisation-router/create-organisation.types';
-import { cn } from '@documenso/ui/lib/utils';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
+import type { InternalClaimPlans } from '@shieldsign/ee/server-only/stripe/get-internal-claim-plans';
+import { useUpdateSearchParams } from '@shieldsign/lib/client-only/hooks/use-update-search-params';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { IS_BILLING_ENABLED } from '@shieldsign/lib/constants/app';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { INTERNAL_CLAIM_ID } from '@shieldsign/lib/types/subscription';
+import { parseMessageDescriptorMacro } from '@shieldsign/lib/utils/i18n';
+import { isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { trpc } from '@shieldsign/trpc/react';
+import { ZCreateOrganisationRequestSchema } from '@shieldsign/trpc/server/organisation-router/create-organisation.types';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Badge } from '@shieldsign/ui/primitives/badge';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -33,7 +33,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -41,11 +41,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { Tabs, TabsList, TabsTrigger } from '@documenso/ui/primitives/tabs';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { SpinnerBox } from '@shieldsign/ui/primitives/spinner';
+import { Tabs, TabsList, TabsTrigger } from '@shieldsign/ui/primitives/tabs';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { IndividualPersonalLayoutCheckoutButton } from '../general/billing-plans';
 
@@ -415,7 +415,7 @@ const BillingPlanForm = ({
         ))}
 
         <Link
-          to="https://documen.so/enterprise-cta"
+          to="https://shieldsign.io/enterprise-cta"
           target="_blank"
           className="bg-muted/30 flex items-center space-x-2 rounded-md border p-4"
         >
@@ -433,7 +433,7 @@ const BillingPlanForm = ({
 
       <div className="mt-6 text-center">
         <Link
-          to="https://shielddocs.io/pricing"
+          to="https://shieldsign.io/pricing"
           className="text-primary hover:text-primary/80 flex items-center justify-center gap-1 text-sm hover:underline"
           target="_blank"
         >

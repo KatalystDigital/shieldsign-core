@@ -1,9 +1,9 @@
 import { useLingui } from '@lingui/react/macro';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { trpc } from '@documenso/trpc/react';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { trpc } from '@shieldsign/trpc/react';
+import { SpinnerBox } from '@shieldsign/ui/primitives/spinner';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import {
   EmailPreferencesForm,

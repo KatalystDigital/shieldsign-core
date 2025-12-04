@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 
-import { createTeam } from '@documenso/lib/server-only/team/create-team';
-import { nanoid } from '@documenso/lib/universal/id';
-import { seedOrganisationMembers } from '@documenso/prisma/seed/organisations';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { createTeam } from '@shieldsign/lib/server-only/team/create-team';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { seedOrganisationMembers } from '@shieldsign/prisma/seed/organisations';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin, apiSignout } from '../fixtures/authentication';
 import { expectTextToBeVisible, expectTextToNotBeVisible } from '../fixtures/generic';
@@ -88,11 +88,11 @@ test('[ORGANISATIONS]: inherit members', async ({ page }) => {
     inheritMembers: false,
   });
 
-  const memberEmail = `member-${nanoid()}@test.shielddocs.io`;
-  const memberEmail2 = `member-2-${nanoid()}@test.shielddocs.io`;
-  const memberEmail3 = `member-3-${nanoid()}@test.shielddocs.io`;
-  const managerEmail = `manager-${nanoid()}@test.shielddocs.io`;
-  const adminEmail = `admin-${nanoid()}@test.shielddocs.io`;
+  const memberEmail = `member-${nanoid()}@test.shieldsign.io`;
+  const memberEmail2 = `member-2-${nanoid()}@test.shieldsign.io`;
+  const memberEmail3 = `member-3-${nanoid()}@test.shieldsign.io`;
+  const managerEmail = `manager-${nanoid()}@test.shieldsign.io`;
+  const adminEmail = `admin-${nanoid()}@test.shieldsign.io`;
   const ownerEmail = user.email;
 
   await seedOrganisationMembers({
@@ -233,16 +233,16 @@ test('[ORGANISATIONS]: manage groups and members', async ({ page }) => {
     inheritMembers: false,
   });
 
-  const memberEmail1 = `member-1-${nanoid()}@test.shielddocs.io`;
-  const memberEmail2 = `member-2-${nanoid()}@test.shielddocs.io`;
-  const memberEmail3 = `member-3-${nanoid()}@test.shielddocs.io`;
-  const memberEmail4 = `member-4-${nanoid()}@test.shielddocs.io`;
-  const memberEmail5 = `member-5-${nanoid()}@test.shielddocs.io`;
-  const memberEmail6 = `member-6-${nanoid()}@test.shielddocs.io`;
+  const memberEmail1 = `member-1-${nanoid()}@test.shieldsign.io`;
+  const memberEmail2 = `member-2-${nanoid()}@test.shieldsign.io`;
+  const memberEmail3 = `member-3-${nanoid()}@test.shieldsign.io`;
+  const memberEmail4 = `member-4-${nanoid()}@test.shieldsign.io`;
+  const memberEmail5 = `member-5-${nanoid()}@test.shieldsign.io`;
+  const memberEmail6 = `member-6-${nanoid()}@test.shieldsign.io`;
 
-  const adminEmail1 = `admin-1-${nanoid()}@test.shielddocs.io`;
-  const adminEmail2 = `admin-2-${nanoid()}@test.shielddocs.io`;
-  const adminEmail3 = `admin-3-${nanoid()}@test.shielddocs.io`;
+  const adminEmail1 = `admin-1-${nanoid()}@test.shieldsign.io`;
+  const adminEmail2 = `admin-2-${nanoid()}@test.shieldsign.io`;
+  const adminEmail3 = `admin-3-${nanoid()}@test.shieldsign.io`;
 
   const ownerEmail = user.email;
 
@@ -537,7 +537,7 @@ test('[ORGANISATIONS]: leave organisation', async ({ page }) => {
     isPersonalOrganisation: false,
   });
 
-  const memberEmail = `member-${nanoid()}@test.shielddocs.io`;
+  const memberEmail = `member-${nanoid()}@test.shieldsign.io`;
 
   await seedOrganisationMembers({
     members: [

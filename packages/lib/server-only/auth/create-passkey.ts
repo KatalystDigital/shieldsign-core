@@ -2,7 +2,7 @@ import { UserSecurityAuditLogType } from '@prisma/client';
 import { verifyRegistrationResponse } from '@simplewebauthn/server';
 import type { RegistrationResponseJSON } from '@simplewebauthn/types';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 import { MAXIMUM_PASSKEYS } from '../../constants/auth';
 import { AppError, AppErrorCode } from '../../errors/app-error';

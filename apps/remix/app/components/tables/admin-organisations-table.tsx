@@ -11,23 +11,23 @@ import {
 } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { SUBSCRIPTION_STATUS_MAP } from '@documenso/lib/constants/billing';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { trpc } from '@documenso/trpc/react';
-import { Badge } from '@documenso/ui/primitives/badge';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
+import { useUpdateSearchParams } from '@shieldsign/lib/client-only/hooks/use-update-search-params';
+import { SUBSCRIPTION_STATUS_MAP } from '@shieldsign/lib/constants/billing';
+import { ZUrlSearchParamsSchema } from '@shieldsign/lib/types/search-params';
+import { trpc } from '@shieldsign/trpc/react';
+import { Badge } from '@shieldsign/ui/primitives/badge';
+import type { DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
+import { DataTable } from '@shieldsign/ui/primitives/data-table';
+import { DataTablePagination } from '@shieldsign/ui/primitives/data-table-pagination';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+} from '@shieldsign/ui/primitives/dropdown-menu';
+import { Skeleton } from '@shieldsign/ui/primitives/skeleton';
+import { TableCell } from '@shieldsign/ui/primitives/table';
 
 type AdminOrganisationsTableOptions = {
   ownerUserId?: number;

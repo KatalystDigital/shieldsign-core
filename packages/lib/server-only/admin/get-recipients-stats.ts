@@ -1,6 +1,6 @@
 import { ReadStatus, SendStatus, SigningStatus } from '@prisma/client';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 export const getRecipientsStats = async () => {
   const results = await prisma.recipient.groupBy({

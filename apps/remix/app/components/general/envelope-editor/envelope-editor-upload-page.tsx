@@ -10,27 +10,27 @@ import { X } from 'lucide-react';
 import { ErrorCode as DropzoneErrorCode, type FileRejection } from 'react-dropzone';
 import { Link } from 'react-router';
 
-import { useLimits } from '@documenso/ee/server-only/limits/provider/client';
+import { useLimits } from '@shieldsign/ee/server-only/limits/provider/client';
 import {
   useCurrentEnvelopeEditor,
   useDebounceFunction,
-} from '@documenso/lib/client-only/providers/envelope-editor-provider';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@documenso/lib/constants/app';
-import { nanoid } from '@documenso/lib/universal/id';
-import { canEnvelopeItemsBeModified } from '@documenso/lib/utils/envelope';
-import { trpc } from '@documenso/trpc/react';
-import type { TCreateEnvelopeItemsPayload } from '@documenso/trpc/server/envelope-router/create-envelope-items.types';
-import { Button } from '@documenso/ui/primitives/button';
+} from '@shieldsign/lib/client-only/providers/envelope-editor-provider';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@shieldsign/lib/constants/app';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { canEnvelopeItemsBeModified } from '@shieldsign/lib/utils/envelope';
+import { trpc } from '@shieldsign/trpc/react';
+import type { TCreateEnvelopeItemsPayload } from '@shieldsign/trpc/server/envelope-router/create-envelope-items.types';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@documenso/ui/primitives/card';
-import { DocumentDropzone } from '@documenso/ui/primitives/document-dropzone';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/card';
+import { DocumentDropzone } from '@shieldsign/ui/primitives/document-dropzone';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { EnvelopeItemDeleteDialog } from '~/components/dialogs/envelope-item-delete-dialog';
 

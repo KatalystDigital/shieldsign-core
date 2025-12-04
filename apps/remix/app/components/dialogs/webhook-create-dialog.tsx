@@ -8,9 +8,9 @@ import type * as DialogPrimitive from '@radix-ui/react-dialog';
 import { useForm } from 'react-hook-form';
 import type { z } from 'zod';
 
-import { trpc } from '@documenso/trpc/react';
-import { ZCreateWebhookRequestSchema } from '@documenso/trpc/server/webhook-router/schema';
-import { Button } from '@documenso/ui/primitives/button';
+import { trpc } from '@shieldsign/trpc/react';
+import { ZCreateWebhookRequestSchema } from '@shieldsign/trpc/server/webhook-router/schema';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -19,7 +19,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -28,11 +28,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { PasswordInput } from '@documenso/ui/primitives/password-input';
-import { Switch } from '@documenso/ui/primitives/switch';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { PasswordInput } from '@shieldsign/ui/primitives/password-input';
+import { Switch } from '@shieldsign/ui/primitives/switch';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 
@@ -141,7 +141,7 @@ export const WebhookCreateDialog = ({ trigger, ...props }: WebhookCreateDialogPr
                       </FormControl>
 
                       <FormDescription>
-                        <Trans>The URL for ShieldDocs Sign to send webhook events to.</Trans>
+                        <Trans>The URL for ShieldSign to send webhook events to.</Trans>
                       </FormDescription>
 
                       <FormMessage />
@@ -219,7 +219,7 @@ export const WebhookCreateDialog = ({ trigger, ...props }: WebhookCreateDialogPr
                     <FormDescription>
                       <Trans>
                         A secret that will be sent to your URL so you can verify that the request
-                        has been sent by ShieldDocs Sign
+                        has been sent by ShieldSign
                       </Trans>
                       .
                     </FormDescription>

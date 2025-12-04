@@ -1,5 +1,5 @@
-import { createPasskeySigninOptions } from '@documenso/lib/server-only/auth/create-passkey-signin-options';
-import { nanoid } from '@documenso/lib/universal/id';
+import { createPasskeySigninOptions } from '@shieldsign/lib/server-only/auth/create-passkey-signin-options';
+import { nanoid } from '@shieldsign/lib/universal/id';
 
 import { procedure } from '../trpc';
 import {

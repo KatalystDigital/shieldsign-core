@@ -36,7 +36,7 @@ export const DocumentPendingEmailTemplate = ({
               ) : (
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="ShieldDocs Sign Logo"
+                  alt="ShieldSign Logo"
                   className="mb-4 h-6"
                 />
               )}

@@ -12,21 +12,21 @@ import { motion } from 'framer-motion';
 import { GripVerticalIcon, HelpCircle, Link2Icon, Plus, Trash } from 'lucide-react';
 import { useFieldArray, useForm } from 'react-hook-form';
 
-import { useAutoSave } from '@documenso/lib/client-only/hooks/use-autosave';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isTemplateRecipientEmailPlaceholder } from '@documenso/lib/constants/template';
-import { ZRecipientAuthOptionsSchema } from '@documenso/lib/types/document-auth';
-import { nanoid } from '@documenso/lib/universal/id';
-import { generateRecipientPlaceholder } from '@documenso/lib/utils/templates';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { RecipientActionAuthSelect } from '@documenso/ui/components/recipient/recipient-action-auth-select';
-import { RecipientRoleSelect } from '@documenso/ui/components/recipient/recipient-role-select';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { FormErrorMessage } from '@documenso/ui/primitives/form/form-error-message';
-import { Input } from '@documenso/ui/primitives/input';
-import { toast } from '@documenso/ui/primitives/use-toast';
+import { useAutoSave } from '@shieldsign/lib/client-only/hooks/use-autosave';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { isTemplateRecipientEmailPlaceholder } from '@shieldsign/lib/constants/template';
+import { ZRecipientAuthOptionsSchema } from '@shieldsign/lib/types/document-auth';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { generateRecipientPlaceholder } from '@shieldsign/lib/utils/templates';
+import { AnimateGenericFadeInOut } from '@shieldsign/ui/components/animate/animate-generic-fade-in-out';
+import { RecipientActionAuthSelect } from '@shieldsign/ui/components/recipient/recipient-action-auth-select';
+import { RecipientRoleSelect } from '@shieldsign/ui/components/recipient/recipient-role-select';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { FormErrorMessage } from '@shieldsign/ui/primitives/form/form-error-message';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { toast } from '@shieldsign/ui/primitives/use-toast';
 
 import {
   DocumentReadOnlyFields,

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { ZDocumentTitleSchema } from '@documenso/trpc/server/document-router/schema';
-import { cn } from '@documenso/ui/lib/utils';
+import { ZDocumentTitleSchema } from '@shieldsign/trpc/server/document-router/schema';
+import { cn } from '@shieldsign/ui/lib/utils';
 
 export type EnvelopeItemTitleInputProps = {
   value: string;

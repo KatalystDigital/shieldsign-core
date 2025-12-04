@@ -13,27 +13,27 @@ import {
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 
-import { authClient } from '@documenso/auth/client';
-import { useOptionalCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { EXTENDED_ORGANISATION_MEMBER_ROLE_MAP } from '@documenso/lib/constants/organisations-translations';
-import { EXTENDED_TEAM_MEMBER_ROLE_MAP } from '@documenso/lib/constants/teams-translations';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { isAdmin } from '@documenso/lib/utils/is-admin';
-import { canExecuteOrganisationAction } from '@documenso/lib/utils/organisations';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { canExecuteTeamAction } from '@documenso/lib/utils/teams';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { LanguageSwitcherDialog } from '@documenso/ui/components/common/language-switcher-dialog';
-import { cn } from '@documenso/ui/lib/utils';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@shieldsign/auth/client';
+import { useOptionalCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { EXTENDED_ORGANISATION_MEMBER_ROLE_MAP } from '@shieldsign/lib/constants/organisations-translations';
+import { EXTENDED_TEAM_MEMBER_ROLE_MAP } from '@shieldsign/lib/constants/teams-translations';
+import { formatAvatarUrl } from '@shieldsign/lib/utils/avatars';
+import { isAdmin } from '@shieldsign/lib/utils/is-admin';
+import { canExecuteOrganisationAction } from '@shieldsign/lib/utils/organisations';
+import { extractInitials } from '@shieldsign/lib/utils/recipient-formatter';
+import { canExecuteTeamAction } from '@shieldsign/lib/utils/teams';
+import { AnimateGenericFadeInOut } from '@shieldsign/ui/components/animate/animate-generic-fade-in-out';
+import { LanguageSwitcherDialog } from '@shieldsign/ui/components/common/language-switcher-dialog';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { AvatarWithText } from '@shieldsign/ui/primitives/avatar';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
+} from '@shieldsign/ui/primitives/dropdown-menu';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 

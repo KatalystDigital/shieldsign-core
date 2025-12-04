@@ -1,11 +1,11 @@
 import { FieldType, ReadStatus, SigningStatus } from '@prisma/client';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getDocumentByToken } from '@documenso/lib/server-only/document/get-document-by-token';
-import { signFieldWithToken } from '@documenso/lib/server-only/field/sign-field-with-token';
-import { getRecipientByToken } from '@documenso/lib/server-only/recipient/get-recipient-by-token';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { prisma } from '@documenso/prisma';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { getDocumentByToken } from '@shieldsign/lib/server-only/document/get-document-by-token';
+import { signFieldWithToken } from '@shieldsign/lib/server-only/field/sign-field-with-token';
+import { getRecipientByToken } from '@shieldsign/lib/server-only/recipient/get-recipient-by-token';
+import { extractDocumentAuthMethods } from '@shieldsign/lib/utils/document-auth';
+import { prisma } from '@shieldsign/prisma';
 
 import { procedure } from '../trpc';
 import {

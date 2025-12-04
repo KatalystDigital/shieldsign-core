@@ -12,19 +12,19 @@ import { nanoid } from 'nanoid';
 import type { Control } from 'react-hook-form';
 import { useFieldArray, useFormContext, useFormState } from 'react-hook-form';
 
-import { RecipientRoleSelect } from '@documenso/ui/components/recipient/recipient-role-select';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+import { RecipientRoleSelect } from '@shieldsign/ui/components/recipient/recipient-role-select';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Checkbox } from '@shieldsign/ui/primitives/checkbox';
 import {
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
 
 import { useConfigureDocument } from './configure-document-context';
 import type { TConfigureEmbedFormSchema } from './configure-document-view.types';

@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
-import { seedPendingDocument } from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { seedPendingDocument } from '@shieldsign/prisma/seed/documents';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 

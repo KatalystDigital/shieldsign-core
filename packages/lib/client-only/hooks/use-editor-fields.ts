@@ -6,8 +6,8 @@ import { FieldType } from '@prisma/client';
 import { useFieldArray, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { ZFieldMetaSchema } from '@documenso/lib/types/field-meta';
-import { nanoid } from '@documenso/lib/universal/id';
+import { ZFieldMetaSchema } from '@shieldsign/lib/types/field-meta';
+import { nanoid } from '@shieldsign/lib/universal/id';
 
 import type { TEnvelope } from '../../types/envelope';
 

@@ -1,11 +1,11 @@
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { createFolder } from '@documenso/lib/server-only/folder/create-folder';
-import { deleteFolder } from '@documenso/lib/server-only/folder/delete-folder';
-import { findFolders } from '@documenso/lib/server-only/folder/find-folders';
-import { findFoldersInternal } from '@documenso/lib/server-only/folder/find-folders-internal';
-import { getFolderBreadcrumbs } from '@documenso/lib/server-only/folder/get-folder-breadcrumbs';
-import { getFolderById } from '@documenso/lib/server-only/folder/get-folder-by-id';
-import { updateFolder } from '@documenso/lib/server-only/folder/update-folder';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { createFolder } from '@shieldsign/lib/server-only/folder/create-folder';
+import { deleteFolder } from '@shieldsign/lib/server-only/folder/delete-folder';
+import { findFolders } from '@shieldsign/lib/server-only/folder/find-folders';
+import { findFoldersInternal } from '@shieldsign/lib/server-only/folder/find-folders-internal';
+import { getFolderBreadcrumbs } from '@shieldsign/lib/server-only/folder/get-folder-breadcrumbs';
+import { getFolderById } from '@shieldsign/lib/server-only/folder/get-folder-by-id';
+import { updateFolder } from '@shieldsign/lib/server-only/folder/update-folder';
 
 import { ZGenericSuccessResponse, ZSuccessResponseSchema } from '../schema';
 import { authenticatedProcedure, router } from '../trpc';

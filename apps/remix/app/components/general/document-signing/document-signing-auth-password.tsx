@@ -5,11 +5,11 @@ import { Trans, useLingui } from '@lingui/react/macro';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { AppError } from '@documenso/lib/errors/app-error';
-import { DocumentAuth, type TRecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { DialogFooter } from '@documenso/ui/primitives/dialog';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { DocumentAuth, type TRecipientActionAuth } from '@shieldsign/lib/types/document-auth';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { DialogFooter } from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -17,8 +17,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 

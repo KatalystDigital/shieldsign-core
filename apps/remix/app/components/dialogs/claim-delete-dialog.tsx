@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import { Trans, useLingui } from '@lingui/react/macro';
 
-import { trpc } from '@documenso/trpc/react';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { trpc } from '@shieldsign/trpc/react';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -13,8 +13,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export type ClaimDeleteDialogProps = {
   claimId: string;

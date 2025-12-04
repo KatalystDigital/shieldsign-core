@@ -1,10 +1,10 @@
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { DOCUMENSO_ENCRYPTION_KEY } from '@documenso/lib/constants/crypto';
-import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/organisations';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { symmetricEncrypt } from '@documenso/lib/universal/crypto';
-import { buildOrganisationWhereQuery } from '@documenso/lib/utils/organisations';
-import { prisma } from '@documenso/prisma';
+import { IS_BILLING_ENABLED } from '@shieldsign/lib/constants/app';
+import { SHIELDSIGN_ENCRYPTION_KEY } from '@shieldsign/lib/constants/crypto';
+import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@shieldsign/lib/constants/organisations';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { symmetricEncrypt } from '@shieldsign/lib/universal/crypto';
+import { buildOrganisationWhereQuery } from '@shieldsign/lib/utils/organisations';
+import { prisma } from '@shieldsign/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {
@@ -80,10 +80,10 @@ export const updateOrganisationAuthenticationPortalRoute = authenticatedProcedur
 
     // Encrypt the secret if it is provided.
     if (clientSecret) {
-      const encryptionKey = DOCUMENSO_ENCRYPTION_KEY;
+      const encryptionKey = SHIELDSIGN_ENCRYPTION_KEY;
 
       if (!encryptionKey) {
-        throw new Error('Missing DOCUMENSO_ENCRYPTION_KEY');
+        throw new Error('Missing SHIELDSIGN_ENCRYPTION_KEY');
       }
 
       encryptedClientSecret = symmetricEncrypt({

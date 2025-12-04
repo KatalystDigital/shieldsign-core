@@ -1,7 +1,7 @@
 import { compare, hash } from '@node-rs/bcrypt';
 import { UserSecurityAuditLogType } from '@prisma/client';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 import { SALT_ROUNDS } from '../../constants/auth';
 import { AppError, AppErrorCode } from '../../errors/app-error';

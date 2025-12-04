@@ -1,10 +1,10 @@
 import type { Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 
-import { getTemplateById } from '@documenso/lib/server-only/template/get-template-by-id';
-import { mapSecondaryIdToTemplateId } from '@documenso/lib/utils/envelope';
-import { seedBlankTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { getTemplateById } from '@shieldsign/lib/server-only/template/get-template-by-id';
+import { mapSecondaryIdToTemplateId } from '@shieldsign/lib/utils/envelope';
+import { seedBlankTemplate } from '@shieldsign/prisma/seed/templates';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 
@@ -209,7 +209,7 @@ test.describe('AutoSave Settings Step - Templates', () => {
   test('should autosave the redirect URL change', async ({ page }) => {
     const { user, template, team } = await setupTemplate(page);
 
-    const newRedirectUrl = 'https://shielddocs.io/test/';
+    const newRedirectUrl = 'https://shieldsign.io/test/';
 
     await page.getByRole('button', { name: 'Advanced Options' }).click();
 

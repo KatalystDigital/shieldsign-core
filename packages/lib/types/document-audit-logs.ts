@@ -220,11 +220,19 @@ export const ZDocumentAuditLogEventEmailSentSchema = z.object({
 
 /**
  * Event: Document completed.
+ *
+ * ShieldSign Enhancement: Added documentHash (SHA-256) for compliance with
+ * ESIGN Act, UETA, and eIDAS SES requirements. The hash is calculated from
+ * the final signed PDF document and can be used to verify document integrity.
  */
 export const ZDocumentAuditLogEventDocumentCompletedSchema = z.object({
   type: z.literal(DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_COMPLETED),
   data: z.object({
     transactionId: z.string(),
+    /** SHA-256 hash of the final signed PDF document for integrity verification */
+    documentHash: z.string().optional(),
+    /** Algorithm used for hashing (default: SHA-256) */
+    hashAlgorithm: z.string().optional(),
   }),
 });
 

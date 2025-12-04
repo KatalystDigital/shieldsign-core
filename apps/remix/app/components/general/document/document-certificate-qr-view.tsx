@@ -8,11 +8,11 @@ import { DateTime } from 'luxon';
 import {
   EnvelopeRenderProvider,
   useCurrentEnvelopeRender,
-} from '@documenso/lib/client-only/providers/envelope-render-provider';
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
-import PDFViewerKonvaLazy from '@documenso/ui/components/pdf-viewer/pdf-viewer-konva-lazy';
-import { Button } from '@documenso/ui/primitives/button';
+} from '@shieldsign/lib/client-only/providers/envelope-render-provider';
+import { formatDocumentsPath } from '@shieldsign/lib/utils/teams';
+import { trpc } from '@shieldsign/trpc/react';
+import PDFViewerKonvaLazy from '@shieldsign/ui/components/pdf-viewer/pdf-viewer-konva-lazy';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -20,8 +20,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
-import { PDFViewerLazy } from '@documenso/ui/primitives/pdf-viewer/lazy';
+} from '@shieldsign/ui/primitives/dialog';
+import { PDFViewerLazy } from '@shieldsign/ui/primitives/pdf-viewer/lazy';
 
 import { EnvelopeDownloadDialog } from '~/components/dialogs/envelope-download-dialog';
 
@@ -81,7 +81,7 @@ export const DocumentCertificateQRView = ({
 
               <DialogDescription>
                 <Trans>
-                  This document is available in your ShieldDocs Sign account. You can view more details,
+                  This document is available in your ShieldSign account. You can view more details,
                   recipients, and audit logs there.
                 </Trans>
               </DialogDescription>

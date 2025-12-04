@@ -6,19 +6,19 @@ import { Trans } from '@lingui/react/macro';
 import { useSearchParams } from 'react-router';
 import { Link } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { trpc } from '@documenso/trpc/react';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+import { useUpdateSearchParams } from '@shieldsign/lib/client-only/hooks/use-update-search-params';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { ZUrlSearchParamsSchema } from '@shieldsign/lib/types/search-params';
+import { formatAvatarUrl } from '@shieldsign/lib/utils/avatars';
+import { trpc } from '@shieldsign/trpc/react';
+import { AvatarWithText } from '@shieldsign/ui/primitives/avatar';
+import { Button } from '@shieldsign/ui/primitives/button';
+import type { DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
+import { DataTable } from '@shieldsign/ui/primitives/data-table';
+import { DataTablePagination } from '@shieldsign/ui/primitives/data-table-pagination';
+import { Skeleton } from '@shieldsign/ui/primitives/skeleton';
+import { TableCell } from '@shieldsign/ui/primitives/table';
 
 import { TeamDeleteDialog } from '../dialogs/team-delete-dialog';
 

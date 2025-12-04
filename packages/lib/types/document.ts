@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { DocumentDataSchema } from '@documenso/prisma/generated/zod/modelSchema/DocumentDataSchema';
-import { DocumentMetaSchema } from '@documenso/prisma/generated/zod/modelSchema/DocumentMetaSchema';
-import EnvelopeItemSchema from '@documenso/prisma/generated/zod/modelSchema/EnvelopeItemSchema';
-import { FolderSchema } from '@documenso/prisma/generated/zod/modelSchema/FolderSchema';
-import { TeamSchema } from '@documenso/prisma/generated/zod/modelSchema/TeamSchema';
-import { UserSchema } from '@documenso/prisma/generated/zod/modelSchema/UserSchema';
-import { LegacyDocumentSchema } from '@documenso/prisma/types/document-legacy-schema';
+import { DocumentDataSchema } from '@shieldsign/prisma/generated/zod/modelSchema/DocumentDataSchema';
+import { DocumentMetaSchema } from '@shieldsign/prisma/generated/zod/modelSchema/DocumentMetaSchema';
+import EnvelopeItemSchema from '@shieldsign/prisma/generated/zod/modelSchema/EnvelopeItemSchema';
+import { FolderSchema } from '@shieldsign/prisma/generated/zod/modelSchema/FolderSchema';
+import { TeamSchema } from '@shieldsign/prisma/generated/zod/modelSchema/TeamSchema';
+import { UserSchema } from '@shieldsign/prisma/generated/zod/modelSchema/UserSchema';
+import { LegacyDocumentSchema } from '@shieldsign/prisma/types/document-legacy-schema';
 
 import { ZFieldSchema } from './field';
 import { ZRecipientLiteSchema } from './recipient';

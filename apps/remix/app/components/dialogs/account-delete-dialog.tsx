@@ -4,11 +4,11 @@ import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 
-import { authClient } from '@documenso/auth/client';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { trpc } from '@documenso/trpc/react';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@shieldsign/auth/client';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { trpc } from '@shieldsign/trpc/react';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -17,10 +17,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export type AccountDeleteDialogProps = {
   className?: string;
@@ -109,7 +109,7 @@ export const AccountDeleteDialog = ({ className }: AccountDeleteDialogProps) => 
 
                 <DialogDescription>
                   <Trans>
-                    ShieldDocs Sign will delete{' '}
+                    ShieldSign will delete{' '}
                     <span className="font-semibold">all of your documents</span>, along with all of
                     your completed documents, signatures, and all other resources belonging to your
                     Account.

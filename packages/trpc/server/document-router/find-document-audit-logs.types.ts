@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-import { ZDocumentAuditLogSchema } from '@documenso/lib/types/document-audit-logs';
-import { ZFindResultResponse, ZFindSearchParamsSchema } from '@documenso/lib/types/search-params';
+import { ZDocumentAuditLogSchema } from '@shieldsign/lib/types/document-audit-logs';
+import { ZFindResultResponse, ZFindSearchParamsSchema } from '@shieldsign/lib/types/search-params';
 
 export const ZFindDocumentAuditLogsRequestSchema = ZFindSearchParamsSchema.extend({
   documentId: z.number().min(1),

@@ -1,5 +1,5 @@
-import { ORGANISATION_ACCOUNT_LINK_VERIFICATION_TOKEN_IDENTIFIER } from '@documenso/lib/constants/organisations';
-import { prisma } from '@documenso/prisma';
+import { ORGANISATION_ACCOUNT_LINK_VERIFICATION_TOKEN_IDENTIFIER } from '@shieldsign/lib/constants/organisations';
+import { prisma } from '@shieldsign/prisma';
 
 import { procedure } from '../trpc';
 import {

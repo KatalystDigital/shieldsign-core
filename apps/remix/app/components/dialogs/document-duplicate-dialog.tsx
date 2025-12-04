@@ -3,18 +3,18 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { useNavigate } from 'react-router';
 
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { formatDocumentsPath } from '@shieldsign/lib/utils/teams';
+import { trpc as trpcReact } from '@shieldsign/trpc/react';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
-import { PDFViewerLazy } from '@documenso/ui/primitives/pdf-viewer/lazy';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { PDFViewerLazy } from '@shieldsign/ui/primitives/pdf-viewer/lazy';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

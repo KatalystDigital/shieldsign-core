@@ -1,7 +1,7 @@
 import type { SubscriptionClaim } from '@prisma/client';
 import { z } from 'zod';
 
-import { ZOrganisationNameSchema } from '@documenso/trpc/server/organisation-router/create-organisation.types';
+import { ZOrganisationNameSchema } from '@shieldsign/trpc/server/organisation-router/create-organisation.types';
 
 /**
  * README:
@@ -9,7 +9,7 @@ import { ZOrganisationNameSchema } from '@documenso/trpc/server/organisation-rou
  */
 export const ZClaimFlagsSchema = z.object({
   /**
-   * Allows disabling of ShieldDocs Sign branding for:
+   * Allows disabling of ShieldSign branding for:
    * - Certificates
    * - Emails
    * - Other?
@@ -54,7 +54,7 @@ export const SUBSCRIPTION_CLAIM_FEATURE_FLAGS: Record<
   },
   hidePoweredBy: {
     key: 'hidePoweredBy',
-    label: 'Hide ShieldDocs Sign branding by',
+    label: 'Hide ShieldSign branding by',
   },
   emailDomains: {
     key: 'emailDomains',

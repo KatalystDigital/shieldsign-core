@@ -1,9 +1,9 @@
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getEnvelopeWhereInput } from '@documenso/lib/server-only/envelope/get-envelope-by-id';
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { canEnvelopeItemsBeModified } from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { getEnvelopeWhereInput } from '@shieldsign/lib/server-only/envelope/get-envelope-by-id';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@shieldsign/lib/types/document-audit-logs';
+import { createDocumentAuditLogData } from '@shieldsign/lib/utils/document-audit-logs';
+import { canEnvelopeItemsBeModified } from '@shieldsign/lib/utils/envelope';
+import { prisma } from '@shieldsign/prisma';
 
 import { ZGenericSuccessResponse } from '../schema';
 import { authenticatedProcedure } from '../trpc';

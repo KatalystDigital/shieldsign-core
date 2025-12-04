@@ -9,14 +9,14 @@ import { History } from 'lucide-react';
 import { useForm, useWatch } from 'react-hook-form';
 import * as z from 'zod';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { getRecipientType } from '@documenso/lib/client-only/recipient-type';
-import { recipientAbbreviation } from '@documenso/lib/utils/recipient-formatter';
-import type { Document } from '@documenso/prisma/types/document-legacy-schema';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { getRecipientType } from '@shieldsign/lib/client-only/recipient-type';
+import { recipientAbbreviation } from '@shieldsign/lib/utils/recipient-formatter';
+import type { Document } from '@shieldsign/prisma/types/document-legacy-schema';
+import { trpc as trpcReact } from '@shieldsign/trpc/react';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Checkbox } from '@shieldsign/ui/primitives/checkbox';
 import {
   Dialog,
   DialogClose,
@@ -25,16 +25,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { DropdownMenuItem } from '@documenso/ui/primitives/dropdown-menu';
+} from '@shieldsign/ui/primitives/dialog';
+import { DropdownMenuItem } from '@shieldsign/ui/primitives/dropdown-menu';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-} from '@documenso/ui/primitives/form/form';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

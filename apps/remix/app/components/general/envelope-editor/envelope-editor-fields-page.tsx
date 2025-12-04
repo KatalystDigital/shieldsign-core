@@ -10,9 +10,9 @@ import { Link, useSearchParams } from 'react-router';
 import { isDeepEqual } from 'remeda';
 import { match } from 'ts-pattern';
 
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
-import { useCurrentEnvelopeRender } from '@documenso/lib/client-only/providers/envelope-render-provider';
-import type { NormalizedFieldWithContext } from '@documenso/lib/server-only/ai/envelope/detect-fields/types';
+import { useCurrentEnvelopeEditor } from '@shieldsign/lib/client-only/providers/envelope-editor-provider';
+import { useCurrentEnvelopeRender } from '@shieldsign/lib/client-only/providers/envelope-render-provider';
+import type { NormalizedFieldWithContext } from '@shieldsign/lib/server-only/ai/envelope/detect-fields/types';
 import {
   FIELD_META_DEFAULT_VALUES,
   type TCheckboxFieldMeta,
@@ -26,13 +26,13 @@ import {
   type TRadioFieldMeta,
   type TSignatureFieldMeta,
   type TTextFieldMeta,
-} from '@documenso/lib/types/field-meta';
-import { canRecipientFieldsBeModified } from '@documenso/lib/utils/recipients';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import PDFViewerKonvaLazy from '@documenso/ui/components/pdf-viewer/pdf-viewer-konva-lazy';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { Separator } from '@documenso/ui/primitives/separator';
+} from '@shieldsign/lib/types/field-meta';
+import { canRecipientFieldsBeModified } from '@shieldsign/lib/utils/recipients';
+import { AnimateGenericFadeInOut } from '@shieldsign/ui/components/animate/animate-generic-fade-in-out';
+import PDFViewerKonvaLazy from '@shieldsign/ui/components/pdf-viewer/pdf-viewer-konva-lazy';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Separator } from '@shieldsign/ui/primitives/separator';
 
 import { AiFieldDetectionDialog } from '~/components/dialogs/ai-field-detection-dialog';
 import { EditorFieldCheckboxForm } from '~/components/forms/editor/editor-field-checkbox-form';

@@ -10,13 +10,13 @@ import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 import type { z } from 'zod';
 
-import { useCopyToClipboard } from '@documenso/lib/client-only/hooks/use-copy-to-clipboard';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { trpc } from '@documenso/trpc/react';
-import { ZCreateApiTokenRequestSchema } from '@documenso/trpc/server/api-token-router/create-api-token.types';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
+import { useCopyToClipboard } from '@shieldsign/lib/client-only/hooks/use-copy-to-clipboard';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { trpc } from '@shieldsign/trpc/react';
+import { ZCreateApiTokenRequestSchema } from '@shieldsign/trpc/server/api-token-router/create-api-token.types';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Card, CardContent } from '@shieldsign/ui/primitives/card';
 import {
   Form,
   FormControl,
@@ -25,17 +25,17 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Switch } from '@documenso/ui/primitives/switch';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/select';
+import { Switch } from '@shieldsign/ui/primitives/switch';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

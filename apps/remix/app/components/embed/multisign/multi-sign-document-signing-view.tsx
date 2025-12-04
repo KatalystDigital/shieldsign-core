@@ -7,23 +7,23 @@ import { DocumentStatus, FieldType, SigningStatus } from '@prisma/client';
 import { Loader, LucideChevronDown, LucideChevronUp, X } from 'lucide-react';
 import { P, match } from 'ts-pattern';
 
-import { PDF_VIEWER_PAGE_SELECTOR } from '@documenso/lib/constants/pdf-viewer';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { trpc } from '@documenso/trpc/react';
+import { PDF_VIEWER_PAGE_SELECTOR } from '@shieldsign/lib/constants/pdf-viewer';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { trpc } from '@shieldsign/trpc/react';
 import type {
   TRemovedSignedFieldWithTokenMutationSchema,
   TSignFieldWithTokenMutationSchema,
-} from '@documenso/trpc/server/field-router/schema';
-import { DocumentReadOnlyFields } from '@documenso/ui/components/document/document-read-only-fields';
-import { FieldToolTip } from '@documenso/ui/components/field/field-tooltip';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { ElementVisible } from '@documenso/ui/primitives/element-visible';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { PDFViewerLazy } from '@documenso/ui/primitives/pdf-viewer/lazy';
-import { SignaturePadDialog } from '@documenso/ui/primitives/signature-pad/signature-pad-dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/trpc/server/field-router/schema';
+import { DocumentReadOnlyFields } from '@shieldsign/ui/components/document/document-read-only-fields';
+import { FieldToolTip } from '@shieldsign/ui/components/field/field-tooltip';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { ElementVisible } from '@shieldsign/ui/primitives/element-visible';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { PDFViewerLazy } from '@shieldsign/ui/primitives/pdf-viewer/lazy';
+import { SignaturePadDialog } from '@shieldsign/ui/primitives/signature-pad/signature-pad-dialog';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useRequiredDocumentSigningContext } from '../../general/document-signing/document-signing-provider';
 import { DocumentSigningRejectDialog } from '../../general/document-signing/document-signing-reject-dialog';

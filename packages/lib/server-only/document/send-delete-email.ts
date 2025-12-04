@@ -2,9 +2,9 @@ import { createElement } from 'react';
 
 import { msg } from '@lingui/core/macro';
 
-import { mailer } from '@documenso/email/mailer';
-import { DocumentSuperDeleteEmailTemplate } from '@documenso/email/templates/document-super-delete';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@shieldsign/email/mailer';
+import { DocumentSuperDeleteEmailTemplate } from '@shieldsign/email/templates/document-super-delete';
+import { prisma } from '@shieldsign/prisma';
 
 import { getI18nInstance } from '../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';

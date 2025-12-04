@@ -1,6 +1,6 @@
-# ShieldDocs Sign - Azure DevOps / GitHub Actions CI/CD Pipeline
+# ShieldSign - Azure DevOps / GitHub Actions CI/CD Pipeline
 
-name: ShieldDocs Sign CI/CD
+name: ShieldSign CI/CD
 
 on:
   push:
@@ -65,8 +65,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_WEBAPP_URL: https://sign.shielddocs.io
-          NEXT_PUBLIC_MARKETING_URL: https://shielddocs.io
+          NEXT_PUBLIC_WEBAPP_URL: https://sign.shieldsign.io
+          NEXT_PUBLIC_MARKETING_URL: https://shieldsign.io
 
   # ============================================
   # Docker Build & Push
@@ -108,8 +108,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            NEXT_PUBLIC_WEBAPP_URL=https://sign.shielddocs.io
-            NEXT_PUBLIC_MARKETING_URL=https://shielddocs.io
+            NEXT_PUBLIC_WEBAPP_URL=https://sign.shieldsign.io
+            NEXT_PUBLIC_MARKETING_URL=https://shieldsign.io
 
   # ============================================
   # Deploy to Azure (Production)
@@ -130,6 +130,6 @@ jobs:
       - name: Deploy to Azure Container Apps
         uses: azure/container-apps-deploy-action@v1
         with:
-          containerAppName: shielddocs-sign
-          resourceGroup: shielddocs-rg
+          containerAppName: shieldsign-sign
+          resourceGroup: shieldsign-rg
           imageToDeploy: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest

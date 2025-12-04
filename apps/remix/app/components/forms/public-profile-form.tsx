@@ -11,17 +11,17 @@ import { CheckSquareIcon, CopyIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import type { z } from 'zod';
 
-import { useCopyToClipboard } from '@documenso/lib/client-only/hooks/use-copy-to-clipboard';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { formatUserProfilePath } from '@documenso/lib/utils/public-profiles';
+import { useCopyToClipboard } from '@shieldsign/lib/client-only/hooks/use-copy-to-clipboard';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { formatUserProfilePath } from '@shieldsign/lib/utils/public-profiles';
 import {
   MAX_PROFILE_BIO_LENGTH,
   ZUpdateTeamRequestSchema,
-} from '@documenso/trpc/server/team-router/update-team.types';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+} from '@shieldsign/trpc/server/team-router/update-team.types';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -29,10 +29,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { Textarea } from '@documenso/ui/primitives/textarea';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Textarea } from '@shieldsign/ui/primitives/textarea';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

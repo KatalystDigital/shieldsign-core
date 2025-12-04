@@ -6,10 +6,10 @@ import { Trans } from '@lingui/react/macro';
 import { DocumentStatus } from '@prisma/client';
 import { P, match } from 'ts-pattern';
 
-import { useLimits } from '@documenso/ee/server-only/limits/provider/client';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { useLimits } from '@shieldsign/ee/server-only/limits/provider/client';
+import { trpc as trpcReact } from '@shieldsign/trpc/react';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -17,9 +17,9 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
-import { Input } from '@documenso/ui/primitives/input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 type DocumentDeleteDialogProps = {
   id: number;

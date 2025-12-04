@@ -11,8 +11,8 @@ import { renderSVG } from 'uqr';
 import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
 import { APP_I18N_OPTIONS, ZSupportedLanguageCodeSchema } from '@documenso/lib/constants/i18n';
 import {
-  RECIPIENT_ROLES_DESCRIPTION,
-  RECIPIENT_ROLE_SIGNING_REASONS,
+    RECIPIENT_ROLES_DESCRIPTION,
+    RECIPIENT_ROLE_SIGNING_REASONS,
 } from '@documenso/lib/constants/recipient-roles';
 import { unsafeGetEntireEnvelope } from '@documenso/lib/server-only/admin/get-entire-document';
 import { decryptSecondaryData } from '@documenso/lib/server-only/crypto/decrypt';
@@ -24,12 +24,12 @@ import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
 import { getTranslations } from '@documenso/lib/utils/i18n';
 import { Card, CardContent } from '@documenso/ui/primitives/card';
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
 } from '@documenso/ui/primitives/table';
 
 import { BrandingLogo } from '~/components/general/branding-logo';
@@ -397,6 +397,26 @@ export default function SigningCertificate({ loaderData }: Route.ComponentProps)
             <BrandingLogo className="max-h-6 print:max-h-4" />
           </div>
         </div>
+      )}
+
+      {/* ShieldSign Enhancement: Document Integrity Section */}
+      {auditLogs.DOCUMENT_COMPLETED?.[0]?.data?.documentHash && (
+        <Card className="mt-4">
+          <CardContent className="p-4">
+            <h3 className="mb-2 font-semibold">{_(msg`Document Integrity`)}</h3>
+            <p className="text-muted-foreground text-sm print:text-xs">
+              <span className="font-medium">{_(msg`SHA-256 Hash`)}:</span>{' '}
+              <span className="block break-all font-mono text-xs">
+                {auditLogs.DOCUMENT_COMPLETED[0].data.documentHash}
+              </span>
+            </p>
+            <p className="text-muted-foreground mt-2 text-xs">
+              {_(
+                msg`This cryptographic hash can be used to verify the document has not been altered since completion.`,
+              )}
+            </p>
+          </CardContent>
+        </Card>
       )}
     </div>
   );

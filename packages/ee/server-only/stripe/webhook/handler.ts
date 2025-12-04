@@ -1,9 +1,9 @@
 import { match } from 'ts-pattern';
 
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import type { Stripe } from '@documenso/lib/server-only/stripe';
-import { stripe } from '@documenso/lib/server-only/stripe';
-import { env } from '@documenso/lib/utils/env';
+import { IS_BILLING_ENABLED } from '@shieldsign/lib/constants/app';
+import type { Stripe } from '@shieldsign/lib/server-only/stripe';
+import { stripe } from '@shieldsign/lib/server-only/stripe';
+import { env } from '@shieldsign/lib/utils/env';
 
 import { onSubscriptionCreated } from './on-subscription-created';
 import { onSubscriptionDeleted } from './on-subscription-deleted';

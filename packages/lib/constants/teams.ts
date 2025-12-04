@@ -80,7 +80,7 @@ export const PROTECTED_TEAM_URLS = [
   'criminal',
   'dashboard',
   'docs',
-  'documenso',
+  'shieldsign',
   'documentation',
   'document',
   'documents',

@@ -1,17 +1,17 @@
 import { expect, test } from '@playwright/test';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import type { TCheckboxFieldMeta, TRadioFieldMeta } from '@documenso/lib/types/field-meta';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { createApiToken } from '@shieldsign/lib/server-only/public-api/create-api-token';
+import type { TCheckboxFieldMeta, TRadioFieldMeta } from '@shieldsign/lib/types/field-meta';
 import {
   mapDocumentIdToSecondaryId,
   mapSecondaryIdToDocumentId,
   mapSecondaryIdToTemplateId,
-} from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
-import { FieldType, RecipientRole } from '@documenso/prisma/client';
-import { seedBlankTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
+} from '@shieldsign/lib/utils/envelope';
+import { prisma } from '@shieldsign/prisma';
+import { FieldType, RecipientRole } from '@shieldsign/prisma/client';
+import { seedBlankTemplate } from '@shieldsign/prisma/seed/templates';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../../fixtures/authentication';
 

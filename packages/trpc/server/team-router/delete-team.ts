@@ -1,4 +1,4 @@
-import { deleteTeam } from '@documenso/lib/server-only/team/delete-team';
+import { deleteTeam } from '@shieldsign/lib/server-only/team/delete-team';
 
 import { authenticatedProcedure } from '../trpc';
 import { ZDeleteTeamRequestSchema, ZDeleteTeamResponseSchema } from './delete-team.types';

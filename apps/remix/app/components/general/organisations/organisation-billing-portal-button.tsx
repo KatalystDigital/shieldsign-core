@@ -2,13 +2,13 @@ import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { canExecuteOrganisationAction } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { canExecuteOrganisationAction } from '@shieldsign/lib/utils/organisations';
+import { trpc } from '@shieldsign/trpc/react';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export type OrganisationBillingPortalButtonProps = {
   buttonProps?: React.ComponentProps<typeof Button>;

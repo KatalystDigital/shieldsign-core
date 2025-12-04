@@ -8,13 +8,13 @@ import { AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useOptionalCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { SUPPORT_EMAIL } from '@documenso/lib/constants/app';
-import { canExecuteOrganisationAction } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { useOptionalCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { SUPPORT_EMAIL } from '@shieldsign/lib/constants/app';
+import { canExecuteOrganisationAction } from '@shieldsign/lib/utils/organisations';
+import { trpc } from '@shieldsign/trpc/react';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -23,8 +23,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export const OrganisationBillingBanner = () => {
   const { _ } = useLingui();
@@ -145,7 +145,7 @@ export const OrganisationBillingBanner = () => {
                 <DialogDescription>
                   <Trans>
                     Your plan is no longer valid. Please subscribe to a new plan to continue using
-                    ShieldDocs Sign.
+                    ShieldSign.
                   </Trans>
                 </DialogDescription>
               </DialogHeader>

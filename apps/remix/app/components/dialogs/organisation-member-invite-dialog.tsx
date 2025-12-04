@@ -11,18 +11,18 @@ import Papa, { type ParseResult } from 'papaparse';
 import { useFieldArray, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { downloadFile } from '@documenso/lib/client-only/download-file';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { IS_BILLING_ENABLED, SUPPORT_EMAIL } from '@documenso/lib/constants/app';
-import { ORGANISATION_MEMBER_ROLE_HIERARCHY } from '@documenso/lib/constants/organisations';
-import { ORGANISATION_MEMBER_ROLE_MAP } from '@documenso/lib/constants/organisations-translations';
-import { INTERNAL_CLAIM_ID } from '@documenso/lib/types/subscription';
-import { trpc } from '@documenso/trpc/react';
-import { ZCreateOrganisationMemberInvitesRequestSchema } from '@documenso/trpc/server/organisation-router/create-organisation-member-invites.types';
-import { cn } from '@documenso/ui/lib/utils';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
+import { downloadFile } from '@shieldsign/lib/client-only/download-file';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { IS_BILLING_ENABLED, SUPPORT_EMAIL } from '@shieldsign/lib/constants/app';
+import { ORGANISATION_MEMBER_ROLE_HIERARCHY } from '@shieldsign/lib/constants/organisations';
+import { ORGANISATION_MEMBER_ROLE_MAP } from '@shieldsign/lib/constants/organisations-translations';
+import { INTERNAL_CLAIM_ID } from '@shieldsign/lib/types/subscription';
+import { trpc } from '@shieldsign/trpc/react';
+import { ZCreateOrganisationMemberInvitesRequestSchema } from '@shieldsign/trpc/server/organisation-router/create-organisation-member-invites.types';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Card, CardContent } from '@shieldsign/ui/primitives/card';
 import {
   Dialog,
   DialogContent,
@@ -31,7 +31,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -39,18 +39,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@documenso/ui/primitives/tabs';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/select';
+import { SpinnerBox } from '@shieldsign/ui/primitives/spinner';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@shieldsign/ui/primitives/tabs';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export type OrganisationMemberInviteDialogProps = {
   trigger?: React.ReactNode;
@@ -253,9 +253,9 @@ export const OrganisationMemberInviteDialog = ({
 
   const downloadTemplate = () => {
     const data = [
-      { email: 'admin@shielddocs.io', role: 'Admin' },
-      { email: 'manager@shielddocs.io', role: 'Manager' },
-      { email: 'member@shielddocs.io', role: 'Member' },
+      { email: 'admin@shieldsign.io', role: 'Admin' },
+      { email: 'manager@shieldsign.io', role: 'Manager' },
+      { email: 'member@shieldsign.io', role: 'Member' },
     ];
 
     const csvContent =
@@ -266,7 +266,7 @@ export const OrganisationMemberInviteDialog = ({
     });
 
     downloadFile({
-      filename: 'documenso-organisation-member-invites-template.csv',
+      filename: 'shieldsign-organisation-member-invites-template.csv',
       data: blob,
     });
   };

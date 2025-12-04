@@ -1,6 +1,6 @@
 import { customAlphabet } from 'nanoid';
 
-import { createTeamMembers } from '@documenso/trpc/server/team-router/create-team-members';
+import { createTeamMembers } from '@shieldsign/trpc/server/team-router/create-team-members';
 
 import { prisma } from '..';
 import type { Prisma } from '../client';
@@ -8,7 +8,7 @@ import { OrganisationMemberRole, TeamMemberRole } from '../client';
 import { seedOrganisationMembers } from './organisations';
 import { seedUser } from './users';
 
-const EMAIL_DOMAIN = `test.shielddocs.io`;
+const EMAIL_DOMAIN = `test.shieldsign.io`;
 const nanoid = customAlphabet('1234567890abcdef', 10);
 
 type SeedTeamOptions = {

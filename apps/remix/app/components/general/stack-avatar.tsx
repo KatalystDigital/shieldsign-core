@@ -1,5 +1,5 @@
-import { RecipientStatusType } from '@documenso/lib/client-only/recipient-type';
-import { Avatar, AvatarFallback } from '@documenso/ui/primitives/avatar';
+import { RecipientStatusType } from '@shieldsign/lib/client-only/recipient-type';
+import { Avatar, AvatarFallback } from '@shieldsign/ui/primitives/avatar';
 
 const ZIndexes: { [key: string]: string } = {
   '10': 'z-10',
@@ -36,7 +36,7 @@ export const StackAvatar = ({ first, zIndex, fallbackText = '', type }: StackAva
       classes = 'bg-water text-water-700';
       break;
     case RecipientStatusType.COMPLETED:
-      classes = 'bg-documenso-200 text-documenso-800';
+      classes = 'bg-shieldsign-200 text-shieldsign-800';
       break;
     case RecipientStatusType.REJECTED:
       classes = 'bg-red-200 text-red-800';

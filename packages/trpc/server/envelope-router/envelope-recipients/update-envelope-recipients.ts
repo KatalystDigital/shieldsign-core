@@ -1,4 +1,4 @@
-import { updateEnvelopeRecipients } from '@documenso/lib/server-only/recipient/update-envelope-recipients';
+import { updateEnvelopeRecipients } from '@shieldsign/lib/server-only/recipient/update-envelope-recipients';
 
 import { authenticatedProcedure } from '../../trpc';
 import {

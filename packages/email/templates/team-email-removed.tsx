@@ -2,7 +2,7 @@ import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 
-import { formatTeamUrl } from '@documenso/lib/utils/teams';
+import { formatTeamUrl } from '@shieldsign/lib/utils/teams';
 
 import { Body, Container, Head, Hr, Html, Img, Preview, Section, Text } from '../components';
 import { useBranding } from '../providers/branding';
@@ -19,15 +19,15 @@ export type TeamEmailRemovedTemplateProps = {
 
 export const TeamEmailRemovedTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://shielddocs.io',
-  teamEmail = 'example@shielddocs.io',
+  baseUrl = 'https://shieldsign.io',
+  teamEmail = 'example@shieldsign.io',
   teamName = 'Team Name',
   teamUrl = 'demo',
 }: TeamEmailRemovedTemplateProps) => {
   const { _ } = useLingui();
   const branding = useBranding();
 
-  const previewText = msg`Team email removed for ${teamName} on ShieldDocs Sign`;
+  const previewText = msg`Team email removed for ${teamName} on ShieldSign`;
 
   return (
     <Html>

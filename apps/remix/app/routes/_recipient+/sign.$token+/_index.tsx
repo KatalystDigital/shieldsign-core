@@ -5,28 +5,28 @@ import { Link, redirect } from 'react-router';
 import { getOptionalLoaderContext } from 'server/utils/get-loader-session';
 import { match } from 'ts-pattern';
 
-import signingCelebration from '@documenso/assets/images/signing-celebration.png';
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { EnvelopeRenderProvider } from '@documenso/lib/client-only/providers/envelope-render-provider';
-import { useOptionalSession } from '@documenso/lib/client-only/providers/session';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getDocumentAndSenderByToken } from '@documenso/lib/server-only/document/get-document-by-token';
-import { viewedDocument } from '@documenso/lib/server-only/document/viewed-document';
-import { getEnvelopeForRecipientSigning } from '@documenso/lib/server-only/envelope/get-envelope-for-recipient-signing';
-import { getEnvelopeRequiredAccessData } from '@documenso/lib/server-only/envelope/get-envelope-required-access-data';
-import { getCompletedFieldsForToken } from '@documenso/lib/server-only/field/get-completed-fields-for-token';
-import { getFieldsForToken } from '@documenso/lib/server-only/field/get-fields-for-token';
-import { getIsRecipientsTurnToSign } from '@documenso/lib/server-only/recipient/get-is-recipient-turn';
-import { getNextPendingRecipient } from '@documenso/lib/server-only/recipient/get-next-pending-recipient';
-import { getRecipientByToken } from '@documenso/lib/server-only/recipient/get-recipient-by-token';
-import { getRecipientSignatures } from '@documenso/lib/server-only/recipient/get-recipient-signatures';
-import { getRecipientsForAssistant } from '@documenso/lib/server-only/recipient/get-recipients-for-assistant';
-import { getTeamSettings } from '@documenso/lib/server-only/team/get-team-settings';
-import { getUserByEmail } from '@documenso/lib/server-only/user/get-user-by-email';
-import { DocumentAccessAuth } from '@documenso/lib/types/document-auth';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { prisma } from '@documenso/prisma';
-import { SigningCard3D } from '@documenso/ui/components/signing-card';
+import signingCelebration from '@shieldsign/assets/images/signing-celebration.png';
+import { getOptionalSession } from '@shieldsign/auth/server/lib/utils/get-session';
+import { EnvelopeRenderProvider } from '@shieldsign/lib/client-only/providers/envelope-render-provider';
+import { useOptionalSession } from '@shieldsign/lib/client-only/providers/session';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { getDocumentAndSenderByToken } from '@shieldsign/lib/server-only/document/get-document-by-token';
+import { viewedDocument } from '@shieldsign/lib/server-only/document/viewed-document';
+import { getEnvelopeForRecipientSigning } from '@shieldsign/lib/server-only/envelope/get-envelope-for-recipient-signing';
+import { getEnvelopeRequiredAccessData } from '@shieldsign/lib/server-only/envelope/get-envelope-required-access-data';
+import { getCompletedFieldsForToken } from '@shieldsign/lib/server-only/field/get-completed-fields-for-token';
+import { getFieldsForToken } from '@shieldsign/lib/server-only/field/get-fields-for-token';
+import { getIsRecipientsTurnToSign } from '@shieldsign/lib/server-only/recipient/get-is-recipient-turn';
+import { getNextPendingRecipient } from '@shieldsign/lib/server-only/recipient/get-next-pending-recipient';
+import { getRecipientByToken } from '@shieldsign/lib/server-only/recipient/get-recipient-by-token';
+import { getRecipientSignatures } from '@shieldsign/lib/server-only/recipient/get-recipient-signatures';
+import { getRecipientsForAssistant } from '@shieldsign/lib/server-only/recipient/get-recipients-for-assistant';
+import { getTeamSettings } from '@shieldsign/lib/server-only/team/get-team-settings';
+import { getUserByEmail } from '@shieldsign/lib/server-only/user/get-user-by-email';
+import { DocumentAccessAuth } from '@shieldsign/lib/types/document-auth';
+import { extractDocumentAuthMethods } from '@shieldsign/lib/utils/document-auth';
+import { prisma } from '@shieldsign/prisma';
+import { SigningCard3D } from '@shieldsign/ui/components/signing-card';
 
 import { Header as AuthenticatedHeader } from '~/components/general/app-header';
 import { DocumentSigningAuthPageView } from '~/components/general/document-signing/document-signing-auth-page';
@@ -360,7 +360,7 @@ const SigningPageV1 = ({ data }: { data: Awaited<ReturnType<typeof handleV1Loade
           </p>
 
           {user ? (
-            <Link to="/" className="text-documenso-700 hover:text-documenso-600 mt-36">
+            <Link to="/" className="text-shieldsign-700 hover:text-shieldsign-600 mt-36">
               <Trans>Go Back Home</Trans>
             </Link>
           ) : (
@@ -368,10 +368,10 @@ const SigningPageV1 = ({ data }: { data: Awaited<ReturnType<typeof handleV1Loade
               <Trans>
                 Want to send slick signing links like this one?{' '}
                 <Link
-                  to="https://shielddocs.io"
-                  className="text-documenso-700 hover:text-documenso-600"
+                  to="https://shieldsign.io"
+                  className="text-shieldsign-700 hover:text-shieldsign-600"
                 >
-                  Check out ShieldDocs Sign.
+                  Check out ShieldSign.
                 </Link>
               </Trans>
             </p>
@@ -459,7 +459,7 @@ const SigningPageV2 = ({ data }: { data: Awaited<ReturnType<typeof handleV2Loade
           </p>
 
           {user ? (
-            <Link to="/" className="text-documenso-700 hover:text-documenso-600 mt-36">
+            <Link to="/" className="text-shieldsign-700 hover:text-shieldsign-600 mt-36">
               <Trans>Go Back Home</Trans>
             </Link>
           ) : (
@@ -467,10 +467,10 @@ const SigningPageV2 = ({ data }: { data: Awaited<ReturnType<typeof handleV2Loade
               <Trans>
                 Want to send slick signing links like this one?{' '}
                 <Link
-                  to="https://shielddocs.io"
-                  className="text-documenso-700 hover:text-documenso-600"
+                  to="https://shieldsign.io"
+                  className="text-shieldsign-700 hover:text-shieldsign-600"
                 >
-                  Check out ShieldDocs Sign.
+                  Check out ShieldSign.
                 </Link>
               </Trans>
             </p>

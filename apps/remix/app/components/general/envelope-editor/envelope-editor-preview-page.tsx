@@ -6,20 +6,20 @@ import { FieldType, SigningStatus } from '@prisma/client';
 import { FileTextIcon } from 'lucide-react';
 import { match } from 'ts-pattern';
 
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
+import { useCurrentEnvelopeEditor } from '@shieldsign/lib/client-only/providers/envelope-editor-provider';
 import {
   EnvelopeRenderProvider,
   useCurrentEnvelopeRender,
-} from '@documenso/lib/client-only/providers/envelope-render-provider';
-import { ZFieldAndMetaSchema } from '@documenso/lib/types/field-meta';
-import { extractFieldInsertionValues } from '@documenso/lib/utils/envelope-signing';
-import { toCheckboxCustomText } from '@documenso/lib/utils/fields';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import PDFViewerKonvaLazy from '@documenso/ui/components/pdf-viewer/pdf-viewer-konva-lazy';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { RecipientSelector } from '@documenso/ui/primitives/recipient-selector';
-import { Separator } from '@documenso/ui/primitives/separator';
+} from '@shieldsign/lib/client-only/providers/envelope-render-provider';
+import { ZFieldAndMetaSchema } from '@shieldsign/lib/types/field-meta';
+import { extractFieldInsertionValues } from '@shieldsign/lib/utils/envelope-signing';
+import { toCheckboxCustomText } from '@shieldsign/lib/utils/fields';
+import { extractInitials } from '@shieldsign/lib/utils/recipient-formatter';
+import { AnimateGenericFadeInOut } from '@shieldsign/ui/components/animate/animate-generic-fade-in-out';
+import PDFViewerKonvaLazy from '@shieldsign/ui/components/pdf-viewer/pdf-viewer-konva-lazy';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { RecipientSelector } from '@shieldsign/ui/primitives/recipient-selector';
+import { Separator } from '@shieldsign/ui/primitives/separator';
 
 import { EnvelopeRendererFileSelector } from './envelope-file-selector';
 

@@ -1,9 +1,9 @@
 import { Prisma } from '@prisma/client';
 import { z } from 'zod';
 
-import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/teams';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
+import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@shieldsign/lib/constants/teams';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { prisma } from '@shieldsign/prisma';
 
 import { buildTeamWhereQuery } from '../../utils/teams';
 

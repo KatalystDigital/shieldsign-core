@@ -7,8 +7,8 @@ import {
   ZClampedFieldWidthSchema,
   ZFieldPageNumberSchema,
   ZFieldSchema,
-} from '@documenso/lib/types/field';
-import { ZEnvelopeFieldAndMetaSchema } from '@documenso/lib/types/field-meta';
+} from '@shieldsign/lib/types/field';
+import { ZEnvelopeFieldAndMetaSchema } from '@shieldsign/lib/types/field-meta';
 
 import type { TrpcRouteMeta } from '../../trpc';
 

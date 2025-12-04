@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import RecipientSchema from '@documenso/prisma/generated/zod/modelSchema/RecipientSchema';
+import RecipientSchema from '@shieldsign/prisma/generated/zod/modelSchema/RecipientSchema';
 
 // Common schemas between envelope routes.
 

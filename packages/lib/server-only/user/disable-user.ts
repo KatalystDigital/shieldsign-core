@@ -1,5 +1,5 @@
-import { AppError } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { prisma } from '@shieldsign/prisma';
 
 export type DisableUserOptions = {
   id: number;

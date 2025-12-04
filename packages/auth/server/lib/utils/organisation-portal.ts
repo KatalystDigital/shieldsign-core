@@ -1,9 +1,9 @@
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { DOCUMENSO_ENCRYPTION_KEY } from '@documenso/lib/constants/crypto';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { symmetricDecrypt } from '@documenso/lib/universal/crypto';
-import { formatOrganisationCallbackUrl } from '@documenso/lib/utils/organisation-authentication-portal';
-import { prisma } from '@documenso/prisma';
+import { IS_BILLING_ENABLED } from '@shieldsign/lib/constants/app';
+import { SHIELDSIGN_ENCRYPTION_KEY } from '@shieldsign/lib/constants/crypto';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { symmetricDecrypt } from '@shieldsign/lib/universal/crypto';
+import { formatOrganisationCallbackUrl } from '@shieldsign/lib/utils/organisation-authentication-portal';
+import { prisma } from '@shieldsign/prisma';
 
 type GetOrganisationAuthenticationPortalOptions =
   | {
@@ -67,14 +67,14 @@ export const getOrganisationAuthenticationPortalOptions = async (
     });
   }
 
-  if (!DOCUMENSO_ENCRYPTION_KEY) {
+  if (!SHIELDSIGN_ENCRYPTION_KEY) {
     throw new AppError(AppErrorCode.NOT_SETUP, {
       message: 'Encryption key is not set',
     });
   }
 
   const clientSecret = Buffer.from(
-    symmetricDecrypt({ key: DOCUMENSO_ENCRYPTION_KEY, data: encryptedClientSecret }),
+    symmetricDecrypt({ key: SHIELDSIGN_ENCRYPTION_KEY, data: encryptedClientSecret }),
   ).toString('utf-8');
 
   return {

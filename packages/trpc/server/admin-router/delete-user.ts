@@ -1,4 +1,4 @@
-import { deleteUser } from '@documenso/lib/server-only/user/delete-user';
+import { deleteUser } from '@shieldsign/lib/server-only/user/delete-user';
 
 import { adminProcedure } from '../trpc';
 import { ZDeleteUserRequestSchema, ZDeleteUserResponseSchema } from './delete-user.types';

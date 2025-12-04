@@ -1,7 +1,7 @@
 import sharp from 'sharp';
 
-import { getFileServerSide } from '@documenso/lib/universal/upload/get-file.server';
-import { prisma } from '@documenso/prisma';
+import { getFileServerSide } from '@shieldsign/lib/universal/upload/get-file.server';
+import { prisma } from '@shieldsign/prisma';
 
 import type { Route } from './+types/branding.logo.organisation.$orgId';
 

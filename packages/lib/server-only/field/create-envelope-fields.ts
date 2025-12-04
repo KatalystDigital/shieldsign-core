@@ -1,10 +1,10 @@
 import { EnvelopeType } from '@prisma/client';
 
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { TFieldAndMeta } from '@documenso/lib/types/field-meta';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { prisma } from '@documenso/prisma';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@shieldsign/lib/types/document-audit-logs';
+import type { TFieldAndMeta } from '@shieldsign/lib/types/field-meta';
+import type { ApiRequestMetadata } from '@shieldsign/lib/universal/extract-request-metadata';
+import { createDocumentAuditLogData } from '@shieldsign/lib/utils/document-audit-logs';
+import { prisma } from '@shieldsign/prisma';
 
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import type { EnvelopeIdOptions } from '../../utils/envelope';

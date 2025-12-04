@@ -2,12 +2,12 @@ import type { Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 import { EnvelopeType } from '@prisma/client';
 
-import { getEnvelopeWhereInput } from '@documenso/lib/server-only/envelope/get-envelope-by-id';
-import { getTemplateById } from '@documenso/lib/server-only/template/get-template-by-id';
-import { mapSecondaryIdToTemplateId } from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
-import { seedBlankTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { getEnvelopeWhereInput } from '@shieldsign/lib/server-only/envelope/get-envelope-by-id';
+import { getTemplateById } from '@shieldsign/lib/server-only/template/get-template-by-id';
+import { mapSecondaryIdToTemplateId } from '@shieldsign/lib/utils/envelope';
+import { prisma } from '@shieldsign/prisma';
+import { seedBlankTemplate } from '@shieldsign/prisma/seed/templates';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 
@@ -36,7 +36,7 @@ const triggerAutosave = async (page: Page) => {
 };
 
 const addSignerAndSave = async (page: Page) => {
-  await page.getByPlaceholder('Email').fill('recipient1@shielddocs.io');
+  await page.getByPlaceholder('Email').fill('recipient1@shieldsign.io');
   await page.getByPlaceholder('Name').fill('Recipient 1');
 
   await triggerAutosave(page);
@@ -56,7 +56,7 @@ test.describe('AutoSave Signers Step - Templates', () => {
       });
 
       expect(retrievedRecipients.length).toBe(1);
-      expect(retrievedRecipients[0].email).toBe('recipient1@shielddocs.io');
+      expect(retrievedRecipients[0].email).toBe('recipient1@shieldsign.io');
       expect(retrievedRecipients[0].name).toBe('Recipient 1');
     }).toPass();
   });
@@ -90,8 +90,8 @@ test.describe('AutoSave Signers Step - Templates', () => {
 
     await addSignerAndSave(page);
 
-    await page.getByPlaceholder('Name').fill('ShieldDocs Sign Manager');
-    await page.getByPlaceholder('Email').fill('manager@shielddocs.io');
+    await page.getByPlaceholder('Name').fill('ShieldSign Manager');
+    await page.getByPlaceholder('Email').fill('manager@shieldsign.io');
 
     await triggerAutosave(page);
 
@@ -108,8 +108,8 @@ test.describe('AutoSave Signers Step - Templates', () => {
       });
 
       expect(retrievedRecipients.length).toBe(1);
-      expect(retrievedRecipients[0].email).toBe('manager@shielddocs.io');
-      expect(retrievedRecipients[0].name).toBe('ShieldDocs Sign Manager');
+      expect(retrievedRecipients[0].email).toBe('manager@shieldsign.io');
+      expect(retrievedRecipients[0].name).toBe('ShieldSign Manager');
       expect(retrievedRecipients[0].role).toBe('CC');
     }).toPass();
   });
@@ -124,7 +124,7 @@ test.describe('AutoSave Signers Step - Templates', () => {
     await page
       .getByTestId('placeholder-recipient-email-input')
       .nth(1)
-      .fill('recipient2@shielddocs.io');
+      .fill('recipient2@shieldsign.io');
     await page.getByTestId('placeholder-recipient-name-input').nth(1).fill('Recipient 2');
 
     await page.getByRole('button', { name: 'Add placeholder recipient' }).click();
@@ -132,7 +132,7 @@ test.describe('AutoSave Signers Step - Templates', () => {
     await page
       .getByTestId('placeholder-recipient-email-input')
       .nth(2)
-      .fill('recipient3@shielddocs.io');
+      .fill('recipient3@shieldsign.io');
     await page.getByTestId('placeholder-recipient-name-input').nth(2).fill('Recipient 3');
 
     await triggerAutosave(page);

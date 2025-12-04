@@ -7,15 +7,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Building2Icon, PlusIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
-import type { InternalClaimPlans } from '@documenso/ee/server-only/stripe/get-internal-claim-plans';
-import { useIsMounted } from '@documenso/lib/client-only/hooks/use-is-mounted';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { INTERNAL_CLAIM_ID } from '@documenso/lib/types/subscription';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
-import { Card, CardContent, CardTitle } from '@documenso/ui/primitives/card';
+import type { InternalClaimPlans } from '@shieldsign/ee/server-only/stripe/get-internal-claim-plans';
+import { useIsMounted } from '@shieldsign/lib/client-only/hooks/use-is-mounted';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { INTERNAL_CLAIM_ID } from '@shieldsign/lib/types/subscription';
+import { isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { trpc } from '@shieldsign/trpc/react';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Card, CardContent, CardTitle } from '@shieldsign/ui/primitives/card';
 import {
   Dialog,
   DialogClose,
@@ -25,7 +25,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -33,12 +33,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { RadioGroup, RadioGroupItem } from '@documenso/ui/primitives/radio-group';
-import { Tabs, TabsList, TabsTrigger } from '@documenso/ui/primitives/tabs';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { RadioGroup, RadioGroupItem } from '@shieldsign/ui/primitives/radio-group';
+import { Tabs, TabsList, TabsTrigger } from '@shieldsign/ui/primitives/tabs';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { ZCreateOrganisationFormSchema } from '../dialogs/organisation-create-dialog';
 

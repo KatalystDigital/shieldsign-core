@@ -3,9 +3,9 @@ import { createElement } from 'react';
 import { msg } from '@lingui/core/macro';
 import { EnvelopeType } from '@prisma/client';
 
-import { mailer } from '@documenso/email/mailer';
-import { AccessAuth2FAEmailTemplate } from '@documenso/email/templates/access-auth-2fa';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@shieldsign/email/mailer';
+import { AccessAuth2FAEmailTemplate } from '@shieldsign/email/templates/access-auth-2fa';
+import { prisma } from '@shieldsign/prisma';
 
 import { getI18nInstance } from '../../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../../constants/app';

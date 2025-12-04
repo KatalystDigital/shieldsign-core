@@ -1,11 +1,11 @@
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 
-import { type TFieldMetaSchema as FieldMeta } from '@documenso/lib/types/field-meta';
-import { parseMessageDescriptor } from '@documenso/lib/utils/i18n';
-import { FieldAdvancedSettings } from '@documenso/ui/primitives/document-flow/field-item-advanced-settings';
-import { FRIENDLY_FIELD_TYPE } from '@documenso/ui/primitives/document-flow/types';
-import { Sheet, SheetContent, SheetTitle } from '@documenso/ui/primitives/sheet';
+import { type TFieldMetaSchema as FieldMeta } from '@shieldsign/lib/types/field-meta';
+import { parseMessageDescriptor } from '@shieldsign/lib/utils/i18n';
+import { FieldAdvancedSettings } from '@shieldsign/ui/primitives/document-flow/field-item-advanced-settings';
+import { FRIENDLY_FIELD_TYPE } from '@shieldsign/ui/primitives/document-flow/types';
+import { Sheet, SheetContent, SheetTitle } from '@shieldsign/ui/primitives/sheet';
 
 import type { TConfigureFieldsFormSchemaField } from './configure-fields-view.types';
 

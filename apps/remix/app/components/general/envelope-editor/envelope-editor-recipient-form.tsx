@@ -18,37 +18,37 @@ import { useSearchParams } from 'react-router';
 import { isDeepEqual, prop, sortBy } from 'remeda';
 import { z } from 'zod';
 
-import { useLimits } from '@documenso/ee/server-only/limits/provider/client';
-import { useDebouncedValue } from '@documenso/lib/client-only/hooks/use-debounced-value';
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import type { TDetectedRecipientSchema } from '@documenso/lib/server-only/ai/envelope/detect-recipients/schema';
+import { useLimits } from '@shieldsign/ee/server-only/limits/provider/client';
+import { useDebouncedValue } from '@shieldsign/lib/client-only/hooks/use-debounced-value';
+import { useCurrentEnvelopeEditor } from '@shieldsign/lib/client-only/providers/envelope-editor-provider';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import type { TDetectedRecipientSchema } from '@shieldsign/lib/server-only/ai/envelope/detect-recipients/schema';
 import {
   ZRecipientActionAuthTypesSchema,
   ZRecipientAuthOptionsSchema,
-} from '@documenso/lib/types/document-auth';
-import { nanoid } from '@documenso/lib/universal/id';
-import { canRecipientBeModified as utilCanRecipientBeModified } from '@documenso/lib/utils/recipients';
-import { trpc } from '@documenso/trpc/react';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { RecipientActionAuthSelect } from '@documenso/ui/components/recipient/recipient-action-auth-select';
+} from '@shieldsign/lib/types/document-auth';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { canRecipientBeModified as utilCanRecipientBeModified } from '@shieldsign/lib/utils/recipients';
+import { trpc } from '@shieldsign/trpc/react';
+import { AnimateGenericFadeInOut } from '@shieldsign/ui/components/animate/animate-generic-fade-in-out';
+import { RecipientActionAuthSelect } from '@shieldsign/ui/components/recipient/recipient-action-auth-select';
 import {
   RecipientAutoCompleteInput,
   type RecipientAutoCompleteOption,
-} from '@documenso/ui/components/recipient/recipient-autocomplete-input';
-import { RecipientRoleSelect } from '@documenso/ui/components/recipient/recipient-role-select';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+} from '@shieldsign/ui/components/recipient/recipient-autocomplete-input';
+import { RecipientRoleSelect } from '@shieldsign/ui/components/recipient/recipient-role-select';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@documenso/ui/primitives/card';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { SigningOrderConfirmation } from '@documenso/ui/primitives/document-flow/signing-order-confirmation';
+} from '@shieldsign/ui/primitives/card';
+import { Checkbox } from '@shieldsign/ui/primitives/checkbox';
+import { SigningOrderConfirmation } from '@shieldsign/ui/primitives/document-flow/signing-order-confirmation';
 import {
   Form,
   FormControl,
@@ -56,11 +56,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { FormErrorMessage } from '@documenso/ui/primitives/form/form-error-message';
-import { Input } from '@documenso/ui/primitives/input';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { FormErrorMessage } from '@shieldsign/ui/primitives/form/form-error-message';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { AiRecipientDetectionDialog } from '~/components/dialogs/ai-recipient-detection-dialog';
 import { useCurrentTeam } from '~/providers/team';

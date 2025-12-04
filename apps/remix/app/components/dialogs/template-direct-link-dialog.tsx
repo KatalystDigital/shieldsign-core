@@ -15,17 +15,17 @@ import {
 import { Link, useRevalidator } from 'react-router';
 import { P, match } from 'ts-pattern';
 
-import { useLimits } from '@documenso/ee/server-only/limits/provider/client';
-import { useCopyToClipboard } from '@documenso/lib/client-only/hooks/use-copy-to-clipboard';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { DIRECT_TEMPLATE_RECIPIENT_EMAIL } from '@documenso/lib/constants/direct-templates';
-import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-roles';
-import { DIRECT_TEMPLATE_DOCUMENTATION } from '@documenso/lib/constants/template';
-import { formatDirectTemplatePath } from '@documenso/lib/utils/templates';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { useLimits } from '@shieldsign/ee/server-only/limits/provider/client';
+import { useCopyToClipboard } from '@shieldsign/lib/client-only/hooks/use-copy-to-clipboard';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { DIRECT_TEMPLATE_RECIPIENT_EMAIL } from '@shieldsign/lib/constants/direct-templates';
+import { RECIPIENT_ROLES_DESCRIPTION } from '@shieldsign/lib/constants/recipient-roles';
+import { DIRECT_TEMPLATE_DOCUMENTATION } from '@shieldsign/lib/constants/template';
+import { formatDirectTemplatePath } from '@shieldsign/lib/utils/templates';
+import { trpc as trpcReact } from '@shieldsign/trpc/react';
+import { AnimateGenericFadeInOut } from '@shieldsign/ui/components/animate/animate-generic-fade-in-out';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -34,10 +34,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { Switch } from '@documenso/ui/primitives/switch';
+} from '@shieldsign/ui/primitives/dialog';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { Switch } from '@shieldsign/ui/primitives/switch';
 import {
   Table,
   TableBody,
@@ -45,9 +45,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@documenso/ui/primitives/table';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/table';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 type TemplateDirectLinkDialogProps = {
   templateId: number;

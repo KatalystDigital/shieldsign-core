@@ -15,20 +15,20 @@ import {
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import type { TEnvelope } from '@documenso/lib/types/envelope';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
-import { DocumentShareButton } from '@documenso/ui/components/document/document-share-button';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import type { TEnvelope } from '@shieldsign/lib/types/envelope';
+import { isDocumentCompleted } from '@shieldsign/lib/utils/document';
+import { mapSecondaryIdToDocumentId } from '@shieldsign/lib/utils/envelope';
+import { formatDocumentsPath } from '@shieldsign/lib/utils/teams';
+import { DocumentShareButton } from '@shieldsign/ui/components/document/document-share-button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dropdown-menu';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { DocumentDeleteDialog } from '~/components/dialogs/document-delete-dialog';
 import { DocumentDuplicateDialog } from '~/components/dialogs/document-duplicate-dialog';

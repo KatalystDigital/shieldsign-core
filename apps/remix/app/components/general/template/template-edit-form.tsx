@@ -5,28 +5,28 @@ import { useLingui } from '@lingui/react';
 import { useNavigate } from 'react-router';
 import { z } from 'zod';
 
-import { DocumentSignatureType } from '@documenso/lib/constants/document';
-import { isValidLanguageCode } from '@documenso/lib/constants/i18n';
+import { DocumentSignatureType } from '@shieldsign/lib/constants/document';
+import { isValidLanguageCode } from '@shieldsign/lib/constants/i18n';
 import {
   DO_NOT_INVALIDATE_QUERY_ON_MUTATION,
   SKIP_QUERY_BATCH_META,
-} from '@documenso/lib/constants/trpc';
-import { ZDocumentAccessAuthTypesSchema } from '@documenso/lib/types/document-auth';
-import type { TTemplate } from '@documenso/lib/types/template';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
-import { DocumentFlowFormContainer } from '@documenso/ui/primitives/document-flow/document-flow-root';
-import type { DocumentFlowStep } from '@documenso/ui/primitives/document-flow/types';
-import { PDFViewerLazy } from '@documenso/ui/primitives/pdf-viewer/lazy';
-import { Stepper } from '@documenso/ui/primitives/stepper';
-import { AddTemplateFieldsFormPartial } from '@documenso/ui/primitives/template-flow/add-template-fields';
-import type { TAddTemplateFieldsFormSchema } from '@documenso/ui/primitives/template-flow/add-template-fields.types';
-import { AddTemplatePlaceholderRecipientsFormPartial } from '@documenso/ui/primitives/template-flow/add-template-placeholder-recipients';
-import type { TAddTemplatePlacholderRecipientsFormSchema } from '@documenso/ui/primitives/template-flow/add-template-placeholder-recipients.types';
-import { AddTemplateSettingsFormPartial } from '@documenso/ui/primitives/template-flow/add-template-settings';
-import type { TAddTemplateSettingsFormSchema } from '@documenso/ui/primitives/template-flow/add-template-settings.types';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/lib/constants/trpc';
+import { ZDocumentAccessAuthTypesSchema } from '@shieldsign/lib/types/document-auth';
+import type { TTemplate } from '@shieldsign/lib/types/template';
+import { trpc } from '@shieldsign/trpc/react';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Card, CardContent } from '@shieldsign/ui/primitives/card';
+import { DocumentFlowFormContainer } from '@shieldsign/ui/primitives/document-flow/document-flow-root';
+import type { DocumentFlowStep } from '@shieldsign/ui/primitives/document-flow/types';
+import { PDFViewerLazy } from '@shieldsign/ui/primitives/pdf-viewer/lazy';
+import { Stepper } from '@shieldsign/ui/primitives/stepper';
+import { AddTemplateFieldsFormPartial } from '@shieldsign/ui/primitives/template-flow/add-template-fields';
+import type { TAddTemplateFieldsFormSchema } from '@shieldsign/ui/primitives/template-flow/add-template-fields.types';
+import { AddTemplatePlaceholderRecipientsFormPartial } from '@shieldsign/ui/primitives/template-flow/add-template-placeholder-recipients';
+import type { TAddTemplatePlacholderRecipientsFormSchema } from '@shieldsign/ui/primitives/template-flow/add-template-placeholder-recipients.types';
+import { AddTemplateSettingsFormPartial } from '@shieldsign/ui/primitives/template-flow/add-template-settings';
+import type { TAddTemplateSettingsFormSchema } from '@shieldsign/ui/primitives/template-flow/add-template-settings.types';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

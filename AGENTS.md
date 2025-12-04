@@ -1,4 +1,4 @@
-# Agent Guidelines for ShieldDocs Sign
+# Agent Guidelines for ShieldSign
 
 ## Build/Test/Lint Commands
 
@@ -6,8 +6,8 @@
 - `npm run lint` - Lint all packages
 - `npm run lint:fix` - Auto-fix linting issues
 - `npm run test:e2e` - Run E2E tests with Playwright
-- `npm run test:dev -w @documenso/app-tests` - Run single E2E test in dev mode
-- `npm run test-ui:dev -w @documenso/app-tests` - Run E2E tests with UI
+- `npm run test:dev -w @shieldsign/app-tests` - Run single E2E test in dev mode
+- `npm run test-ui:dev -w @shieldsign/app-tests` - Run E2E tests with UI
 - `npm run format` - Format code with Prettier
 - `npm run dev` - Start development server for Remix app
 

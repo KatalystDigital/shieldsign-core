@@ -1,8 +1,8 @@
 import * as fs from 'node:fs';
 
-import { getCertificateStatus } from '@documenso/lib/server-only/cert/cert-status';
-import { env } from '@documenso/lib/utils/env';
-import { signWithP12 } from '@documenso/pdf-sign';
+import { getCertificateStatus } from '@shieldsign/lib/server-only/cert/cert-status';
+import { env } from '@shieldsign/lib/utils/env';
+import { signWithP12 } from '@shieldsign/pdf-sign';
 
 import { addSigningPlaceholder } from '../helpers/add-signing-placeholder';
 import { updateSigningPlaceholder } from '../helpers/update-signing-placeholder';
@@ -43,7 +43,7 @@ export const signWithLocalCert = async ({ pdf }: SignWithLocalCertOptions) => {
   }
 
   if (!cert) {
-    let certPath = env('NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH') || '/opt/documenso/cert.p12';
+    let certPath = env('NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH') || '/opt/shieldsign/cert.p12';
 
     // We don't want to make the development server suddenly crash when using the `dx` script
     // so we retain this when NODE_ENV isn't set to production which it should be in most production

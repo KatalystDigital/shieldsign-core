@@ -6,12 +6,12 @@ import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { authClient } from '@documenso/auth/client';
-import type { SessionUser } from '@documenso/auth/server/lib/session/session';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { ZCurrentPasswordSchema, ZPasswordSchema } from '@documenso/trpc/server/auth-router/schema';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@shieldsign/auth/client';
+import type { SessionUser } from '@shieldsign/auth/server/lib/session/session';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { ZCurrentPasswordSchema, ZPasswordSchema } from '@shieldsign/trpc/server/auth-router/schema';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -19,9 +19,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { PasswordInput } from '@documenso/ui/primitives/password-input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { PasswordInput } from '@shieldsign/ui/primitives/password-input';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export const ZPasswordFormSchema = z
   .object({

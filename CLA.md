@@ -1,16 +1,16 @@
-# ShieldDocs Sign Contributors License Agreement
+# ShieldSign Contributors License Agreement
 
-This Contributors License Agreement ("CLA") is entered into between the Contributor, and ShieldDocs Sign Inc. ("ShieldDocs Sign"), collectively referred to as the "Parties."
+This Contributors License Agreement ("CLA") is entered into between the Contributor, and ShieldSign Inc. ("ShieldSign"), collectively referred to as the "Parties."
 
 ## Background:
 
-ShieldDocs Sign is an open-source project aimed at providing an open-source document signing platform for all parties. This CLA governs the rights and contributions made by the Contributor to the ShieldDocs Sign project.
+ShieldSign is an open-source project aimed at providing an open-source document signing platform for all parties. This CLA governs the rights and contributions made by the Contributor to the ShieldSign project.
 
 ## Agreement:
 
 **Contributor Grant of License:**
 
-By submitting code, documentation, or any other materials (collectively, "Contributions") to the ShieldDocs Sign project, the Contributor grants ShieldDocs Sign a perpetual, worldwide, non-exclusive, royalty-free, sublicensable license to use, modify, distribute, and otherwise exploit the Contributions, including any intellectual property rights therein, for the purposes of the ShieldDocs Sign project.
+By submitting code, documentation, or any other materials (collectively, "Contributions") to the ShieldSign project, the Contributor grants ShieldSign a perpetual, worldwide, non-exclusive, royalty-free, sublicensable license to use, modify, distribute, and otherwise exploit the Contributions, including any intellectual property rights therein, for the purposes of the ShieldSign project.
 
 **Representation of Ownership and Right to Contribute:**
 
@@ -18,11 +18,11 @@ The Contributor represents that they have the legal right to grant the license s
 
 **Patent Grant:**
 
-If the Contributions include any method, process, or apparatus that is covered by a patent, the Contributor agrees to grant ShieldDocs Sign a non-exclusive, worldwide, royalty-free license under any patent claims necessary to use, modify, distribute, and otherwise exploit the Contributions for the purposes of the ShieldDocs Sign project.
+If the Contributions include any method, process, or apparatus that is covered by a patent, the Contributor agrees to grant ShieldSign a non-exclusive, worldwide, royalty-free license under any patent claims necessary to use, modify, distribute, and otherwise exploit the Contributions for the purposes of the ShieldSign project.
 
 **No Implied Warranties or Support:**
 
-The Contributor acknowledges that the Contributions are provided "as is," without any warranties or support of any kind. ShieldDocs Sign shall have no obligation to provide maintenance, updates, bug fixes, or support for the Contributions.
+The Contributor acknowledges that the Contributions are provided "as is," without any warranties or support of any kind. ShieldSign shall have no obligation to provide maintenance, updates, bug fixes, or support for the Contributions.
 
 **Retention of Contributor Rights:**
 
@@ -38,8 +38,8 @@ This CLA constitutes the entire agreement between the Parties with respect to th
 
 **Acceptance:**
 
-By submitting Contributions to the ShieldDocs Sign project, the Contributor acknowledges and agrees to the terms and conditions of this CLA. If the Contributor is agreeing to this CLA on behalf of an entity, they represent that they have the necessary authority to bind that entity to these terms.
+By submitting Contributions to the ShieldSign project, the Contributor acknowledges and agrees to the terms and conditions of this CLA. If the Contributor is agreeing to this CLA on behalf of an entity, they represent that they have the necessary authority to bind that entity to these terms.
 
 **Effective Date:**
 
-This CLA is effective as of the date of the first Contribution made by the Contributor to the ShieldDocs Sign project.
+This CLA is effective as of the date of the first Contribution made by the Contributor to the ShieldSign project.

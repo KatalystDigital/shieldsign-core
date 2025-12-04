@@ -5,13 +5,13 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { ChevronDown, ChevronUp, Trash } from 'lucide-react';
 
-import { validateRadioField } from '@documenso/lib/advanced-fields-validation/validate-radio';
-import { type TRadioFieldMeta as RadioFieldMeta } from '@documenso/lib/types/field-meta';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { Switch } from '@documenso/ui/primitives/switch';
+import { validateRadioField } from '@shieldsign/lib/advanced-fields-validation/validate-radio';
+import { type TRadioFieldMeta as RadioFieldMeta } from '@shieldsign/lib/types/field-meta';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Checkbox } from '@shieldsign/ui/primitives/checkbox';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { Switch } from '@shieldsign/ui/primitives/switch';
 
 export type RadioFieldAdvancedSettingsProps = {
   fieldState: RadioFieldMeta;
@@ -167,7 +167,7 @@ export const RadioFieldAdvancedSettings = ({
           {values.map((value) => (
             <div key={value.id} className="mt-2 flex items-center gap-4">
               <Checkbox
-                className="data-[state=checked]:bg-documenso border-foreground/30 data-[state=checked]:ring-primary dark:data-[state=checked]:ring-offset-background h-5 w-5 rounded-full data-[state=checked]:ring-1 data-[state=checked]:ring-offset-2 data-[state=checked]:ring-offset-white"
+                className="data-[state=checked]:bg-shieldsign border-foreground/30 data-[state=checked]:ring-primary dark:data-[state=checked]:ring-offset-background h-5 w-5 rounded-full data-[state=checked]:ring-1 data-[state=checked]:ring-offset-2 data-[state=checked]:ring-offset-white"
                 checked={value.checked}
                 onCheckedChange={(checked) => handleCheckedChange(Boolean(checked), value.id)}
               />

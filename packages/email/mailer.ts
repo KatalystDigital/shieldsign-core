@@ -1,8 +1,8 @@
 import type { Transporter } from 'nodemailer';
 import { createTransport } from 'nodemailer';
 
-import { env } from '@documenso/lib/utils/env';
-import { ResendTransport } from '@documenso/nodemailer-resend';
+import { env } from '@shieldsign/lib/utils/env';
+import { ResendTransport } from '@shieldsign/nodemailer-resend';
 
 import { MailChannelsTransport } from './transports/mailchannels';
 

@@ -7,18 +7,18 @@ import { type Field, FieldType, type Recipient, RecipientRole } from '@prisma/cl
 import { Controller, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 
-import type { DocumentAndSender } from '@documenso/lib/server-only/document/get-document-by-token';
-import type { TRecipientAccessAuth } from '@documenso/lib/types/document-auth';
-import { isFieldUnsignedAndRequired } from '@documenso/lib/utils/advanced-fields-helpers';
-import { sortFieldsByPosition } from '@documenso/lib/utils/fields';
-import type { RecipientWithFields } from '@documenso/prisma/types/recipient-with-fields';
-import { FieldToolTip } from '@documenso/ui/components/field/field-tooltip';
-import { Button } from '@documenso/ui/primitives/button';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { RadioGroup, RadioGroupItem } from '@documenso/ui/primitives/radio-group';
-import { SignaturePadDialog } from '@documenso/ui/primitives/signature-pad/signature-pad-dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import type { DocumentAndSender } from '@shieldsign/lib/server-only/document/get-document-by-token';
+import type { TRecipientAccessAuth } from '@shieldsign/lib/types/document-auth';
+import { isFieldUnsignedAndRequired } from '@shieldsign/lib/utils/advanced-fields-helpers';
+import { sortFieldsByPosition } from '@shieldsign/lib/utils/fields';
+import type { RecipientWithFields } from '@shieldsign/prisma/types/recipient-with-fields';
+import { FieldToolTip } from '@shieldsign/ui/components/field/field-tooltip';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { RadioGroup, RadioGroupItem } from '@shieldsign/ui/primitives/radio-group';
+import { SignaturePadDialog } from '@shieldsign/ui/primitives/signature-pad/signature-pad-dialog';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import {
   AssistantConfirmationDialog,

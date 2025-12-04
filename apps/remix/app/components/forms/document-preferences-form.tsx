@@ -7,26 +7,26 @@ import { DocumentVisibility, OrganisationType } from '@prisma/client';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { DATE_FORMATS } from '@documenso/lib/constants/date-formats';
-import { DOCUMENT_SIGNATURE_TYPES, DocumentSignatureType } from '@documenso/lib/constants/document';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { DATE_FORMATS } from '@shieldsign/lib/constants/date-formats';
+import { DOCUMENT_SIGNATURE_TYPES, DocumentSignatureType } from '@shieldsign/lib/constants/document';
 import {
   SUPPORTED_LANGUAGES,
   SUPPORTED_LANGUAGE_CODES,
   isValidLanguageCode,
-} from '@documenso/lib/constants/i18n';
-import { TIME_ZONES } from '@documenso/lib/constants/time-zones';
+} from '@shieldsign/lib/constants/i18n';
+import { TIME_ZONES } from '@shieldsign/lib/constants/time-zones';
 import {
   type TDocumentMetaDateFormat,
   ZDocumentMetaTimezoneSchema,
-} from '@documenso/lib/types/document-meta';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { extractTeamSignatureSettings } from '@documenso/lib/utils/teams';
-import { DocumentSignatureSettingsTooltip } from '@documenso/ui/components/document/document-signature-settings-tooltip';
-import { Alert } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { Combobox } from '@documenso/ui/primitives/combobox';
+} from '@shieldsign/lib/types/document-meta';
+import { isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { extractTeamSignatureSettings } from '@shieldsign/lib/utils/teams';
+import { DocumentSignatureSettingsTooltip } from '@shieldsign/ui/components/document/document-signature-settings-tooltip';
+import { Alert } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Combobox } from '@shieldsign/ui/primitives/combobox';
 import {
   Form,
   FormControl,
@@ -35,15 +35,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+} from '@shieldsign/ui/primitives/form/form';
+import { MultiSelectCombobox } from '@shieldsign/ui/primitives/multi-select-combobox';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
+} from '@shieldsign/ui/primitives/select';
 
 /**
  * Can't infer this from the schema since we need to keep the schema inside the component to allow

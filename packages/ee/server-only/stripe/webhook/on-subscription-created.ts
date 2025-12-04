@@ -4,17 +4,17 @@ import { match } from 'ts-pattern';
 import {
   createOrganisation,
   createOrganisationClaimUpsertData,
-} from '@documenso/lib/server-only/organisation/create-organisation';
-import { type Stripe } from '@documenso/lib/server-only/stripe';
+} from '@shieldsign/lib/server-only/organisation/create-organisation';
+import { type Stripe } from '@shieldsign/lib/server-only/stripe';
 import type {
   InternalClaim,
   StripeOrganisationCreateMetadata,
-} from '@documenso/lib/types/subscription';
+} from '@shieldsign/lib/types/subscription';
 import {
   INTERNAL_CLAIM_ID,
   ZStripeOrganisationCreateMetadataSchema,
-} from '@documenso/lib/types/subscription';
-import { prisma } from '@documenso/prisma';
+} from '@shieldsign/lib/types/subscription';
+import { prisma } from '@shieldsign/prisma';
 
 import { extractStripeClaim } from './on-subscription-updated';
 

@@ -1,10 +1,10 @@
 import type { DocumentData } from '@prisma/client';
 import { DocumentDataType, EnvelopeType } from '@prisma/client';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getEnvelopeById } from '@documenso/lib/server-only/envelope/get-envelope-by-id';
-import { getPresignGetUrl } from '@documenso/lib/universal/upload/server-actions';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { getEnvelopeById } from '@shieldsign/lib/server-only/envelope/get-envelope-by-id';
+import { getPresignGetUrl } from '@shieldsign/lib/universal/upload/server-actions';
+import { isDocumentCompleted } from '@shieldsign/lib/utils/document';
 
 import { authenticatedProcedure } from '../trpc';
 import {

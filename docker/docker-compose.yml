@@ -1,19 +1,19 @@
-# ShieldDocs Sign - Docker Compose Production Configuration
+# ShieldSign - Docker Compose Production Configuration
 version: '3.8'
 
 services:
   # ============================================
-  # ShieldDocs Sign Application
+  # ShieldSign Application
   # ============================================
-  shielddocs-sign:
+  shieldsign-sign:
     build:
       context: ..
       dockerfile: docker/Dockerfile
       args:
-        - NEXT_PUBLIC_WEBAPP_URL=${NEXT_PUBLIC_WEBAPP_URL:-https://sign.shielddocs.io}
-        - NEXT_PUBLIC_MARKETING_URL=${NEXT_PUBLIC_MARKETING_URL:-https://shielddocs.io}
-    image: shielddocs-sign:latest
-    container_name: shielddocs-sign
+        - NEXT_PUBLIC_WEBAPP_URL=${NEXT_PUBLIC_WEBAPP_URL:-https://sign.shieldsign.io}
+        - NEXT_PUBLIC_MARKETING_URL=${NEXT_PUBLIC_MARKETING_URL:-https://shieldsign.io}
+    image: shieldsign-sign:latest
+    container_name: shieldsign-sign
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -33,14 +33,14 @@ services:
       - NEXT_PRIVATE_SMTP_PORT=${SMTP_PORT:-587}
       - NEXT_PRIVATE_SMTP_USERNAME=${SMTP_USERNAME}
       - NEXT_PRIVATE_SMTP_PASSWORD=${SMTP_PASSWORD}
-      - NEXT_PRIVATE_SMTP_FROM_NAME=ShieldDocs Sign
-      - NEXT_PRIVATE_SMTP_FROM_ADDRESS=${SMTP_FROM_ADDRESS:-sign@shielddocs.io}
+      - NEXT_PRIVATE_SMTP_FROM_NAME=ShieldSign
+      - NEXT_PRIVATE_SMTP_FROM_ADDRESS=${SMTP_FROM_ADDRESS:-sign@shieldsign.io}
       
       # Storage (Azure Blob / S3-compatible)
       - NEXT_PRIVATE_UPLOAD_TRANSPORT=${UPLOAD_TRANSPORT:-s3}
       - NEXT_PRIVATE_UPLOAD_ENDPOINT=${UPLOAD_ENDPOINT}
       - NEXT_PRIVATE_UPLOAD_REGION=${UPLOAD_REGION:-eastus}
-      - NEXT_PRIVATE_UPLOAD_BUCKET=${UPLOAD_BUCKET:-shielddocs-signatures}
+      - NEXT_PRIVATE_UPLOAD_BUCKET=${UPLOAD_BUCKET:-shieldsign-signatures}
       - NEXT_PRIVATE_UPLOAD_ACCESS_KEY_ID=${UPLOAD_ACCESS_KEY}
       - NEXT_PRIVATE_UPLOAD_SECRET_ACCESS_KEY=${UPLOAD_SECRET_KEY}
       
@@ -49,7 +49,7 @@ services:
       - NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH=/app/certs/certificate.p12
       
       # Branding
-      - NEXT_PUBLIC_MARKETING_URL=${MARKETING_URL:-https://shielddocs.io}
+      - NEXT_PUBLIC_MARKETING_URL=${MARKETING_URL:-https://shieldsign.io}
       - NEXT_PUBLIC_DISABLE_SIGNUP=${DISABLE_SIGNUP:-false}
     volumes:
       - ./certs:/app/certs:ro
@@ -60,35 +60,35 @@ services:
       retries: 3
       start_period: 10s
     networks:
-      - shielddocs-network
+      - shieldsign-network
 
   # ============================================
   # PostgreSQL Database (optional - use Azure SQL in production)
   # ============================================
   postgres:
     image: postgres:16-alpine
-    container_name: shielddocs-sign-db
+    container_name: shieldsign-sign-db
     restart: unless-stopped
     environment:
-      - POSTGRES_USER=${POSTGRES_USER:-shielddocs}
+      - POSTGRES_USER=${POSTGRES_USER:-shieldsign}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB:-shielddocs_sign}
+      - POSTGRES_DB=${POSTGRES_DB:-shieldsign_sign}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-shielddocs}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-shieldsign}"]
       interval: 10s
       timeout: 5s
       retries: 5
     networks:
-      - shielddocs-network
+      - shieldsign-network
     profiles:
       - with-db
 
 networks:
-  shielddocs-network:
+  shieldsign-network:
     driver: bridge
 
 volumes:

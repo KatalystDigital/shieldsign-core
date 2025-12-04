@@ -19,15 +19,15 @@ import { useNavigate, useSearchParams } from 'react-router';
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
+import { useCurrentEnvelopeEditor } from '@shieldsign/lib/client-only/providers/envelope-editor-provider';
 import {
   mapSecondaryIdToDocumentId,
   mapSecondaryIdToTemplateId,
-} from '@documenso/lib/utils/envelope';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { Button } from '@documenso/ui/primitives/button';
-import { Separator } from '@documenso/ui/primitives/separator';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
+} from '@shieldsign/lib/utils/envelope';
+import { AnimateGenericFadeInOut } from '@shieldsign/ui/components/animate/animate-generic-fade-in-out';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Separator } from '@shieldsign/ui/primitives/separator';
+import { SpinnerBox } from '@shieldsign/ui/primitives/spinner';
 
 import { DocumentDeleteDialog } from '~/components/dialogs/document-delete-dialog';
 import { EnvelopeDistributeDialog } from '~/components/dialogs/envelope-distribute-dialog';
@@ -175,7 +175,7 @@ export default function EnvelopeEditor() {
               <motion.div
                 layout="size"
                 layoutId="document-flow-container-step"
-                className="absolute inset-y-0 left-0 bg-documenso"
+                className="absolute inset-y-0 left-0 bg-shieldsign"
                 style={{
                   width: `${(100 / envelopeEditorSteps.length) * (currentStepData.order ?? 0)}%`,
                 }}

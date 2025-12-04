@@ -4,8 +4,8 @@ import { EnvelopeType, RecipientRole } from '@prisma/client';
 import {
   DIRECT_TEMPLATE_RECIPIENT_EMAIL,
   DIRECT_TEMPLATE_RECIPIENT_NAME,
-} from '@documenso/lib/constants/direct-templates';
-import { prisma } from '@documenso/prisma';
+} from '@shieldsign/lib/constants/direct-templates';
+import { prisma } from '@shieldsign/prisma';
 
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import {

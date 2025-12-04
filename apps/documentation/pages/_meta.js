@@ -21,12 +21,12 @@ export default {
     items: {
       changelog: {
         title: 'Changelog',
-        href: 'https://shielddocs.io/changelog',
+        href: 'https://shieldsign.io/changelog',
         newWindow: true,
       },
       blog: {
         title: 'Blog',
-        href: 'https://shielddocs.io/blog',
+        href: 'https://shieldsign.io/blog',
         newWindow: true,
       },
     },

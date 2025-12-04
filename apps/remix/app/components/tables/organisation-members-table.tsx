@@ -7,26 +7,26 @@ import { OrganisationGroupType } from '@prisma/client';
 import { Edit, MoreHorizontal, Trash2 } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { EXTENDED_ORGANISATION_MEMBER_ROLE_MAP } from '@documenso/lib/constants/organisations-translations';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { isOrganisationRoleWithinUserHierarchy } from '@documenso/lib/utils/organisations';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { trpc } from '@documenso/trpc/react';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
+import { useUpdateSearchParams } from '@shieldsign/lib/client-only/hooks/use-update-search-params';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { EXTENDED_ORGANISATION_MEMBER_ROLE_MAP } from '@shieldsign/lib/constants/organisations-translations';
+import { ZUrlSearchParamsSchema } from '@shieldsign/lib/types/search-params';
+import { isOrganisationRoleWithinUserHierarchy } from '@shieldsign/lib/utils/organisations';
+import { extractInitials } from '@shieldsign/lib/utils/recipient-formatter';
+import { trpc } from '@shieldsign/trpc/react';
+import { AvatarWithText } from '@shieldsign/ui/primitives/avatar';
+import type { DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
+import { DataTable } from '@shieldsign/ui/primitives/data-table';
+import { DataTablePagination } from '@shieldsign/ui/primitives/data-table-pagination';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+} from '@shieldsign/ui/primitives/dropdown-menu';
+import { Skeleton } from '@shieldsign/ui/primitives/skeleton';
+import { TableCell } from '@shieldsign/ui/primitives/table';
 
 import { OrganisationMemberDeleteDialog } from '~/components/dialogs/organisation-member-delete-dialog';
 import { OrganisationMemberUpdateDialog } from '~/components/dialogs/organisation-member-update-dialog';

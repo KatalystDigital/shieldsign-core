@@ -6,11 +6,11 @@ import { Trans } from '@lingui/react/macro';
 import { FilePlus, Loader } from 'lucide-react';
 import { useNavigate } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { formatTemplatesPath } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
-import type { TCreateTemplatePayloadSchema } from '@documenso/trpc/server/template-router/schema';
-import { Button } from '@documenso/ui/primitives/button';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { formatTemplatesPath } from '@shieldsign/lib/utils/teams';
+import { trpc } from '@shieldsign/trpc/react';
+import type { TCreateTemplatePayloadSchema } from '@shieldsign/trpc/server/template-router/schema';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -20,9 +20,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { DocumentDropzone } from '@documenso/ui/primitives/document-dropzone';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { DocumentDropzone } from '@shieldsign/ui/primitives/document-dropzone';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

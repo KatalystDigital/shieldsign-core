@@ -9,22 +9,22 @@ import { useHotkeys } from 'react-hotkeys-hook';
 import { useNavigate } from 'react-router';
 import { Theme, useTheme } from 'remix-themes';
 
-import { useDebouncedValue } from '@documenso/lib/client-only/hooks/use-debounced-value';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { SUPPORTED_LANGUAGES } from '@documenso/lib/constants/i18n';
+import { useDebouncedValue } from '@shieldsign/lib/client-only/hooks/use-debounced-value';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { SUPPORTED_LANGUAGES } from '@shieldsign/lib/constants/i18n';
 import {
   DOCUMENTS_PAGE_SHORTCUT,
   SETTINGS_PAGE_SHORTCUT,
   TEMPLATES_PAGE_SHORTCUT,
-} from '@documenso/lib/constants/keyboard-shortcuts';
+} from '@shieldsign/lib/constants/keyboard-shortcuts';
 import {
   DO_NOT_INVALIDATE_QUERY_ON_MUTATION,
   SKIP_QUERY_BATCH_META,
-} from '@documenso/lib/constants/trpc';
-import { dynamicActivate } from '@documenso/lib/utils/i18n';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
+} from '@shieldsign/lib/constants/trpc';
+import { dynamicActivate } from '@shieldsign/lib/utils/i18n';
+import { isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { trpc as trpcReact } from '@shieldsign/trpc/react';
+import { cn } from '@shieldsign/ui/lib/utils';
 import {
   CommandDialog,
   CommandEmpty,
@@ -33,8 +33,8 @@ import {
   CommandItem,
   CommandList,
   CommandShortcut,
-} from '@documenso/ui/primitives/command';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/command';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 

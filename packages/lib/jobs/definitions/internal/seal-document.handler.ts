@@ -1,27 +1,28 @@
 import {
-  PDFDocument,
-  RotationTypes,
-  popGraphicsState,
-  pushGraphicsState,
-  radiansToDegrees,
-  rotateDegrees,
-  translate,
+    PDFDocument,
+    RotationTypes,
+    popGraphicsState,
+    pushGraphicsState,
+    radiansToDegrees,
+    rotateDegrees,
+    translate,
 } from '@cantoo/pdf-lib';
 import type { DocumentData, DocumentMeta, Envelope, EnvelopeItem, Field } from '@prisma/client';
 import {
-  DocumentStatus,
-  EnvelopeType,
-  RecipientRole,
-  SigningStatus,
-  WebhookTriggerEvents,
+    DocumentStatus,
+    EnvelopeType,
+    RecipientRole,
+    SigningStatus,
+    WebhookTriggerEvents,
 } from '@prisma/client';
+import { createHash } from 'crypto';
 import { nanoid } from 'nanoid';
 import path from 'node:path';
 import { groupBy } from 'remeda';
 import { match } from 'ts-pattern';
 
-import { prisma } from '@documenso/prisma';
-import { signPdf } from '@documenso/signing';
+import { prisma } from '@shieldsign/prisma';
+import { signPdf } from '@shieldsign/signing';
 
 import { AppError, AppErrorCode } from '../../../errors/app-error';
 import { sendCompletedEmail } from '../../../server-only/document/send-completed-email';
@@ -39,8 +40,8 @@ import { getTeamSettings } from '../../../server-only/team/get-team-settings';
 import { triggerWebhook } from '../../../server-only/webhooks/trigger/trigger-webhook';
 import { DOCUMENT_AUDIT_LOG_TYPE } from '../../../types/document-audit-logs';
 import {
-  ZWebhookDocumentSchema,
-  mapEnvelopeToWebhookDocumentPayload,
+    ZWebhookDocumentSchema,
+    mapEnvelopeToWebhookDocumentPayload,
 } from '../../../types/webhook-payload';
 import { prefixedId } from '../../../universal/id';
 import { getFileServerSide } from '../../../universal/upload/get-file.server';
@@ -172,7 +173,11 @@ export const run = async ({
       settings,
     });
 
-    const newDocumentData: Array<{ oldDocumentDataId: string; newDocumentDataId: string }> = [];
+    const newDocumentData: Array<{
+      oldDocumentDataId: string;
+      newDocumentDataId: string;
+      documentHash: string;
+    }> = [];
 
     for (const envelopeItem of envelopeItems) {
       const envelopeItemFields = envelope.envelopeItems.find(
@@ -195,6 +200,18 @@ export const run = async ({
 
       newDocumentData.push(result);
     }
+
+    /**
+     * ShieldSign Enhancement: Combine all document hashes for multi-document envelopes.
+     * For single documents, this is the direct SHA-256 hash of the signed PDF.
+     * For multi-document envelopes, we concatenate all hashes and re-hash.
+     */
+    const combinedDocumentHash =
+      newDocumentData.length === 1
+        ? newDocumentData[0].documentHash
+        : createHash('sha256')
+            .update(newDocumentData.map((d) => d.documentHash).join(''))
+            .digest('hex');
 
     await prisma.$transaction(async (tx) => {
       for (const { oldDocumentDataId, newDocumentDataId } of newDocumentData) {
@@ -232,6 +249,9 @@ export const run = async ({
           user: null,
           data: {
             transactionId: nanoid(),
+            /** SHA-256 hash of the final signed document for integrity verification */
+            documentHash: combinedDocumentHash,
+            hashAlgorithm: 'SHA-256',
             ...(isRejected ? { isRejected: true, rejectionReason: rejectionReason } : {}),
           },
         }),
@@ -440,6 +460,13 @@ const decorateAndSignPdf = async ({
 
   const pdfBuffer = await signPdf({ pdf: Buffer.from(pdfBytes) });
 
+  /**
+   * ShieldSign Enhancement: Calculate SHA-256 hash of the final signed PDF
+   * for document integrity verification and compliance with ESIGN/UETA/eIDAS.
+   * This hash is stored in the DOCUMENT_COMPLETED audit log entry.
+   */
+  const documentHash = createHash('sha256').update(pdfBuffer).digest('hex');
+
   const { name } = path.parse(envelopeItem.title);
 
   // Add suffix based on document status
@@ -454,6 +481,7 @@ const decorateAndSignPdf = async ({
   return {
     oldDocumentDataId: envelopeItem.documentData.id,
     newDocumentDataId: newDocumentData.id,
+    documentHash,
   };
 };
 

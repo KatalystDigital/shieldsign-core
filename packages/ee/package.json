@@ -1,5 +1,5 @@
 {
-  "name": "@documenso/ee",
+  "name": "@shieldsign/ee",
   "version": "0.0.0",
   "main": "./index.ts",
   "types": "./index.ts",
@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@aws-sdk/client-sesv2": "^3.936.0",
-    "@documenso/lib": "*",
-    "@documenso/prisma": "*",
+    "@shieldsign/lib": "*",
+    "@shieldsign/prisma": "*",
     "luxon": "^3.7.2",
     "react": "^18",
     "ts-pattern": "^5.9.0",

@@ -2,12 +2,12 @@ import type { DocsThemeConfig } from 'nextra-theme-docs';
 import { useConfig } from 'nextra-theme-docs';
 
 const themeConfig: DocsThemeConfig = {
-  logo: <span>ShieldDocs Sign</span>,
+  logo: <span>ShieldSign</span>,
   head: function useHead() {
     const config = useConfig();
 
-    const title = `${config.frontMatter.title} | ShieldDocs Sign Docs` || 'ShieldDocs Sign Docs';
-    const description = config.frontMatter.description || 'The official ShieldDocs Sign documentation';
+    const title = `${config.frontMatter.title} | ShieldSign Docs` || 'ShieldSign Docs';
+    const description = config.frontMatter.description || 'The official ShieldSign documentation';
 
     return (
       <>
@@ -40,18 +40,18 @@ const themeConfig: DocsThemeConfig = {
     );
   },
   project: {
-    link: 'https://documen.so/github',
+    link: 'https://shieldsign.io/github',
   },
   chat: {
-    link: 'https://documen.so/discord',
+    link: 'https://shieldsign.io/discord',
   },
-  docsRepositoryBase: 'https://github.com/documenso/documenso/tree/main/apps/documentation',
+  docsRepositoryBase: 'https://github.com/shieldsign/shieldsign/tree/main/apps/documentation',
   footer: {
     content: (
       <span>
         {new Date().getFullYear()} ©{' '}
-        <a href="https://documen.so" target="_blank">
-          ShieldDocs Sign
+        <a href="https://shieldsign.io" target="_blank">
+          ShieldSign
         </a>
         .
       </span>

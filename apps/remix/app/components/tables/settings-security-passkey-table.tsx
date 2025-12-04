@@ -5,14 +5,14 @@ import { useLingui } from '@lingui/react';
 import { DateTime } from 'luxon';
 import { useLocation, useNavigate, useSearchParams } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { trpc } from '@documenso/trpc/react';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+import { useUpdateSearchParams } from '@shieldsign/lib/client-only/hooks/use-update-search-params';
+import { ZUrlSearchParamsSchema } from '@shieldsign/lib/types/search-params';
+import { trpc } from '@shieldsign/trpc/react';
+import type { DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
+import { DataTable } from '@shieldsign/ui/primitives/data-table';
+import { DataTablePagination } from '@shieldsign/ui/primitives/data-table-pagination';
+import { Skeleton } from '@shieldsign/ui/primitives/skeleton';
+import { TableCell } from '@shieldsign/ui/primitives/table';
 
 import { SettingsSecurityPasskeyTableActions } from './settings-security-passkey-table-actions';
 

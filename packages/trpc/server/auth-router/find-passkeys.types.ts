@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-import { ZFindResultResponse, ZFindSearchParamsSchema } from '@documenso/lib/types/search-params';
-import PasskeySchema from '@documenso/prisma/generated/zod/modelSchema/PasskeySchema';
+import { ZFindResultResponse, ZFindSearchParamsSchema } from '@shieldsign/lib/types/search-params';
+import PasskeySchema from '@shieldsign/prisma/generated/zod/modelSchema/PasskeySchema';
 
 export const ZFindPasskeysRequestSchema = ZFindSearchParamsSchema.extend({
   orderBy: z

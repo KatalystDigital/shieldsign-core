@@ -1,4 +1,4 @@
-import { type TSiteSettingsBannerSchema } from '@documenso/lib/server-only/site-settings/schemas/banner';
+import { type TSiteSettingsBannerSchema } from '@shieldsign/lib/server-only/site-settings/schemas/banner';
 
 export type AppBannerProps = {
   banner: TSiteSettingsBannerSchema;

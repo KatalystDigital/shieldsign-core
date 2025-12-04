@@ -3,18 +3,18 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { useRevalidator } from 'react-router';
 
-import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@documenso/lib/constants/trpc';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { TRecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { ZInitialsFieldMeta } from '@documenso/lib/types/field-meta';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import type { FieldWithSignature } from '@documenso/prisma/types/field-with-signature';
-import { trpc } from '@documenso/trpc/react';
+import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@shieldsign/lib/constants/trpc';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import type { TRecipientActionAuth } from '@shieldsign/lib/types/document-auth';
+import { ZInitialsFieldMeta } from '@shieldsign/lib/types/field-meta';
+import { extractInitials } from '@shieldsign/lib/utils/recipient-formatter';
+import type { FieldWithSignature } from '@shieldsign/prisma/types/field-with-signature';
+import { trpc } from '@shieldsign/trpc/react';
 import type {
   TRemovedSignedFieldWithTokenMutationSchema,
   TSignFieldWithTokenMutationSchema,
-} from '@documenso/trpc/server/field-router/schema';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/trpc/server/field-router/schema';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { DocumentSigningFieldContainer } from './document-signing-field-container';
 import {

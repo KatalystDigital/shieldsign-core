@@ -9,18 +9,18 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router';
 import type { z } from 'zod';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { SUBSCRIPTION_STATUS_MAP } from '@documenso/lib/constants/billing';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '@documenso/lib/types/subscription';
-import { trpc } from '@documenso/trpc/react';
-import type { TGetAdminOrganisationResponse } from '@documenso/trpc/server/admin-router/get-admin-organisation.types';
-import { ZUpdateAdminOrganisationRequestSchema } from '@documenso/trpc/server/admin-router/update-admin-organisation.types';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { DataTable, type DataTableColumnDef } from '@documenso/ui/primitives/data-table';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { SUBSCRIPTION_STATUS_MAP } from '@shieldsign/lib/constants/billing';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '@shieldsign/lib/types/subscription';
+import { trpc } from '@shieldsign/trpc/react';
+import type { TGetAdminOrganisationResponse } from '@shieldsign/trpc/server/admin-router/get-admin-organisation.types';
+import { ZUpdateAdminOrganisationRequestSchema } from '@shieldsign/trpc/server/admin-router/update-admin-organisation.types';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Badge } from '@shieldsign/ui/primitives/badge';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Checkbox } from '@shieldsign/ui/primitives/checkbox';
+import { DataTable, type DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
 import {
   Form,
   FormControl,
@@ -29,10 +29,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { AdminOrganisationMemberUpdateDialog } from '~/components/dialogs/admin-organisation-member-update-dialog';
 import { GenericErrorLayout } from '~/components/general/generic-error-layout';

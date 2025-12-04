@@ -1,11 +1,11 @@
 import { Trans } from '@lingui/react/macro';
 import { File } from 'lucide-react';
 
-import timurImage from '@documenso/assets/images/timur.png';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { VerifiedIcon } from '@documenso/ui/icons/verified';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import timurImage from '@shieldsign/assets/images/timur.png';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { VerifiedIcon } from '@shieldsign/ui/icons/verified';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
 
 export type UserProfileTimurProps = {
   className?: string;
@@ -30,7 +30,7 @@ export const UserProfileTimur = ({ className, rows = 2 }: UserProfileTimurProps)
         <img
           src={timurImage}
           className="h-20 w-20 rounded-full"
-          alt="image of timur ercan founder of documenso"
+          alt="image of timur ercan founder of shieldsign"
         />
       </div>
 

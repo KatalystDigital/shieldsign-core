@@ -7,11 +7,11 @@ import { ArrowLeftIcon, BanIcon, DownloadCloudIcon, PaperclipIcon } from 'lucide
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useCurrentEnvelopeRender } from '@documenso/lib/client-only/providers/envelope-render-provider';
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
-import PDFViewerKonvaLazy from '@documenso/ui/components/pdf-viewer/pdf-viewer-konva-lazy';
-import { Button } from '@documenso/ui/primitives/button';
-import { Separator } from '@documenso/ui/primitives/separator';
+import { useCurrentEnvelopeRender } from '@shieldsign/lib/client-only/providers/envelope-render-provider';
+import { mapSecondaryIdToDocumentId } from '@shieldsign/lib/utils/envelope';
+import PDFViewerKonvaLazy from '@shieldsign/ui/components/pdf-viewer/pdf-viewer-konva-lazy';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Separator } from '@shieldsign/ui/primitives/separator';
 
 import { EnvelopeDownloadDialog } from '~/components/dialogs/envelope-download-dialog';
 import { SignFieldCheckboxDialog } from '~/components/dialogs/sign-field-checkbox-dialog';
@@ -109,7 +109,7 @@ export const DocumentSigningPageViewV2 = () => {
               <motion.div
                 layout="size"
                 layoutId="document-flow-container-step"
-                className="absolute inset-y-0 left-0 bg-documenso"
+                className="absolute inset-y-0 left-0 bg-shieldsign"
                 style={{
                   width: `${100 - (100 / requiredRecipientFields.length) * (recipientFieldsRemaining.length ?? 0)}%`,
                 }}
@@ -248,7 +248,7 @@ export const DocumentSigningPageViewV2 = () => {
 
               {!hidePoweredBy && (
                 <a
-                  href="https://shielddocs.io"
+                  href="https://shieldsign.io"
                   target="_blank"
                   className="fixed bottom-0 right-0 z-40 hidden cursor-pointer rounded-tl bg-primary px-2 py-1 text-xs font-medium text-primary-foreground opacity-60 hover:opacity-100 lg:block"
                 >

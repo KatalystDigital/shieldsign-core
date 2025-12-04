@@ -6,22 +6,22 @@ import { EnvelopeType, RecipientRole } from '@prisma/client';
 import { SendStatus, SigningStatus } from '@prisma/client';
 import { isDeepEqual } from 'remeda';
 
-import { mailer } from '@documenso/email/mailer';
-import RecipientRemovedFromDocumentTemplate from '@documenso/email/templates/recipient-removed-from-document';
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { TRecipientAccessAuthTypes } from '@documenso/lib/types/document-auth';
+import { mailer } from '@shieldsign/email/mailer';
+import RecipientRemovedFromDocumentTemplate from '@shieldsign/email/templates/recipient-removed-from-document';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@shieldsign/lib/types/document-audit-logs';
+import type { TRecipientAccessAuthTypes } from '@shieldsign/lib/types/document-auth';
 import {
   type TRecipientActionAuthTypes,
   ZRecipientAuthOptionsSchema,
-} from '@documenso/lib/types/document-auth';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { nanoid } from '@documenso/lib/universal/id';
+} from '@shieldsign/lib/types/document-auth';
+import type { ApiRequestMetadata } from '@shieldsign/lib/universal/extract-request-metadata';
+import { nanoid } from '@shieldsign/lib/universal/id';
 import {
   createDocumentAuditLogData,
   diffRecipientChanges,
-} from '@documenso/lib/utils/document-audit-logs';
-import { createRecipientAuthOptions } from '@documenso/lib/utils/document-auth';
-import { prisma } from '@documenso/prisma';
+} from '@shieldsign/lib/utils/document-audit-logs';
+import { createRecipientAuthOptions } from '@shieldsign/lib/utils/document-auth';
+import { prisma } from '@shieldsign/prisma';
 
 import { getI18nInstance } from '../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';

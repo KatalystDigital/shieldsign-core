@@ -1,9 +1,9 @@
 import { EnvelopeType } from '@prisma/client';
 
-import { jobs } from '@documenso/lib/jobs/client';
-import { unsafeGetEntireEnvelope } from '@documenso/lib/server-only/admin/get-entire-document';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
+import { jobs } from '@shieldsign/lib/jobs/client';
+import { unsafeGetEntireEnvelope } from '@shieldsign/lib/server-only/admin/get-entire-document';
+import { isDocumentCompleted } from '@shieldsign/lib/utils/document';
+import { mapSecondaryIdToDocumentId } from '@shieldsign/lib/utils/envelope';
 
 import { adminProcedure } from '../trpc';
 import {

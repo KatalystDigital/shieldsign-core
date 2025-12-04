@@ -1,5 +1,5 @@
-import { updateTeam } from '@documenso/lib/server-only/team/update-team';
-import { updateTeamPublicProfile } from '@documenso/lib/server-only/team/update-team-public-profile';
+import { updateTeam } from '@shieldsign/lib/server-only/team/update-team';
+import { updateTeamPublicProfile } from '@shieldsign/lib/server-only/team/update-team-public-profile';
 
 import { authenticatedProcedure } from '../trpc';
 import { ZUpdateTeamRequestSchema, ZUpdateTeamResponseSchema } from './update-team.types';

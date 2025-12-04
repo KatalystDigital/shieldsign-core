@@ -5,18 +5,18 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { CheckIcon, ShieldCheckIcon, UserIcon, XIcon } from 'lucide-react';
 
-import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-roles';
-import type { TDetectedRecipientSchema } from '@documenso/lib/server-only/ai/envelope/detect-recipients/schema';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
+import { RECIPIENT_ROLES_DESCRIPTION } from '@shieldsign/lib/constants/recipient-roles';
+import type { TDetectedRecipientSchema } from '@shieldsign/lib/server-only/ai/envelope/detect-recipients/schema';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { AvatarWithText } from '@shieldsign/ui/primitives/avatar';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 
 import {
   AiApiError,

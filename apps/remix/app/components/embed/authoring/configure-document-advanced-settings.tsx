@@ -4,13 +4,13 @@ import { InfoIcon } from 'lucide-react';
 import type { Control } from 'react-hook-form';
 import { useFormContext } from 'react-hook-form';
 
-import { DATE_FORMATS } from '@documenso/lib/constants/date-formats';
-import { DOCUMENT_SIGNATURE_TYPES } from '@documenso/lib/constants/document';
-import { SUPPORTED_LANGUAGES } from '@documenso/lib/constants/i18n';
-import { TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import { DocumentEmailCheckboxes } from '@documenso/ui/components/document/document-email-checkboxes';
-import { DocumentSendEmailMessageHelper } from '@documenso/ui/components/document/document-send-email-message-helper';
-import { Combobox } from '@documenso/ui/primitives/combobox';
+import { DATE_FORMATS } from '@shieldsign/lib/constants/date-formats';
+import { DOCUMENT_SIGNATURE_TYPES } from '@shieldsign/lib/constants/document';
+import { SUPPORTED_LANGUAGES } from '@shieldsign/lib/constants/i18n';
+import { TIME_ZONES } from '@shieldsign/lib/constants/time-zones';
+import { DocumentEmailCheckboxes } from '@shieldsign/ui/components/document/document-email-checkboxes';
+import { DocumentSendEmailMessageHelper } from '@shieldsign/ui/components/document/document-send-email-message-helper';
+import { Combobox } from '@shieldsign/ui/primitives/combobox';
 import {
   FormControl,
   FormDescription,
@@ -18,19 +18,19 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { MultiSelectCombobox } from '@shieldsign/ui/primitives/multi-select-combobox';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@documenso/ui/primitives/tabs';
-import { Textarea } from '@documenso/ui/primitives/textarea';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+} from '@shieldsign/ui/primitives/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@shieldsign/ui/primitives/tabs';
+import { Textarea } from '@shieldsign/ui/primitives/textarea';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
 
 import { useConfigureDocument } from './configure-document-context';
 import type { TConfigureEmbedFormSchema } from './configure-document-view.types';

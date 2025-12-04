@@ -2,11 +2,11 @@ import { sValidator } from '@hono/standard-validator';
 import { EnvelopeType } from '@prisma/client';
 import { Hono } from 'hono';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getEnvelopeById } from '@documenso/lib/server-only/envelope/get-envelope-by-id';
-import { getApiTokenByToken } from '@documenso/lib/server-only/public-api/get-api-token-by-token';
-import { buildTeamWhereQuery } from '@documenso/lib/utils/teams';
-import { prisma } from '@documenso/prisma';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { getEnvelopeById } from '@shieldsign/lib/server-only/envelope/get-envelope-by-id';
+import { getApiTokenByToken } from '@shieldsign/lib/server-only/public-api/get-api-token-by-token';
+import { buildTeamWhereQuery } from '@shieldsign/lib/utils/teams';
+import { prisma } from '@shieldsign/prisma';
 
 import type { HonoEnv } from '../../router';
 import { handleEnvelopeItemFileRequest } from '../files/files.helpers';

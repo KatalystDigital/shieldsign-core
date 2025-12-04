@@ -6,11 +6,11 @@ import { useForm, useWatch } from 'react-hook-form';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { validateCheckboxLength } from '@documenso/lib/advanced-fields-validation/validate-checkbox';
-import { type TCheckboxFieldMeta } from '@documenso/lib/types/field-meta';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+import { validateCheckboxLength } from '@shieldsign/lib/advanced-fields-validation/validate-checkbox';
+import { type TCheckboxFieldMeta } from '@shieldsign/lib/types/field-meta';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Checkbox } from '@shieldsign/ui/primitives/checkbox';
 import {
   Dialog,
   DialogContent,
@@ -18,8 +18,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
-import { Form, FormControl, FormField, FormItem } from '@documenso/ui/primitives/form/form';
+} from '@shieldsign/ui/primitives/dialog';
+import { Form, FormControl, FormField, FormItem } from '@shieldsign/ui/primitives/form/form';
 
 export type SignFieldCheckboxDialogProps = {
   fieldMeta: TCheckboxFieldMeta;

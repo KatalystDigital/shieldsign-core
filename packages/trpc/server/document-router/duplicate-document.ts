@@ -1,4 +1,4 @@
-import { duplicateEnvelope } from '@documenso/lib/server-only/envelope/duplicate-envelope';
+import { duplicateEnvelope } from '@shieldsign/lib/server-only/envelope/duplicate-envelope';
 
 import { authenticatedProcedure } from '../trpc';
 import {

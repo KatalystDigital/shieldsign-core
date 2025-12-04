@@ -9,14 +9,14 @@ import { DateTime } from 'luxon';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import type { TRecipientAccessAuth } from '@documenso/lib/types/document-auth';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Alert } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { Form, FormField, FormItem } from '@documenso/ui/primitives/form/form';
-import { PinInput, PinInputGroup, PinInputSlot } from '@documenso/ui/primitives/pin-input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import type { TRecipientAccessAuth } from '@shieldsign/lib/types/document-auth';
+import { trpc } from '@shieldsign/trpc/react';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Alert } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { Form, FormField, FormItem } from '@shieldsign/ui/primitives/form/form';
+import { PinInput, PinInputGroup, PinInputSlot } from '@shieldsign/ui/primitives/pin-input';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 

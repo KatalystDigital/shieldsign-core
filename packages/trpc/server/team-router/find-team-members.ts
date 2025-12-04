@@ -1,4 +1,4 @@
-import { findTeamMembers } from '@documenso/lib/server-only/team/find-team-members';
+import { findTeamMembers } from '@shieldsign/lib/server-only/team/find-team-members';
 
 import { authenticatedProcedure } from '../trpc';
 import {

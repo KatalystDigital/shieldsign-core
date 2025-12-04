@@ -1,8 +1,8 @@
 import { createElement } from 'react';
 
-import { mailer } from '@documenso/email/mailer';
-import { ResetPasswordTemplate } from '@documenso/email/templates/reset-password';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@shieldsign/email/mailer';
+import { ResetPasswordTemplate } from '@shieldsign/email/templates/reset-password';
+import { prisma } from '@shieldsign/prisma';
 
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';
 import { env } from '../../utils/env';
@@ -38,8 +38,8 @@ export const sendResetPassword = async ({ userId }: SendResetPasswordOptions) =>
       name: user.name || '',
     },
     from: {
-      name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'ShieldDocs Sign',
-      address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@shielddocs.io',
+      name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'ShieldSign',
+      address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@shieldsign.io',
     },
     subject: 'Password Reset Success!',
     html,

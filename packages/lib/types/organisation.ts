@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-import OrganisationClaimSchema from '@documenso/prisma/generated/zod/modelSchema/OrganisationClaimSchema';
-import { OrganisationSchema } from '@documenso/prisma/generated/zod/modelSchema/OrganisationSchema';
+import OrganisationClaimSchema from '@shieldsign/prisma/generated/zod/modelSchema/OrganisationClaimSchema';
+import { OrganisationSchema } from '@shieldsign/prisma/generated/zod/modelSchema/OrganisationSchema';
 
 export const ZOrganisationSchema = OrganisationSchema.pick({
   id: true,

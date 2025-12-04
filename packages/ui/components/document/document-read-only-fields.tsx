@@ -6,17 +6,17 @@ import type { DocumentMeta, Field, Recipient } from '@prisma/client';
 import { SigningStatus } from '@prisma/client';
 import { Clock, EyeOffIcon } from 'lucide-react';
 
-import { PDF_VIEWER_PAGE_SELECTOR } from '@documenso/lib/constants/pdf-viewer';
-import { isTemplateRecipientEmailPlaceholder } from '@documenso/lib/constants/template';
-import { parseMessageDescriptor } from '@documenso/lib/utils/i18n';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { FieldRootContainer } from '@documenso/ui/components/field/field';
-import { SignatureIcon } from '@documenso/ui/icons/signature';
-import { Avatar, AvatarFallback } from '@documenso/ui/primitives/avatar';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { FRIENDLY_FIELD_TYPE } from '@documenso/ui/primitives/document-flow/types';
-import { ElementVisible } from '@documenso/ui/primitives/element-visible';
-import { PopoverHover } from '@documenso/ui/primitives/popover';
+import { PDF_VIEWER_PAGE_SELECTOR } from '@shieldsign/lib/constants/pdf-viewer';
+import { isTemplateRecipientEmailPlaceholder } from '@shieldsign/lib/constants/template';
+import { parseMessageDescriptor } from '@shieldsign/lib/utils/i18n';
+import { extractInitials } from '@shieldsign/lib/utils/recipient-formatter';
+import { FieldRootContainer } from '@shieldsign/ui/components/field/field';
+import { SignatureIcon } from '@shieldsign/ui/icons/signature';
+import { Avatar, AvatarFallback } from '@shieldsign/ui/primitives/avatar';
+import { Badge } from '@shieldsign/ui/primitives/badge';
+import { FRIENDLY_FIELD_TYPE } from '@shieldsign/ui/primitives/document-flow/types';
+import { ElementVisible } from '@shieldsign/ui/primitives/element-visible';
+import { PopoverHover } from '@shieldsign/ui/primitives/popover';
 
 import { getRecipientColorStyles } from '../../lib/recipient-colors';
 import { FieldContent } from '../../primitives/document-flow/field-content';

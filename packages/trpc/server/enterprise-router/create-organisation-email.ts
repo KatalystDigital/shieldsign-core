@@ -1,8 +1,8 @@
-import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/organisations';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { generateDatabaseId } from '@documenso/lib/universal/id';
-import { buildOrganisationWhereQuery } from '@documenso/lib/utils/organisations';
-import { prisma } from '@documenso/prisma';
+import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@shieldsign/lib/constants/organisations';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { generateDatabaseId } from '@shieldsign/lib/universal/id';
+import { buildOrganisationWhereQuery } from '@shieldsign/lib/utils/organisations';
+import { prisma } from '@shieldsign/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

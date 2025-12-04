@@ -3,14 +3,14 @@ import type { Team, User } from '@prisma/client';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import { nanoid } from '@documenso/lib/universal/id';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { createApiToken } from '@shieldsign/lib/server-only/public-api/create-api-token';
+import { nanoid } from '@shieldsign/lib/universal/id';
 import {
   mapSecondaryIdToDocumentId,
   mapSecondaryIdToTemplateId,
-} from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
+} from '@shieldsign/lib/utils/envelope';
+import { prisma } from '@shieldsign/prisma';
 import {
   DocumentVisibility,
   EnvelopeType,
@@ -20,21 +20,21 @@ import {
   RecipientRole,
   SendStatus,
   SigningStatus,
-} from '@documenso/prisma/client';
+} from '@shieldsign/prisma/client';
 import {
   seedBlankDocument,
   seedCompletedDocument,
   seedDraftDocument,
   seedPendingDocument,
-} from '@documenso/prisma/seed/documents';
-import { seedBlankFolder } from '@documenso/prisma/seed/folders';
-import { seedBlankTemplate, seedTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
-import type { TCreateEnvelopeItemsPayload } from '@documenso/trpc/server/envelope-router/create-envelope-items.types';
+} from '@shieldsign/prisma/seed/documents';
+import { seedBlankFolder } from '@shieldsign/prisma/seed/folders';
+import { seedBlankTemplate, seedTemplate } from '@shieldsign/prisma/seed/templates';
+import { seedUser } from '@shieldsign/prisma/seed/users';
+import type { TCreateEnvelopeItemsPayload } from '@shieldsign/trpc/server/envelope-router/create-envelope-items.types';
 import type {
   TUseEnvelopePayload,
   TUseEnvelopeResponse,
-} from '@documenso/trpc/server/envelope-router/use-envelope.types';
+} from '@shieldsign/trpc/server/envelope-router/use-envelope.types';
 
 const WEBAPP_BASE_URL = NEXT_PUBLIC_WEBAPP_URL();
 

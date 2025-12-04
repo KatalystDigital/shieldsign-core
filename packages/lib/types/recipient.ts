@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-import { RecipientSchema } from '@documenso/prisma/generated/zod/modelSchema/RecipientSchema';
-import { TeamSchema } from '@documenso/prisma/generated/zod/modelSchema/TeamSchema';
-import { UserSchema } from '@documenso/prisma/generated/zod/modelSchema/UserSchema';
+import { RecipientSchema } from '@shieldsign/prisma/generated/zod/modelSchema/RecipientSchema';
+import { TeamSchema } from '@shieldsign/prisma/generated/zod/modelSchema/TeamSchema';
+import { UserSchema } from '@shieldsign/prisma/generated/zod/modelSchema/UserSchema';
 
 import { ZFieldSchema } from './field';
 

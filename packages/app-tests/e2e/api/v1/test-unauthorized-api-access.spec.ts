@@ -1,21 +1,21 @@
 import { expect, test } from '@playwright/test';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { createApiToken } from '@shieldsign/lib/server-only/public-api/create-api-token';
 import {
   mapSecondaryIdToDocumentId,
   mapSecondaryIdToTemplateId,
-} from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
-import { DocumentDataType, FieldType } from '@documenso/prisma/client';
+} from '@shieldsign/lib/utils/envelope';
+import { prisma } from '@shieldsign/prisma';
+import { DocumentDataType, FieldType } from '@shieldsign/prisma/client';
 import {
   seedBlankDocument,
   seedCompletedDocument,
   seedDraftDocument,
   seedPendingDocumentWithFullFields,
-} from '@documenso/prisma/seed/documents';
-import { seedBlankTemplate, seedTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
+} from '@shieldsign/prisma/seed/documents';
+import { seedBlankTemplate, seedTemplate } from '@shieldsign/prisma/seed/templates';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 const WEBAPP_BASE_URL = NEXT_PUBLIC_WEBAPP_URL();
 

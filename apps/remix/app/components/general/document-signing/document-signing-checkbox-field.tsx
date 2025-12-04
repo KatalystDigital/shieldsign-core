@@ -5,23 +5,23 @@ import { useLingui } from '@lingui/react';
 import { Loader } from 'lucide-react';
 import { useRevalidator } from 'react-router';
 
-import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@documenso/lib/constants/trpc';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { TRecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { ZCheckboxFieldMeta } from '@documenso/lib/types/field-meta';
-import { fromCheckboxValue, toCheckboxValue } from '@documenso/lib/universal/field-checkbox';
-import type { FieldWithSignatureAndFieldMeta } from '@documenso/prisma/types/field-with-signature-and-fieldmeta';
-import { trpc } from '@documenso/trpc/react';
+import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@shieldsign/lib/constants/trpc';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import type { TRecipientActionAuth } from '@shieldsign/lib/types/document-auth';
+import { ZCheckboxFieldMeta } from '@shieldsign/lib/types/field-meta';
+import { fromCheckboxValue, toCheckboxValue } from '@shieldsign/lib/universal/field-checkbox';
+import type { FieldWithSignatureAndFieldMeta } from '@shieldsign/prisma/types/field-with-signature-and-fieldmeta';
+import { trpc } from '@shieldsign/trpc/react';
 import type {
   TRemovedSignedFieldWithTokenMutationSchema,
   TSignFieldWithTokenMutationSchema,
-} from '@documenso/trpc/server/field-router/schema';
-import { FieldToolTip } from '@documenso/ui/components/field/field-tooltip';
-import { cn } from '@documenso/ui/lib/utils';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { checkboxValidationSigns } from '@documenso/ui/primitives/document-flow/field-items-advanced-settings/constants';
-import { Label } from '@documenso/ui/primitives/label';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/trpc/server/field-router/schema';
+import { FieldToolTip } from '@shieldsign/ui/components/field/field-tooltip';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Checkbox } from '@shieldsign/ui/primitives/checkbox';
+import { checkboxValidationSigns } from '@shieldsign/ui/primitives/document-flow/field-items-advanced-settings/constants';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 import { DocumentSigningFieldContainer } from './document-signing-field-container';

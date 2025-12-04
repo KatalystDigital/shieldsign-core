@@ -1,1 +1,1 @@
-# @documenso/openpage-api
+# @shieldsign/openpage-api

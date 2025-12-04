@@ -5,15 +5,15 @@ import { SubscriptionStatus } from '@prisma/client';
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { canExecuteOrganisationAction } from '@documenso/lib/utils/organisations';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { formatAvatarUrl } from '@shieldsign/lib/utils/avatars';
+import { canExecuteOrganisationAction } from '@shieldsign/lib/utils/organisations';
+import { AvatarWithText } from '@shieldsign/ui/primitives/avatar';
+import { Badge } from '@shieldsign/ui/primitives/badge';
+import { Button } from '@shieldsign/ui/primitives/button';
+import type { DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
+import { DataTable } from '@shieldsign/ui/primitives/data-table';
 
 export const UserBillingOrganisationsTable = () => {
   const { t } = useLingui();

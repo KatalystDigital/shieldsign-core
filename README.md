@@ -1,8 +1,8 @@
-# 🛡️ ShieldDocs Sign
+# 🛡️ ShieldSign
 
-**Enterprise E-Signatures for Trust Centers**
+**Enterprise E-Signatures Built for Security**
 
-ShieldDocs Sign is a white-labeled fork of [Documenso](https://github.com/documenso/documenso), customized for the ShieldDocs Trust Center platform. It provides legally-binding electronic signatures integrated with your security documentation workflow.
+ShieldSign is a white-labeled fork of [ShieldSign](https://github.com/shieldsign/shieldsign), customized for the ShieldSign platform. It provides legally-binding electronic signatures integrated with your security documentation workflow.
 
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 
@@ -10,10 +10,10 @@ ShieldDocs Sign is a white-labeled fork of [Documenso](https://github.com/docume
 
 ## 🎯 Overview
 
-ShieldDocs Sign extends the excellent Documenso platform with:
+ShieldSign extends the excellent ShieldSign platform with:
 
-- **ShieldDocs Branding** - Consistent teal color scheme and branding
-- **Trust Center Integration** - Seamless connection to ShieldDocs Trust Center
+- **ShieldSign Branding** - Consistent teal color scheme and branding
+- **Trust Center Integration** - Seamless connection to ShieldSign
 - **Azure Deployment** - Optimized for Azure cloud infrastructure
 - **Enterprise Features** - Team management, audit logs, webhooks
 
@@ -29,8 +29,8 @@ ShieldDocs Sign extends the excellent Documenso platform with:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/shielddocs-esign.git
-cd shielddocs-esign
+git clone https://github.com/your-org/shieldsign-esign.git
+cd shieldsign-esign
 
 # Copy environment template
 cp .env.example .env.local
@@ -59,19 +59,19 @@ Key environment variables to configure:
 
 ```env
 # Database
-NEXT_PRIVATE_DATABASE_URL=postgresql://user:password@localhost:5432/shielddocs_sign
+NEXT_PRIVATE_DATABASE_URL=postgresql://user:password@localhost:5432/shieldsign_sign
 
 # App URLs
-NEXT_PUBLIC_WEBAPP_URL=https://sign.shielddocs.io
-NEXT_PUBLIC_MARKETING_URL=https://shielddocs.io
+NEXT_PUBLIC_WEBAPP_URL=https://sign.shieldsign.io
+NEXT_PUBLIC_MARKETING_URL=https://shieldsign.io
 
 # Email (SMTP)
 NEXT_PRIVATE_SMTP_HOST=smtp.sendgrid.net
 NEXT_PRIVATE_SMTP_PORT=587
 NEXT_PRIVATE_SMTP_USERNAME=apikey
 NEXT_PRIVATE_SMTP_PASSWORD=your-sendgrid-api-key
-NEXT_PRIVATE_SMTP_FROM_ADDRESS=noreply@shielddocs.io
-NEXT_PRIVATE_SMTP_FROM_NAME=ShieldDocs Sign
+NEXT_PRIVATE_SMTP_FROM_ADDRESS=noreply@shieldsign.io
+NEXT_PRIVATE_SMTP_FROM_NAME=ShieldSign
 
 # Storage (Azure Blob)
 NEXT_PRIVATE_UPLOAD_TRANSPORT=azure
@@ -84,7 +84,7 @@ See `.env.example` for all available options.
 ## 🏗️ Project Structure
 
 ```
-shielddocs-esign/
+shieldsign-esign/
 ├── apps/
 │   ├── remix/              # Main web application (React Router)
 │   ├── documentation/      # Documentation site
@@ -96,7 +96,7 @@ shielddocs-esign/
 │   ├── trpc/              # tRPC API router
 │   ├── ui/                # UI components
 │   └── signing/           # PDF signing logic
-├── branding/              # ShieldDocs branding assets
+├── branding/              # ShieldSign branding assets
 │   ├── colors.css         # Color definitions
 │   ├── tailwind-colors.js # Tailwind configuration
 │   └── logo/              # Logo assets (add your files here)
@@ -112,7 +112,7 @@ shielddocs-esign/
 ### Build the Image
 
 ```bash
-docker build -t shielddocs-sign:latest -f docker/Dockerfile .
+docker build -t shieldsign-sign:latest -f docker/Dockerfile .
 ```
 
 ### Run with Docker Compose
@@ -154,9 +154,9 @@ npm run prisma:migrate-deploy
 npm run prisma:seed
 ```
 
-## 🔗 Integration with ShieldDocs Trust Center
+## 🔗 Integration with ShieldSign
 
-ShieldDocs Sign integrates with the main ShieldDocs Trust Center application via:
+ShieldSign integrates with the main ShieldSign application via:
 
 1. **Webhook Events** - Document signing events trigger webhooks
 2. **REST API** - Create and manage documents programmatically
@@ -202,9 +202,9 @@ Update legal documents:
 
 ## 🤝 Attribution
 
-ShieldDocs Sign is based on [Documenso](https://github.com/documenso/documenso), an open-source document signing platform licensed under AGPL-3.0.
+ShieldSign is based on [ShieldSign](https://github.com/shieldsign/shieldsign), an open-source document signing platform licensed under AGPL-3.0.
 
-We gratefully acknowledge the Documenso team for their excellent work in creating the foundation for this project.
+We gratefully acknowledge the ShieldSign team for their excellent work in creating the foundation for this project.
 
 ## 📄 License
 
@@ -212,7 +212,7 @@ This project is licensed under the [AGPL-3.0 License](LICENSE).
 
 ---
 
-**ShieldDocs** - Trust Center & E-Signature Platform
+**ShieldSign** - Trust Center & E-Signature Platform
 
-- 🌐 Website: [shielddocs.io](https://shielddocs.io)
-- 📧 Support: [support@shielddocs.io](mailto:support@shielddocs.io)
+- 🌐 Website: [shieldsign.io](https://shieldsign.io)
+- 📧 Support: [support@shieldsign.io](mailto:support@shieldsign.io)

@@ -1,6 +1,6 @@
-import { DOCUMENSO_ENCRYPTION_SECONDARY_KEY } from '@documenso/lib/constants/crypto';
-import { ZEncryptedDataSchema } from '@documenso/lib/server-only/crypto/encrypt';
-import { symmetricDecrypt } from '@documenso/lib/universal/crypto';
+import { SHIELDSIGN_ENCRYPTION_SECONDARY_KEY } from '@shieldsign/lib/constants/crypto';
+import { ZEncryptedDataSchema } from '@shieldsign/lib/server-only/crypto/encrypt';
+import { symmetricDecrypt } from '@shieldsign/lib/universal/crypto';
 
 /**
  * Decrypt the passed in data. This uses the secondary encrypt key for miscellaneous data.
@@ -9,13 +9,13 @@ import { symmetricDecrypt } from '@documenso/lib/universal/crypto';
  * @returns The decrypted value, or `null` if the data is invalid or expired.
  */
 export const decryptSecondaryData = (encryptedData: string): string | null => {
-  if (!DOCUMENSO_ENCRYPTION_SECONDARY_KEY) {
+  if (!SHIELDSIGN_ENCRYPTION_SECONDARY_KEY) {
     throw new Error('Missing encryption key');
   }
 
   try {
     const decryptedBufferValue = symmetricDecrypt({
-      key: DOCUMENSO_ENCRYPTION_SECONDARY_KEY,
+      key: SHIELDSIGN_ENCRYPTION_SECONDARY_KEY,
       data: encryptedData,
     });
 

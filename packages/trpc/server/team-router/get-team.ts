@@ -1,4 +1,4 @@
-import { getTeam } from '@documenso/lib/server-only/team/get-team';
+import { getTeam } from '@shieldsign/lib/server-only/team/get-team';
 
 import { authenticatedProcedure } from '../trpc';
 import { ZGetTeamRequestSchema, ZGetTeamResponseSchema } from './get-team.types';

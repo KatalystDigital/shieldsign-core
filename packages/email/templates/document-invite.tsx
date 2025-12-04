@@ -4,7 +4,7 @@ import { Trans } from '@lingui/react/macro';
 import type { RecipientRole } from '@prisma/client';
 import { OrganisationType } from '@prisma/client';
 
-import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-roles';
+import { RECIPIENT_ROLES_DESCRIPTION } from '@shieldsign/lib/constants/recipient-roles';
 
 import { Body, Container, Head, Hr, Html, Img, Link, Preview, Section, Text } from '../components';
 import { useBranding } from '../providers/branding';
@@ -25,9 +25,9 @@ export type DocumentInviteEmailTemplateProps = Partial<TemplateDocumentInvitePro
 
 export const DocumentInviteEmailTemplate = ({
   inviterName = 'Lucas Smith',
-  inviterEmail = 'lucas@shielddocs.io',
+  inviterEmail = 'lucas@shieldsign.io',
   documentName = 'Open Source Pledge.pdf',
-  signDocumentLink = 'https://shielddocs.io',
+  signDocumentLink = 'https://shieldsign.io',
   assetBaseUrl = 'http://localhost:3002',
   customBody,
   role,
@@ -71,7 +71,7 @@ export const DocumentInviteEmailTemplate = ({
               ) : (
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="ShieldDocs Sign Logo"
+                  alt="ShieldSign Logo"
                   className="mb-4 h-6"
                 />
               )}

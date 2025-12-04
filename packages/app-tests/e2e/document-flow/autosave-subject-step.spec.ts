@@ -2,9 +2,9 @@ import type { Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 import { EnvelopeType } from '@prisma/client';
 
-import { getEnvelopeById } from '@documenso/lib/server-only/envelope/get-envelope-by-id';
-import { seedBlankDocument } from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { getEnvelopeById } from '@shieldsign/lib/server-only/envelope/get-envelope-by-id';
+import { seedBlankDocument } from '@shieldsign/prisma/seed/documents';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 
@@ -22,7 +22,7 @@ export const setupDocumentAndNavigateToSubjectStep = async (page: Page) => {
 
   await page.getByRole('button', { name: 'Continue' }).click();
 
-  await page.getByPlaceholder('Email').fill('recipient1@shielddocs.io');
+  await page.getByPlaceholder('Email').fill('recipient1@shieldsign.io');
   await page.getByPlaceholder('Name').fill('Recipient 1');
 
   await page.getByRole('button', { name: 'Continue' }).click();

@@ -3,15 +3,15 @@ import { UsersIcon } from 'lucide-react';
 import { redirect } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { EnvelopeRenderProvider } from '@documenso/lib/client-only/providers/envelope-render-provider';
-import { useOptionalSession } from '@documenso/lib/client-only/providers/session';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getEnvelopeForDirectTemplateSigning } from '@documenso/lib/server-only/envelope/get-envelope-for-direct-template-signing';
-import { getTemplateByDirectLinkToken } from '@documenso/lib/server-only/template/get-template-by-direct-link-token';
-import { DocumentAccessAuth } from '@documenso/lib/types/document-auth';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { prisma } from '@documenso/prisma';
+import { getOptionalSession } from '@shieldsign/auth/server/lib/utils/get-session';
+import { EnvelopeRenderProvider } from '@shieldsign/lib/client-only/providers/envelope-render-provider';
+import { useOptionalSession } from '@shieldsign/lib/client-only/providers/session';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { getEnvelopeForDirectTemplateSigning } from '@shieldsign/lib/server-only/envelope/get-envelope-for-direct-template-signing';
+import { getTemplateByDirectLinkToken } from '@shieldsign/lib/server-only/template/get-template-by-direct-link-token';
+import { DocumentAccessAuth } from '@shieldsign/lib/types/document-auth';
+import { extractDocumentAuthMethods } from '@shieldsign/lib/utils/document-auth';
+import { prisma } from '@shieldsign/prisma';
 
 import { Header as AuthenticatedHeader } from '~/components/general/app-header';
 import { DirectTemplatePageView } from '~/components/general/direct-template/direct-template-page';

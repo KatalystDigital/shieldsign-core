@@ -7,11 +7,11 @@ import type * as DialogPrimitive from '@radix-ui/react-dialog';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { DocumentVisibility } from '@documenso/lib/types/document-visibility';
-import { trpc } from '@documenso/trpc/react';
-import type { TFolderWithSubfolders } from '@documenso/trpc/server/folder-router/schema';
-import { Button } from '@documenso/ui/primitives/button';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { DocumentVisibility } from '@shieldsign/lib/types/document-visibility';
+import { trpc } from '@shieldsign/trpc/react';
+import type { TFolderWithSubfolders } from '@shieldsign/trpc/server/folder-router/schema';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -20,7 +20,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -28,16 +28,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/select';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 

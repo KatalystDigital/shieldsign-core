@@ -8,24 +8,24 @@ import { ErrorCode as DropzoneErrorCode, type FileRejection } from 'react-dropzo
 import { useNavigate } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useLimits } from '@documenso/ee/server-only/limits/provider/client';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@documenso/lib/constants/app';
-import { TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { formatDocumentsPath, formatTemplatesPath } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
-import type { TCreateEnvelopePayload } from '@documenso/trpc/server/envelope-router/create-envelope.types';
-import { cn } from '@documenso/ui/lib/utils';
-import { DocumentUploadButton } from '@documenso/ui/primitives/document-upload-button';
+import { useLimits } from '@shieldsign/ee/server-only/limits/provider/client';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@shieldsign/lib/constants/app';
+import { TIME_ZONES } from '@shieldsign/lib/constants/time-zones';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { formatDocumentsPath, formatTemplatesPath } from '@shieldsign/lib/utils/teams';
+import { trpc } from '@shieldsign/trpc/react';
+import type { TCreateEnvelopePayload } from '@shieldsign/trpc/server/envelope-router/create-envelope.types';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { DocumentUploadButton } from '@shieldsign/ui/primitives/document-upload-button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/tooltip';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

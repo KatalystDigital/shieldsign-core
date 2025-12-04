@@ -1,8 +1,8 @@
 import { FieldType } from '@prisma/client';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { TFieldInitials } from '@documenso/lib/types/field';
-import type { TSignEnvelopeFieldValue } from '@documenso/trpc/server/envelope-router/sign-envelope-field.types';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import type { TFieldInitials } from '@shieldsign/lib/types/field';
+import type { TSignEnvelopeFieldValue } from '@shieldsign/trpc/server/envelope-router/sign-envelope-field.types';
 
 import { SignFieldInitialsDialog } from '~/components/dialogs/sign-field-initials-dialog';
 

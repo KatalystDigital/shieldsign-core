@@ -2,9 +2,9 @@ import { msg } from '@lingui/core/macro';
 import { Trans } from '@lingui/react/macro';
 import { useLocation, useNavigate, useSearchParams } from 'react-router';
 
-import { useIsMounted } from '@documenso/lib/client-only/hooks/use-is-mounted';
-import { trpc } from '@documenso/trpc/react';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+import { useIsMounted } from '@shieldsign/lib/client-only/hooks/use-is-mounted';
+import { trpc } from '@shieldsign/trpc/react';
+import { MultiSelectCombobox } from '@shieldsign/ui/primitives/multi-select-combobox';
 
 type DocumentsTableSenderFilterProps = {
   teamId: number;

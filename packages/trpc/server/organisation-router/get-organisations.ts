@@ -1,5 +1,5 @@
-import { getHighestOrganisationRoleInGroup } from '@documenso/lib/utils/organisations';
-import { prisma } from '@documenso/prisma';
+import { getHighestOrganisationRoleInGroup } from '@shieldsign/lib/utils/organisations';
+import { prisma } from '@shieldsign/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

@@ -1,4 +1,4 @@
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 import { DOCUMENT_AUDIT_LOG_TYPE, DOCUMENT_EMAIL_TYPE } from '../../types/document-audit-logs';
 import { parseDocumentAuditLogData } from '../../utils/document-audit-logs';
@@ -7,6 +7,12 @@ export type GetDocumentCertificateAuditLogsOptions = {
   envelopeId: string;
 };
 
+/**
+ * Retrieves audit logs for the document certificate.
+ *
+ * ShieldSign Enhancement: Added DOCUMENT_COMPLETED to retrieve the SHA-256
+ * document hash for display on the signing certificate.
+ */
 export const getDocumentCertificateAuditLogs = async ({
   envelopeId,
 }: GetDocumentCertificateAuditLogsOptions) => {
@@ -15,6 +21,7 @@ export const getDocumentCertificateAuditLogs = async ({
       envelopeId,
       type: {
         in: [
+          DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_COMPLETED,
           DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_RECIPIENT_COMPLETED,
           DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_RECIPIENT_REJECTED,
           DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_FIELD_INSERTED,
@@ -28,6 +35,9 @@ export const getDocumentCertificateAuditLogs = async ({
   const auditLogs = rawAuditLogs.map((log) => parseDocumentAuditLogData(log));
 
   const groupedAuditLogs = {
+    [DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_COMPLETED]: auditLogs.filter(
+      (log) => log.type === DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_COMPLETED,
+    ),
     [DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_RECIPIENT_COMPLETED]: auditLogs.filter(
       (log) => log.type === DOCUMENT_AUDIT_LOG_TYPE.DOCUMENT_RECIPIENT_COMPLETED,
     ),

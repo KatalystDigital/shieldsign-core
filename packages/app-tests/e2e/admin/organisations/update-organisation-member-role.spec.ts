@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
-import { nanoid } from '@documenso/lib/universal/id';
-import { seedOrganisationMembers } from '@documenso/prisma/seed/organisations';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { seedOrganisationMembers } from '@shieldsign/prisma/seed/organisations';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../../fixtures/authentication';
 
@@ -18,9 +18,9 @@ test('[ADMIN]: promote member to owner', async ({ page }) => {
   });
 
   // Create organisation members with different roles
-  const memberEmail = `member-${nanoid()}@test.shielddocs.io`;
-  const managerEmail = `manager-${nanoid()}@test.shielddocs.io`;
-  const adminMemberEmail = `admin-member-${nanoid()}@test.shielddocs.io`;
+  const memberEmail = `member-${nanoid()}@test.shieldsign.io`;
+  const managerEmail = `manager-${nanoid()}@test.shieldsign.io`;
+  const adminMemberEmail = `admin-member-${nanoid()}@test.shieldsign.io`;
 
   const [memberUser, managerUser, adminMemberUser] = await seedOrganisationMembers({
     members: [
@@ -128,7 +128,7 @@ test('[ADMIN]: promote manager to owner', async ({ page }) => {
     isPersonalOrganisation: false,
   });
 
-  const managerEmail = `manager-${nanoid()}@test.shielddocs.io`;
+  const managerEmail = `manager-${nanoid()}@test.shieldsign.io`;
 
   const [managerUser] = await seedOrganisationMembers({
     members: [
@@ -187,7 +187,7 @@ test('[ADMIN]: promote admin member to owner', async ({ page }) => {
     isPersonalOrganisation: false,
   });
 
-  const adminMemberEmail = `admin-member-${nanoid()}@test.shielddocs.io`;
+  const adminMemberEmail = `admin-member-${nanoid()}@test.shieldsign.io`;
 
   const [adminMemberUser] = await seedOrganisationMembers({
     members: [
@@ -272,7 +272,7 @@ test('[ADMIN]: verify role hierarchy after promotion', async ({ page }) => {
     isPersonalOrganisation: false,
   });
 
-  const memberEmail = `member-${nanoid()}@test.shielddocs.io`;
+  const memberEmail = `member-${nanoid()}@test.shieldsign.io`;
 
   const [memberUser] = await seedOrganisationMembers({
     members: [
@@ -373,8 +373,8 @@ test('[ADMIN]: multiple promotions in sequence', async ({ page }) => {
     isPersonalOrganisation: false,
   });
 
-  const member1Email = `member1-${nanoid()}@test.shielddocs.io`;
-  const member2Email = `member2-${nanoid()}@test.shielddocs.io`;
+  const member1Email = `member1-${nanoid()}@test.shieldsign.io`;
+  const member2Email = `member2-${nanoid()}@test.shieldsign.io`;
 
   const [member1User, member2User] = await seedOrganisationMembers({
     members: [
@@ -476,7 +476,7 @@ test('[ADMIN]: verify organisation access after ownership change', async ({ page
     isPersonalOrganisation: false,
   });
 
-  const memberEmail = `member-${nanoid()}@test.shielddocs.io`;
+  const memberEmail = `member-${nanoid()}@test.shieldsign.io`;
 
   const [memberUser] = await seedOrganisationMembers({
     members: [

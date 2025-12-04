@@ -10,10 +10,10 @@ import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { TEAM_MEMBER_ROLE_HIERARCHY } from '@documenso/lib/constants/teams';
-import { TEAM_MEMBER_ROLE_MAP } from '@documenso/lib/constants/teams-translations';
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { TEAM_MEMBER_ROLE_HIERARCHY } from '@shieldsign/lib/constants/teams';
+import { TEAM_MEMBER_ROLE_MAP } from '@shieldsign/lib/constants/teams-translations';
+import { trpc } from '@shieldsign/trpc/react';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -22,7 +22,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -31,18 +31,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { MultiSelectCombobox } from '@shieldsign/ui/primitives/multi-select-combobox';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/select';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 
@@ -154,10 +154,10 @@ export const TeamMemberCreateDialog = ({ trigger, ...props }: TeamMemberCreateDi
                       To be able to add members to a team, you must first add them to the
                       organisation. For more information, please see the{' '}
                       <Link
-                        to="https://docs.shielddocs.io/users/organisations/members"
+                        to="https://docs.shieldsign.io/users/organisations/members"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-documenso-700 hover:text-documenso-600 hover:underline"
+                        className="text-shieldsign-700 hover:text-shieldsign-600 hover:underline"
                       >
                         documentation
                       </Link>

@@ -2,12 +2,12 @@
 import type {
   TDocumentAuthOptions,
   TRecipientAuthOptions,
-} from '@documenso/lib/types/document-auth';
-import type { TDocumentEmailSettings } from '@documenso/lib/types/document-email';
-import type { TDocumentFormValues } from '@documenso/lib/types/document-form-values';
-import type { TEnvelopeAttachmentType } from '@documenso/lib/types/envelope-attachment';
-import type { TFieldMetaNotOptionalSchema } from '@documenso/lib/types/field-meta';
-import type { TClaimFlags } from '@documenso/lib/types/subscription';
+} from '@shieldsign/lib/types/document-auth';
+import type { TDocumentEmailSettings } from '@shieldsign/lib/types/document-email';
+import type { TDocumentFormValues } from '@shieldsign/lib/types/document-form-values';
+import type { TEnvelopeAttachmentType } from '@shieldsign/lib/types/envelope-attachment';
+import type { TFieldMetaNotOptionalSchema } from '@shieldsign/lib/types/field-meta';
+import type { TClaimFlags } from '@shieldsign/lib/types/subscription';
 
 /**
  * Global types for Prisma.Json instances.

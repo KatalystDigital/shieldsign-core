@@ -1,8 +1,8 @@
 import type { Session } from '@prisma/client';
 import type { Context } from 'hono';
 
-import { AppError } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { prisma } from '@shieldsign/prisma';
 
 import { AuthenticationErrorCode } from '../errors/error-codes';
 import type { SessionValidationResult } from '../session/session';

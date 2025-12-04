@@ -1,7 +1,7 @@
 import type { z } from 'zod';
 
-import { ZFindResultResponse, ZFindSearchParamsSchema } from '@documenso/lib/types/search-params';
-import SubscriptionClaimSchema from '@documenso/prisma/generated/zod/modelSchema/SubscriptionClaimSchema';
+import { ZFindResultResponse, ZFindSearchParamsSchema } from '@shieldsign/lib/types/search-params';
+import SubscriptionClaimSchema from '@shieldsign/prisma/generated/zod/modelSchema/SubscriptionClaimSchema';
 
 export const ZFindSubscriptionClaimsRequestSchema = ZFindSearchParamsSchema.extend({});
 

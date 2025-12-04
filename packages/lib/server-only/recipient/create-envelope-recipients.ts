@@ -1,14 +1,14 @@
 import { EnvelopeType, RecipientRole } from '@prisma/client';
 import { SendStatus, SigningStatus } from '@prisma/client';
 
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { TRecipientAccessAuthTypes } from '@documenso/lib/types/document-auth';
-import { type TRecipientActionAuthTypes } from '@documenso/lib/types/document-auth';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { nanoid } from '@documenso/lib/universal/id';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { createRecipientAuthOptions } from '@documenso/lib/utils/document-auth';
-import { prisma } from '@documenso/prisma';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@shieldsign/lib/types/document-audit-logs';
+import type { TRecipientAccessAuthTypes } from '@shieldsign/lib/types/document-auth';
+import { type TRecipientActionAuthTypes } from '@shieldsign/lib/types/document-auth';
+import type { ApiRequestMetadata } from '@shieldsign/lib/universal/extract-request-metadata';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { createDocumentAuditLogData } from '@shieldsign/lib/utils/document-audit-logs';
+import { createRecipientAuthOptions } from '@shieldsign/lib/utils/document-auth';
+import { prisma } from '@shieldsign/prisma';
 
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import type { EnvelopeIdOptions } from '../../utils/envelope';

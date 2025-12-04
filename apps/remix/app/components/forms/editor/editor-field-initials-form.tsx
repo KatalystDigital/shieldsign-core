@@ -9,8 +9,8 @@ import {
   FIELD_DEFAULT_GENERIC_ALIGN,
   type TInitialsFieldMeta as InitialsFieldMeta,
   ZInitialsFieldMeta,
-} from '@documenso/lib/types/field-meta';
-import { Form } from '@documenso/ui/primitives/form/form';
+} from '@shieldsign/lib/types/field-meta';
+import { Form } from '@shieldsign/ui/primitives/form/form';
 
 import {
   EditorGenericFontSizeField,

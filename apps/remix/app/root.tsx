@@ -11,15 +11,15 @@ import {
 } from 'react-router';
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { SessionProvider } from '@documenso/lib/client-only/providers/session';
-import { APP_I18N_OPTIONS, type SupportedLanguageCodes } from '@documenso/lib/constants/i18n';
-import { createPublicEnv } from '@documenso/lib/utils/env';
-import { extractLocaleData } from '@documenso/lib/utils/i18n';
-import { TrpcProvider } from '@documenso/trpc/react';
-import { getOrganisationSession } from '@documenso/trpc/server/organisation-router/get-organisation-session';
-import { Toaster } from '@documenso/ui/primitives/toaster';
-import { TooltipProvider } from '@documenso/ui/primitives/tooltip';
+import { getOptionalSession } from '@shieldsign/auth/server/lib/utils/get-session';
+import { SessionProvider } from '@shieldsign/lib/client-only/providers/session';
+import { APP_I18N_OPTIONS, type SupportedLanguageCodes } from '@shieldsign/lib/constants/i18n';
+import { createPublicEnv } from '@shieldsign/lib/utils/env';
+import { extractLocaleData } from '@shieldsign/lib/utils/i18n';
+import { TrpcProvider } from '@shieldsign/trpc/react';
+import { getOrganisationSession } from '@shieldsign/trpc/server/organisation-router/get-organisation-session';
+import { Toaster } from '@shieldsign/ui/primitives/toaster';
+import { TooltipProvider } from '@shieldsign/ui/primitives/tooltip';
 
 import type { Route } from './+types/root';
 import stylesheet from './app.css?url';

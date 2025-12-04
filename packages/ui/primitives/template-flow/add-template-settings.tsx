@@ -8,40 +8,40 @@ import { InfoIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 
-import { useAutoSave } from '@documenso/lib/client-only/hooks/use-autosave';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
+import { useAutoSave } from '@shieldsign/lib/client-only/hooks/use-autosave';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@shieldsign/lib/constants/date-formats';
 import {
   DOCUMENT_DISTRIBUTION_METHODS,
   DOCUMENT_SIGNATURE_TYPES,
-} from '@documenso/lib/constants/document';
-import { SUPPORTED_LANGUAGES } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
-import type { TDocumentMetaDateFormat } from '@documenso/lib/types/document-meta';
-import type { TTemplate } from '@documenso/lib/types/template';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { extractTeamSignatureSettings } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
+} from '@shieldsign/lib/constants/document';
+import { SUPPORTED_LANGUAGES } from '@shieldsign/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@shieldsign/lib/constants/time-zones';
+import { ZDocumentEmailSettingsSchema } from '@shieldsign/lib/types/document-email';
+import type { TDocumentMetaDateFormat } from '@shieldsign/lib/types/document-meta';
+import type { TTemplate } from '@shieldsign/lib/types/template';
+import { extractDocumentAuthMethods } from '@shieldsign/lib/utils/document-auth';
+import { extractTeamSignatureSettings } from '@shieldsign/lib/utils/teams';
+import { trpc } from '@shieldsign/trpc/react';
 import {
   DocumentGlobalAuthAccessSelect,
   DocumentGlobalAuthAccessTooltip,
-} from '@documenso/ui/components/document/document-global-auth-access-select';
+} from '@shieldsign/ui/components/document/document-global-auth-access-select';
 import {
   DocumentGlobalAuthActionSelect,
   DocumentGlobalAuthActionTooltip,
-} from '@documenso/ui/components/document/document-global-auth-action-select';
-import { DocumentSendEmailMessageHelper } from '@documenso/ui/components/document/document-send-email-message-helper';
+} from '@shieldsign/ui/components/document/document-global-auth-action-select';
+import { DocumentSendEmailMessageHelper } from '@shieldsign/ui/components/document/document-send-email-message-helper';
 import {
   DocumentVisibilitySelect,
   DocumentVisibilityTooltip,
-} from '@documenso/ui/components/document/document-visibility-select';
+} from '@shieldsign/ui/components/document/document-visibility-select';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@documenso/ui/primitives/accordion';
+} from '@shieldsign/ui/primitives/accordion';
 import {
   Form,
   FormControl,
@@ -49,7 +49,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
+} from '@shieldsign/ui/primitives/form/form';
 
 import { DocumentEmailCheckboxes } from '../../components/document/document-email-checkboxes';
 import {
@@ -501,7 +501,7 @@ export const AddTemplateSettingsFormPartial = ({
                                       </SelectItem>
                                     ))}
 
-                                    <SelectItem value={'-1'}>ShieldDocs Sign</SelectItem>
+                                    <SelectItem value={'-1'}>ShieldSign</SelectItem>
                                   </SelectContent>
                                 </Select>
                               </FormControl>

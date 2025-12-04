@@ -12,7 +12,7 @@ export type DocumentCompletedEmailTemplateProps = Partial<TemplateDocumentComple
 };
 
 export const DocumentCompletedEmailTemplate = ({
-  downloadLink = 'https://shielddocs.io',
+  downloadLink = 'https://shieldsign.io',
   documentName = 'Open Source Pledge.pdf',
   assetBaseUrl = 'http://localhost:3002',
   customBody,
@@ -40,7 +40,7 @@ export const DocumentCompletedEmailTemplate = ({
               ) : (
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="ShieldDocs Sign Logo"
+                  alt="ShieldSign Logo"
                   className="mb-4 h-6"
                 />
               )}

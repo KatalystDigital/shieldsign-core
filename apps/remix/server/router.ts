@@ -6,15 +6,15 @@ import { requestId } from 'hono/request-id';
 import type { RequestIdVariables } from 'hono/request-id';
 import type { Logger } from 'pino';
 
-import { tsRestHonoApp } from '@documenso/api/hono';
-import { auth } from '@documenso/auth/server';
-import { API_V2_BETA_URL, API_V2_URL } from '@documenso/lib/constants/app';
-import { jobsClient } from '@documenso/lib/jobs/client';
-import { TelemetryClient } from '@documenso/lib/server-only/telemetry/telemetry-client';
-import { getIpAddress } from '@documenso/lib/universal/get-ip-address';
-import { env } from '@documenso/lib/utils/env';
-import { logger } from '@documenso/lib/utils/logger';
-import { openApiDocument } from '@documenso/trpc/server/open-api';
+import { tsRestHonoApp } from '@shieldsign/api/hono';
+import { auth } from '@shieldsign/auth/server';
+import { API_V2_BETA_URL, API_V2_URL } from '@shieldsign/lib/constants/app';
+import { jobsClient } from '@shieldsign/lib/jobs/client';
+import { TelemetryClient } from '@shieldsign/lib/server-only/telemetry/telemetry-client';
+import { getIpAddress } from '@shieldsign/lib/universal/get-ip-address';
+import { env } from '@shieldsign/lib/utils/env';
+import { logger } from '@shieldsign/lib/utils/logger';
+import { openApiDocument } from '@shieldsign/trpc/server/open-api';
 
 import { aiRoute } from './api/ai/route';
 import { downloadRoute } from './api/download/download';
@@ -135,7 +135,7 @@ app.use(`${API_V2_BETA_URL}/*`, async (c) =>
 );
 
 // Start telemetry client for anonymous usage tracking.
-// Can be disabled by setting DOCUMENSO_DISABLE_TELEMETRY=true
+// Can be disabled by setting SHIELDSIGN_DISABLE_TELEMETRY=true
 if (env('NODE_ENV') !== 'development') {
   void TelemetryClient.start();
 }

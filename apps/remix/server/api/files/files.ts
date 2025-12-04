@@ -2,14 +2,14 @@ import { sValidator } from '@hono/standard-validator';
 import type { Prisma } from '@prisma/client';
 import { Hono } from 'hono';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@documenso/lib/constants/app';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { verifyEmbeddingPresignToken } from '@documenso/lib/server-only/embedding-presign/verify-embedding-presign-token';
-import { getTeamById } from '@documenso/lib/server-only/team/get-team';
-import { putNormalizedPdfFileServerSide } from '@documenso/lib/universal/upload/put-file.server';
-import { getPresignPostUrl } from '@documenso/lib/universal/upload/server-actions';
-import { prisma } from '@documenso/prisma';
+import { getOptionalSession } from '@shieldsign/auth/server/lib/utils/get-session';
+import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@shieldsign/lib/constants/app';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { verifyEmbeddingPresignToken } from '@shieldsign/lib/server-only/embedding-presign/verify-embedding-presign-token';
+import { getTeamById } from '@shieldsign/lib/server-only/team/get-team';
+import { putNormalizedPdfFileServerSide } from '@shieldsign/lib/universal/upload/put-file.server';
+import { getPresignPostUrl } from '@shieldsign/lib/universal/upload/server-actions';
+import { prisma } from '@shieldsign/prisma';
 
 import type { HonoEnv } from '../../router';
 import { handleEnvelopeItemFileRequest } from './files.helpers';

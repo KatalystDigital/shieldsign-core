@@ -1,7 +1,7 @@
-import { getServerLimits } from '@documenso/ee/server-only/limits/server';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { createEnvelope } from '@documenso/lib/server-only/envelope/create-envelope';
-import { putNormalizedPdfFileServerSide } from '@documenso/lib/universal/upload/put-file.server';
+import { getServerLimits } from '@shieldsign/ee/server-only/limits/server';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { createEnvelope } from '@shieldsign/lib/server-only/envelope/create-envelope';
+import { putNormalizedPdfFileServerSide } from '@shieldsign/lib/universal/upload/put-file.server';
 
 import { insertFormValuesInPdf } from '../../../lib/server-only/pdf/insert-form-values-in-pdf';
 import { authenticatedProcedure } from '../trpc';

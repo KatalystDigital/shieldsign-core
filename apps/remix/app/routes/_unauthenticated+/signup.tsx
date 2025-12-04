@@ -4,9 +4,9 @@ import {
   IS_GOOGLE_SSO_ENABLED,
   IS_MICROSOFT_SSO_ENABLED,
   IS_OIDC_SSO_ENABLED,
-} from '@documenso/lib/constants/auth';
-import { env } from '@documenso/lib/utils/env';
-import { isValidReturnTo, normalizeReturnTo } from '@documenso/lib/utils/is-valid-return-to';
+} from '@shieldsign/lib/constants/auth';
+import { env } from '@shieldsign/lib/utils/env';
+import { isValidReturnTo, normalizeReturnTo } from '@shieldsign/lib/utils/is-valid-return-to';
 
 import { SignUpForm } from '~/components/forms/signup';
 import { appMetaTags } from '~/utils/meta';

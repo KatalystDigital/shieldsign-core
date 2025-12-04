@@ -1,9 +1,9 @@
 import { DocumentStatus, RecipientRole, SigningStatus } from '@prisma/client';
 
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { RequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { prisma } from '@documenso/prisma';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@shieldsign/lib/types/document-audit-logs';
+import type { RequestMetadata } from '@shieldsign/lib/universal/extract-request-metadata';
+import { createDocumentAuditLogData } from '@shieldsign/lib/utils/document-audit-logs';
+import { prisma } from '@shieldsign/prisma';
 
 export type RemovedSignedFieldWithTokenOptions = {
   token: string;

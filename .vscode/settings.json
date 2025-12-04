@@ -1,4 +1,4 @@
-# ShieldDocs Sign - VS Code Settings
+# ShieldSign - VS Code Settings
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",

@@ -1,16 +1,16 @@
 import { Trans, useLingui } from '@lingui/react/macro';
 
-import { validateFields as validateNameFields } from '@documenso/lib/advanced-fields-validation/validate-fields';
-import { type TNameFieldMeta as NameFieldMeta } from '@documenso/lib/types/field-meta';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
+import { validateFields as validateNameFields } from '@shieldsign/lib/advanced-fields-validation/validate-fields';
+import { type TNameFieldMeta as NameFieldMeta } from '@shieldsign/lib/types/field-meta';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
+} from '@shieldsign/ui/primitives/select';
 
 type NameFieldAdvancedSettingsProps = {
   fieldState: NameFieldMeta;

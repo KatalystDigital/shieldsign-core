@@ -4,11 +4,11 @@ import { CheckCircle, Download, Edit, EyeIcon, Pencil } from 'lucide-react';
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import type { TDocumentMany as TDocumentRow } from '@documenso/lib/types/document';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
-import { Button } from '@documenso/ui/primitives/button';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import type { TDocumentMany as TDocumentRow } from '@shieldsign/lib/types/document';
+import { isDocumentCompleted } from '@shieldsign/lib/utils/document';
+import { formatDocumentsPath } from '@shieldsign/lib/utils/teams';
+import { Button } from '@shieldsign/ui/primitives/button';
 
 import { useCurrentTeam } from '~/providers/team';
 

@@ -12,18 +12,18 @@ import {
 import { TemplateType } from '@prisma/client';
 import { z } from 'zod';
 
-import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import { SUPPORTED_LANGUAGE_CODES } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import { ZUrlSchema } from '@documenso/lib/schemas/common';
+import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@shieldsign/lib/constants/date-formats';
+import { SUPPORTED_LANGUAGE_CODES } from '@shieldsign/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@shieldsign/lib/constants/time-zones';
+import { ZUrlSchema } from '@shieldsign/lib/schemas/common';
 import {
   ZDocumentAccessAuthTypesSchema,
   ZDocumentActionAuthTypesSchema,
   ZRecipientActionAuthTypesSchema,
-} from '@documenso/lib/types/document-auth';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
-import { ZEnvelopeAttachmentTypeSchema } from '@documenso/lib/types/envelope-attachment';
-import { ZFieldMetaPrefillFieldsSchema, ZFieldMetaSchema } from '@documenso/lib/types/field-meta';
+} from '@shieldsign/lib/types/document-auth';
+import { ZDocumentEmailSettingsSchema } from '@shieldsign/lib/types/document-email';
+import { ZEnvelopeAttachmentTypeSchema } from '@shieldsign/lib/types/envelope-attachment';
+import { ZFieldMetaPrefillFieldsSchema, ZFieldMetaSchema } from '@shieldsign/lib/types/field-meta';
 
 extendZodWithOpenApi(z);
 

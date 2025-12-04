@@ -2,7 +2,7 @@ import { Trans } from '@lingui/react/macro';
 import { ChevronLeft, Loader } from 'lucide-react';
 import { Link } from 'react-router';
 
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
+import { Skeleton } from '@shieldsign/ui/primitives/skeleton';
 
 export default function DocumentEditSkeleton() {
   return (
@@ -23,7 +23,7 @@ export default function DocumentEditSkeleton() {
       <div className="mt-4 grid h-[80vh] max-h-[60rem] w-full grid-cols-12 gap-x-8">
         <div className="dark:bg-background border-border col-span-12 rounded-xl border-2 bg-white/50 p-2 before:rounded-xl lg:col-span-6 xl:col-span-7">
           <div className="flex h-[80vh] max-h-[60rem] flex-col items-center justify-center">
-            <Loader className="text-documenso h-12 w-12 animate-spin" />
+            <Loader className="text-shieldsign h-12 w-12 animate-spin" />
 
             <p className="text-muted-foreground mt-4">
               <Trans>Loading document...</Trans>

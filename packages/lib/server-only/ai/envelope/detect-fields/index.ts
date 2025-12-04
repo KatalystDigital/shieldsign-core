@@ -4,7 +4,7 @@ import { generateObject } from 'ai';
 import pMap from 'p-map';
 import sharp from 'sharp';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 import { AppError, AppErrorCode } from '../../../../errors/app-error';
 import { getFileServerSide } from '../../../../universal/upload/get-file.server';

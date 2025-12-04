@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 import {
   EMAIL_VERIFICATION_STATE,

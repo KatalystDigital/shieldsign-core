@@ -9,28 +9,28 @@ import { LucideChevronDown, LucideChevronUp } from 'lucide-react';
 import { DateTime } from 'luxon';
 import { useSearchParams } from 'react-router';
 
-import { useThrottleFn } from '@documenso/lib/client-only/hooks/use-throttle-fn';
-import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import { PDF_VIEWER_PAGE_SELECTOR } from '@documenso/lib/constants/pdf-viewer';
-import { DEFAULT_DOCUMENT_TIME_ZONE } from '@documenso/lib/constants/time-zones';
+import { useThrottleFn } from '@shieldsign/lib/client-only/hooks/use-throttle-fn';
+import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@shieldsign/lib/constants/date-formats';
+import { PDF_VIEWER_PAGE_SELECTOR } from '@shieldsign/lib/constants/pdf-viewer';
+import { DEFAULT_DOCUMENT_TIME_ZONE } from '@shieldsign/lib/constants/time-zones';
 import {
   isFieldUnsignedAndRequired,
   isRequiredField,
-} from '@documenso/lib/utils/advanced-fields-helpers';
-import { validateFieldsInserted } from '@documenso/lib/utils/fields';
-import { trpc } from '@documenso/trpc/react';
+} from '@shieldsign/lib/utils/advanced-fields-helpers';
+import { validateFieldsInserted } from '@shieldsign/lib/utils/fields';
+import { trpc } from '@shieldsign/trpc/react';
 import type {
   TRemovedSignedFieldWithTokenMutationSchema,
   TSignFieldWithTokenMutationSchema,
-} from '@documenso/trpc/server/field-router/schema';
-import { FieldToolTip } from '@documenso/ui/components/field/field-tooltip';
-import { Button } from '@documenso/ui/primitives/button';
-import { ElementVisible } from '@documenso/ui/primitives/element-visible';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { PDFViewerLazy } from '@documenso/ui/primitives/pdf-viewer/lazy';
-import { SignaturePadDialog } from '@documenso/ui/primitives/signature-pad/signature-pad-dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/trpc/server/field-router/schema';
+import { FieldToolTip } from '@shieldsign/ui/components/field/field-tooltip';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { ElementVisible } from '@shieldsign/ui/primitives/element-visible';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { PDFViewerLazy } from '@shieldsign/ui/primitives/pdf-viewer/lazy';
+import { SignaturePadDialog } from '@shieldsign/ui/primitives/signature-pad/signature-pad-dialog';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { BrandingLogo } from '~/components/general/branding-logo';
 import { ZDirectTemplateEmbedDataSchema } from '~/types/embed-direct-template-schema';

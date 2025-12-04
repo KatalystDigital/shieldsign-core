@@ -11,13 +11,13 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate, useSearchParams } from 'react-router';
 import { z } from 'zod';
 
-import communityCardsImage from '@documenso/assets/images/community-cards.png';
-import { authClient } from '@documenso/auth/client';
-import { useAnalytics } from '@documenso/lib/client-only/hooks/use-analytics';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { ZPasswordSchema } from '@documenso/trpc/server/auth-router/schema';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import communityCardsImage from '@shieldsign/assets/images/community-cards.png';
+import { authClient } from '@shieldsign/auth/client';
+import { useAnalytics } from '@shieldsign/lib/client-only/hooks/use-analytics';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { ZPasswordSchema } from '@shieldsign/trpc/server/auth-router/schema';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -25,11 +25,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { PasswordInput } from '@documenso/ui/primitives/password-input';
-import { SignaturePadDialog } from '@documenso/ui/primitives/signature-pad/signature-pad-dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { PasswordInput } from '@shieldsign/ui/primitives/password-input';
+import { SignaturePadDialog } from '@shieldsign/ui/primitives/signature-pad/signature-pad-dialog';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { UserProfileTimur } from '~/components/general/user-profile-timur';
 
@@ -389,7 +389,7 @@ export const SignUpForm = ({
               <p className="text-muted-foreground mt-4 text-sm">
                 <Trans>
                   Already have an account?{' '}
-                  <Link to="/signin" className="text-documenso-700 duration-200 hover:opacity-70">
+                  <Link to="/signin" className="text-shieldsign-700 duration-200 hover:opacity-70">
                     Sign in instead
                   </Link>
                 </Trans>
@@ -410,17 +410,17 @@ export const SignUpForm = ({
           <Trans>
             By proceeding, you agree to our{' '}
             <Link
-              to="https://documen.so/terms"
+              to="https://shieldsign.io/terms"
               target="_blank"
-              className="text-documenso-700 duration-200 hover:opacity-70"
+              className="text-shieldsign-700 duration-200 hover:opacity-70"
             >
               Terms of Service
             </Link>{' '}
             and{' '}
             <Link
-              to="https://documen.so/privacy"
+              to="https://shieldsign.io/privacy"
               target="_blank"
-              className="text-documenso-700 duration-200 hover:opacity-70"
+              className="text-shieldsign-700 duration-200 hover:opacity-70"
             >
               Privacy Policy
             </Link>

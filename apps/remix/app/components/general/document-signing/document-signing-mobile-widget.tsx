@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { LucideChevronDown, LucideChevronUp } from 'lucide-react';
 import { match } from 'ts-pattern';
 
-import { Button } from '@documenso/ui/primitives/button';
+import { Button } from '@shieldsign/ui/primitives/button';
 
 import { useEmbedSigningContext } from '~/components/embed/embed-signing-context';
 
@@ -106,7 +106,7 @@ export const DocumentSigningMobileWidget = () => {
                   <motion.div
                     layout="size"
                     layoutId="document-signing-mobile-widget-progress-bar"
-                    className="bg-documenso absolute inset-y-0 left-0"
+                    className="bg-shieldsign absolute inset-y-0 left-0"
                     style={{
                       width: `${100 - (100 / requiredRecipientFields.length) * (recipientFieldsRemaining.length ?? 0)}%`,
                     }}

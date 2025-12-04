@@ -5,13 +5,13 @@ import { FieldType } from '@prisma/client';
 import { TooltipArrow } from '@radix-ui/react-tooltip';
 import { X } from 'lucide-react';
 
-import { type TRecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { ZFieldMetaSchema } from '@documenso/lib/types/field-meta';
-import type { FieldWithSignature } from '@documenso/prisma/types/field-with-signature';
-import { FieldRootContainer } from '@documenso/ui/components/field/field';
-import { RECIPIENT_COLOR_STYLES } from '@documenso/ui/lib/recipient-colors';
-import { cn } from '@documenso/ui/lib/utils';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+import { type TRecipientActionAuth } from '@shieldsign/lib/types/document-auth';
+import { ZFieldMetaSchema } from '@shieldsign/lib/types/field-meta';
+import type { FieldWithSignature } from '@shieldsign/prisma/types/field-with-signature';
+import { FieldRootContainer } from '@shieldsign/ui/components/field/field';
+import { RECIPIENT_COLOR_STYLES } from '@shieldsign/ui/lib/recipient-colors';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 
@@ -183,7 +183,7 @@ export const DocumentSigningFieldContainer = ({
                   'bg-foreground/5 border-border border': !field.inserted,
                 },
                 {
-                  'bg-documenso-200 border-primary border': field.inserted,
+                  'bg-shieldsign-200 border-primary border': field.inserted,
                 },
               )}
             >

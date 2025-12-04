@@ -2,17 +2,17 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 import { type Envelope, FieldType, type Passkey, type Recipient } from '@prisma/client';
 
-import type { SessionUser } from '@documenso/auth/server/lib/session/session';
-import { MAXIMUM_PASSKEYS } from '@documenso/lib/constants/auth';
+import type { SessionUser } from '@shieldsign/auth/server/lib/session/session';
+import { MAXIMUM_PASSKEYS } from '@shieldsign/lib/constants/auth';
 import type {
   TDocumentAuthOptions,
   TRecipientAccessAuthTypes,
   TRecipientActionAuthTypes,
   TRecipientAuthOptions,
-} from '@documenso/lib/types/document-auth';
-import { DocumentAuth } from '@documenso/lib/types/document-auth';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { trpc } from '@documenso/trpc/react';
+} from '@shieldsign/lib/types/document-auth';
+import { DocumentAuth } from '@shieldsign/lib/types/document-auth';
+import { extractDocumentAuthMethods } from '@shieldsign/lib/utils/document-auth';
+import { trpc } from '@shieldsign/trpc/react';
 
 import type { DocumentSigningAuthDialogProps } from './document-signing-auth-dialog';
 import { DocumentSigningAuthDialog } from './document-signing-auth-dialog';

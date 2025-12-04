@@ -14,20 +14,20 @@ import { Link, useNavigate } from 'react-router';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { authClient } from '@documenso/auth/client';
-import { AuthenticationErrorCode } from '@documenso/auth/server/lib/errors/error-codes';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { trpc } from '@documenso/trpc/react';
-import { ZCurrentPasswordSchema } from '@documenso/trpc/server/auth-router/schema';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@shieldsign/auth/client';
+import { AuthenticationErrorCode } from '@shieldsign/auth/server/lib/errors/error-codes';
+import { AppError } from '@shieldsign/lib/errors/app-error';
+import { trpc } from '@shieldsign/trpc/react';
+import { ZCurrentPasswordSchema } from '@shieldsign/trpc/server/auth-router/schema';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
+} from '@shieldsign/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -35,11 +35,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { PasswordInput } from '@documenso/ui/primitives/password-input';
-import { PinInput, PinInputGroup, PinInputSlot } from '@documenso/ui/primitives/pin-input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { PasswordInput } from '@shieldsign/ui/primitives/password-input';
+import { PinInput, PinInputGroup, PinInputSlot } from '@shieldsign/ui/primitives/pin-input';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 const CommonErrorMessages: Record<string, MessageDescriptor> = {
   [AuthenticationErrorCode.AccountDisabled]: msg`This account has been disabled. Please contact support.`,
@@ -381,7 +381,7 @@ export const SignInForm = ({
             type="submit"
             size="lg"
             loading={isSubmitting}
-            className="dark:bg-documenso dark:hover:opacity-90"
+            className="dark:bg-shieldsign dark:hover:opacity-90"
           >
             {isSubmitting ? <Trans>Signing in...</Trans> : <Trans>Sign In</Trans>}
           </Button>

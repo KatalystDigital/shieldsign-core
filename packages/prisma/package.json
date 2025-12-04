@@ -1,5 +1,5 @@
 {
-  "name": "@documenso/prisma",
+  "name": "@shieldsign/prisma",
   "version": "0.0.0",
   "main": "./index.ts",
   "types": "./index.ts",

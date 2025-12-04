@@ -1,6 +1,6 @@
 import { Prisma, WebhookCallStatus } from '@prisma/client';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 import type { JobRunIO } from '../../client/_internal/job';
 import type { TExecuteWebhookJobDefinition } from './execute-webhook';
@@ -34,7 +34,7 @@ export const run = async ({
     body: JSON.stringify(payloadData),
     headers: {
       'Content-Type': 'application/json',
-      'X-ShieldDocs Sign-Secret': secret ?? '',
+      'X-ShieldSign-Secret': secret ?? '',
     },
   });
 

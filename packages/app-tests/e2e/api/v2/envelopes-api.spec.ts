@@ -4,9 +4,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pick } from 'remeda';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import { prisma } from '@documenso/prisma';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { createApiToken } from '@shieldsign/lib/server-only/public-api/create-api-token';
+import { prisma } from '@shieldsign/prisma';
 import {
   DocumentDistributionMethod,
   DocumentSigningOrder,
@@ -16,16 +16,16 @@ import {
   FieldType,
   FolderType,
   RecipientRole,
-} from '@documenso/prisma/client';
-import { seedUser } from '@documenso/prisma/seed/users';
-import type { TCreateEnvelopeItemsPayload } from '@documenso/trpc/server/envelope-router/create-envelope-items.types';
+} from '@shieldsign/prisma/client';
+import { seedUser } from '@shieldsign/prisma/seed/users';
+import type { TCreateEnvelopeItemsPayload } from '@shieldsign/trpc/server/envelope-router/create-envelope-items.types';
 import type {
   TCreateEnvelopePayload,
   TCreateEnvelopeResponse,
-} from '@documenso/trpc/server/envelope-router/create-envelope.types';
-import type { TCreateEnvelopeRecipientsRequest } from '@documenso/trpc/server/envelope-router/envelope-recipients/create-envelope-recipients.types';
-import type { TGetEnvelopeResponse } from '@documenso/trpc/server/envelope-router/get-envelope.types';
-import type { TUpdateEnvelopeRequest } from '@documenso/trpc/server/envelope-router/update-envelope.types';
+} from '@shieldsign/trpc/server/envelope-router/create-envelope.types';
+import type { TCreateEnvelopeRecipientsRequest } from '@shieldsign/trpc/server/envelope-router/envelope-recipients/create-envelope-recipients.types';
+import type { TGetEnvelopeResponse } from '@shieldsign/trpc/server/envelope-router/get-envelope.types';
+import type { TUpdateEnvelopeRequest } from '@shieldsign/trpc/server/envelope-router/update-envelope.types';
 
 import { ALIGNMENT_TEST_FIELDS } from '../../../constants/field-alignment-pdf';
 import { FIELD_META_TEST_FIELDS } from '../../../constants/field-meta-pdf';
@@ -185,7 +185,7 @@ test.describe('API V2 Envelopes', () => {
           distributionMethod: DocumentDistributionMethod.NONE,
           signingOrder: DocumentSigningOrder.SEQUENTIAL,
           allowDictateNextSigner: true,
-          redirectUrl: 'https://shielddocs.io',
+          redirectUrl: 'https://shieldsign.io',
           language: 'de',
           typedSignatureEnabled: true,
           uploadSignatureEnabled: false,
@@ -204,7 +204,7 @@ test.describe('API V2 Envelopes', () => {
         attachments: [
           {
             label: 'Test Attachment',
-            data: 'https://shielddocs.io',
+            data: 'https://shieldsign.io',
             type: 'link',
           },
         ],

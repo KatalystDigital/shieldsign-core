@@ -2,9 +2,9 @@ import type { OrganisationGroupType, OrganisationMemberRole } from '@prisma/clie
 import { Prisma } from '@prisma/client';
 import { unique } from 'remeda';
 
-import type { FindResultResponse } from '@documenso/lib/types/search-params';
-import { buildTeamWhereQuery } from '@documenso/lib/utils/teams';
-import { prisma } from '@documenso/prisma';
+import type { FindResultResponse } from '@shieldsign/lib/types/search-params';
+import { buildTeamWhereQuery } from '@shieldsign/lib/utils/teams';
+import { prisma } from '@shieldsign/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

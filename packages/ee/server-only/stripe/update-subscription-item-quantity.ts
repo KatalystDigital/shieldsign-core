@@ -1,10 +1,10 @@
 import type { OrganisationClaim, Subscription } from '@prisma/client';
 import type Stripe from 'stripe';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { stripe } from '@documenso/lib/server-only/stripe';
-import { appLog } from '@documenso/lib/utils/debugger';
-import { prisma } from '@documenso/prisma';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { stripe } from '@shieldsign/lib/server-only/stripe';
+import { appLog } from '@shieldsign/lib/utils/debugger';
+import { prisma } from '@shieldsign/prisma';
 
 import { isPriceSeatsBased } from './is-price-seats-based';
 

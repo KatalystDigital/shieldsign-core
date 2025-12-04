@@ -4,11 +4,11 @@ import nextra from 'nextra';
 
 const nextConfig: NextConfig = {
   transpilePackages: [
-    '@documenso/assets',
-    '@documenso/lib',
-    '@documenso/tailwind-config',
-    '@documenso/trpc',
-    '@documenso/ui',
+    '@shieldsign/assets',
+    '@shieldsign/lib',
+    '@shieldsign/tailwind-config',
+    '@shieldsign/trpc',
+    '@shieldsign/ui',
   ],
 };
 

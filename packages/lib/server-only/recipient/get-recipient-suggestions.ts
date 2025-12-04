@@ -1,7 +1,7 @@
 import { EnvelopeType, Prisma } from '@prisma/client';
 
-import { buildTeamWhereQuery } from '@documenso/lib/utils/teams';
-import { prisma } from '@documenso/prisma';
+import { buildTeamWhereQuery } from '@shieldsign/lib/utils/teams';
+import { prisma } from '@shieldsign/prisma';
 
 export type GetRecipientSuggestionsOptions = {
   userId: number;

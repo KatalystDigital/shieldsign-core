@@ -1,15 +1,15 @@
 import { unique } from 'remeda';
 
-import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/organisations';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getMemberOrganisationRole } from '@documenso/lib/server-only/team/get-member-roles';
-import { generateDatabaseId } from '@documenso/lib/universal/id';
+import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@shieldsign/lib/constants/organisations';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { getMemberOrganisationRole } from '@shieldsign/lib/server-only/team/get-member-roles';
+import { generateDatabaseId } from '@shieldsign/lib/universal/id';
 import {
   buildOrganisationWhereQuery,
   isOrganisationRoleWithinUserHierarchy,
-} from '@documenso/lib/utils/organisations';
-import { prisma } from '@documenso/prisma';
-import { OrganisationGroupType } from '@documenso/prisma/generated/types';
+} from '@shieldsign/lib/utils/organisations';
+import { prisma } from '@shieldsign/prisma';
+import { OrganisationGroupType } from '@shieldsign/prisma/generated/types';
 
 import { authenticatedProcedure } from '../trpc';
 import {

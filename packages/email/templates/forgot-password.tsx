@@ -10,7 +10,7 @@ import { TemplateForgotPassword } from '../template-components/template-forgot-p
 export type ForgotPasswordTemplateProps = Partial<TemplateForgotPasswordProps>;
 
 export const ForgotPasswordTemplate = ({
-  resetPasswordLink = 'https://shielddocs.io',
+  resetPasswordLink = 'https://shieldsign.io',
   assetBaseUrl = 'http://localhost:3002',
 }: ForgotPasswordTemplateProps) => {
   const { _ } = useLingui();
@@ -36,7 +36,7 @@ export const ForgotPasswordTemplate = ({
               ) : (
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="ShieldDocs Sign Logo"
+                  alt="ShieldSign Logo"
                   className="mb-4 h-6"
                 />
               )}

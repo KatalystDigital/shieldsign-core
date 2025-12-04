@@ -15,17 +15,17 @@ import {
   UserIcon,
 } from 'lucide-react';
 
-import { getBoundingClientRect } from '@documenso/lib/client-only/get-bounding-client-rect';
-import { useDocumentElement } from '@documenso/lib/client-only/hooks/use-document-element';
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
-import { PDF_VIEWER_PAGE_SELECTOR } from '@documenso/lib/constants/pdf-viewer';
-import { FIELD_META_DEFAULT_VALUES } from '@documenso/lib/types/field-meta';
-import { nanoid } from '@documenso/lib/universal/id';
-import { canRecipientFieldsBeModified } from '@documenso/lib/utils/recipients';
-import { SignatureIcon } from '@documenso/ui/icons/signature';
-import { RECIPIENT_COLOR_STYLES } from '@documenso/ui/lib/recipient-colors';
-import { cn } from '@documenso/ui/lib/utils';
-import { FRIENDLY_FIELD_TYPE } from '@documenso/ui/primitives/document-flow/types';
+import { getBoundingClientRect } from '@shieldsign/lib/client-only/get-bounding-client-rect';
+import { useDocumentElement } from '@shieldsign/lib/client-only/hooks/use-document-element';
+import { useCurrentEnvelopeEditor } from '@shieldsign/lib/client-only/providers/envelope-editor-provider';
+import { PDF_VIEWER_PAGE_SELECTOR } from '@shieldsign/lib/constants/pdf-viewer';
+import { FIELD_META_DEFAULT_VALUES } from '@shieldsign/lib/types/field-meta';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { canRecipientFieldsBeModified } from '@shieldsign/lib/utils/recipients';
+import { SignatureIcon } from '@shieldsign/ui/icons/signature';
+import { RECIPIENT_COLOR_STYLES } from '@shieldsign/ui/lib/recipient-colors';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { FRIENDLY_FIELD_TYPE } from '@shieldsign/ui/primitives/document-flow/types';
 
 const MIN_HEIGHT_PX = 12;
 const MIN_WIDTH_PX = 36;

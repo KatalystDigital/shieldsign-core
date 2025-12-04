@@ -1,4 +1,4 @@
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 type GetResetTokenValidityOptions = {
   token: string;

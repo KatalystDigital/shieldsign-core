@@ -1,6 +1,6 @@
 import { EnvelopeType } from '@prisma/client';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@shieldsign/prisma';
 
 import { mapDocumentIdToSecondaryId } from '../../utils/envelope';
 

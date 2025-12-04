@@ -18,16 +18,16 @@ export type OrganisationLeaveEmailProps = {
 
 export const OrganisationLeaveEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://shielddocs.io',
+  baseUrl = 'https://shieldsign.io',
   memberName = 'John Doe',
-  memberEmail = 'johndoe@shielddocs.io',
+  memberEmail = 'johndoe@shieldsign.io',
   organisationName = 'Organisation Name',
   organisationUrl = 'demo',
 }: OrganisationLeaveEmailProps) => {
   const { _ } = useLingui();
   const branding = useBranding();
 
-  const previewText = msg`A member has left your organisation on ShieldDocs Sign`;
+  const previewText = msg`A member has left your organisation on ShieldSign`;
 
   return (
     <Html>

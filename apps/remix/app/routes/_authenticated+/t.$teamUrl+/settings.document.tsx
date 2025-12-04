@@ -2,10 +2,10 @@ import { useLingui } from '@lingui/react/macro';
 import { Loader } from 'lucide-react';
 import { useLoaderData } from 'react-router';
 
-import { IS_AI_FEATURES_CONFIGURED } from '@documenso/lib/constants/app';
-import { DocumentSignatureType } from '@documenso/lib/constants/document';
-import { trpc } from '@documenso/trpc/react';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { IS_AI_FEATURES_CONFIGURED } from '@shieldsign/lib/constants/app';
+import { DocumentSignatureType } from '@shieldsign/lib/constants/document';
+import { trpc } from '@shieldsign/trpc/react';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import {
   DocumentPreferencesForm,

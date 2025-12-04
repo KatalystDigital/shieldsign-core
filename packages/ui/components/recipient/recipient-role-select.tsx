@@ -5,9 +5,9 @@ import { RecipientRole } from '@prisma/client';
 import type { SelectProps } from '@radix-ui/react-select';
 import { InfoIcon } from 'lucide-react';
 
-import { ROLE_ICONS } from '@documenso/ui/primitives/recipient-role-icons';
-import { Select, SelectContent, SelectItem, SelectTrigger } from '@documenso/ui/primitives/select';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+import { ROLE_ICONS } from '@shieldsign/ui/primitives/recipient-role-icons';
+import { Select, SelectContent, SelectItem, SelectTrigger } from '@shieldsign/ui/primitives/select';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
 
 import { cn } from '../../lib/utils';
 

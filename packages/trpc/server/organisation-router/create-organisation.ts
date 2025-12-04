@@ -1,13 +1,13 @@
 import { OrganisationType } from '@prisma/client';
 
-import { createCheckoutSession } from '@documenso/ee/server-only/stripe/create-checkout-session';
-import { createCustomer } from '@documenso/ee/server-only/stripe/create-customer';
-import { IS_BILLING_ENABLED, NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { createOrganisation } from '@documenso/lib/server-only/organisation/create-organisation';
-import { INTERNAL_CLAIM_ID, internalClaims } from '@documenso/lib/types/subscription';
-import { generateStripeOrganisationCreateMetadata } from '@documenso/lib/utils/billing';
-import { prisma } from '@documenso/prisma';
+import { createCheckoutSession } from '@shieldsign/ee/server-only/stripe/create-checkout-session';
+import { createCustomer } from '@shieldsign/ee/server-only/stripe/create-customer';
+import { IS_BILLING_ENABLED, NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { createOrganisation } from '@shieldsign/lib/server-only/organisation/create-organisation';
+import { INTERNAL_CLAIM_ID, internalClaims } from '@shieldsign/lib/types/subscription';
+import { generateStripeOrganisationCreateMetadata } from '@shieldsign/lib/utils/billing';
+import { prisma } from '@shieldsign/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

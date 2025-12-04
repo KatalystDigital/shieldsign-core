@@ -9,13 +9,13 @@ import {
   WebhookTriggerEvents,
 } from '@prisma/client';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { normalizePdf as makeNormalizedPdf } from '@documenso/lib/server-only/pdf/normalize-pdf';
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { nanoid, prefixedId } from '@documenso/lib/universal/id';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { prisma } from '@documenso/prisma';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { normalizePdf as makeNormalizedPdf } from '@shieldsign/lib/server-only/pdf/normalize-pdf';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@shieldsign/lib/types/document-audit-logs';
+import type { ApiRequestMetadata } from '@shieldsign/lib/universal/extract-request-metadata';
+import { nanoid, prefixedId } from '@shieldsign/lib/universal/id';
+import { createDocumentAuditLogData } from '@shieldsign/lib/utils/document-audit-logs';
+import { prisma } from '@shieldsign/prisma';
 
 import type {
   TDocumentAccessAuthTypes,

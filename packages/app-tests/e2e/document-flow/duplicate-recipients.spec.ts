@@ -1,10 +1,10 @@
 import { type Page, expect, test } from '@playwright/test';
 import type { Document, Team } from '@prisma/client';
 
-import { PDF_VIEWER_PAGE_SELECTOR } from '@documenso/lib/constants/pdf-viewer';
-import { prisma } from '@documenso/prisma';
-import { seedBlankDocument } from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { PDF_VIEWER_PAGE_SELECTOR } from '@shieldsign/lib/constants/pdf-viewer';
+import { prisma } from '@shieldsign/prisma';
+import { seedBlankDocument } from '@shieldsign/prisma/seed/documents';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 import { signSignaturePad } from '../fixtures/signature';

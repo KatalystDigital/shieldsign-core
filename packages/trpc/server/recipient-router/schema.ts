@@ -1,14 +1,14 @@
 import { RecipientRole } from '@prisma/client';
 import { z } from 'zod';
 
-import { isTemplateRecipientEmailPlaceholder } from '@documenso/lib/constants/template';
+import { isTemplateRecipientEmailPlaceholder } from '@shieldsign/lib/constants/template';
 import {
   ZRecipientAccessAuthSchema,
   ZRecipientAccessAuthTypesSchema,
   ZRecipientActionAuthSchema,
   ZRecipientActionAuthTypesSchema,
-} from '@documenso/lib/types/document-auth';
-import { ZRecipientLiteSchema, ZRecipientSchema } from '@documenso/lib/types/recipient';
+} from '@shieldsign/lib/types/document-auth';
+import { ZRecipientLiteSchema, ZRecipientSchema } from '@shieldsign/lib/types/recipient';
 
 export const ZGetRecipientRequestSchema = z.object({
   recipientId: z.number(),

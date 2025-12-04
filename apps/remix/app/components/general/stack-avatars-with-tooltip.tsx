@@ -4,10 +4,10 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { type DocumentStatus, type Recipient } from '@prisma/client';
 
-import { RecipientStatusType, getRecipientType } from '@documenso/lib/client-only/recipient-type';
-import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-roles';
-import { recipientAbbreviation } from '@documenso/lib/utils/recipient-formatter';
-import { PopoverHover } from '@documenso/ui/primitives/popover';
+import { RecipientStatusType, getRecipientType } from '@shieldsign/lib/client-only/recipient-type';
+import { RECIPIENT_ROLES_DESCRIPTION } from '@shieldsign/lib/constants/recipient-roles';
+import { recipientAbbreviation } from '@shieldsign/lib/utils/recipient-formatter';
+import { PopoverHover } from '@shieldsign/ui/primitives/popover';
 
 import { AvatarWithRecipient } from './avatar-with-recipient';
 import { StackAvatar } from './stack-avatar';

@@ -5,16 +5,16 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { AlertTriangle } from 'lucide-react';
 
-import { authClient } from '@documenso/auth/client';
-import { ONE_DAY, ONE_SECOND } from '@documenso/lib/constants/time';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@shieldsign/auth/client';
+import { ONE_DAY, ONE_SECOND } from '@shieldsign/lib/constants/time';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/dialog';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 export type VerifyEmailBannerProps = {
   email: string;

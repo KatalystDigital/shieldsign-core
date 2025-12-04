@@ -14,37 +14,37 @@ import { InfoIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 
-import { useAutoSave } from '@documenso/lib/client-only/hooks/use-autosave';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import { DOCUMENT_SIGNATURE_TYPES } from '@documenso/lib/constants/document';
-import { SUPPORTED_LANGUAGES } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import type { TDocument } from '@documenso/lib/types/document';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { extractTeamSignatureSettings } from '@documenso/lib/utils/teams';
+import { useAutoSave } from '@shieldsign/lib/client-only/hooks/use-autosave';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@shieldsign/lib/constants/date-formats';
+import { DOCUMENT_SIGNATURE_TYPES } from '@shieldsign/lib/constants/document';
+import { SUPPORTED_LANGUAGES } from '@shieldsign/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@shieldsign/lib/constants/time-zones';
+import type { TDocument } from '@shieldsign/lib/types/document';
+import { extractDocumentAuthMethods } from '@shieldsign/lib/utils/document-auth';
+import { extractTeamSignatureSettings } from '@shieldsign/lib/utils/teams';
 import {
   DocumentGlobalAuthAccessSelect,
   DocumentGlobalAuthAccessTooltip,
-} from '@documenso/ui/components/document/document-global-auth-access-select';
+} from '@shieldsign/ui/components/document/document-global-auth-access-select';
 import {
   DocumentGlobalAuthActionSelect,
   DocumentGlobalAuthActionTooltip,
-} from '@documenso/ui/components/document/document-global-auth-action-select';
+} from '@shieldsign/ui/components/document/document-global-auth-action-select';
 import {
   DocumentReadOnlyFields,
   mapFieldsWithRecipients,
-} from '@documenso/ui/components/document/document-read-only-fields';
+} from '@shieldsign/ui/components/document/document-read-only-fields';
 import {
   DocumentVisibilitySelect,
   DocumentVisibilityTooltip,
-} from '@documenso/ui/components/document/document-visibility-select';
+} from '@shieldsign/ui/components/document/document-visibility-select';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@documenso/ui/primitives/accordion';
+} from '@shieldsign/ui/primitives/accordion';
 import {
   Form,
   FormControl,
@@ -52,8 +52,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+} from '@shieldsign/ui/primitives/form/form';
+import { MultiSelectCombobox } from '@shieldsign/ui/primitives/multi-select-combobox';
 
 import { DocumentSignatureSettingsTooltip } from '../../components/document/document-signature-settings-tooltip';
 import { Combobox } from '../combobox';

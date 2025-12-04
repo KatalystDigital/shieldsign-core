@@ -1,10 +1,10 @@
 import { OrganisationGroupType } from '@prisma/client';
 
-import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/teams';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getMemberRoles } from '@documenso/lib/server-only/team/get-member-roles';
-import { buildTeamWhereQuery, isTeamRoleWithinUserHierarchy } from '@documenso/lib/utils/teams';
-import { prisma } from '@documenso/prisma';
+import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@shieldsign/lib/constants/teams';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { getMemberRoles } from '@shieldsign/lib/server-only/team/get-member-roles';
+import { buildTeamWhereQuery, isTeamRoleWithinUserHierarchy } from '@shieldsign/lib/utils/teams';
+import { prisma } from '@shieldsign/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

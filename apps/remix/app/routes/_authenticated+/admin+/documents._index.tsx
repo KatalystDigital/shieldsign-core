@@ -6,16 +6,16 @@ import { Trans } from '@lingui/react/macro';
 import { Loader } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router';
 
-import { useDebouncedValue } from '@documenso/lib/client-only/hooks/use-debounced-value';
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { trpc } from '@documenso/trpc/react';
-import { Avatar, AvatarFallback } from '@documenso/ui/primitives/avatar';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { Input } from '@documenso/ui/primitives/input';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+import { useDebouncedValue } from '@shieldsign/lib/client-only/hooks/use-debounced-value';
+import { useUpdateSearchParams } from '@shieldsign/lib/client-only/hooks/use-update-search-params';
+import { extractInitials } from '@shieldsign/lib/utils/recipient-formatter';
+import { trpc } from '@shieldsign/trpc/react';
+import { Avatar, AvatarFallback } from '@shieldsign/ui/primitives/avatar';
+import type { DataTableColumnDef } from '@shieldsign/ui/primitives/data-table';
+import { DataTable } from '@shieldsign/ui/primitives/data-table';
+import { DataTablePagination } from '@shieldsign/ui/primitives/data-table-pagination';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@shieldsign/ui/primitives/tooltip';
 
 import { DocumentStatus } from '~/components/general/document/document-status';
 

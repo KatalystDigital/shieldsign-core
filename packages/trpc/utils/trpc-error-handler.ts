@@ -1,7 +1,7 @@
 import type { ErrorHandlerOptions } from '@trpc/server/unstable-core-do-not-import';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { logger } from '@documenso/lib/utils/logger';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { logger } from '@shieldsign/lib/utils/logger';
 
 import type { TrpcContext } from '../server/context';
 

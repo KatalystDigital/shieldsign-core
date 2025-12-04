@@ -7,10 +7,10 @@ import { useRevalidator } from 'react-router';
 import { Link } from 'react-router';
 import type { z } from 'zod';
 
-import { trpc } from '@documenso/trpc/react';
-import type { TGetUserResponse } from '@documenso/trpc/server/admin-router/get-user.types';
-import { ZUpdateUserRequestSchema } from '@documenso/trpc/server/admin-router/update-user.types';
-import { Button } from '@documenso/ui/primitives/button';
+import { trpc } from '@shieldsign/trpc/react';
+import type { TGetUserResponse } from '@shieldsign/trpc/server/admin-router/get-user.types';
+import { ZUpdateUserRequestSchema } from '@shieldsign/trpc/server/admin-router/update-user.types';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -18,10 +18,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@shieldsign/ui/primitives/form/form';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { SpinnerBox } from '@shieldsign/ui/primitives/spinner';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import { AdminOrganisationCreateDialog } from '~/components/dialogs/admin-organisation-create-dialog';
 import { AdminUserDeleteDialog } from '~/components/dialogs/admin-user-delete-dialog';

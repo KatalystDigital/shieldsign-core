@@ -1,35 +1,35 @@
 /**
- * ShieldDocs Sign - Email Footer Component
+ * ShieldSign - Email Footer Component
  * 
  * Replace email footer in packages/email/templates/ files
  */
 
 import { Hr, Link, Section, Text } from '@react-email/components';
 
-export const ShieldDocsEmailFooter = () => {
+export const ShieldSignEmailFooter = () => {
   return (
     <Section style={footerStyle}>
       <Hr style={hrStyle} />
       <Text style={footerTextStyle}>
         Sent by{' '}
-        <Link href="https://shielddocs.io" style={linkStyle}>
-          ShieldDocs Sign
+        <Link href="https://shieldsign.io" style={linkStyle}>
+          ShieldSign
         </Link>
-        {' '}- Enterprise E-Signatures for Trust Centers
+        {' '}- Enterprise E-Signatures Built for Security
       </Text>
       <Text style={footerSubTextStyle}>
-        Part of the ShieldDocs Trust Center Platform
+        Part of the ShieldSign Platform
       </Text>
       <Text style={footerSubTextStyle}>
-        <Link href="https://shielddocs.io/privacy" style={linkStyle}>
+        <Link href="https://shieldsign.io/privacy" style={linkStyle}>
           Privacy Policy
         </Link>
         {' · '}
-        <Link href="https://shielddocs.io/terms" style={linkStyle}>
+        <Link href="https://shieldsign.io/terms" style={linkStyle}>
           Terms of Service
         </Link>
         {' · '}
-        <Link href="mailto:support@shielddocs.io" style={linkStyle}>
+        <Link href="mailto:support@shieldsign.io" style={linkStyle}>
           Contact Support
         </Link>
       </Text>
@@ -66,4 +66,4 @@ const linkStyle = {
   textDecoration: 'none',
 };
 
-export default ShieldDocsEmailFooter;
+export default ShieldSignEmailFooter;

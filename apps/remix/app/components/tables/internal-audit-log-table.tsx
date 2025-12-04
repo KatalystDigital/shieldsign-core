@@ -5,14 +5,14 @@ import { DateTime } from 'luxon';
 import { P, match } from 'ts-pattern';
 import { UAParser } from 'ua-parser-js';
 
-import { APP_I18N_OPTIONS } from '@documenso/lib/constants/i18n';
+import { APP_I18N_OPTIONS } from '@shieldsign/lib/constants/i18n';
 import {
   DOCUMENT_AUDIT_LOG_TYPE,
   type TDocumentAuditLog,
-} from '@documenso/lib/types/document-audit-logs';
-import { formatDocumentAuditLogAction } from '@documenso/lib/utils/document-audit-logs';
-import { cn } from '@documenso/ui/lib/utils';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
+} from '@shieldsign/lib/types/document-audit-logs';
+import { formatDocumentAuditLogAction } from '@shieldsign/lib/utils/document-audit-logs';
+import { cn } from '@shieldsign/ui/lib/utils';
+import { Card, CardContent } from '@shieldsign/ui/primitives/card';
 
 export type AuditLogDataTableProps = {
   logs: TDocumentAuditLog[];

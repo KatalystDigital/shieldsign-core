@@ -5,7 +5,7 @@ import { DocumentDistributionMethod, DocumentStatus } from '@prisma/client';
 /**
  * Workaround for E2E tests to not import `msg`.
  */
-import { DocumentSignatureType } from '@documenso/lib/utils/teams';
+import { DocumentSignatureType } from '@shieldsign/lib/utils/teams';
 
 export { DocumentSignatureType };
 

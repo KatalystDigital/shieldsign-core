@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { seedTeamEmailVerification } from '@documenso/prisma/seed/teams';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { seedTeamEmailVerification } from '@shieldsign/prisma/seed/teams';
+import { seedUser } from '@shieldsign/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 
@@ -18,9 +18,9 @@ test('[TEAMS]: send team email request', async ({ page }) => {
 
   await page.getByRole('button', { name: 'Add email' }).click();
   await page.getByPlaceholder('eg. Legal').click();
-  await page.getByPlaceholder('eg. Legal').fill('test@test.shielddocs.io');
+  await page.getByPlaceholder('eg. Legal').fill('test@test.shieldsign.io');
   await page.getByPlaceholder('example@example.com').click();
-  await page.getByPlaceholder('example@example.com').fill('test@test.shielddocs.io');
+  await page.getByPlaceholder('example@example.com').fill('test@test.shieldsign.io');
   await page.getByRole('button', { name: 'Add' }).click();
 
   await expect(
@@ -35,7 +35,7 @@ test('[TEAMS]: accept team email request', async ({ page }) => {
   const { user, team } = await seedUser();
 
   const teamEmailVerification = await seedTeamEmailVerification({
-    email: `team-email-verification--${team.url}@test.shielddocs.io`,
+    email: `team-email-verification--${team.url}@test.shieldsign.io`,
     teamId: team.id,
   });
 

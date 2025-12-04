@@ -1,11 +1,11 @@
 import type { Context } from 'hono';
 
-import { API_V2_BETA_URL, API_V2_URL } from '@documenso/lib/constants/app';
-import { AppError, genericErrorCodeToTrpcErrorCodeMap } from '@documenso/lib/errors/app-error';
-import { createTrpcContext } from '@documenso/trpc/server/context';
-import { appRouter } from '@documenso/trpc/server/router';
-import { createOpenApiFetchHandler } from '@documenso/trpc/utils/openapi-fetch-handler';
-import { handleTrpcRouterError } from '@documenso/trpc/utils/trpc-error-handler';
+import { API_V2_BETA_URL, API_V2_URL } from '@shieldsign/lib/constants/app';
+import { AppError, genericErrorCodeToTrpcErrorCodeMap } from '@shieldsign/lib/errors/app-error';
+import { createTrpcContext } from '@shieldsign/trpc/server/context';
+import { appRouter } from '@shieldsign/trpc/server/router';
+import { createOpenApiFetchHandler } from '@shieldsign/trpc/utils/openapi-fetch-handler';
+import { handleTrpcRouterError } from '@shieldsign/trpc/utils/trpc-error-handler';
 
 type OpenApiTrpcServerHandlerOptions = {
   isBeta: boolean;

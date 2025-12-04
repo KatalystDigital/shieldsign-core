@@ -1,7 +1,7 @@
 import { redirect, useLoaderData } from 'react-router';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { getDocumentByAccessToken } from '@documenso/lib/server-only/document/get-document-by-access-token';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
+import { getDocumentByAccessToken } from '@shieldsign/lib/server-only/document/get-document-by-access-token';
 
 import { DocumentCertificateQRView } from '~/components/general/document/document-certificate-qr-view';
 
@@ -13,15 +13,15 @@ export function meta({ params: { slug } }: Route.MetaArgs) {
   }
 
   return [
-    { title: 'ShieldDocs Sign - Share' },
-    { description: 'I just signed a document in style with ShieldDocs Sign!' },
+    { title: 'ShieldSign - Share' },
+    { description: 'I just signed a document in style with ShieldSign!' },
     {
       property: 'og:title',
-      content: 'ShieldDocs Sign - Join the open source signing revolution',
+      content: 'ShieldSign - Join the open source signing revolution',
     },
     {
       property: 'og:description',
-      content: 'I just signed with ShieldDocs Sign!',
+      content: 'I just signed with ShieldSign!',
     },
     {
       property: 'og:type',
@@ -33,7 +33,7 @@ export function meta({ params: { slug } }: Route.MetaArgs) {
     },
     {
       name: 'twitter:site',
-      content: '@documenso',
+      content: '@shieldsign',
     },
     {
       name: 'twitter:card',
@@ -45,7 +45,7 @@ export function meta({ params: { slug } }: Route.MetaArgs) {
     },
     {
       name: 'twitter:description',
-      content: 'I just signed with ShieldDocs Sign!',
+      content: 'I just signed with ShieldSign!',
     },
   ];
 }
@@ -70,8 +70,8 @@ export const loader = async ({ request, params: { slug } }: Route.LoaderArgs) =>
     return {};
   }
 
-  // Is hardcoded because this whole meta is hardcoded anyway for ShieldDocs Sign.
-  throw redirect('https://shielddocs.io');
+  // Is hardcoded because this whole meta is hardcoded anyway for ShieldSign.
+  throw redirect('https://shieldsign.io');
 };
 
 export default function SharePage() {

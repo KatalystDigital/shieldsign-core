@@ -10,9 +10,9 @@ import {
   SendStatus,
 } from '@prisma/client';
 
-import { mailer } from '@documenso/email/mailer';
-import DocumentInviteEmailTemplate from '@documenso/email/templates/document-invite';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@shieldsign/email/mailer';
+import DocumentInviteEmailTemplate from '@shieldsign/email/templates/document-invite';
+import { prisma } from '@shieldsign/prisma';
 
 import { getI18nInstance } from '../../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../../constants/app';

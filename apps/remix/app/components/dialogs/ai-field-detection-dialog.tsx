@@ -6,18 +6,18 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { CheckIcon, FormInputIcon, ShieldCheckIcon } from 'lucide-react';
 
-import type { NormalizedFieldWithContext } from '@documenso/lib/server-only/ai/envelope/detect-fields/types';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import type { NormalizedFieldWithContext } from '@shieldsign/lib/server-only/ai/envelope/detect-fields/types';
+import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
-import { Label } from '@documenso/ui/primitives/label';
-import { Textarea } from '@documenso/ui/primitives/textarea';
+} from '@shieldsign/ui/primitives/dialog';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { Textarea } from '@shieldsign/ui/primitives/textarea';
 
 import {
   AiApiError,

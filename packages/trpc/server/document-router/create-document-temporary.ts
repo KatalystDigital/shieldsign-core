@@ -1,12 +1,12 @@
 import { DocumentDataType, EnvelopeType } from '@prisma/client';
 
-import { getServerLimits } from '@documenso/ee/server-only/limits/server';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { createDocumentData } from '@documenso/lib/server-only/document-data/create-document-data';
-import { createEnvelope } from '@documenso/lib/server-only/envelope/create-envelope';
-import { getPresignPostUrl } from '@documenso/lib/universal/upload/server-actions';
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
+import { getServerLimits } from '@shieldsign/ee/server-only/limits/server';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { createDocumentData } from '@shieldsign/lib/server-only/document-data/create-document-data';
+import { createEnvelope } from '@shieldsign/lib/server-only/envelope/create-envelope';
+import { getPresignPostUrl } from '@shieldsign/lib/universal/upload/server-actions';
+import { mapSecondaryIdToDocumentId } from '@shieldsign/lib/utils/envelope';
+import { prisma } from '@shieldsign/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

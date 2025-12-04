@@ -1,16 +1,16 @@
 import { UserSecurityAuditLogType } from '@prisma/client';
 
-import { getOrganisationAuthenticationPortalOptions } from '@documenso/auth/server/lib/utils/organisation-portal';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
+import { getOrganisationAuthenticationPortalOptions } from '@shieldsign/auth/server/lib/utils/organisation-portal';
+import { IS_BILLING_ENABLED } from '@shieldsign/lib/constants/app';
 import {
   ORGANISATION_ACCOUNT_LINK_VERIFICATION_TOKEN_IDENTIFIER,
   ORGANISATION_USER_ACCOUNT_TYPE,
-} from '@documenso/lib/constants/organisations';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { addUserToOrganisation } from '@documenso/lib/server-only/organisation/accept-organisation-invitation';
-import { ZOrganisationAccountLinkMetadataSchema } from '@documenso/lib/types/organisation';
-import type { RequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { prisma } from '@documenso/prisma';
+} from '@shieldsign/lib/constants/organisations';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { addUserToOrganisation } from '@shieldsign/lib/server-only/organisation/accept-organisation-invitation';
+import { ZOrganisationAccountLinkMetadataSchema } from '@shieldsign/lib/types/organisation';
+import type { RequestMetadata } from '@shieldsign/lib/universal/extract-request-metadata';
+import { prisma } from '@shieldsign/prisma';
 
 export interface LinkOrganisationAccountOptions {
   token: string;

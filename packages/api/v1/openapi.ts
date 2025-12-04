@@ -1,6 +1,6 @@
 import { generateOpenApi } from '@ts-rest/open-api';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
 
 import { ApiContractV1 } from './contract';
 
@@ -9,9 +9,9 @@ export const OpenAPIV1 = Object.assign(
     ApiContractV1,
     {
       info: {
-        title: 'ShieldDocs Sign API',
+        title: 'ShieldSign API',
         version: '1.0.0',
-        description: 'The ShieldDocs Sign API for retrieving, creating, updating and deleting documents.',
+        description: 'The ShieldSign API for retrieving, creating, updating and deleting documents.',
       },
       servers: [
         {

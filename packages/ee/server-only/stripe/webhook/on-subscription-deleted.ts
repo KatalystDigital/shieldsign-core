@@ -1,7 +1,7 @@
 import { SubscriptionStatus } from '@prisma/client';
 
-import type { Stripe } from '@documenso/lib/server-only/stripe';
-import { prisma } from '@documenso/prisma';
+import type { Stripe } from '@shieldsign/lib/server-only/stripe';
+import { prisma } from '@shieldsign/prisma';
 
 export type OnSubscriptionDeletedOptions = {
   subscription: Stripe.Subscription;

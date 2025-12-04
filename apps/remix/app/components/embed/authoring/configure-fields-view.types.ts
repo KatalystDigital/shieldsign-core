@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-import { ZFieldMetaSchema } from '@documenso/lib/types/field-meta';
-import { FieldType } from '@documenso/prisma/client';
+import { ZFieldMetaSchema } from '@shieldsign/lib/types/field-meta';
+import { FieldType } from '@shieldsign/prisma/client';
 
 export const ZConfigureFieldsFormSchema = z.object({
   fields: z.array(

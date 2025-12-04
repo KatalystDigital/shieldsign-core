@@ -18,16 +18,16 @@ export type OrganisationJoinEmailProps = {
 
 export const OrganisationJoinEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://shielddocs.io',
+  baseUrl = 'https://shieldsign.io',
   memberName = 'John Doe',
-  memberEmail = 'johndoe@shielddocs.io',
+  memberEmail = 'johndoe@shieldsign.io',
   organisationName = 'Organisation Name',
   organisationUrl = 'demo',
 }: OrganisationJoinEmailProps) => {
   const { _ } = useLingui();
   const branding = useBranding();
 
-  const previewText = msg`A member has joined your organisation on ShieldDocs Sign`;
+  const previewText = msg`A member has joined your organisation on ShieldSign`;
 
   return (
     <Html>

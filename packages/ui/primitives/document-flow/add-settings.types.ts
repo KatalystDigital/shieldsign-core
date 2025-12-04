@@ -2,19 +2,19 @@ import { msg } from '@lingui/core/macro';
 import { DocumentVisibility } from '@prisma/client';
 import { z } from 'zod';
 
-import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import { DocumentSignatureType } from '@documenso/lib/constants/document';
-import { SUPPORTED_LANGUAGE_CODES } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE } from '@documenso/lib/constants/time-zones';
+import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@shieldsign/lib/constants/date-formats';
+import { DocumentSignatureType } from '@shieldsign/lib/constants/document';
+import { SUPPORTED_LANGUAGE_CODES } from '@shieldsign/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE } from '@shieldsign/lib/constants/time-zones';
 import {
   ZDocumentAccessAuthTypesSchema,
   ZDocumentActionAuthTypesSchema,
-} from '@documenso/lib/types/document-auth';
+} from '@shieldsign/lib/types/document-auth';
 import {
   ZDocumentMetaDateFormatSchema,
   ZDocumentMetaTimezoneSchema,
-} from '@documenso/lib/types/document-meta';
-import { isValidRedirectUrl } from '@documenso/lib/utils/is-valid-redirect-url';
+} from '@shieldsign/lib/types/document-meta';
+import { isValidRedirectUrl } from '@shieldsign/lib/utils/is-valid-redirect-url';
 
 export const ZAddSettingsFormSchema = z.object({
   title: z

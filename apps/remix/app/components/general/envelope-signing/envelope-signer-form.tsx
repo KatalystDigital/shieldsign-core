@@ -3,10 +3,10 @@ import { useMemo } from 'react';
 import { Plural, Trans } from '@lingui/react/macro';
 import { FieldType, RecipientRole } from '@prisma/client';
 
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { RadioGroup, RadioGroupItem } from '@documenso/ui/primitives/radio-group';
-import { SignaturePadDialog } from '@documenso/ui/primitives/signature-pad/signature-pad-dialog';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
+import { RadioGroup, RadioGroupItem } from '@shieldsign/ui/primitives/radio-group';
+import { SignaturePadDialog } from '@shieldsign/ui/primitives/signature-pad/signature-pad-dialog';
 
 import { useEmbedSigningContext } from '~/components/embed/embed-signing-context';
 

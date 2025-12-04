@@ -1,4 +1,4 @@
-# ShieldDocs Sign - Logo Assets
+# ShieldSign - Logo Assets
 
 Place the following logo files in this directory:
 
@@ -38,7 +38,7 @@ apps/remix/public/icons/
 - **Secondary Color**: Dark slate #0d1117
 - **Style**: Modern, professional, security-focused
 - **Icon**: Shield with document/signature element
-- **Text**: "ShieldDocs Sign" or "ShieldDocs" (short form)
+- **Text**: "ShieldSign" or "ShieldSign" (short form)
 
 ## Logo Concept
 
@@ -60,7 +60,7 @@ Example SVG placeholder (replace with actual design):
         stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
   <!-- Text -->
   <text x="45" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#e6edf3">
-    ShieldDocs Sign
+    ShieldSign
   </text>
 </svg>
 ```

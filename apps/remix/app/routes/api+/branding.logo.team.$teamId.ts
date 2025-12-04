@@ -1,7 +1,7 @@
 import sharp from 'sharp';
 
-import { getTeamSettings } from '@documenso/lib/server-only/team/get-team-settings';
-import { getFileServerSide } from '@documenso/lib/universal/upload/get-file.server';
+import { getTeamSettings } from '@shieldsign/lib/server-only/team/get-team-settings';
+import { getFileServerSide } from '@shieldsign/lib/universal/upload/get-file.server';
 
 import type { Route } from './+types/branding.logo.team.$teamId';
 

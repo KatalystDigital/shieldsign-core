@@ -1,12 +1,12 @@
 import { EnvelopeType, type Field, FieldType } from '@prisma/client';
 import { isDeepEqual } from 'remeda';
 
-import { validateCheckboxField } from '@documenso/lib/advanced-fields-validation/validate-checkbox';
-import { validateDropdownField } from '@documenso/lib/advanced-fields-validation/validate-dropdown';
-import { validateNumberField } from '@documenso/lib/advanced-fields-validation/validate-number';
-import { validateRadioField } from '@documenso/lib/advanced-fields-validation/validate-radio';
-import { validateTextField } from '@documenso/lib/advanced-fields-validation/validate-text';
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
+import { validateCheckboxField } from '@shieldsign/lib/advanced-fields-validation/validate-checkbox';
+import { validateDropdownField } from '@shieldsign/lib/advanced-fields-validation/validate-dropdown';
+import { validateNumberField } from '@shieldsign/lib/advanced-fields-validation/validate-number';
+import { validateRadioField } from '@shieldsign/lib/advanced-fields-validation/validate-radio';
+import { validateTextField } from '@shieldsign/lib/advanced-fields-validation/validate-text';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@shieldsign/lib/types/document-audit-logs';
 import {
   type TFieldMetaSchema as FieldMeta,
   ZCheckboxFieldMeta,
@@ -15,13 +15,13 @@ import {
   ZNumberFieldMeta,
   ZRadioFieldMeta,
   ZTextFieldMeta,
-} from '@documenso/lib/types/field-meta';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
+} from '@shieldsign/lib/types/field-meta';
+import type { ApiRequestMetadata } from '@shieldsign/lib/universal/extract-request-metadata';
 import {
   createDocumentAuditLogData,
   diffFieldChanges,
-} from '@documenso/lib/utils/document-audit-logs';
-import { prisma } from '@documenso/prisma';
+} from '@shieldsign/lib/utils/document-audit-logs';
+import { prisma } from '@shieldsign/prisma';
 
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import type { EnvelopeIdOptions } from '../../utils/envelope';

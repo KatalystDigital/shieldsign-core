@@ -2,15 +2,15 @@ import { Trans, useLingui } from '@lingui/react/macro';
 import { Loader } from 'lucide-react';
 import { Link } from 'react-router';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { putFile } from '@documenso/lib/universal/upload/put-file';
-import { canExecuteOrganisationAction, isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { IS_BILLING_ENABLED } from '@shieldsign/lib/constants/app';
+import { putFile } from '@shieldsign/lib/universal/upload/put-file';
+import { canExecuteOrganisationAction, isPersonalLayout } from '@shieldsign/lib/utils/organisations';
+import { trpc } from '@shieldsign/trpc/react';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Button } from '@shieldsign/ui/primitives/button';
+import { useToast } from '@shieldsign/ui/primitives/use-toast';
 
 import {
   BrandingPreferencesForm,

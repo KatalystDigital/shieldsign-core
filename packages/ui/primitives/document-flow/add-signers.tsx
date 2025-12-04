@@ -13,19 +13,19 @@ import { GripVerticalIcon, HelpCircle, Plus, Trash } from 'lucide-react';
 import { useFieldArray, useForm } from 'react-hook-form';
 import { prop, sortBy } from 'remeda';
 
-import { useLimits } from '@documenso/ee/server-only/limits/provider/client';
-import { useAutoSave } from '@documenso/lib/client-only/hooks/use-autosave';
-import { useDebouncedValue } from '@documenso/lib/client-only/hooks/use-debounced-value';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { ZRecipientAuthOptionsSchema } from '@documenso/lib/types/document-auth';
-import { nanoid } from '@documenso/lib/universal/id';
-import { canRecipientBeModified as utilCanRecipientBeModified } from '@documenso/lib/utils/recipients';
-import { trpc } from '@documenso/trpc/react';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { RecipientActionAuthSelect } from '@documenso/ui/components/recipient/recipient-action-auth-select';
-import { RecipientRoleSelect } from '@documenso/ui/components/recipient/recipient-role-select';
-import { cn } from '@documenso/ui/lib/utils';
+import { useLimits } from '@shieldsign/ee/server-only/limits/provider/client';
+import { useAutoSave } from '@shieldsign/lib/client-only/hooks/use-autosave';
+import { useDebouncedValue } from '@shieldsign/lib/client-only/hooks/use-debounced-value';
+import { useCurrentOrganisation } from '@shieldsign/lib/client-only/providers/organisation';
+import { useSession } from '@shieldsign/lib/client-only/providers/session';
+import { ZRecipientAuthOptionsSchema } from '@shieldsign/lib/types/document-auth';
+import { nanoid } from '@shieldsign/lib/universal/id';
+import { canRecipientBeModified as utilCanRecipientBeModified } from '@shieldsign/lib/utils/recipients';
+import { trpc } from '@shieldsign/trpc/react';
+import { AnimateGenericFadeInOut } from '@shieldsign/ui/components/animate/animate-generic-fade-in-out';
+import { RecipientActionAuthSelect } from '@shieldsign/ui/components/recipient/recipient-action-auth-select';
+import { RecipientRoleSelect } from '@shieldsign/ui/components/recipient/recipient-role-select';
+import { cn } from '@shieldsign/ui/lib/utils';
 
 import {
   DocumentReadOnlyFields,

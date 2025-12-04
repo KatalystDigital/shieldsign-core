@@ -1,10 +1,10 @@
 import { EnvelopeType } from '@prisma/client';
 import { match } from 'ts-pattern';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { deleteDocument } from '@documenso/lib/server-only/document/delete-document';
-import { deleteTemplate } from '@documenso/lib/server-only/template/delete-template';
-import { prisma } from '@documenso/prisma';
+import { AppError, AppErrorCode } from '@shieldsign/lib/errors/app-error';
+import { deleteDocument } from '@shieldsign/lib/server-only/document/delete-document';
+import { deleteTemplate } from '@shieldsign/lib/server-only/template/delete-template';
+import { prisma } from '@shieldsign/prisma';
 
 import { ZGenericSuccessResponse } from '../schema';
 import { authenticatedProcedure } from '../trpc';

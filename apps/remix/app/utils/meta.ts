@@ -1,12 +1,12 @@
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@shieldsign/lib/constants/app';
 
 export const appMetaTags = (title?: string) => {
   const description =
-    'Join ShieldDocs Sign, the open signing infrastructure, and get a 10x better signing experience. Pricing starts at $30/mo. forever! Sign in now and enjoy a faster, smarter, and more beautiful document signing process. Integrates with your favorite tools, customizable, and expandable. Support our mission and become a part of our open-source community.';
+    'Join ShieldSign, the open signing infrastructure, and get a 10x better signing experience. Pricing starts at $30/mo. forever! Sign in now and enjoy a faster, smarter, and more beautiful document signing process. Integrates with your favorite tools, customizable, and expandable. Support our mission and become a part of our open-source community.';
 
   return [
     {
-      title: title ? `${title} - ShieldDocs Sign` : 'ShieldDocs Sign',
+      title: title ? `${title} - ShieldSign` : 'ShieldSign',
     },
     {
       name: 'description',
@@ -15,11 +15,11 @@ export const appMetaTags = (title?: string) => {
     {
       name: 'keywords',
       content:
-        'ShieldDocs Sign, open source, DocuSign alternative, document signing, open signing infrastructure, open-source community, fast signing, beautiful signing, smart templates',
+        'ShieldSign, open source, DocuSign alternative, document signing, open signing infrastructure, open-source community, fast signing, beautiful signing, smart templates',
     },
     {
       name: 'author',
-      content: 'ShieldDocs Sign, Inc.',
+      content: 'ShieldSign, Inc.',
     },
     {
       name: 'robots',
@@ -27,7 +27,7 @@ export const appMetaTags = (title?: string) => {
     },
     {
       property: 'og:title',
-      content: 'ShieldDocs Sign - Enterprise E-Signatures for Trust Centers',
+      content: 'ShieldSign - Enterprise E-Signatures Built for Security',
     },
     {
       property: 'og:description',
@@ -47,7 +47,7 @@ export const appMetaTags = (title?: string) => {
     },
     {
       name: 'twitter:site',
-      content: '@documenso',
+      content: '@shieldsign',
     },
     {
       name: 'twitter:description',

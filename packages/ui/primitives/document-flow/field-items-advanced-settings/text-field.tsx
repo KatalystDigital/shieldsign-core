@@ -1,18 +1,18 @@
 import { Trans, useLingui } from '@lingui/react/macro';
 
-import { validateTextField } from '@documenso/lib/advanced-fields-validation/validate-text';
-import { type TTextFieldMeta as TextFieldMeta } from '@documenso/lib/types/field-meta';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
+import { validateTextField } from '@shieldsign/lib/advanced-fields-validation/validate-text';
+import { type TTextFieldMeta as TextFieldMeta } from '@shieldsign/lib/types/field-meta';
+import { Input } from '@shieldsign/ui/primitives/input';
+import { Label } from '@shieldsign/ui/primitives/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Switch } from '@documenso/ui/primitives/switch';
-import { Textarea } from '@documenso/ui/primitives/textarea';
+} from '@shieldsign/ui/primitives/select';
+import { Switch } from '@shieldsign/ui/primitives/switch';
+import { Textarea } from '@shieldsign/ui/primitives/textarea';
 
 type TextFieldAdvancedSettingsProps = {
   fieldState: TextFieldMeta;

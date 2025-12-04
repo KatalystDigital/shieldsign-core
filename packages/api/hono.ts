@@ -1,22 +1,22 @@
 import { TsRestHttpError, fetchRequestHandler } from '@ts-rest/serverless/fetch';
 import { Hono } from 'hono';
 
-import { ApiContractV1 } from '@documenso/api/v1/contract';
-import { ApiContractV1Implementation } from '@documenso/api/v1/implementation';
-import { OpenAPIV1 } from '@documenso/api/v1/openapi';
-import { testCredentialsHandler } from '@documenso/lib/server-only/public-api/test-credentials';
-import { listDocumentsHandler } from '@documenso/lib/server-only/webhooks/zapier/list-documents';
-import { subscribeHandler } from '@documenso/lib/server-only/webhooks/zapier/subscribe';
-import { unsubscribeHandler } from '@documenso/lib/server-only/webhooks/zapier/unsubscribe';
+import { ApiContractV1 } from '@shieldsign/api/v1/contract';
+import { ApiContractV1Implementation } from '@shieldsign/api/v1/implementation';
+import { OpenAPIV1 } from '@shieldsign/api/v1/openapi';
+import { testCredentialsHandler } from '@shieldsign/lib/server-only/public-api/test-credentials';
+import { listDocumentsHandler } from '@shieldsign/lib/server-only/webhooks/zapier/list-documents';
+import { subscribeHandler } from '@shieldsign/lib/server-only/webhooks/zapier/subscribe';
+import { unsubscribeHandler } from '@shieldsign/lib/server-only/webhooks/zapier/unsubscribe';
 // This is a bit nasty. Todo: Extract
-import type { HonoEnv } from '@documenso/remix/server/router';
+import type { HonoEnv } from '@shieldsign/remix/server/router';
 
 // This is bad, ts-router will be created on each request.
 // But don't really have a choice here.
 export const tsRestHonoApp = new Hono<HonoEnv>();
 
 tsRestHonoApp
-  .get('/openapi', (c) => c.redirect('https://openapi-v1.shielddocs.io'))
+  .get('/openapi', (c) => c.redirect('https://openapi-v1.shieldsign.io'))
   .get('/openapi.json', (c) => c.json(OpenAPIV1))
   .get('/me', async (c) => testCredentialsHandler(c.req.raw));
 
