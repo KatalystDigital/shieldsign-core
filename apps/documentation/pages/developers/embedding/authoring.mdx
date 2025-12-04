@@ -5,7 +5,7 @@ description: Learn how to use embedded authoring to create documents and templat
 
 # Embedded Authoring
 
-In addition to embedding signing experiences, Documenso now supports embedded authoring, allowing you to integrate document and template creation and editing directly within your application.
+In addition to embedding signing experiences, ShieldSign now supports embedded authoring, allowing you to integrate document and template creation and editing directly within your application.
 
 ## How Embedded Authoring Works
 
@@ -28,7 +28,7 @@ import {
   EmbedCreateTemplateV1,
   EmbedUpdateDocumentV1,
   EmbedUpdateTemplateV1,
-} from '@documenso/embed-react';
+} from '@ShieldSign/embed-react';
 ```
 
 ## Creating Documents
@@ -36,7 +36,7 @@ import {
 To implement document creation in your application, use the `EmbedCreateDocumentV1` component:
 
 ```jsx
-import { EmbedCreateDocumentV1 } from '@documenso/embed-react';
+import { EmbedCreateDocumentV1 } from '@ShieldSign/embed-react';
 
 const DocumentCreator = () => {
   // You'll need to obtain a presign token using your API key
@@ -62,7 +62,7 @@ const DocumentCreator = () => {
 To create templates, use the `EmbedCreateTemplateV1` component:
 
 ```jsx
-import { EmbedCreateTemplateV1 } from '@documenso/embed-react';
+import { EmbedCreateTemplateV1 } from '@ShieldSign/embed-react';
 
 const TemplateCreator = () => {
   const presignToken = 'YOUR_PRESIGN_TOKEN';
@@ -87,7 +87,7 @@ const TemplateCreator = () => {
 To edit existing documents, use the `EmbedUpdateDocumentV1` component:
 
 ```jsx
-import { EmbedUpdateDocumentV1 } from '@documenso/embed-react';
+import { EmbedUpdateDocumentV1 } from '@ShieldSign/embed-react';
 
 const DocumentEditor = () => {
   const presignToken = 'YOUR_PRESIGN_TOKEN';
@@ -114,7 +114,7 @@ const DocumentEditor = () => {
 To edit existing templates, use the `EmbedUpdateTemplateV1` component:
 
 ```jsx
-import { EmbedUpdateTemplateV1 } from '@documenso/embed-react';
+import { EmbedUpdateTemplateV1 } from '@ShieldSign/embed-react';
 
 const TemplateEditor = () => {
   const presignToken = 'YOUR_PRESIGN_TOKEN';
@@ -146,9 +146,9 @@ You can create a presign token by making a request to:
 POST /api/v2/embedding/create-presign-token
 ```
 
-This API endpoint requires authentication with your Documenso API key. The token has a default expiration of 1 hour, but you can customize this duration based on your security requirements.
+This API endpoint requires authentication with your ShieldSign API key. The token has a default expiration of 1 hour, but you can customize this duration based on your security requirements.
 
-You can find more details on this request at our [API Documentation](https://openapi.documenso.com/reference#tag/embedding)
+You can find more details on this request at our [API Documentation](https://openapi.ShieldSign.com/reference#tag/embedding)
 
 ## Configuration Options
 
@@ -158,7 +158,7 @@ All authoring components accept the following configuration options:
 | ------------------ | ------- | -------------------------------------------------------------------------- |
 | `presignToken`     | string  | **Required**. The authentication token for the embedding session.          |
 | `externalId`       | string  | Optional reference ID from your system to link with the document/template. |
-| `host`             | string  | Optional custom host URL. Defaults to `https://app.documenso.com`.         |
+| `host`             | string  | Optional custom host URL. Defaults to `https://app.ShieldSign.com`.        |
 | `css`              | string  | Optional custom CSS to style the embedded component.                       |
 | `cssVars`          | object  | Optional CSS variables for colors, spacing, and more.                      |
 | `darkModeDisabled` | boolean | Optional flag to disable dark mode.                                        |
@@ -259,7 +259,7 @@ You can customize the appearance of the embedded component using standard CSS cl
   className="h-screen w-full rounded-lg border-none shadow-md"
   presignToken="YOUR_PRESIGN_TOKEN"
   css={`
-    .documenso-embed {
+    .ShieldSign-embed {
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
@@ -279,7 +279,7 @@ Here's a complete example of integrating document creation in a React applicatio
 ```tsx
 import { useState } from 'react';
 
-import { EmbedCreateDocumentV1, EmbedUpdateDocumentV1 } from '@documenso/embed-react';
+import { EmbedCreateDocumentV1, EmbedUpdateDocumentV1 } from '@ShieldSign/embed-react';
 
 function DocumentManager() {
   // In a real application, you would fetch this token from your backend

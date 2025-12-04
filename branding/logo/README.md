@@ -1,35 +1,39 @@
 # ShieldSign - Logo Assets
 
-Place the following logo files in this directory:
+## Current Assets
 
-## Required Files
+| File | Status | Usage |
+|------|--------|-------|
+| `favicon-16x16.png` | ✅ Deployed | Browser tab icon (small) |
+| `favicon-32x32.png` | ✅ Deployed | Browser tab icon (standard) |
+| `shieldsign-logo-transparent.png` | ✅ Deployed | Main logo (transparent bg) |
+| `shieldsign-logo-white.png` | ✅ Available | Logo on dark backgrounds |
+
+## TODO: Generate Additional Assets
 
 | File | Size | Usage |
 |------|------|-------|
-| `logo.svg` | Vector | Primary logo (web) |
-| `logo-dark.svg` | Vector | Logo for dark backgrounds |
-| `logo-light.svg` | Vector | Logo for light backgrounds |
-| `logo-icon.svg` | Vector | Icon only (no text) |
-| `logo-32.png` | 32x32 | Favicon |
-| `logo-192.png` | 192x192 | PWA icon |
-| `logo-512.png` | 512x512 | PWA icon large |
+| `android-chrome-192x192.png` | 192x192 | PWA icon |
+| `android-chrome-512x512.png` | 512x512 | PWA icon large |
+| `apple-touch-icon.png` | 180x180 | iOS home screen |
+| `favicon.ico` | multi-size | Legacy browsers |
 | `og-image.png` | 1200x630 | Social sharing |
 
-## Destination Paths
+Generate these from `shieldsign-logo-transparent.png` and copy to:
+- `packages/assets/`
+- `apps/remix/public/`
 
-After creating the logos, copy them to:
+## Deployment Script
 
-```
-apps/remix/public/
-├── favicon.ico          (from logo-32.png, converted)
-├── logo.svg             (from logo.svg)
-├── logo-dark.svg        (from logo-dark.svg)
-├── apple-touch-icon.png (from logo-192.png)
-└── og-image.png         (from og-image.png)
+```powershell
+# After generating new icons, run:
+Copy-Item "branding\logo\favicon-16x16.png" "packages\assets\" -Force
+Copy-Item "branding\logo\favicon-32x32.png" "packages\assets\" -Force
+Copy-Item "branding\logo\android-chrome-192x192.png" "packages\assets\" -Force
+Copy-Item "branding\logo\android-chrome-512x512.png" "packages\assets\" -Force
+Copy-Item "branding\logo\apple-touch-icon.png" "packages\assets\" -Force
 
-apps/remix/public/icons/
-├── icon-192.png
-└── icon-512.png
+# Repeat for apps/remix/public/
 ```
 
 ## Design Guidelines

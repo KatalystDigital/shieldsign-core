@@ -2,7 +2,7 @@
 
 **Enterprise E-Signatures Built for Security**
 
-ShieldSign is a white-labeled fork of [ShieldSign](https://github.com/shieldsign/shieldsign), customized for the ShieldSign platform. It provides legally-binding electronic signatures integrated with your security documentation workflow.
+ShieldSign is a white-labeled fork of [Documenso](https://github.com/documenso/documenso) (v2.1.0), customized for the ShieldSign platform. It provides legally-binding electronic signatures integrated with your security documentation workflow.
 
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 
@@ -202,9 +202,9 @@ Update legal documents:
 
 ## 🤝 Attribution
 
-ShieldSign is based on [ShieldSign](https://github.com/shieldsign/shieldsign), an open-source document signing platform licensed under AGPL-3.0.
+ShieldSign is based on [Documenso](https://github.com/documenso/documenso) v2.1.0, an open-source document signing platform licensed under AGPL-3.0.
 
-We gratefully acknowledge the ShieldSign team for their excellent work in creating the foundation for this project.
+We gratefully acknowledge the Documenso team for their excellent work in creating the foundation for this project. See [NOTICE.md](NOTICE.md) for full attribution details.
 
 ## 📄 License
 

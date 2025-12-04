@@ -1,26 +1,26 @@
 ---
 title: Manual Setup
-description: Manually set up Documenso on your machine for local development.
+description: Manually set up ShieldSign on your machine for local development.
 ---
 
 import { Callout, Steps } from 'nextra/components';
 
 # Manual Setup
 
-Follow these steps to set up Documenso on your local machine:
+Follow these steps to set up ShieldSign on your local machine:
 
 <Steps>
 
-### Fork Documenso
+### Fork ShieldSign
 
-Fork the [Documenso repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) to your GitHub account.
+Fork the [ShieldSign repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) to your GitHub account.
 
 ### Clone Repository
 
 After forking the repository, clone it to your local device by using the following command:
 
 ```bash
-git clone https://github.com/<your-username>/documenso
+git clone https://github.com/<your-username>/ShieldSign
 ```
 
 ### Install Dependencies
@@ -55,7 +55,7 @@ npm run prisma:migrate-dev
 Seed the database with test data by running the following command:
 
 ```bash
-npm run prisma:seed -w @documenso/prisma
+npm run prisma:seed -w @ShieldSign/prisma
 ```
 
 ### Start the Application
@@ -64,7 +64,7 @@ Run `npm run dev` in the root directory to start the application.
 
 ### Access the Application
 
-Access the Documenso application by visiting `http://localhost:3000` in your web browser.
+Access the ShieldSign application by visiting `http://localhost:3000` in your web browser.
 
 </Steps>
 

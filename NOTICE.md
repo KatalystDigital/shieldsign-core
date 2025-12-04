@@ -2,29 +2,29 @@
 
 ## ShieldSign - AGPL-3.0 Compliance Notice
 
-**ShieldSign** is a commercial fork of the open-source [ShieldSign](https://github.com/shieldsign/shieldsign) project.
+**ShieldSign** is a commercial fork of the open-source [Documenso](https://github.com/documenso/documenso) project (v2.1.0).
 
 ### Original Project
 
-- **Name:** ShieldSign
-- **Repository:** https://github.com/shieldsign/shieldsign
+- **Name:** Documenso
+- **Repository:** https://github.com/documenso/documenso
 - **License:** GNU Affero General Public License v3.0 (AGPL-3.0)
-- **Copyright:** © 2023-2025 ShieldSign, Inc.
+- **Copyright:** © 2023-2025 Documenso, Inc.
 
 ### Fork Information
 
 - **Fork Name:** ShieldSign
-- **Repository:** https://github.com/shieldsign/shieldsign-core (placeholder)
+- **Repository:** https://github.com/shieldsign/shieldsign-core
 - **Maintained by:** ShieldSign
 - **Website:** https://shieldsign.io
 - **License:** AGPL-3.0 (unchanged from original)
 
 ### Summary of Modifications
 
-This fork includes the following modifications from the original ShieldSign codebase:
+This fork includes the following modifications from the original Documenso codebase:
 
 1. **Rebranding**
-   - Product name changed from "ShieldSign" to "ShieldSign"
+   - Product name changed from "Documenso" to "ShieldSign"
    - Updated domain references to shieldsign.io
    - Custom color scheme (Primary: #0a3b3c, Accent: #14b8a6)
    - Updated logos, icons, and brand assets
@@ -66,9 +66,9 @@ This fork remains fully compliant with AGPL-3.0:
 
 ### Attribution
 
-We gratefully acknowledge the ShieldSign team for creating the excellent open-source document signing platform that serves as the foundation for ShieldSign.
+We gratefully acknowledge the Documenso team for creating the excellent open-source document signing platform that serves as the foundation for ShieldSign.
 
-ShieldSign Contributors: https://github.com/shieldsign/shieldsign/graphs/contributors
+Documenso Contributors: https://github.com/documenso/documenso/graphs/contributors
 
 ### Contact
 
@@ -79,4 +79,4 @@ ShieldSign Contributors: https://github.com/shieldsign/shieldsign/graphs/contrib
 ---
 
 © 2025 ShieldSign. This software is licensed under AGPL-3.0.
-Original work © 2023-2025 ShieldSign, Inc.
+Original work © 2023-2025 Documenso, Inc.
