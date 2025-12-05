@@ -3,7 +3,7 @@ title: Send a document for signing
 description: The guide gives a detailed description of all options available when sending out a document for signing.
 ---
 
-import { Callout, Steps } from 'nextra/components';
+import { Steps } from 'nextra/components';
 
 # Send Documents for Signing
 
@@ -20,10 +20,7 @@ The guide assumes you have a ShieldSign account. If you don't, you can create a 
 
 Navigate to the ShieldSign dashboard at `https://your-domain.com/documents` and click on the "Upload Document" button located at the top right of the page. Select the documents you want to upload and wait for the upload to complete.
 
-<Callout type="info">
-  The maximum file size for uploaded documents is 150MB in production. You can upload up to 5
-  documents at a time on standard plans. In staging, the limit is 50MB.
-</Callout>
+> **Note:** The maximum file size for uploaded documents is 150MB in production. You can upload up to 5 documents at a time on standard plans. In staging, the limit is 50MB.
 
 After the upload is complete, you will be redirected to the editor. You can configure the document's settings and add recipients and fields here.
 
@@ -63,10 +60,7 @@ The first step in the editor is to upload your document and add recipients.
 
 You can upload documents by either clicking the "Add a document" dropzone, or dragging and dropping files into the dropzone.
 
-<Callout type="info">
-  The maximum file size for uploaded documents is 150MB in production. You can upload up to 5
-  documents at a time on standard plans. In staging, the limit is 50MB.
-</Callout>
+> **Note:** The maximum file size for uploaded documents is 150MB in production. You can upload up to 5 documents at a time on standard plans. In staging, the limit is 50MB.
 
 #### Add Recipients
 
@@ -110,10 +104,7 @@ The available field types are:
 
 All fields can be placed anywhere on the document and resized as needed.
 
-<Callout type="info">
-  Learn more about the available field types and how to use them on the [Fields
-  page](/users/documents/fields).
-</Callout>
+> **Note:** Learn more about the available field types and how to use them on the [Fields page](https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/users/documents/fields.mdx).
 
 ### Preview
 
@@ -182,6 +173,4 @@ The available options are:
 
 This can be overridden by setting the authentication requirements directly for each recipient in the next step.
 
-<Callout type="info">
-  The "Recipient Authentication" feature is only available for Enterprise accounts.
-</Callout>
+> **Note:** The "Recipient Authentication" feature is only available for Enterprise accounts.
