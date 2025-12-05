@@ -410,7 +410,7 @@ export const SignUpForm = ({
           <Trans>
             By proceeding, you agree to our{' '}
             <Link
-              to="https://shieldsign.io/terms"
+              to="/terms"
               target="_blank"
               className="text-shieldsign-700 duration-200 hover:opacity-70"
             >
@@ -418,7 +418,7 @@ export const SignUpForm = ({
             </Link>{' '}
             and{' '}
             <Link
-              to="https://shieldsign.io/privacy"
+              to="/privacy"
               target="_blank"
               className="text-shieldsign-700 duration-200 hover:opacity-70"
             >
