@@ -7,5 +7,6 @@ export type PlausibleProviderProps = {
 };
 
 export const PlausibleProvider = ({ children }: PlausibleProviderProps) => {
-  return <NextPlausibleProvider domain="shieldsign.io">{children}</NextPlausibleProvider>;
+  const domain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN || 'your-domain.com';
+  return <NextPlausibleProvider domain={domain}>{children}</NextPlausibleProvider>;
 };
