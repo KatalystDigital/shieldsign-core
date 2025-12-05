@@ -14,9 +14,8 @@
 ### Fork Information
 
 - **Fork Name:** ShieldSign
-- **Repository:** https://github.com/shieldsign/shieldsign-core
-- **Maintained by:** ShieldSign
-- **Website:** https://shieldsign.io
+- **Repository:** https://github.com/KatalystDigital/shieldsign-core
+- **Maintained by:** KatalystDigital
 - **License:** AGPL-3.0 (unchanged from original)
 
 ### Summary of Modifications

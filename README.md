@@ -10,12 +10,12 @@ ShieldSign is a white-labeled fork of [Documenso](https://github.com/documenso/d
 
 ## 🎯 Overview
 
-ShieldSign extends the excellent ShieldSign platform with:
+ShieldSign is an AGPL-3.0 licensed fork of [Documenso](https://github.com/documenso/documenso), providing:
 
-- **ShieldSign Branding** - Consistent teal color scheme and branding
-- **Trust Center Integration** - Seamless connection to ShieldSign
-- **Azure Deployment** - Optimized for Azure cloud infrastructure
+- **Custom Branding** - Configurable color scheme and branding
 - **Enterprise Features** - Team management, audit logs, webhooks
+- **Cloud Ready** - Optimized for cloud infrastructure deployment
+- **API Access** - Full REST API and webhook integrations
 
 ## 🚀 Quick Start
 
@@ -29,8 +29,8 @@ ShieldSign extends the excellent ShieldSign platform with:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/shieldsign-esign.git
-cd shieldsign-esign
+git clone https://github.com/KatalystDigital/shieldsign-core.git
+cd shieldsign-core
 
 # Copy environment template
 cp .env.example .env.local
@@ -59,24 +59,18 @@ Key environment variables to configure:
 
 ```env
 # Database
-NEXT_PRIVATE_DATABASE_URL=postgresql://user:password@localhost:5432/shieldsign_sign
+NEXT_PRIVATE_DATABASE_URL=postgresql://user:password@localhost:5432/shieldsign
 
 # App URLs
-NEXT_PUBLIC_WEBAPP_URL=https://sign.shieldsign.io
-NEXT_PUBLIC_MARKETING_URL=https://shieldsign.io
+NEXT_PUBLIC_WEBAPP_URL=http://localhost:3000
 
 # Email (SMTP)
-NEXT_PRIVATE_SMTP_HOST=smtp.sendgrid.net
+NEXT_PRIVATE_SMTP_HOST=smtp.example.com
 NEXT_PRIVATE_SMTP_PORT=587
-NEXT_PRIVATE_SMTP_USERNAME=apikey
-NEXT_PRIVATE_SMTP_PASSWORD=your-sendgrid-api-key
-NEXT_PRIVATE_SMTP_FROM_ADDRESS=noreply@shieldsign.io
+NEXT_PRIVATE_SMTP_USERNAME=your-username
+NEXT_PRIVATE_SMTP_PASSWORD=your-password
+NEXT_PRIVATE_SMTP_FROM_ADDRESS=noreply@your-domain.com
 NEXT_PRIVATE_SMTP_FROM_NAME=ShieldSign
-
-# Storage (Azure Blob)
-NEXT_PRIVATE_UPLOAD_TRANSPORT=azure
-NEXT_PRIVATE_AZURE_BLOB_CONNECTION_STRING=your-connection-string
-NEXT_PRIVATE_AZURE_BLOB_CONTAINER_NAME=documents
 ```
 
 See `.env.example` for all available options.
@@ -84,7 +78,7 @@ See `.env.example` for all available options.
 ## 🏗️ Project Structure
 
 ```
-shieldsign-esign/
+shieldsign-core/
 ├── apps/
 │   ├── remix/              # Main web application (React Router)
 │   ├── documentation/      # Documentation site
@@ -154,13 +148,13 @@ npm run prisma:migrate-deploy
 npm run prisma:seed
 ```
 
-## 🔗 Integration with ShieldSign
+## 🔗 Integration Options
 
-ShieldSign integrates with the main ShieldSign application via:
+ShieldSign can integrate with your applications via:
 
 1. **Webhook Events** - Document signing events trigger webhooks
 2. **REST API** - Create and manage documents programmatically
-3. **SSO Integration** - Shared authentication with Trust Center
+3. **OAuth/OIDC** - Support for external authentication providers
 
 ### Webhook Events
 
@@ -212,7 +206,7 @@ This project is licensed under the [AGPL-3.0 License](LICENSE).
 
 ---
 
-**ShieldSign** - Trust Center & E-Signature Platform
+**ShieldSign** - Open Source E-Signature Platform
 
-- 🌐 Website: [shieldsign.io](https://shieldsign.io)
-- 📧 Support: [support@shieldsign.io](mailto:support@shieldsign.io)
+- 📦 Repository: [github.com/KatalystDigital/shieldsign-core](https://github.com/KatalystDigital/shieldsign-core)
+- 📄 License: [AGPL-3.0](LICENSE)

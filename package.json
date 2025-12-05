@@ -1,13 +1,13 @@
 {
   "private": true,
-  "name": "@shieldsign/esign",
+  "name": "@shieldsign/core",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "version": "1.0.0",
-  "description": "ShieldSign - Enterprise E-Signatures Built for Security",
-  "author": "ShieldSign <support@shieldsign.io>",
+  "description": "ShieldSign - Open Source E-Signature Platform (AGPL-3.0 fork of Documenso)",
+  "author": "KatalystDigital",
   "license": "AGPL-3.0",
   "scripts": {
     "postinstall": "patch-package",
