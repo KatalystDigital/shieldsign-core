@@ -27,11 +27,11 @@ docker buildx build \
     --progress=plain \
     --build-arg NEXT_PRIVATE_TELEMETRY_KEY="${NEXT_PRIVATE_TELEMETRY_KEY:-}" \
     --build-arg NEXT_PRIVATE_TELEMETRY_HOST="${NEXT_PRIVATE_TELEMETRY_HOST:-}" \
-    -t "documenso/documenso:latest" \
-    -t "documenso/documenso:$GIT_SHA" \
-    -t "documenso/documenso:$APP_VERSION" \
-    -t "ghcr.io/documenso/documenso:latest" \
-    -t "ghcr.io/documenso/documenso:$GIT_SHA" \
-    -t "ghcr.io/documenso/documenso:$APP_VERSION" \
+    -t "shieldsign/shieldsign:latest" \
+    -t "shieldsign/shieldsign:$GIT_SHA" \
+    -t "shieldsign/shieldsign:$APP_VERSION" \
+    -t "ghcr.io/shieldsign/shieldsign:latest" \
+    -t "ghcr.io/shieldsign/shieldsign:$GIT_SHA" \
+    -t "ghcr.io/shieldsign/shieldsign:$APP_VERSION" \
     --push \
     "$MONOREPO_ROOT"
