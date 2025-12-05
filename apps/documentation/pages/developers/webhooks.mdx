@@ -27,11 +27,7 @@ ShieldSign supports Webhooks and allows you to subscribe to the following events
 
 You can create a webhook subscription from the user settings page. Click on your avatar in the top right corner of the dashboard and select "**[User settings](https://app.ShieldSign.com/settings)**" from the dropdown menu.
 
-![A screenshot of the ShieldSign's dashboard that shows the dropdown menu when you click on your user avatar](/webhook-images/dashboard-user-dropdown-menu.webp)
-
 Then, navigate to the "**[Webhooks](https://app.ShieldSign.com/settings/webhooks)**" tab, where you can see a list of your existing webhooks and create new ones.
-
-![A screenshot of the ShieldSign's user settings page that shows the Webhooks tab and the Create Webhook button](/webhook-images/webhooks-settings-page.webp)
 
 Clicking on the "**Create Webhook**" button opens a modal to create a new webhook subscription.
 
@@ -41,13 +37,7 @@ To create a new webhook subscription, you need to provide the following informat
 - Select the event(s) you want to subscribe to: `document.created`, `document.sent`, `document.opened`, `document.signed`, `document.completed`, `document.rejected`, `document.cancelled`.
 - Optionally, you can provide a secret key that will be used to sign the payload. This key will be included in the `X-ShieldSign-Secret` header of the request.
 
-![A screenshot of the Create Webhook modal that shows the URL input field and the event checkboxes](/webhook-images/webhooks-page-create-webhook-modal.webp)
-
 After you have filled in the required information, click on the "**Create Webhook**" button to save your subscription.
-
-The screenshot below illustrates a newly created webhook subscription.
-
-![A screenshot of the ShieldSign's user settings page that shows the newly created webhook subscription](/webhook-images/webhooks-page.webp)
 
 You can edit or delete your webhook subscriptions by clicking the "**Edit**" or "**Delete**" buttons next to the webhook.
 

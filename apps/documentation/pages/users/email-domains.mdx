@@ -22,16 +22,12 @@ Before setting up email domains, ensure you have:
 
 Navigate to your Organisation email domains settings page and click the "Add Email Domain" button.
 
-![Email Domains settings page](/email-domains/email-domains-settings-page.webp)
-
 ### Configure DNS Records
 
 After adding your domain, ShieldSign will provide you with the following required DNS records that need to be configured on your domain:
 
 - **SPF Record**: Specifies which servers are authorized to send emails from your domain
 - **DKIM Record**: Provides email authentication and prevents tampering
-
-![DNS configuration instructions](/email-domains/email-domains-record.webp)
 
 <Callout type="info">
   If you already have an SPF record configured, you will need to update it to include Amazon SES as
@@ -44,8 +40,6 @@ Configure these records in your domain's DNS settings according to their specifi
 
 Once you've added the DNS records, return to the ShieldSign email domains settings page and click the "Verify" button.
 This will trigger a verification process which will check if the DNS records are properly configured. If successful, the domain will be marked as "Active".
-
-![Domain verification process](/email-domains/email-domain-sync.webp)
 
 <Callout type="info">
   Please note that it may take up to 48 hours for the DNS records to propagate.
@@ -63,13 +57,9 @@ Once your email domain has been configured, you can create multiple email addres
 
 Navigate to the email domains settings page and click "Manage" on the domain you want to use.
 
-![Email Domains settings page](/email-domains/email-domains-manage.webp)
-
 ### Add a New Email
 
 Click on the "Add Email" button to begin the setup process.
-
-![Create email](/email-domains/email-domains-manage-create-email.webp)
 
 ### Use Email
 
