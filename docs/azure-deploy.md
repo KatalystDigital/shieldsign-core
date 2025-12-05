@@ -131,9 +131,9 @@ az containerapp create \
   --min-replicas 1 \
   --max-replicas 5 \
   --env-vars \
-    SHIELDSIGN_APP_URL=https://shieldsign.io \
-    SHIELDSIGN_API_URL=https://api.shieldsign.io \
-    NEXT_PUBLIC_WEBAPP_URL=https://shieldsign.io \
+    SHIELDSIGN_APP_URL=https://your-domain.com \
+    SHIELDSIGN_API_URL=https://api.your-domain.com \
+    NEXT_PUBLIC_WEBAPP_URL=https://your-domain.com \
     NEXT_PRIVATE_DATABASE_URL=secretref:database-url \
     NEXT_PRIVATE_ENCRYPTION_KEY=secretref:encryption-key \
     NEXT_PUBLIC_UPLOAD_TRANSPORT=s3 \
@@ -146,9 +146,9 @@ Create a `.env.production` file with these variables:
 
 ```env
 # App URLs
-SHIELDSIGN_APP_URL=https://shieldsign.io
-SHIELDSIGN_API_URL=https://api.shieldsign.io
-NEXT_PUBLIC_WEBAPP_URL=https://shieldsign.io
+SHIELDSIGN_APP_URL=https://your-domain.com
+SHIELDSIGN_API_URL=https://api.your-domain.com
+NEXT_PUBLIC_WEBAPP_URL=https://your-domain.com
 
 # Database
 SHIELDSIGN_DB_URL=postgresql://shieldsign:<password>@shieldsign-db.postgres.database.azure.com:5432/shieldsign?sslmode=require
@@ -210,12 +210,12 @@ az containerapp exec \
 az containerapp hostname add \
   --name shieldsign-app \
   --resource-group shieldsign-rg \
-  --hostname shieldsign.io
+  --hostname your-domain.com
 
 az containerapp hostname bind \
   --name shieldsign-app \
   --resource-group shieldsign-rg \
-  --hostname shieldsign.io \
+  --hostname your-domain.com \
   --environment shieldsign-env
 ```
 
