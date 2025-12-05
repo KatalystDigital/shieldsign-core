@@ -18,42 +18,19 @@ const themeConfig: DocsThemeConfig = {
         <meta name="description" content={description} />
         <meta name="og:description" content={description} />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            !function(){
-             if (location.hostname === 'localhost') return;
-              var e="6c236490c9a68c1",
-                  t=function(){Reo.init({ clientID: e })},
-                  n=document.createElement("script");
-              n.src="https://static.reo.dev/"+e+"/reo.js";
-              n.defer=true;
-              n.onload=t;
-              document.head.appendChild(n);
-            }();
-          `,
-          }}
-        />
       </>
     );
   },
   project: {
-    link: 'https://shieldsign.io/github',
+    link: 'https://github.com/KatalystDigital/shieldsign-core',
   },
-  chat: {
-    link: 'https://shieldsign.io/discord',
-  },
-  docsRepositoryBase: 'https://github.com/shieldsign/shieldsign/tree/main/apps/documentation',
+  docsRepositoryBase: 'https://github.com/KatalystDigital/shieldsign-core/tree/main/apps/documentation',
   footer: {
     content: (
       <span>
-        {new Date().getFullYear()} ©{' '}
-        <a href="https://shieldsign.io" target="_blank">
-          ShieldSign
-        </a>
-        .
+        {new Date().getFullYear()} © ShieldSign. Licensed under AGPL-3.0.
       </span>
     ),
   },
