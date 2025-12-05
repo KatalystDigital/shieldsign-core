@@ -21,12 +21,12 @@ export default {
     items: {
       changelog: {
         title: 'Changelog',
-        href: 'https://shieldsign.io/changelog',
+        href: 'https://github.com/KatalystDigital/shieldsign-core/blob/main/CHANGELOG.md',
         newWindow: true,
       },
-      blog: {
-        title: 'Blog',
-        href: 'https://shieldsign.io/blog',
+      releases: {
+        title: 'Releases',
+        href: 'https://github.com/KatalystDigital/shieldsign-core/releases',
         newWindow: true,
       },
     },
