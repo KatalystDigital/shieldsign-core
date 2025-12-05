@@ -1,7 +1,6 @@
 # General Issues
-Contact: https://github.com/documenso/documenso/issues/new?assignees=&labels=bug&projects=&template=bug-report.yml
+Contact: https://github.com/KatalystDigital/shieldsign-core/issues/new
 
 # Report critical issues privately to let us take appropriate action before publishing.
-Contact: mailto:security@documenso.com
+Contact: mailto:security@katalystdl.ai
 Preferred-Languages: en
-Canonical: https://documenso.com/.well-known/security.txt

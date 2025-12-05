@@ -13,6 +13,5 @@ export default {
     title: 'API & Integration Guides',
   },
   'public-api': 'Public API',
-  embedding: 'Embedding',
   webhooks: 'Webhooks',
 };
