@@ -71,11 +71,10 @@ Documenso Contributors: https://github.com/documenso/documenso/graphs/contributo
 
 ### Contact
 
-- **ShieldSign Support:** support@shieldsign.io
-- **Website:** https://shieldsign.io
-- **Source Code:** https://github.com/shieldsign/shieldsign-core
+- **Support:** support@katalystdl.ai
+- **Source Code:** https://github.com/KatalystDigital/shieldsign-core
 
 ---
 
-© 2025 ShieldSign. This software is licensed under AGPL-3.0.
+© 2025 Katalyst Digital. This software is licensed under AGPL-3.0.
 Original work © 2023-2025 Documenso, Inc.
