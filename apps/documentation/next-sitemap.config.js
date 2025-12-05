@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://docs.shieldsign.io', // Replace with your actual site URL
-  generateRobotsTxt: true, // Generates robots.txt
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://docs.your-domain.com',
+  generateRobotsTxt: true,
 };
