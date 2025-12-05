@@ -1,9 +1,8 @@
 /**
  * ShieldSign - Email Footer Component
- * 
+ *
  * Replace email footer in packages/email/templates/ files
  */
-
 import { Hr, Link, Section, Text } from '@react-email/components';
 
 export const ShieldSignEmailFooter = () => {
@@ -12,24 +11,22 @@ export const ShieldSignEmailFooter = () => {
       <Hr style={hrStyle} />
       <Text style={footerTextStyle}>
         Sent by{' '}
-        <Link href="https://shieldsign.io" style={linkStyle}>
+        <Link href="/" style={linkStyle}>
           ShieldSign
-        </Link>
-        {' '}- Enterprise E-Signatures Built for Security
+        </Link>{' '}
+        - Enterprise E-Signatures Built for Security
       </Text>
+      <Text style={footerSubTextStyle}>Part of the ShieldSign Platform</Text>
       <Text style={footerSubTextStyle}>
-        Part of the ShieldSign Platform
-      </Text>
-      <Text style={footerSubTextStyle}>
-        <Link href="https://shieldsign.io/privacy" style={linkStyle}>
+        <Link href="/privacy" style={linkStyle}>
           Privacy Policy
         </Link>
         {' · '}
-        <Link href="https://shieldsign.io/terms" style={linkStyle}>
+        <Link href="/terms" style={linkStyle}>
           Terms of Service
         </Link>
         {' · '}
-        <Link href="mailto:support@shieldsign.io" style={linkStyle}>
+        <Link href="mailto:support@example.com" style={linkStyle}>
           Contact Support
         </Link>
       </Text>

@@ -126,12 +126,12 @@ We may update this Privacy Policy periodically. We will notify you of significan
 ## 13. Contact Us
 
 For privacy-related inquiries:
-- **Email**: privacy@shieldsign.io
-- **Data Protection Officer**: dpo@shieldsign.io
-- **Website**: https://shieldsign.io/contact
+- **Email**: privacy@example.com
+- **Data Protection Officer**: dpo@example.com
+- **Website**: /contact
 
 For EU residents, you have the right to lodge a complaint with your local supervisory authority.
 
 ---
 
-© 2025 ShieldSign. All rights reserved.
+© 2025 [Your Company]. All rights reserved.

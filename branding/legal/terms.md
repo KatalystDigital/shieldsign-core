@@ -83,9 +83,9 @@ These Terms shall be governed by and construed in accordance with the laws of [Y
 ## 13. Contact Us
 
 For questions about these Terms:
-- Email: legal@shieldsign.io
-- Website: https://shieldsign.io/contact
+- Email: legal@example.com
+- Website: /contact
 
 ---
 
-© 2025 ShieldSign. All rights reserved.
+© 2025 [Your Company]. All rights reserved.
