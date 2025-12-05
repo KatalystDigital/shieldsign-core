@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="branding/logo/shieldsign-logo-transparent.png" alt="ShieldSign Logo" height="60">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="branding/logo/shieldsign-logo-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="branding/logo/shieldsign-logo-transparent.png">
+    <img src="branding/logo/shieldsign-logo-transparent.png" alt="ShieldSign Logo" height="120" style="background-color: #f0f0f0; padding: 10px; border-radius: 8px;">
+  </picture>
 </p>
-
-<h1 align="center">ShieldSign</h1>
 
 <p align="center">
   <strong>Enterprise E-Signatures Built for Security</strong>
