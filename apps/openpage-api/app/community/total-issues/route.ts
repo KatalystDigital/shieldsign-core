@@ -1,8 +1,10 @@
 import cors from '@/lib/cors';
 import { transformData } from '@/lib/transform-data';
 
+const STATS_API_URL = process.env.STATS_API_URL || 'https://api.github.com/repos/KatalystDigital/shieldsign-core';
+
 export async function GET(request: Request) {
-  const res = await fetch('https://stargrazer-live.onrender.com/api/stats');
+  const res = await fetch(STATS_API_URL);
   const data = await res.json();
   const transformedData = transformData({ data, metric: 'openIssues' });
 
