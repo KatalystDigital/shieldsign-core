@@ -1,17 +1,26 @@
-# 🛡️ ShieldSign
+<p align="center">
+  <img src="branding/logo/shieldsign-logo-transparent.png" alt="ShieldSign Logo" width="200">
+</p>
 
-**Enterprise E-Signatures Built for Security**
+<h1 align="center">ShieldSign</h1>
 
-ShieldSign is a white-labeled fork of [Documenso](https://github.com/documenso/documenso) (v2.1.0), customized for the ShieldSign platform. It provides legally-binding electronic signatures integrated with your security documentation workflow.
+<p align="center">
+  <strong>Enterprise E-Signatures Built for Security</strong>
+</p>
 
-[![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-blue.svg" alt="License: AGPL-3.0"></a>
+</p>
+
+ShieldSign Core is an AGPL-3.0 licensed fork of [Documenso](https://github.com/documenso/documenso) (v2.1.0), providing a self-hosted, open-source document signing platform.
 
 ---
 
 ## 🎯 Overview
 
-ShieldSign is an AGPL-3.0 licensed fork of [Documenso](https://github.com/documenso/documenso), providing:
+ShieldSign Core is an AGPL-3.0 licensed fork of [Documenso](https://github.com/documenso/documenso), providing:
 
+- **Self-Hosted** - Full control over your signing infrastructure
 - **Custom Branding** - Configurable color scheme and branding
 - **Enterprise Features** - Team management, audit logs, webhooks
 - **Cloud Ready** - Optimized for cloud infrastructure deployment
@@ -92,12 +101,12 @@ shieldsign-core/
 ├── branding/              # ShieldSign branding assets
 │   ├── colors.css         # Color definitions
 │   ├── tailwind-colors.js # Tailwind configuration
-│   └── logo/              # Logo assets (add your files here)
+│   └── logo/              # Logo assets
 ├── docker/                # Docker configuration
 │   ├── Dockerfile
 │   └── docker-compose.yml
-└── scripts/
-    └── rebrand.ps1        # Rebranding script
+├── docs/                  # Documentation
+└── templates/             # Document templates
 ```
 
 ## 🐳 Docker Deployment
@@ -117,7 +126,7 @@ docker-compose up -d
 
 ### Azure Container Apps
 
-See [Azure Deployment Guide](docs/azure-deployment.md) for deploying to Azure Container Apps.
+See [Azure Deployment Guide](docs/azure-deploy.md) for deploying to Azure Container Apps.
 
 ## 🔧 Development Commands
 
@@ -205,7 +214,8 @@ This project is licensed under the [AGPL-3.0 License](LICENSE).
 
 ---
 
-**ShieldSign** - Open Source E-Signature Platform
+**ShieldSign Core** - Open Source E-Signature Platform
 
 - 📦 Repository: [github.com/KatalystDigital/shieldsign-core](https://github.com/KatalystDigital/shieldsign-core)
+- 💬 Discussions: [GitHub Discussions](https://github.com/KatalystDigital/shieldsign-core/discussions)
 - 📄 License: [AGPL-3.0](LICENSE)

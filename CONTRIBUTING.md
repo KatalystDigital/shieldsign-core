@@ -4,10 +4,10 @@ If you plan to contribute to ShieldSign, please take a moment to feel awesome âœ
 
 ## Before getting started
 
-- Before jumping into a PR be sure to search [existing PRs](https://github.com/shieldsign/shieldsign/pulls) or [issues](https://github.com/shieldsign/shieldsign/issues) for an open or closed item that relates to your submission.
-- Select an issue from [here](https://github.com/shieldsign/shieldsign/issues) or create a new one
+- Before jumping into a PR be sure to search [existing PRs](https://github.com/KatalystDigital/shieldsign-core/pulls) or [issues](https://github.com/KatalystDigital/shieldsign-core/issues) for an open or closed item that relates to your submission.
+- Select an issue from [here](https://github.com/KatalystDigital/shieldsign-core/issues) or create a new one
 - Consider the results from the discussion on the issue
-- Accept the [Contributor License Agreement](https://shieldsign.io/cla) to ensure we can accept your contributions.
+- Review the [Contributor License Agreement](./CLA.md) to ensure we can accept your contributions.
 
 ## Taking issues
 
@@ -27,7 +27,7 @@ Always feel free to ask questions or seek clarification on the issue.
 
 ## Developing
 
-The development branch is <code>main</code>. All pull requests should be made against this branch. If you need help getting started, [join us on Discord](https://shieldsign.io/discord).
+The development branch is <code>main</code>. All pull requests should be made against this branch. If you need help getting started, [join us on GitHub Discussions](https://github.com/KatalystDigital/shieldsign-core/discussions).
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your
    own GitHub account and then
@@ -40,7 +40,7 @@ The development branch is <code>main</code>. All pull requests should be made ag
   git checkout -b feat/doc-999-somefeature-that-rocks
   ```
 
-3. See the [Developer Setup](https://github.com/shieldsign/shieldsign/blob/main/README.md#developer-setup) for more setup details.
+3. See the [Developer Setup](https://github.com/KatalystDigital/shieldsign-core/blob/main/README.md#developer-setup) for more setup details.
 
 ## Building
 
