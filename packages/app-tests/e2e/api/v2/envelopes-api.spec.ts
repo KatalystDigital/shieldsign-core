@@ -185,7 +185,7 @@ test.describe('API V2 Envelopes', () => {
           distributionMethod: DocumentDistributionMethod.NONE,
           signingOrder: DocumentSigningOrder.SEQUENTIAL,
           allowDictateNextSigner: true,
-          redirectUrl: 'https://shieldsign.io',
+          redirectUrl: 'https://example.com',
           language: 'de',
           typedSignatureEnabled: true,
           uploadSignatureEnabled: false,
@@ -204,7 +204,7 @@ test.describe('API V2 Envelopes', () => {
         attachments: [
           {
             label: 'Test Attachment',
-            data: 'https://shieldsign.io',
+            data: 'https://example.com',
             type: 'link',
           },
         ],

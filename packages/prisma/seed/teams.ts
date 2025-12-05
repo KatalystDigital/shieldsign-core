@@ -8,7 +8,7 @@ import { OrganisationMemberRole, TeamMemberRole } from '../client';
 import { seedOrganisationMembers } from './organisations';
 import { seedUser } from './users';
 
-const EMAIL_DOMAIN = `test.shieldsign.io`;
+const EMAIL_DOMAIN = `test.example.com`;
 const nanoid = customAlphabet('1234567890abcdef', 10);
 
 type SeedTeamOptions = {

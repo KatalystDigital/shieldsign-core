@@ -409,7 +409,7 @@ test('[DOCUMENT_FLOW]: should be able to create, send with redirect url, sign a 
   await expect(page.getByRole('heading', { name: 'General' })).toBeVisible();
   await page.getByLabel('Title').fill(documentTitle);
   await page.getByRole('button', { name: 'Advanced Options' }).click();
-  await page.getByLabel('Redirect URL').fill('https://shieldsign.io');
+  await page.getByLabel('Redirect URL').fill('https://example.com');
 
   await page.getByRole('button', { name: 'Continue' }).click();
 
@@ -466,7 +466,7 @@ test('[DOCUMENT_FLOW]: should be able to create, send with redirect url, sign a 
   ).toBeVisible();
   await page.getByRole('button', { name: 'Approve' }).click();
 
-  await page.waitForURL('https://shieldsign.io');
+  await page.waitForURL('https://example.com');
 
   await expect(async () => {
     // Check if document has been signed

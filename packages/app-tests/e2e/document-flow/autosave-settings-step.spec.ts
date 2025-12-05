@@ -215,7 +215,7 @@ test.describe('AutoSave Settings Step', () => {
   test('should autosave the redirect URL change', async ({ page }) => {
     const { user, document, team } = await setupDocument(page);
 
-    const newRedirectUrl = 'https://shieldsign.io/test/';
+    const newRedirectUrl = 'https://example.com/test/';
 
     await page.getByRole('button', { name: 'Advanced Options' }).click();
 

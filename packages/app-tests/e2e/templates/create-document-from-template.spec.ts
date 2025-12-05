@@ -55,7 +55,7 @@ test('[TEMPLATE]: should create a document from a template', async ({ page }) =>
 
   await page.locator('.time-zone-field').click();
   await page.getByRole('option', { name: 'Etc/UTC' }).click();
-  await page.getByLabel('Redirect URL').fill('https://shieldsign.io');
+  await page.getByLabel('Redirect URL').fill('https://example.com');
   await page.getByRole('button', { name: 'Continue' }).click();
 
   await expect(page.getByRole('heading', { name: 'Add Placeholder' })).toBeVisible();
@@ -101,7 +101,7 @@ test('[TEMPLATE]: should create a document from a template', async ({ page }) =>
 
   expect(document.documentMeta?.dateFormat).toEqual('dd/MM/yyyy HH:mm');
   expect(document.documentMeta?.message).toEqual('MESSAGE');
-  expect(document.documentMeta?.redirectUrl).toEqual('https://shieldsign.io');
+  expect(document.documentMeta?.redirectUrl).toEqual('https://example.com');
   expect(document.documentMeta?.subject).toEqual('SUBJECT');
   expect(document.documentMeta?.timezone).toEqual('Etc/UTC');
 
@@ -158,7 +158,7 @@ test('[TEMPLATE]: should create a team document from a team template', async ({ 
 
   await page.locator('.time-zone-field').click();
   await page.getByRole('option', { name: 'Etc/UTC' }).click();
-  await page.getByLabel('Redirect URL').fill('https://shieldsign.io');
+  await page.getByLabel('Redirect URL').fill('https://example.com');
   await page.getByRole('button', { name: 'Continue' }).click();
 
   await expect(page.getByRole('heading', { name: 'Add Placeholder' })).toBeVisible();
@@ -205,7 +205,7 @@ test('[TEMPLATE]: should create a team document from a team template', async ({ 
   expect(documentAuth.documentAuthOption.globalAccessAuth).toContain('ACCOUNT');
   expect(document.documentMeta?.dateFormat).toEqual('dd/MM/yyyy HH:mm');
   expect(document.documentMeta?.message).toEqual('MESSAGE');
-  expect(document.documentMeta?.redirectUrl).toEqual('https://shieldsign.io');
+  expect(document.documentMeta?.redirectUrl).toEqual('https://example.com');
   expect(document.documentMeta?.subject).toEqual('SUBJECT');
   expect(document.documentMeta?.timezone).toEqual('Etc/UTC');
 

@@ -126,7 +126,7 @@ test('[ORGANISATIONS]: manage branding preferences', async ({ page }) => {
   await page.getByTestId('enable-branding').click();
   await page.getByRole('option', { name: 'Yes' }).click();
   await page.getByRole('textbox', { name: 'Brand Website' }).click();
-  await page.getByRole('textbox', { name: 'Brand Website' }).fill('https://shieldsign.io');
+  await page.getByRole('textbox', { name: 'Brand Website' }).fill('https://example.com');
   await page.getByRole('textbox', { name: 'Brand Details' }).click();
   await page.getByRole('textbox', { name: 'Brand Details' }).fill('BrandDetails');
   await page.getByRole('button', { name: 'Update' }).first().click();
@@ -138,7 +138,7 @@ test('[ORGANISATIONS]: manage branding preferences', async ({ page }) => {
 
   // Check that the team settings have inherited these values.
   expect(teamSettings.brandingEnabled).toEqual(true);
-  expect(teamSettings.brandingUrl).toEqual('https://shieldsign.io');
+  expect(teamSettings.brandingUrl).toEqual('https://example.com');
   expect(teamSettings.brandingCompanyDetails).toEqual('BrandDetails');
 
   // Edit the team branding settings
@@ -177,7 +177,7 @@ test('[ORGANISATIONS]: manage branding preferences', async ({ page }) => {
 
   // Check that the team settings now inherit from organisation again.
   expect(inheritedTeamSettings.brandingEnabled).toEqual(true);
-  expect(inheritedTeamSettings.brandingUrl).toEqual('https://shieldsign.io');
+  expect(inheritedTeamSettings.brandingUrl).toEqual('https://example.com');
   expect(inheritedTeamSettings.brandingCompanyDetails).toEqual('BrandDetails');
 
   // Verify that a document can be created successfully with the branding settings

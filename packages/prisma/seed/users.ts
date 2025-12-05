@@ -21,7 +21,7 @@ type SeedUserOptions = {
 
 const nanoid = customAlphabet('1234567890abcdef', 10);
 
-export const seedTestEmail = () => `${nanoid()}@test.shieldsign.io`;
+export const seedTestEmail = () => `${nanoid()}@test.example.com`;
 
 export const seedUser = async ({
   name = nanoid(),
@@ -35,7 +35,7 @@ export const seedUser = async ({
   isPersonalOrganisation = false,
 }: SeedUserOptions = {}) => {
   if (!email) {
-    email = `${nanoid()}@test.shieldsign.io`;
+    email = `${nanoid()}@test.example.com`;
   }
 
   const user = await prisma.user.create({
