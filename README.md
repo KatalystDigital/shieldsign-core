@@ -81,8 +81,7 @@ See `.env.example` for all available options.
 shieldsign-core/
 ├── apps/
 │   ├── remix/              # Main web application (React Router)
-│   ├── documentation/      # Documentation site
-│   └── openpage-api/       # Public API
+│   └── documentation/      # Documentation site
 ├── packages/
 │   ├── prisma/            # Database schema & migrations
 │   ├── lib/               # Shared library code
