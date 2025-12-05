@@ -368,7 +368,7 @@ const SigningPageV1 = ({ data }: { data: Awaited<ReturnType<typeof handleV1Loade
               <Trans>
                 Want to send slick signing links like this one?{' '}
                 <Link
-                  to="https://shieldsign.io"
+                  to="/"
                   className="text-shieldsign-700 hover:text-shieldsign-600"
                 >
                   Check out ShieldSign.
@@ -467,7 +467,7 @@ const SigningPageV2 = ({ data }: { data: Awaited<ReturnType<typeof handleV2Loade
               <Trans>
                 Want to send slick signing links like this one?{' '}
                 <Link
-                  to="https://shieldsign.io"
+                  to="/"
                   className="text-shieldsign-700 hover:text-shieldsign-600"
                 >
                   Check out ShieldSign.

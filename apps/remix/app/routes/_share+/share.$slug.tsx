@@ -71,7 +71,7 @@ export const loader = async ({ request, params: { slug } }: Route.LoaderArgs) =>
   }
 
   // Is hardcoded because this whole meta is hardcoded anyway for ShieldSign.
-  throw redirect('https://shieldsign.io');
+  throw redirect('/');
 };
 
 export default function SharePage() {

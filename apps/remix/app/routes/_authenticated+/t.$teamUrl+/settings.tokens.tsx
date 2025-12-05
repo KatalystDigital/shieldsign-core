@@ -34,7 +34,7 @@ export default function ApiTokensPage() {
             On this page, you can create and manage API tokens. See our{' '}
             <a
               className="text-primary underline"
-              href={'https://docs.shieldsign.io/developers/public-api'}
+              href={'https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/developers/public-api/index.mdx'}
               target="_blank"
             >
               Documentation

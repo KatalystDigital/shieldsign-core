@@ -52,7 +52,7 @@ export default function SupportPage() {
             <h2 className="flex items-center gap-2 text-lg font-bold">
               <BookIcon className="text-muted-foreground h-5 w-5" />
               <Link
-                to="https://docs.shieldsign.io"
+                to="https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/users/index.mdx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
@@ -68,24 +68,24 @@ export default function SupportPage() {
             <h2 className="flex items-center gap-2 text-lg font-bold">
               <Link2Icon className="text-muted-foreground h-5 w-5" />
               <Link
-                to="https://shieldsign.io/discord"
+                to="https://github.com/KatalystDigital/shieldsign-core/discussions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <Trans>Discord</Trans>
+                <Trans>Community</Trans>
               </Link>
             </h2>
             <p className="text-muted-foreground mt-1">
               <Trans>
                 Join our community on{' '}
                 <Link
-                  to="https://shieldsign.io/discord"
+                  to="https://github.com/KatalystDigital/shieldsign-core/discussions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  Discord
+                  GitHub Discussions
                 </Link>{' '}
                 for community support and discussion.
               </Trans>
