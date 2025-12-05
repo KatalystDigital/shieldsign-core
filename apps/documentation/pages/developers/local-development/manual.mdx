@@ -13,14 +13,14 @@ Follow these steps to set up ShieldSign on your local machine:
 
 ### Fork ShieldSign
 
-Fork the [ShieldSign repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) to your GitHub account.
+Fork the [ShieldSign repository](https://github.com/KatalystDigital/shieldsign-core) to your GitHub account.
 
 ### Clone Repository
 
 After forking the repository, clone it to your local device by using the following command:
 
 ```bash
-git clone https://github.com/<your-username>/ShieldSign
+git clone https://github.com/<your-username>/shieldsign-core
 ```
 
 ### Install Dependencies
@@ -55,7 +55,7 @@ npm run prisma:migrate-dev
 Seed the database with test data by running the following command:
 
 ```bash
-npm run prisma:seed -w @ShieldSign/prisma
+npm run prisma:seed -w @shieldsign/prisma
 ```
 
 ### Start the Application
@@ -68,8 +68,4 @@ Access the ShieldSign application by visiting `http://localhost:3000` in your we
 
 </Steps>
 
-<Callout type="info">
-  Optional: Create your signing certificate. To generate your own using these steps and a Linux
-  Terminal or Windows Subsystem for Linux (WSL), see **[Create your signing
-  certificate](/developers/local-development/signing-certificate)**.
-</Callout>
+> **Note:** Optional: Create your signing certificate. To generate your own using these steps and a Linux Terminal or Windows Subsystem for Linux (WSL), see [Create your signing certificate](https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/developers/local-development/signing-certificate.mdx).
