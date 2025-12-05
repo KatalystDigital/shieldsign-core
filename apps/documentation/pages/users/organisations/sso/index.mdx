@@ -5,7 +5,7 @@ description: Learn how to set up a custom SSO login portal for your organisation
 
 import Image from 'next/image';
 
-import { Callout, Steps } from 'nextra/components';
+import { Steps } from 'nextra/components';
 
 # Organisation SSO Portal
 
@@ -15,17 +15,13 @@ The SSO Portal provides a dedicated login URL for your organisation that integra
 - **Automatic onboarding**: New users will be automatically added to your organisation when they sign in through the portal
 - **Delegated account management**: Your organisation has full control over the users who sign in through the portal
 
-<Callout type="warning">
-  Anyone who signs in through your portal will be added to your organisation as a member.
-</Callout>
+> **Warning:** Anyone who signs in through your portal will be added to your organisation as a member.
 
 ## Getting Started
 
 To set up the SSO Portal, you need to be an organisation owner, admin, or manager.
 
-<Callout type="info">
-  **Enterprise Only**: This feature is only available to Enterprise customers.
-</Callout>
+> **Enterprise Only:** This feature is only available to Enterprise customers.
 
 <Steps>
 
@@ -33,7 +29,7 @@ To set up the SSO Portal, you need to be an organisation owner, admin, or manage
 
 ### Configure SSO Portal
 
-See the [Microsoft Entra ID](/users/organisations/sso/microsoft-entra-id) guide to find the values for the following fields.
+See the [Microsoft Entra ID](https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/users/organisations/sso/microsoft-entra-id.mdx) guide to find the values for the following fields.
 
 #### Issuer URL
 
@@ -139,4 +135,4 @@ If you encounter issues with your SSO portal configuration:
 
 For detailed setup instructions for specific identity providers:
 
-- [Microsoft Entra ID](/users/organisations/sso/microsoft-entra-id) - Complete guide for Azure AD configuration
+- [Microsoft Entra ID](https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/users/organisations/sso/microsoft-entra-id.mdx) - Complete guide for Azure AD configuration

@@ -1,12 +1,10 @@
-import { Callout, Steps } from 'nextra/components';
+import { Steps } from 'nextra/components';
 
 # Email Domains
 
 Email Domains allow you to send emails to recipients from your own domain instead of the default ShieldSign email address.
 
-<Callout type="info">
-  **Enterprise Only**: Email Domains is only available to Enterprise customers and custom plans
-</Callout>
+> **Enterprise Only:** Email Domains is only available to Enterprise customers and custom plans
 
 ## Creating Email Domains
 
@@ -29,10 +27,7 @@ After adding your domain, ShieldSign will provide you with the following require
 - **SPF Record**: Specifies which servers are authorized to send emails from your domain
 - **DKIM Record**: Provides email authentication and prevents tampering
 
-<Callout type="info">
-  If you already have an SPF record configured, you will need to update it to include Amazon SES as
-  an authorized server instead of creating a new record.
-</Callout>
+> **Note:** If you already have an SPF record configured, you will need to update it to include Amazon SES as an authorized server instead of creating a new record.
 
 Configure these records in your domain's DNS settings according to their specific instructions.
 
@@ -41,9 +36,7 @@ Configure these records in your domain's DNS settings according to their specifi
 Once you've added the DNS records, return to the ShieldSign email domains settings page and click the "Verify" button.
 This will trigger a verification process which will check if the DNS records are properly configured. If successful, the domain will be marked as "Active".
 
-<Callout type="info">
-  Please note that it may take up to 48 hours for the DNS records to propagate.
-</Callout>
+> **Note:** Please note that it may take up to 48 hours for the DNS records to propagate.
 
 </Steps>
 
