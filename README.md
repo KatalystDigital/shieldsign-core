@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/logo/shieldsign-logo-transparent.png" alt="ShieldSign Logo" width="200">
+  <img src="branding/logo/shieldsign-logo-transparent.png" alt="ShieldSign Logo" height="60">
 </p>
 
 <h1 align="center">ShieldSign</h1>
