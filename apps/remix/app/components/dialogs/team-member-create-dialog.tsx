@@ -154,7 +154,7 @@ export const TeamMemberCreateDialog = ({ trigger, ...props }: TeamMemberCreateDi
                       To be able to add members to a team, you must first add them to the
                       organisation. For more information, please see the{' '}
                       <Link
-                        to="https://docs.shieldsign.io/users/organisations/members"
+                        to="https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/users/organisations/members.mdx"
                         target="_blank"
                         rel="noreferrer"
                         className="text-shieldsign-700 hover:text-shieldsign-600 hover:underline"

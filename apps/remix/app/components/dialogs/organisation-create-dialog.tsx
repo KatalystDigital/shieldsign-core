@@ -415,8 +415,7 @@ const BillingPlanForm = ({
         ))}
 
         <Link
-          to="https://shieldsign.io/enterprise-cta"
-          target="_blank"
+          to="/settings/billing"
           className="bg-muted/30 flex items-center space-x-2 rounded-md border p-4"
         >
           <div className="flex-1 font-normal">
@@ -433,9 +432,8 @@ const BillingPlanForm = ({
 
       <div className="mt-6 text-center">
         <Link
-          to="https://shieldsign.io/pricing"
+          to="/settings/billing"
           className="text-primary hover:text-primary/80 flex items-center justify-center gap-1 text-sm hover:underline"
-          target="_blank"
         >
           <Trans>Compare all plans and features in detail</Trans>
           <ExternalLinkIcon className="h-4 w-4" />

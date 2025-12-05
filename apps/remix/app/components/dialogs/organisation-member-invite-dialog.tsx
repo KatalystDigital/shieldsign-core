@@ -253,9 +253,9 @@ export const OrganisationMemberInviteDialog = ({
 
   const downloadTemplate = () => {
     const data = [
-      { email: 'admin@shieldsign.io', role: 'Admin' },
-      { email: 'manager@shieldsign.io', role: 'Manager' },
-      { email: 'member@shieldsign.io', role: 'Member' },
+      { email: 'admin@example.com', role: 'Admin' },
+      { email: 'manager@example.com', role: 'Manager' },
+      { email: 'member@example.com', role: 'Member' },
     ];
 
     const csvContent =
