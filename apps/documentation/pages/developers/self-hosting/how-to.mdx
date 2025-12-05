@@ -5,8 +5,6 @@ description: Learn how to self-host ShieldSign on your server or cloud infrastru
 
 import { Callout, Steps } from 'nextra/components';
 
-import { CallToAction } from '../../../components/call-to-action';
-
 # Self Hosting
 
 We support various deployment methods and are actively working on adding more. Please let us know if you have a specific deployment method in mind!
@@ -21,12 +19,12 @@ The following guide will walk you through setting up ShieldSign manually on your
 The first step is to clone the repository:
 
 ```bash
-git clone https://github.com/ShieldSign/ShieldSign.git
+git clone https://github.com/KatalystDigital/shieldsign-core.git
 ```
 
 ### Configure the Environment Variables
 
-Navigate to the `ShieldSign` folder and create a `.env` file from the example `.env.example` file:
+Navigate to the `shieldsign-core` folder and create a `.env` file from the example `.env.example` file:
 
 ```bash
 cp .env.example .env
@@ -78,12 +76,7 @@ This will start the server on `localhost:3000`. Any reverse proxy can handle the
 
 The following guide will walk you through setting up ShieldSign using Docker. You can choose between a Docker Compose production setup or a standalone container.
 
-We provide a Docker container for ShieldSign, published on both DockerHub and GitHub Container Registry.
-
-- [DockerHub](https://hub.docker.com/r/ShieldSign/ShieldSign)
-- [GitHub Container Registry](https://ghcr.io/ShieldSign/ShieldSign)
-
-You can pull the Docker image from either of these registries and run it with your preferred container hosting provider.
+We provide a Docker container for ShieldSign. You can build the Docker image from the repository and run it with your preferred container hosting provider.
 
 Please note that you must provide environment variables for connecting to the database, mail server, and other services.
 
@@ -95,7 +88,7 @@ This setup includes a PostgreSQL database and the ShieldSign application. You wi
 
 ### Download the Docker Compose File
 
-Download the Docker Compose file from the ShieldSign repository - [compose.yml](https://raw.githubusercontent.com/ShieldSign/ShieldSign/release/docker/production/compose.yml).
+Download the Docker Compose file from the ShieldSign repository - [compose.yml](https://raw.githubusercontent.com/KatalystDigital/shieldsign-core/main/docker/production/compose.yml).
 
 ### Navigate to the `compose.yml` File
 
@@ -217,22 +210,16 @@ Access the ShieldSign application by visiting `http://localhost:3000` in your we
 
 ### Option 2: Standalone Docker Container
 
-If you prefer to host the ShieldSign application on a specific container provider, use the pre-built Docker image from DockerHub or GitHub's Package Registry. You will need to provide your own database and SMTP host.
+If you prefer to host the ShieldSign application on a specific container provider, you can build the Docker image from the repository. You will need to provide your own database and SMTP host.
 
 <Steps>
 
-### Pull the Docker Image
+### Build the Docker Image
 
-Pull the ShieldSign Docker image from DockerHub:
-
-```bash
-docker pull ShieldSign/ShieldSign
-```
-
-Or, pull the image from GitHub Container Registry:
+Build the Docker image from the repository:
 
 ```bash
-docker pull ghcr.io/ShieldSign/ShieldSign
+docker build -t shieldsign -f docker/Dockerfile .
 ```
 
 ### Run the Docker Container
@@ -251,8 +238,8 @@ docker run -d \
  -e NEXT_PRIVATE_SMTP_TRANSPORT="<your-next-private-smtp-transport>"
  -e NEXT_PRIVATE_SMTP_FROM_NAME="<your-next-private-smtp-from-name>"
  -e NEXT_PRIVATE_SMTP_FROM_ADDRESS="<your-next-private-smtp-from-address>"
- -v /path/to/your/keyfile.p12:/opt/ShieldSign/cert.p12
- ShieldSign/ShieldSign
+ -v /path/to/your/keyfile.p12:/opt/shieldsign/cert.p12
+ shieldsign
 ```
 
 Replace the placeholders with the actual values.
@@ -283,13 +270,13 @@ The environment variables listed above are a subset of those available for confi
 | `NEXT_PRIVATE_OIDC_PROVIDER_LABEL`           | The label to display for the OIDC provider button (optional).                                       |
 | `NEXT_PRIVATE_OIDC_SKIP_VERIFY`              | Whether to skip email verification for OIDC accounts (optional, default `false`).                   |
 | `NEXT_PUBLIC_WEBAPP_URL`                     | The URL for the web application.                                                                    |
-| `NEXT_PUBLIC_SUPPORT_EMAIL`                  | The support email address displayed to users (default `support@ShieldSign.com`).                    |
+| `NEXT_PUBLIC_SUPPORT_EMAIL`                  | The support email address displayed to users.                                                       |
 | `NEXT_PRIVATE_DATABASE_URL`                  | The URL for the primary database connection (with connection pooling).                              |
 | `NEXT_PRIVATE_DIRECT_DATABASE_URL`           | The URL for the direct database connection (without connection pooling).                            |
 | `NEXT_PRIVATE_SIGNING_TRANSPORT`             | The signing transport to use. Available options: local (default)                                    |
 | `NEXT_PRIVATE_SIGNING_PASSPHRASE`            | The passphrase for the key file.                                                                    |
 | `NEXT_PRIVATE_SIGNING_LOCAL_FILE_CONTENTS`   | The base64-encoded contents of the key file will be used instead of the file path.                  |
-| `NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH`       | The path to the key file, default `/opt/ShieldSign/cert.p12`.                                       |
+| `NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH`       | The path to the key file, default `/opt/shieldsign/cert.p12`.                                       |
 | `NEXT_PUBLIC_UPLOAD_TRANSPORT`               | The transport for file uploads (database or s3).                                                    |
 | `NEXT_PRIVATE_UPLOAD_ENDPOINT`               | The endpoint for the S3 storage transport (for third-party S3-compatible providers).                |
 | `NEXT_PRIVATE_UPLOAD_FORCE_PATH_STYLE`       | Whether to force path-style URLs for the S3 storage transport.                                      |
@@ -318,7 +305,7 @@ The environment variables listed above are a subset of those available for confi
 | `NEXT_PUBLIC_POSTHOG_KEY`                    | The optional PostHog key for analytics and feature flags.                                           |
 | `NEXT_PUBLIC_DISABLE_SIGNUP`                 | Whether to disable user signups through the /signup page.                                           |
 | `NEXT_PRIVATE_BROWSERLESS_URL`               | The URL for a Browserless.io instance to generate PDFs (optional).                                  |
-| `ShieldSign_DISABLE_TELEMETRY`               | Set to `true` to disable anonymous telemetry (see [Telemetry](#telemetry) section below).           |
+| `SHIELDSIGN_DISABLE_TELEMETRY`               | Set to `true` to disable anonymous telemetry (see [Telemetry](#telemetry) section below).           |
 
 ## Telemetry
 
@@ -344,7 +331,7 @@ We do **not** collect any personal data, document contents, user information, or
 To disable telemetry, set the following environment variable:
 
 ```bash
-ShieldSign_DISABLE_TELEMETRY=true
+SHIELDSIGN_DISABLE_TELEMETRY=true
 ```
 
 This will completely disable all telemetry data collection.
@@ -362,7 +349,7 @@ After=network.target
 Environment=PATH=/path/to/your/node/binaries
 Type=simple
 User=www-data
-WorkingDirectory=/var/www/ShieldSign/apps/remix
+WorkingDirectory=/var/www/shieldsign/apps/remix
 ExecStart=/usr/bin/next start -p 3500
 TimeoutSec=15
 Restart=always
@@ -371,18 +358,4 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-We offer several alternative deployment methods for ShieldSign if you need more options.
-
-## Railway
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/bG6D4p)
-
-## Render
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ShieldSign/ShieldSign)
-
-## Koyeb
-
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/ShieldSign/ShieldSign&branch=main&name=ShieldSign-app&builder=dockerfile&dockerfile=/docker/Dockerfile)
-
-<CallToAction className="mt-12" utmSource="self-hosting" />
+We offer several alternative deployment methods for ShieldSign. You can deploy using your preferred cloud provider's container service with the Docker image.
