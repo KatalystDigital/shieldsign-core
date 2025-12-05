@@ -1,8 +1,10 @@
 # Privacy Policy
 
-**ShieldSign - E-Signature Platform**
+**[Your Organization Name]**
 
-Last updated: December 2025
+Last updated: [Date]
+
+> **Note for self-hosters:** This is a template privacy policy for ShieldSign Core deployments. Please customize it with your organization's information, contact details, and specific data handling practices.
 
 ## 1. Introduction
 
