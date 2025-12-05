@@ -16,7 +16,7 @@ import type { HonoEnv } from '@shieldsign/remix/server/router';
 export const tsRestHonoApp = new Hono<HonoEnv>();
 
 tsRestHonoApp
-  .get('/openapi', (c) => c.redirect('https://openapi-v1.shieldsign.io'))
+  .get('/openapi', (c) => c.redirect('https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/developers/public-api/index.mdx'))
   .get('/openapi.json', (c) => c.json(OpenAPIV1))
   .get('/me', async (c) => testCredentialsHandler(c.req.raw));
 

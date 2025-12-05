@@ -108,7 +108,7 @@ export class TelemetryClient {
       '[Telemetry] To disable telemetry, set SHIELDSIGN_DISABLE_TELEMETRY=true in your environment variables.',
     );
     console.log(
-      '[Telemetry] Learn more: https://shieldsign.io/docs/developers/self-hosting/telemetry',
+      '[Telemetry] Learn more: https://github.com/KatalystDigital/shieldsign-core/blob/main/apps/documentation/pages/developers/self-hosting/index.mdx',
     );
 
     // Capture startup event

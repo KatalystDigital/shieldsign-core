@@ -19,12 +19,12 @@ import { ZPasswordSchema } from '@shieldsign/trpc/server/auth-router/schema';
 import { cn } from '@shieldsign/ui/lib/utils';
 import { Button } from '@shieldsign/ui/primitives/button';
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
 } from '@shieldsign/ui/primitives/form/form';
 import { Input } from '@shieldsign/ui/primitives/input';
 import { PasswordInput } from '@shieldsign/ui/primitives/password-input';

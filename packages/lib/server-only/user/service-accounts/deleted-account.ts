@@ -3,7 +3,7 @@ import { prisma } from '@shieldsign/prisma';
 export const deletedAccountServiceAccount = async () => {
   const serviceAccount = await prisma.user.findFirst({
     where: {
-      email: 'deleted-account@shieldsign.io',
+      email: 'deleted-account@example.com',
     },
   });
 

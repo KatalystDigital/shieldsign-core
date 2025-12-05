@@ -2,32 +2,31 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
-import type { Recipient } from '@prisma/client';
-import type { Field } from '@prisma/client';
+import type { Field, Recipient } from '@prisma/client';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import { useOptionalSession } from '@shieldsign/lib/client-only/providers/session';
 import type { TTemplate } from '@shieldsign/lib/types/template';
 import {
-  DocumentReadOnlyFields,
-  mapFieldsWithRecipients,
+    DocumentReadOnlyFields,
+    mapFieldsWithRecipients,
 } from '@shieldsign/ui/components/document/document-read-only-fields';
 import {
-  DocumentFlowFormContainerActions,
-  DocumentFlowFormContainerContent,
-  DocumentFlowFormContainerFooter,
-  DocumentFlowFormContainerHeader,
-  DocumentFlowFormContainerStep,
+    DocumentFlowFormContainerActions,
+    DocumentFlowFormContainerContent,
+    DocumentFlowFormContainerFooter,
+    DocumentFlowFormContainerHeader,
+    DocumentFlowFormContainerStep,
 } from '@shieldsign/ui/primitives/document-flow/document-flow-root';
 import type { DocumentFlowStep } from '@shieldsign/ui/primitives/document-flow/types';
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
 } from '@shieldsign/ui/primitives/form/form';
 import { Input } from '@shieldsign/ui/primitives/input';
 import { useStep } from '@shieldsign/ui/primitives/stepper';

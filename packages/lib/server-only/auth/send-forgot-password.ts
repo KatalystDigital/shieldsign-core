@@ -57,7 +57,7 @@ export const sendForgotPassword = async ({ userId }: SendForgotPasswordOptions) 
     },
     from: {
       name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'ShieldSign',
-      address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@shieldsign.io',
+      address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@example.com',
     },
     subject: i18n._(msg`Forgot Password?`),
     html,

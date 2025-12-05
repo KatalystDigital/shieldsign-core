@@ -31,7 +31,7 @@ export type ConfirmTeamEmailProps = {
 
 export const ConfirmTeamEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://shieldsign.io',
+  baseUrl = 'http://localhost:3000',
   teamName = 'Team Name',
   teamUrl = 'demo',
   token = '',

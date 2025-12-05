@@ -4,8 +4,7 @@ import { TeamMemberRole } from '@prisma/client';
 import { DateTime } from 'luxon';
 
 import { trpc } from '@shieldsign/trpc/react';
-import { Alert, AlertDescription } from '@shieldsign/ui/primitives/alert';
-import { AlertTitle } from '@shieldsign/ui/primitives/alert';
+import { Alert, AlertDescription, AlertTitle } from '@shieldsign/ui/primitives/alert';
 import { Button } from '@shieldsign/ui/primitives/button';
 
 import TokenDeleteDialog from '~/components/dialogs/token-delete-dialog';

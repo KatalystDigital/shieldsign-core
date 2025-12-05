@@ -18,9 +18,9 @@ export type OrganisationJoinEmailProps = {
 
 export const OrganisationJoinEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://shieldsign.io',
+  baseUrl = 'http://localhost:3000',
   memberName = 'John Doe',
-  memberEmail = 'johndoe@shieldsign.io',
+  memberEmail = 'johndoe@example.com',
   organisationName = 'Organisation Name',
   organisationUrl = 'demo',
 }: OrganisationJoinEmailProps) => {

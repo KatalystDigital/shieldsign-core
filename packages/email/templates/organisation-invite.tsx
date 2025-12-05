@@ -28,7 +28,7 @@ export type OrganisationInviteEmailProps = {
 
 export const OrganisationInviteEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://shieldsign.io',
+  baseUrl = 'http://localhost:3000',
   senderName = 'John Doe',
   organisationName = 'Organisation Name',
   token = '',

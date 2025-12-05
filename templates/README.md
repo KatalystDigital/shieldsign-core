@@ -1,4 +1,4 @@
-# ShieldSign Templates
+# [Your Company] Templates
 
 This directory contains document template foundations for common enterprise agreements.
 
@@ -26,7 +26,7 @@ Each template includes:
 
 ## Usage
 
-Templates can be loaded into ShieldSign via:
+Templates can be loaded into [Your Company] via:
 1. Web UI upload
 2. API template creation
 3. Direct database seeding
@@ -54,4 +54,4 @@ POST /api/v1/templates/{templateId}/create-document
 
 ---
 
-© 2025 ShieldSign - Enterprise E-Signatures Built for Security
+© 2025 [Your Company] - Enterprise E-Signatures Built for Security

@@ -99,5 +99,5 @@ Date: [[DATE:party_b_signed]]
 
 ---
 
-*Document secured by ShieldSign - Enterprise E-Signatures Built for Security*
-*https://shieldsign.io*
+*Document secured by [Your Company] - Enterprise E-Signatures Built for Security*
+*https://[Your Company].io*

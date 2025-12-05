@@ -12,7 +12,7 @@ export type ResetPasswordTemplateProps = Partial<TemplateResetPasswordProps>;
 
 export const ResetPasswordTemplate = ({
   userName = 'Lucas Smith',
-  userEmail = 'lucas@shieldsign.io',
+  userEmail = 'lucas@example.com',
   assetBaseUrl = 'http://localhost:3002',
 }: ResetPasswordTemplateProps) => {
   const { _ } = useLingui();
@@ -72,7 +72,7 @@ export const ResetPasswordTemplate = ({
                 <Trans>
                   Didn't request a password change? We are here to help you secure your account,
                   just{' '}
-                  <Link className="text-shieldsign-700 font-normal" href="mailto:hi@shieldsign.io">
+                  <Link className="text-shieldsign-700 font-normal" href="mailto:hi@example.com">
                     contact us.
                   </Link>
                 </Trans>

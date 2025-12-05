@@ -89,7 +89,7 @@ export const ALIGNMENT_TEST_FIELDS: FieldTestData[] = [
     },
     page: 1,
     ...calculatePositionPageOne(0, 0),
-    customText: 'admin@shieldsign.io',
+    customText: 'admin@example.com',
   },
   {
     type: FieldType.EMAIL,
@@ -99,7 +99,7 @@ export const ALIGNMENT_TEST_FIELDS: FieldTestData[] = [
     },
     page: 1,
     ...calculatePositionPageOne(0, 1),
-    customText: 'admin@shieldsign.io',
+    customText: 'admin@example.com',
   },
   {
     type: FieldType.EMAIL,
@@ -110,7 +110,7 @@ export const ALIGNMENT_TEST_FIELDS: FieldTestData[] = [
     },
     page: 1,
     ...calculatePositionPageOne(0, 2),
-    customText: 'admin@shieldsign.io',
+    customText: 'admin@example.com',
   },
   /**
    * Row 2 NAME

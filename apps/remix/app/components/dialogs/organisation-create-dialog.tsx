@@ -3,8 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import type { MessageDescriptor } from '@lingui/core';
 import { msg } from '@lingui/core/macro';
-import { useLingui } from '@lingui/react/macro';
-import { Trans } from '@lingui/react/macro';
+import { Trans, useLingui } from '@lingui/react/macro';
 import type * as DialogPrimitive from '@radix-ui/react-dialog';
 import { ExternalLinkIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
@@ -26,21 +25,21 @@ import { cn } from '@shieldsign/ui/lib/utils';
 import { Badge } from '@shieldsign/ui/primitives/badge';
 import { Button } from '@shieldsign/ui/primitives/button';
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
 } from '@shieldsign/ui/primitives/dialog';
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
 } from '@shieldsign/ui/primitives/form/form';
 import { Input } from '@shieldsign/ui/primitives/input';
 import { SpinnerBox } from '@shieldsign/ui/primitives/spinner';

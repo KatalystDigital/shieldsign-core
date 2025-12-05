@@ -19,8 +19,8 @@ export type TeamEmailRemovedTemplateProps = {
 
 export const TeamEmailRemovedTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://shieldsign.io',
-  teamEmail = 'example@shieldsign.io',
+  baseUrl = 'http://localhost:3000',
+  teamEmail = 'example@example.com',
   teamName = 'Team Name',
   teamUrl = 'demo',
 }: TeamEmailRemovedTemplateProps) => {

@@ -25,9 +25,9 @@ export type DocumentInviteEmailTemplateProps = Partial<TemplateDocumentInvitePro
 
 export const DocumentInviteEmailTemplate = ({
   inviterName = 'Lucas Smith',
-  inviterEmail = 'lucas@shieldsign.io',
+  inviterEmail = 'lucas@example.com',
   documentName = 'Open Source Pledge.pdf',
-  signDocumentLink = 'https://shieldsign.io',
+  signDocumentLink = 'http://localhost:3000',
   assetBaseUrl = 'http://localhost:3002',
   customBody,
   role,

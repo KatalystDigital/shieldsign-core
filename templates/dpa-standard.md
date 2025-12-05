@@ -11,9 +11,9 @@ This Data Processing Agreement ("DPA") forms part of the Agreement between:
 - Email: [[EMAIL:controller_email]]
 
 **Data Processor:**
-- Company Name: ShieldSign
-- Address: [ShieldSign Address]
-- Data Protection Contact: dpo@shieldsign.io
+- Company Name: [Your Company Name]
+- Address: [Your Company Address]
+- Data Protection Contact: dpo@example.com
 
 ## 1. DEFINITIONS
 
@@ -23,11 +23,11 @@ This Data Processing Agreement ("DPA") forms part of the Agreement between:
 
 **"Data Subject"** means the identified or identifiable natural person to whom Personal Data relates.
 
-**"Sub-processor"** means any processor engaged by ShieldSign to process Personal Data on behalf of the Controller.
+**"Sub-processor"** means any processor engaged by [Your Company] to process Personal Data on behalf of the Controller.
 
 ## 2. SCOPE AND PURPOSE
 
-2.1 This DPA applies to all Processing of Personal Data by ShieldSign on behalf of the Controller in connection with the electronic signature services.
+2.1 This DPA applies to all Processing of Personal Data by [Your Company] on behalf of the Controller in connection with the electronic signature services.
 
 2.2 Categories of Personal Data processed:
 - Names and email addresses of signatories
@@ -43,7 +43,7 @@ This Data Processing Agreement ("DPA") forms part of the Agreement between:
 
 ## 3. PROCESSOR OBLIGATIONS
 
-ShieldSign shall:
+[Your Company] shall:
 
 3.1 Process Personal Data only on documented instructions from the Controller.
 
@@ -63,27 +63,27 @@ ShieldSign shall:
 
 ## 4. SUB-PROCESSORS
 
-4.1 The Controller authorizes ShieldSign to engage the following categories of Sub-processors:
+4.1 The Controller authorizes [Your Company] to engage the following categories of Sub-processors:
 - Cloud infrastructure providers
 - Email delivery services
 - Analytics providers (with anonymized data only)
 
-4.2 ShieldSign shall inform the Controller of any intended changes to Sub-processors.
+4.2 [Your Company] shall inform the Controller of any intended changes to Sub-processors.
 
-4.3 ShieldSign shall ensure Sub-processors are bound by equivalent data protection obligations.
+4.3 [Your Company] shall ensure Sub-processors are bound by equivalent data protection obligations.
 
 ## 5. DATA TRANSFERS
 
-5.1 ShieldSign shall not transfer Personal Data outside the EEA without appropriate safeguards.
+5.1 [Your Company] shall not transfer Personal Data outside the EEA without appropriate safeguards.
 
-5.2 For transfers to third countries, ShieldSign shall ensure:
+5.2 For transfers to third countries, [Your Company] shall ensure:
 - Standard Contractual Clauses are in place, or
 - The destination country has an adequacy decision, or
 - Other valid transfer mechanisms exist
 
 ## 6. SECURITY INCIDENTS
 
-6.1 ShieldSign shall notify the Controller of any Personal Data breach without undue delay.
+6.1 [Your Company] shall notify the Controller of any Personal Data breach without undue delay.
 
 6.2 Notification shall include:
 - Nature of the breach
@@ -93,15 +93,15 @@ ShieldSign shall:
 
 ## 7. AUDIT RIGHTS
 
-7.1 ShieldSign shall allow for and contribute to audits conducted by the Controller or an authorized auditor.
+7.1 [Your Company] shall allow for and contribute to audits conducted by the Controller or an authorized auditor.
 
-7.2 ShieldSign maintains SOC 2 Type II certification and will provide audit reports upon request.
+7.2 [Your Company] maintains SOC 2 Type II certification and will provide audit reports upon request.
 
 ## 8. TERM AND TERMINATION
 
 8.1 This DPA shall remain in effect for the duration of the Agreement.
 
-8.2 Upon termination, ShieldSign shall delete all Personal Data within 30 days unless retention is required by law.
+8.2 Upon termination, [Your Company] shall delete all Personal Data within 30 days unless retention is required by law.
 
 ## 9. LIABILITY
 
@@ -123,7 +123,7 @@ Date: [[DATE:controller_signed]]
 
 ---
 
-**Data Processor (ShieldSign):**
+**Data Processor ([Your Company]):**
 
 Signature: [[SIGNATURE:processor]]
 
@@ -137,7 +137,7 @@ Date: [[DATE:processor_signed]]
 
 ## ANNEX A: TECHNICAL AND ORGANIZATIONAL MEASURES
 
-ShieldSign implements the following security measures:
+[Your Company] implements the following security measures:
 
 ### Encryption
 - TLS 1.3 for data in transit
@@ -166,5 +166,5 @@ ShieldSign implements the following security measures:
 
 ---
 
-*Document secured by ShieldSign - Enterprise E-Signatures Built for Security*
-*https://shieldsign.io*
+*Document secured by [Your Company] - Enterprise E-Signatures Built for Security*
+*https://[Your Company].io*

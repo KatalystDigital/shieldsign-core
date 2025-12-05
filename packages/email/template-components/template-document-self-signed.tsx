@@ -71,7 +71,7 @@ export const TemplateDocumentSelfSigned = ({
 
           <Button
             className="rounded-lg border border-solid border-slate-200 px-4 py-2 text-center text-sm font-medium text-black no-underline"
-            href="https://shieldsign.io/pricing"
+            href="/"
           >
             <Img
               src={getAssetUrl('/static/review.png')}

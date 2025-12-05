@@ -15,7 +15,7 @@ type LoginOptions = {
 
 export const apiSignin = async ({
   page,
-  email = 'example@shieldsign.io',
+  email = 'example@example.com',
   password = 'password',
   redirectPath = '/',
 }: LoginOptions) => {

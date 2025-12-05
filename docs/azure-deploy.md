@@ -177,7 +177,7 @@ NEXT_PRIVATE_SMTP_PORT=587
 NEXT_PRIVATE_SMTP_USERNAME=apikey
 NEXT_PRIVATE_SMTP_PASSWORD=<sendgrid-api-key>
 NEXT_PRIVATE_SMTP_FROM_NAME=ShieldSign
-NEXT_PRIVATE_SMTP_FROM_ADDRESS=noreply@shieldsign.io
+NEXT_PRIVATE_SMTP_FROM_ADDRESS=noreply@example.com
 
 # OAuth (optional)
 NEXT_PRIVATE_GOOGLE_CLIENT_ID=<google-client-id>
@@ -187,7 +187,7 @@ NEXT_PRIVATE_MICROSOFT_CLIENT_SECRET=<microsoft-client-secret>
 
 # Feature Flags
 NEXT_PUBLIC_FEATURE_BILLING_ENABLED=false
-NEXT_PUBLIC_SUPPORT_EMAIL=support@shieldsign.io
+NEXT_PUBLIC_SUPPORT_EMAIL=support@example.com
 ```
 
 ## Step 5: Database Migration
@@ -293,4 +293,4 @@ Estimated monthly costs (Basic tier):
 
 ---
 
-For support, contact: support@shieldsign.io
+For support, contact: support@example.com
