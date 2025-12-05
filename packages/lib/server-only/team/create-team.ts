@@ -6,8 +6,8 @@ import { prisma } from '@shieldsign/prisma';
 
 import { IS_BILLING_ENABLED } from '../../constants/app';
 import {
-  LOWEST_ORGANISATION_ROLE,
-  ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP,
+    LOWEST_ORGANISATION_ROLE,
+    ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP,
 } from '../../constants/organisations';
 import { TEAM_INTERNAL_GROUPS } from '../../constants/teams';
 import { generateDatabaseId } from '../../universal/id';
